@@ -1,0 +1,32 @@
+% !TEX program = lualatex
+\documentclass[10pt,titlepage]{article}
+
+\usepackage{amsmath}
+\usepackage[a4paper,hmargin={2cm,8cm},height=25cm]{geometry}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[super,sort&compress,comma]{natbib}
+\usepackage[version=3]{mhchem}
+\usepackage{gensymb}
+\usepackage{graphicx}
+%\usepackage{fontspec}
+\graphicspath{{./}{./Figures/}}
+
+%\setmainfont[Ligatures=TeX]{Input Sans}
+
+\newcommand{\fig}[1]{Fig.~\ref{#1}}
+
+\usepackage{lineno}
+\linenumbers
+\linespread{2}
+
+\begin{document}
+  \title{High-Resolution NMR Spectroscopy in Microfluidic Droplets}
+  \author{William Hale, Gabriel Rossetto, Rachael Greenhalgh, \\ Graeme Finch, and Marcel Utz}
+  \maketitle
+  \begin{abstract}
+  \input{droplet-shim-abstract}
+  \end{abstract}
+
+  \input{droplet-shim-text-resubmission.tex}
+\end{document}

@@ -1,0 +1,71 @@
+% !TEX program = lualatex
+
+%% ----------------------------------------------------------------
+%% Thesis.tex
+%% ----------------------------------------------------------------
+\documentclass{ecsthesis}      % Use the Thesis Style
+\usepackage[square,numbers]{natbib}  % Use Natbib style for the refs.
+\usepackage{graphicx}
+\usepackage[version=4]{mhchem}
+\usepackage{amsmath}
+\usepackage{unicode-math}
+\usepackage{braket}
+\usepackage{textcomp}
+\usepackage{gensymb}
+\newcommand{\fig}[1]{Fig.~\ref{#1}}
+\newcommand{\eqn}[1]{Eqn.~\ref{#1}}
+\hypersetup{colorlinks=true}   % Set to false for black/white printing
+\graphicspath{{./}{./Figures/}}   % Location of your graphics files
+%% ----------------------------------------------------------------
+\begin{document}
+\frontmatter
+\title      {Applications of Microfluidics in Nuclear Magnetic Resonance}
+\authors    {
+             {William G Hale}
+            }
+\addresses  {\groupname\\\deptname\\\univname}
+\date       {\today}
+\subject    {}
+\keywords   {}
+\maketitle
+\begin{abstract}
+  Microfluidics is a constantly growing field of research finding applications in a diverse range of subjects
+  such as materials science, chemistry and across the life sciences. This is due to many advantageous attributes
+  that microfluidics enjoys, namely small sample volumes which contribute to waste reduction and reduced cost of
+  experimentation; highly controllable local environments that enable very precise investigation of changes in
+  systems to stimuli; rapid prototyping techniques meaning make, test, tweak cycles can be run more than once
+  in a typical day; ease of parallelisation makes gathering statistically significant data much easier without
+  the need to repeat experiments for days at a time; and ease of automation increases precision and repeatability
+
+  Nuclear magnetic resonance (NMR) spectroscopy is widely applied technique in chemistry and the life sciences.
+  Its non-invasive and non-destructive nature makes it ideal to study living, or mass limited samples. However,
+  it is limited by having to have an extremely homogenous magnetic field as well as the low sensitivities possible in a
+  typical experiment.
+
+  This thesis describes methods for integrating these two fields. Some NMR experiments being ‘miniaturised’ to
+  be performed ‘on-chip’ as well as microfluidic concepts that have been engineered to be compatible with NMR
+  techniques. These techniques do not seek to replace established methods of microfluidic analysis such as mass
+  spectrometry or fluorescence spectroscopy but could be used to compliment these techniques as an additional
+  method of extracting data from the system.
+
+\end{abstract}
+\tableofcontents
+\listoffigures
+\listoftables
+\lstlistoflistings
+\listofsymbols{ll}{$w$ & The weight vector}
+\acknowledgements{Thanks to no one.}
+\dedicatory{To \dots}
+\mainmatter
+%% ----------------------------------------------------------------
+\include{Introduction}
+\include{chapter-droplets}
+\include{chapter-ph2}
+\include{chapter-peristaltics}
+%\include{Conclusions}
+\appendix
+%\include{AppendixA}
+\bibliographystyle{rsc}
+\bibliography{literature}
+\end{document}
+%% ----------------------------------------------------------------
