@@ -10,7 +10,7 @@ Microfluidics is a broad term that covers a wide variety of research, it is clas
 volumes of liquids usually nL to $\mu$l in doing so it offers a numerous benefits. Microfluidics chiefly uses
 Lab-on-a-chip (LoC) devices or the more archaic term micro total analysis system (µTAS) to perform experiments. An LoC is
 a device capable of scaling labratory functions down to a chip-format. The size of this device ranges from a few mm$^2$ to a few cm$^2$
-and contain very small volumes of fluid typically nano to micro litres. The small 
+and contain very small volumes of fluid typically nano to micro litres. The small
 volumes involved make it ideal to study mass limited samples, as in macromolecular chemistry or protein classification
 in biochemistry whilst reducing the costs associated with these experiments. Microfludic systems possess precisely defined
 geometry of paths which enable control of mixing and seperation of fluids, this also lends itself well to the control of the
@@ -22,7 +22,7 @@ microenvironment with the device. Devices usually consist of cheap fabrication m
 can also be used in conjunction with existing methods of analysis in microfluidics (mass spec, fluorescence)
 as NMR leaves sample unpeturbed, perfect for \textit{in situ} monitoring of living systems. Coupling
 could take the form of a longitudinal NMR metabolomic study of cells whilst monitoring specific protein
-expresison with fluorescence.
+expression with fluorescence.
   \item Who uses it?(What has been done in literature?)
 - need help with this, maybe discuss with Marcel? Manz et al 1990 - breif summary of paper, why is it important?
   \item Goal - combination without compromise (MF + $\mu$NMR)
@@ -42,6 +42,56 @@ new insight and analysis is available. Having quantitative, system-level informa
 a single or just a few scans could benefit a wide variety of experiments. Enabling microfluidic
 NMR also provides the oppurtunity to scan mass-limited samples such as those commonly found in
 ligand binding reactions or macrocyclic chemistry.
+  \item The first analytical miniaturised device fabricated on silicon was presented in 1979 by Terry \textit{et al}
+  \citep{terry1979ieee}. The device was a gas chromatograph capable of seperating a simple mixture of gases
+  in seconds and included an injection valve and a 1.5 m long seperation column. A thermal conductivity detector
+  was fabricated seperately and clamped to the silicon wafer containing the column. This allowed for
+  a reduction in size of nearly 3 orders of magnitude compared to the conventional lab equipment at the time
+  and is regarded\citep{reyes2002micro} as the first demonstration of the power of miniaturisation from which, the
+  field of lab-on-a-chip and microfluidics would be born.
+  \item From this into the 1980s research related to miniaturisation focused on the fabrication of
+  components like micropumps\citep{van1988piezoelectric,van1989thermo} and microvalves\citep{shoji1988prototype}
+  rather than silicon based analysers. In 1990 work describing a miniaturised liquid chromatograph on a silicon
+  wafer was published\citep{manz1990design}. This work described a 5 x 5 mm chip containing a
+  column and detector that was connected to an off-chip HPLC pump and valves to perform high pressure
+  liquid chromatography. Concurrently, the concept of a 'miniaturised total analysis system' (µTAS) was introduced
+  by Manz \textit{et al}\citep{manz1990miniaturized}, where the incorporation of sample pretreatment, separation,
+  and detection onto a single device was proposed to enhance the analytical performance of the device rather
+  than to arbitrarily reduce its size. However, it was also recognised that miniaturisation of the device
+  presented the advantage of smaller consumption of materials. Crucially, this miniaturisation would also
+  enable integration of multiple separation techniques cpaable of monitoring many coponents in a single device. Such
+  a device was envisioned as capable of sample handling, analysis, detection, and incorporating control of
+  mass transport and measurements. Conventional pumps, struggled with the high pressures needed for transport
+  in small channels and early theoretical considerations showed that electroosmotic pumping was an attractive and
+  feasible way to move aqueous liquid through a µTAS especially when separation was needed.
+  \item Electroosmotic is defined as the motion of liquid induced by an applied potential, an electroosmotic
+  has no moving parts and produces an even flow in the entire length of the channel, ideal for early applications
+  of µTAS that imagined separating nd analysing aqueous solutions. Early efforts were first put into optimising
+  injection and separationg by switching voltages between the reservoirs containing reagent, carrier and
+  waste\citep{manz1991integrated}.
+  \item Electrophoresis in a µTAS was reported in 1992 using silicon and glass\citep{harrison1992capillary}. This
+  demostrated success in using electroosmotic pumping for flow control in interconnected channels without the
+  use of valves. The concept of integrating injection, separation, and detection was demostrated. As electrophoresis
+  is most commonly used to separate biological samples (usually charged molecules in aqueous) it started to be
+  coupled with laser induced fluorescence to detect amino acids separated on-chip\citep{seiler1993planar}. In
+  addition to separation of biological samples, applications of reactions concerning biomolecules and the
+  handlng of cells started to emerge. Microfabricated devices found uses in DNA amplification by
+  PCR\citep{woolley1996functional} and cellular metabolism\citep{bousse1994micromachined}.
+  \item As analysis of biological samples in water continued to be persued fabrication of the devices
+  from glass and silicon became unecessary and inappropriate. Silicon was at the time expensive, but more
+  importantly opaque to visible and UV-light and so couldn't be used with conventional methods of optical
+  methods of detection frequently used in biology. With the increase in complexity of the systems it became
+  important for pumps and valves to be integrated into the device, these are more easily made from elastomers
+  than rigid materials. The trend towards studying mammalian cells lead to different requirements such as gas
+  permeability which neither glass or silicon can provide. This lead to the replacement of silicon and glass with
+  polymers\citep{RN5}.
+  \item poly(dimethylsiloxane) PDMS was the polymer of choice, the properties of which differ greatly
+  from silicon or glass\citep{ng2002components,whitesides2001flexible}. The switch to PDMS was made even
+  more attractive by the development of soft-lithography as a method for building prototype
+  devices\citep{mcdonald2000fabrication} and the development of a method to fabricate pneumatically actuated valves
+  pumps and mixers\citep{mcdonald2000fabrication}. Thse are only possible due to the elastomeric nature of PDMS
+  and would not be possible with a pure silicon or glass devices.
+  \item S
 
 
 \end{itemize}
