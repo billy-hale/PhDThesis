@@ -4,98 +4,62 @@
 
 \section{Microfluidics}
 
-\begin{itemize}
-  \item What is it?
-Microfluidics is a broad term that covers a wide variety of research, it is classified by the analysis of small
-volumes of liquids usually nL to $\mu$l in doing so it offers a numerous benefits. Microfluidics chiefly uses
-Lab-on-a-chip (LoC) devices or the more archaic term micro total analysis system (µTAS) to perform experiments. An LoC is
-a device capable of scaling labratory functions down to a chip-format. The size of this device ranges from a few mm$^2$ to a few cm$^2$
-and contain very small volumes of fluid typically nano to micro litres. The small
-volumes involved make it ideal to study mass limited samples, as in macromolecular chemistry or protein classification
-in biochemistry whilst reducing the costs associated with these experiments. Microfludic systems possess precisely defined
-geometry of paths which enable control of mixing and seperation of fluids, this also lends itself well to the control of the
-microenvironment with the device. Devices usually consist of cheap fabrication materials such as polydimethylsiloxane
-(PDMS) or thermoplastics like polyolefin.
-  \item Why do we want to use it?
-- The fine control of reaction conditions allows for precise investigations of reaction kinetics
-- Currently, NMR not widely used in microfluidics and can be used to provide extra information on the system
-can also be used in conjunction with existing methods of analysis in microfluidics (mass spec, fluorescence)
-as NMR leaves sample unpeturbed, perfect for \textit{in situ} monitoring of living systems. Coupling
-could take the form of a longitudinal NMR metabolomic study of cells whilst monitoring specific protein
-expression with fluorescence.
-  \item Who uses it?(What has been done in literature?)
-- need help with this, maybe discuss with Marcel? Manz et al 1990 - breif summary of paper, why is it important?
-  \item Goal - combination without compromise (MF + $\mu$NMR)
-- We'd like to incorporate funcitonal microfluidic experiments with high resolution NMR spectroscopy. In
-such a way that the validity either part, microfluidic or magnetic resonance, remains intact. In that
-way not ony would NMR become a more widely used tool for the microfluidic toolbox it could also
-become a valuable attachment to compliment existing tools. However, this combination
-is not without significant challenges. Firstly, a probe capable of $\mu$NMR must be designed, that fits
-with a removable chip for ease of parellelisation. This probe must be of comparable performance
-to existing probes, to maintain validity, and work with existing magnets and spectrometers. Secondly, the
-chip, and any functionality that it possesses, must fit into the bore of the magnet which is typically around
-38 mm in diameter. Thirdly, materials used in construction of the chip must be non-magnetic and susceptibility
-matched to the sample of interest so it can enable high resolution NMR. Lastly, the device used must be
-bio-compatible as most applications in microfluidics are in some way biological.
-  \item Motivation: By combining these two fields and harnassing the 'best of both worlds' approach
-new insight and analysis is available. Having quantitative, system-level information in a
-a single or just a few scans could benefit a wide variety of experiments. Enabling microfluidic
-NMR also provides the oppurtunity to scan mass-limited samples such as those commonly found in
-ligand binding reactions or macrocyclic chemistry.
-  \item The first analytical miniaturised device fabricated on silicon was presented in 1979 by Terry \textit{et al}
-  \citep{terry1979ieee}. The device was a gas chromatograph capable of seperating a simple mixture of gases
-  in seconds and included an injection valve and a 1.5 m long seperation column. A thermal conductivity detector
-  was fabricated seperately and clamped to the silicon wafer containing the column. This allowed for
-  a reduction in size of nearly 3 orders of magnitude compared to the conventional lab equipment at the time
-  and is regarded\citep{reyes2002micro} as the first demonstration of the power of miniaturisation from which, the
-  field of lab-on-a-chip and microfluidics would be born.
-  \item From this into the 1980s research related to miniaturisation focused on the fabrication of
-  components like micropumps\citep{van1988piezoelectric,van1989thermo} and microvalves\citep{shoji1988prototype}
-  rather than silicon based analysers. In 1990 work describing a miniaturised liquid chromatograph on a silicon
-  wafer was published\citep{manz1990design}. This work described a 5 x 5 mm chip containing a
-  column and detector that was connected to an off-chip HPLC pump and valves to perform high pressure
-  liquid chromatography. Concurrently, the concept of a 'miniaturised total analysis system' (µTAS) was introduced
-  by Manz \textit{et al}\citep{manz1990miniaturized}, where the incorporation of sample pretreatment, separation,
-  and detection onto a single device was proposed to enhance the analytical performance of the device rather
-  than to arbitrarily reduce its size. However, it was also recognised that miniaturisation of the device
-  presented the advantage of smaller consumption of materials. Crucially, this miniaturisation would also
-  enable integration of multiple separation techniques cpaable of monitoring many coponents in a single device. Such
-  a device was envisioned as capable of sample handling, analysis, detection, and incorporating control of
-  mass transport and measurements. Conventional pumps, struggled with the high pressures needed for transport
-  in small channels and early theoretical considerations showed that electroosmotic pumping was an attractive and
-  feasible way to move aqueous liquid through a µTAS especially when separation was needed.
-  \item Electroosmotic is defined as the motion of liquid induced by an applied potential, an electroosmotic
-  has no moving parts and produces an even flow in the entire length of the channel, ideal for early applications
-  of µTAS that imagined separating nd analysing aqueous solutions. Early efforts were first put into optimising
-  injection and separationg by switching voltages between the reservoirs containing reagent, carrier and
-  waste\citep{manz1991integrated}.
-  \item Electrophoresis in a µTAS was reported in 1992 using silicon and glass\citep{harrison1992capillary}. This
-  demostrated success in using electroosmotic pumping for flow control in interconnected channels without the
-  use of valves. The concept of integrating injection, separation, and detection was demostrated. As electrophoresis
-  is most commonly used to separate biological samples (usually charged molecules in aqueous) it started to be
-  coupled with laser induced fluorescence to detect amino acids separated on-chip\citep{seiler1993planar}. In
-  addition to separation of biological samples, applications of reactions concerning biomolecules and the
-  handlng of cells started to emerge. Microfabricated devices found uses in DNA amplification by
-  PCR\citep{woolley1996functional} and cellular metabolism\citep{bousse1994micromachined}.
-  \item As analysis of biological samples in water continued to be persued fabrication of the devices
-  from glass and silicon became unecessary and inappropriate. Silicon was at the time expensive, but more
-  importantly opaque to visible and UV-light and so couldn't be used with conventional methods of optical
-  methods of detection frequently used in biology. With the increase in complexity of the systems it became
-  important for pumps and valves to be integrated into the device, these are more easily made from elastomers
-  than rigid materials. The trend towards studying mammalian cells lead to different requirements such as gas
-  permeability which neither glass or silicon can provide. This lead to the replacement of silicon and glass with
-  polymers\citep{RN5}.
-  \item poly(dimethylsiloxane) PDMS was the polymer of choice, the properties of which differ greatly
-  from silicon or glass\citep{ng2002components,whitesides2001flexible}. The switch to PDMS was made even
-  more attractive by the development of soft-lithography as a method for building prototype
-  devices\citep{mcdonald2000fabrication} and the development of a method to fabricate pneumatically actuated valves
-  pumps and mixers\citep{mcdonald2000fabrication}. Thse are only possible due to the elastomeric nature of PDMS
-  and would not be possible with a pure silicon or glass devices.
-  \item These improved methods of fabrication lead to the developments of the components required for more sophisticated
-  experiments in the form of valves\citep{weibel2005torque}, mixers\citep{gunther2005micromixing} and pumps\citep{laser2004review}.
-  With these compnents, microfluidics was in a position to tackle more complex problems one example of the complexity is shown in \fig{fig:immunoassay}.
+\subsection{History to present day}
 
-\end{itemize}
+The first analytical miniaturised device fabricated on silicon was presented in 1979 by Terry \textit{et al}
+\citep{terry1979ieee}. This device, was a gas chromatograph capable of seperating a simple mixture of gases
+in seconds and included an injection valve and a 1.5 m long seperation column. A thermal conductivity detector
+was fabricated seperately, and clamped to the silicon wafer containing the column. This allowed for
+a reduction in size of nearly 3 orders of magnitude compared to the conventional lab equipment at the time
+and is regarded\citep{reyes2002micro} as the first demonstration of the power of miniaturisation from which, the
+field of lab-on-a-chip and microfluidics would be born.
+From this, into the 1980s research related to miniaturisation focused on the fabrication of
+components, like micropumps\citep{van1988piezoelectric,van1989thermo}, and microvalves\citep{shoji1988prototype},
+rather than silicon based analysers. In 1990, work describing a miniaturised liquid chromatograph on a silicon
+wafer was published\citep{manz1990design}. This work described a 5 x 5 mm chip containing a
+column and detector that was connected to an off-chip HPLC pump and valves to perform high pressure
+liquid chromatography. Concurrently, the concept of a 'miniaturised total analysis system' (µTAS) was introduced
+by Manz \textit{et al}\citep{manz1990miniaturized}, where the incorporation of sample pretreatment, separation,
+and detection onto a single device was proposed to enhance the analytical performance of the device rather
+than to arbitrarily reduce its size. However, it was also recognised that miniaturisation of the device
+presented the advantage of smaller consumption of materials, crucially, this miniaturisation would also
+enable integration of multiple separation techniques capable of monitoring many coponents in a single device.
+
+Such a device was envisioned as capable of sample handling, analysis, detection, and incorporating control of
+mass transport and measurements. Conventional pumps at the time struggled with the high pressures needed for transport
+in small channels and early theoretical considerations showed that electroosmotic pumping was an attractive and
+feasible way to move aqueous liquid through a µTAS especially when separation was needed.
+Electroosmotic is defined as the motion of liquid induced by an applied potential, an electroosmotic pump
+has no moving parts and produces an even flow in the entire length of the channel, ideal for early applications
+of µTAS that imagined separating and analysing aqueous solutions. Early efforts were first put into optimising
+injection and separationg by switching voltages between the reservoirs containing reagent, carrier and
+waste\citep{manz1991integrated}.
+Electrophoresis in a µTAS was reported in 1992 using silicon and glass\citep{harrison1992capillary}. This
+demostrated success in using electroosmotic pumping for flow control in interconnected channels without the
+use of valves. The concept of integrating injection, separation, and detection was demostrated. As electrophoresis
+is most commonly used to separate biological samples (usually charged molecules in aqueous solution) it started to be
+coupled with laser induced fluorescence to detect amino acids separated on-chip\citep{seiler1993planar}. In
+addition to separation of biological samples, applications of reactions concerning biomolecules and the
+handlng of cells started to emerge. Microfabricated devices found uses in DNA amplification by
+PCR\citep{woolley1996functional} and cellular metabolism\citep{bousse1994micromachined}.
+As analysis of biological samples in water continued to be persued, fabrication of the devices
+from glass and silicon became unecessary and inappropriate. Silicon was at the time expensive, but more
+importantly opaque to visible and UV-light and so couldn't be used with conventional methods of optical
+methods of detection frequently used in biology. The increasing complexity of the systems meant it became
+important for pumps and valves to be integrated into the device, these are more easily made from elastomers
+than rigid materials. The trend towards studying mammalian cells lead to different requirements such as gas
+permeability which neither glass or silicon can provide. This required replacement of silicon and glass with
+polymers\citep{RN5}.
+poly(dimethylsiloxane) PDMS was the polymer of choice, the properties of which differ greatly
+from silicon or glass\citep{ng2002components,whitesides2001flexible}. The switch to PDMS was made even
+more attractive by the development of soft-lithography as a method for building prototype
+devices\citep{mcdonald2000fabrication} and the development of a method to fabricate pneumatically actuated valves
+pumps and mixers\citep{mcdonald2000fabrication}. Thse are only possible due to the elastomeric nature of PDMS
+and would not be possible with a pure silicon or glass devices.
+These improved methods of fabrication lead to the developments of the components required for more sophisticated
+experiments in the form of valves\citep{weibel2005torque}, mixers\citep{gunther2005micromixing} and pumps\citep{laser2004review}.
+With these compnents, microfluidics was in a position to tackle more complex problems one example of the complexity is shown in \fig{fig:immunoassay}.
+
 
 \begin{figure}
   \begin{center}
@@ -107,34 +71,44 @@ ligand binding reactions or macrocyclic chemistry.
   \label{fig:immunoassay}
 \end{figure}
 
-\begin{itemize}
-  \item As these fabrication methods become more widely used the field of microfluidics moved from
-  adding components to its analytical
-  arsenal, to starting to apply microfluidic systems to resolving problems.
-  These systems then found applications in protein cyrstallisation[ref],
-  separations coupled with mass spectroscopy[ref], single cell manipulation[ref],
-  and synthesis of $^19$F-labelled organic compounds for use in PET
-  scans[ref].
-  \item A subsection of microfluidics began to emerge around this time too, as
-  low reynolds numbers makes multiphase flow manipulation
-  relatively easy, the generation and manipulation of droplets[refs] began to be explored.
-  These involved dispersing a liquid phase in a continuous
-  liquid stream to form a monodisperse emulsion of (often) aqueous droplets in oil. These droplets
-  were used to produce polymer particles[ref], in making irregular particles[ref],
-  hollow microcapsules[ref], and protein detection in cells\citep{huebner2007quantitative}.
-  \item In parallel, another branch of microfluidics was being developed. Its goal was to
-  culture cells in a repeatable way. In their normal environment, cells are subject to multiple
-  cues that can vary including cytokines and secreted proteins from neighbouring cells, biochemical
-  interactions with the extracellular matrix, mechanical stress and direct cell to cell contacts.
-  Microfluidics provided cells these cues in a controlled and reproducible fashion that cannot be easily
-  replecated with conventional cell culture. The idea at the time was that devices could combine
-  cell culture with analytical techniques in order to probe the biochemical processes that
-  govern all manner of cell behaviour.
-\end{itemize}
+
+As these fabrication methods become more widely used the field of microfluidics moved from
+adding components to its analytical
+arsenal, to starting to apply microfluidic systems to resolving problems.
+These systems then found applications in protein cyrstallisation\citep{hansen2002robust},
+separations coupled with mass spectroscopy\citep{ramsey1997generating}, single cell manipulation\citep{wheeler2003microfluidic},
+and synthesis of $^19$F-labelled organic compounds for use in PET
+scans\citep{lee2005multistep}.
+A subsection of microfluidics began to emerge around this time too, as
+low reynolds numbers makes multiphase flow manipulation
+relatively easy, the generation and manipulation of droplets\citep{thorsen2001dynamic, link2004geometrically, tan2004design} began to be explored.
+These involved dispersing a liquid phase in a continuous
+liquid stream to form a monodisperse emulsion of (often) aqueous droplets in oil. These droplets
+were used to produce polymer particles\citep{nie2005polymer}, in making irregular particles\citep{nisisako2007formation},
+hollow microcapsules\citep{utada2005monodisperse}, and protein detection in cells\citep{huebner2007quantitative}. An example of one of the ways droplets were first
+produced in microfluidic devices is shown in \fig{fig:IntroDrops}.
+
+\begin{figure}
+  \includegraphics[width=\columnwidth]{Droplets.png}
+  \caption{Formation of droplets in a T-Junction of a microfluidic device the continuous hydrocarbon
+  phase disperses a water phase. Figure from \citep{RN104}}
+  \label{fig:IntroDrops}
+\end{figure}
+
+
+
+In parallel, another branch of microfluidics was being developed. Its goal was to
+culture cells in a repeatable way. In their normal environment, cells are subject to multiple
+cues that can vary including cytokines and secreted proteins from neighbouring cells, biochemical
+interactions with the extracellular matrix, mechanical stress and direct cell to cell contacts.
+Microfluidics was seen as a method of providing cells with these cues in a controlled and reproducible fashion that couldn't be easily
+replecated with conventional cell culture. The idea at the time was that devices could combine
+cell culture with analytical techniques in order to probe the biochemical processes that
+govern all manner of cell behaviour.
 
 \begin{figure}
   \begin{center}
-  \includegraphics{Microfluidic-Cell-Culture.jpg}
+  \includegraphics[width=\columnwidth,height=12cm,keepaspectratio]{Microfluidic-Cell-Culture.jpg}
   \end{center}
   \caption{A collection of microfluidic devices that enabled cell based assays from cell culture, to selection and treatment,
   to analysis. \textbf{a}, Six biorexctors are operated in parallel in a single chip to monitor small numbers of cells\citep{balagadde2005long},
@@ -151,30 +125,132 @@ ligand binding reactions or macrocyclic chemistry.
   \label{fig:CellCulture}
 \end{figure}
 
-\begin{itemize}
-  \item Microfluidic devices have been used enable cell-based assays from cell culture to biochemical analysis. In
-  \fig{fig:CellCulture} images of different devices are shown that convey how complex the devices being produced were becoming,
-  depite integration of functionalities proving difficult, these demonstrate the power of miniaturisation and the ingenuity
-  being developed in the field.
 
-  \item Late 2000s developments - towards organ on a chip, label free methods of detection needed,
-  fluorscence spec, mass spec, flow cytometry, 3D cell culture all becoming more and more advanced [refs]
-  \item 2010s to now digital microfluidic platforms becoming successful, micrfluidics now too big for
-  broad reviews - many specialised areas that need review of their own - ref ans ummarize some of them.
-  \item label free is where µNMR comes in to help - dicussed in microNMR but can breifly mention here
-  due to the relevance
-  \item This work seeks to combine both fields - bring in from before. This is will be useful due to
-  reduced cost involved meaning many experiments can be run in parallel. This technique is also well
-  suited to mass limited samples due to its non-destructive nature
-\end{itemize}
+Microfluidic devices have been used enable cell-based assays from cell culture to biochemical analysis. In
+\fig{fig:CellCulture} images of different devices are shown that convey how complex the devices being
+produced were becoming, depite integration of functionalities proving difficult, these demonstrate the
+power of miniaturisation and the ingenuity being developed in the field.
+Microfluidics can offer unique control over cell-cell and soluble cues typical of
+\textit{in vivo} cell environments by combining microfabrication of 3D extracellular matrix (ECM)
+structres and fluid networks that can deliver nutrients and oxygen.
+
+Throughout the 2000s, microfabrication, which combined micropatterning techniques such as
+photolithography, photoreactive chemistry, and soft lithography, made it possible to engineer the
+microenvironment of the cell on similar length scales\citep{folch2000microengineering}. This surface
+patterning of micrometre sized features, enabled control of cell-EDM interactions and was used
+to fabricate 3D scaffolds on which to grow cells that were made of biodegradable
+materials\citep{tsang2004three}.
+
+One are of application was the 3D culture of liver cells. \textit{In vitro} culture
+of liver cells was of particular interest as many drugs failed clinical studies because they
+either damaged the liver directly, or because the metabolites produced by the liver are toxic
+\citep{sivaraman2005microscale}. Efforts were then made to produce \textit{in vitro} culture
+systems that mimiced real liver conditions. In the liver, hepatocytes are found in a complex
+3D environment in which nutrients, soluble factors and oxygen are transported through blood
+capillaries and bile canaliculi. Using silicon as a substrate, Powers \textit{et al} fabricated
+3D liver reactors using array of 300 µm wide channels\citep{powers2002microfabricated}. In their
+device they perfused rat liver cells providing fluid shear stresses at physiological range. They found
+that the cells seeded into the channels rearranged extensively to form 'tissue like' structures and
+remained viable for up to 2 weeks.
+
+Later, Sivaraman \textit{et al} developed a different system to culture liver cells in a 3D scaffold,
+using a polycarbonate housing for a silicon device that contained a microfabricated wells in which the
+cells were seeded and perfused with media. In this work they also found that the cells in the 3D culture
+also had cell-cell contacts that resembled those found in tissues \textit{in
+vivo}\citep{sivaraman2005microscale}. It has been observed that co-culture of hepatocytes with other cell types, inculding liver epithelial cells and Kupffer cells, prolongs the survival of cultured hepatocytes and helps maintain liver-specific properties such as albumin secretion\citep{guguen1983maintenance}.
+
+As 3D cell culture became more and more popular, a new subgenre of microfluidics was formed, organ-on-a-chip. Early efforts had shown
+that microfabrication of adhesive substrates that provided well controlled environments for cell growth and epression of differentiated tissue-
+specific functions\citep{chen1997geometric,bhatia1999effect}. Advances in soft lithography-based microfluidic devices made it easier
+to develop the more complex 3D architecture of living tissues and organs. For example, a poly(dimethylsiloxane) (PDMS) device
+that contained structures that mimiced the structure of the endothelial-epithelial interface that forms the liver sinusoid\citep{nakao2011bile}.
+
+Along with liver: kidney, lung, and body functions were replicated in microfluidic devices shown in \fig{fig:OrganChip}. Whilst the liver and kidney offered highly
+simplified microengineered models, nutrients, hormones, metabolites, cytokines and physical signals are usually transferred across interfaces
+between adjacent living cells \textit{in vivo} and therefore require a much more complex microenvironment
+for true replication. Huh \textit{et al} created a model of the human alveolar-capillary interface formed in a flexible
+PDMS device containing a central channel and two hollow side chambers\citep{huh2010reconstituting}. A 10 µm PDMS membrane containing an
+ordered array of micropores (10 µm diameter) was stretched across the main channel see \fig{fig:OrganChip}. Human alveolar epithelial were then cultured on
+one side of the membrane and exposed to air, while human lung capillary endothelial cells were cultured on the opposing side and exposed to flowing
+medium. When the holllow side chambers were exposed to vacuum the cells were subjected to strain ranging from 5\%-15\% to match strain observed within
+whole lung \textit{in vivo}. In doing so, they found their 'lung on a chip' accentuated inflammatory responses of the cells to silica
+nanoparticles. This mechanical strain also enhanced uptake of nanoparticles and stimulated the transport into the vascular channel and
+similar effects of physiological breathing were observed in whole mouse lung. These early organ on chip experiments paved the way for more complex
+'Body-on-a-chip' devices that contain multiple types of cultured cells connected by a network of
+microfluidic channels that permit recirculation and exchange of metabolites in a physiologically-relevant manner\citep{esch2011role}.
+
 
 \begin{figure}
-  \includegraphics[width=\columnwidth]{Droplets.png}
-  \caption{Formation of droplets in a T-Junction of a microfluidic device the continuous hydrocarbon
-  phase disperses a water phase. Figure from \citep{RN104}}
-  \label{fig:IntroDrops}
+  \begin{center}
+  \includegraphics[width=\textwidth]{Organ-on-a-chip}
+  \end{center}
+  \caption{Organ-Organ and tissue-tissue interfaces in microdevices. Liver chip: A microfluidic liver device with cell culture and flow chambers separated by
+  a baffle that separates cultured hepatocytes from fluid flow to simulate the endothelial-hepatocyte interface of the liver sinusoid. This geometry promotes alignment
+  of hepatocytes in two lines that facilitates the production of functional bile canaliculi along hepatic-cord-like structures\citep{nakao2011bile}. Kidney chip:
+  A simple kidney on a chip that mimics the the interface between epithelium and flowing urine was created by donding a PDMS well and a PDMS channel to either side
+  of a semi-permeable membrane on which cells are cultured and subejected to fluid flow\citep{jang2010multi}. Lung chip: A lung-on-a-chip capable of replicating mechanical
+  strain caused by breathing, fabricated from PDMS that mimics the physiological function of the alveolar-capillary interface in the human lung. The hollow chambers
+  are subjected to cyclic suction to replicate breathing movements whilst fluid flowing mimics blood flow\citep{huh2010reconstituting}. Body chip: A
+  microfluidic device containing multiple linked tissue types representing different organs was conctructed by sealing three cell culture chambers against a cover. Each
+  cell culture chamber contains a 3D ECM gel containing living cells from a different organ. Media was circulated through the chambers via microfluidic channels
+  during operation\citep{sung2009micro}. Figure taken from \citep{huh2012microengineered}.}
+  \label{fig:OrganChip}
 \end{figure}
 
+
+
+Presently, Microfluidics is a large and diverse field, so much so that the areas that started out as sub-categories are now referred to as their
+own field of research, indeed, within the last three years the journal Lab on a Chip has published no less than 116 reviews focusing on a wide variety of applications
+that microfluidics now enjoys, from 3D printed fluidic networks\citep{kinstlinger20163d} to droplet microfluidics for synthetic biology\citep{gach2017droplet} and
+phase behaviour characterization for industrial CO$_2$, oil and gas\citep{bao2017microfluidic}. Form the early days of Manz \textit{et al} the field is
+now virtually unrecognisable and has shown recent results in stem cells\citep{giulitti2019direct} and paper microfluidics for diagnosis of malraia in
+low resource community\citep{reboud2019based}.
+
+
+\subsection{Goal}
+
+Microfluidics is a broad term that covers a wide variety of research, it is classified by the analysis of
+small volumes of liquids usually nL to $\mu$l in doing so it offers a numerous benefits. Microfluidics
+chiefly uses Lab-on-a-chip (LoC) devices or the more archaic term micro total analysis system (µTAS) to
+perform experiments. An LoC is a device capable of scaling labratory functions down to a chip-format. The
+size of this device ranges from a few mm$^2$ to a few cm$^2$ and contain very small volumes of fluid
+typically nano to micro litres.
+
+Currently, NMR spectroscopy is not widely utilised in microfluidic devices or experiments§ and could be
+used to provide extra information on the system can also be used in conjunction with existing methods of
+analysis in microfluidics such as mass spectrometry of fluorescence spectroscopy.
+As NMR leaves sample unpeturbed, this makes it an ideal candidate for \textit{in situ} monitoring of
+living systems.
+
+The goal of the work presented here is to incorporate funcitonal microfluidic experiments with high
+resolution NMR spectroscopy, in such a way that the validity either section, microfluidic or magnetic
+resonance, remains intact. In this way, not ony would NMR become a more widely used tool in the
+microfluidic toolbox it could also become a valuable attachment to compliment existing tools. However,
+this combination is not without significant challenges. Firstly, a probe capable of $\mu$NMR must be
+designed, that fits with a removable chip for ease of parellelisation. This probe must be of comparable
+performance to existing probes, to maintain validity, and work with existing magnets and spectrometers.
+Secondly, the chip, and any functionality that it possesses, must fit into the bore of the magnet which is
+typically around 38 mm in diameter. Thirdly, materials used in construction of the chip must be non-
+magnetic and susceptibility. SOme examples of current devices and their applications are shown in \fig{fig:DifferentChips}.
+
+\begin{figure}
+  \begin{center}
+  \includegraphics[width=\textwidth]{MVChips.jpg}
+  \end{center}
+  \caption{Microfluidic devices developed for this work, as well as for other applications in microfluidic
+  NMR. From the left: A device for perfusion culture of a tissue slice on chip; capable of peristaltic
+  pumping; hydrogenation on a chip; droplet generation; simple sample chamber filler; 2D/3D cell culture
+  device. Figure taken from \citep{RN164}}
+  \label{fig:DifferentChips}
+\end{figure}
+
+By combining these two fields, and harnassing the 'best of both worlds' approach
+new insight and analysis is available. Having quantitative, system-level information in a
+a single or just a few scans could benefit a wide variety of experiments. Enabling microfluidic
+NMR also provides the oppurtunity to scan mass-limited samples such as those commonly found in
+ligand binding reactions\citep{Finch:2016gv} or macrocyclic chemistry\citep{RN81}.
+
+\newpage
 
 \section{NMR theory}
 
