@@ -1,6 +1,6 @@
 % !TEX root = ./Thesis.tex
 
-\chapter{An NMR compatible on-chip Peristaltic Pump}
+\chapter{An NMR compatible on-chip Peristaltic Pump}\label{Chapter:Peristaltics}
 
 \section{Introduction}
 
@@ -22,21 +22,21 @@ culture could also benefit from perfusion provided by the pump supplying them wi
 and nutrients. Ultimately, the goal is to observe active changes on the chip, induced by
 pumping, in real time, using NMR.
 
+\begin{figure}
+\begin{center}
+  \includegraphics[width=\textwidth,height=4cm,keepaspectratio]{UngarFig.png}
+\end{center}
+  \caption{A) A 3D scale diagram of an elastomeric peristaltic pump. The channels are 100 μm wide and 10 μm high. Peristalsis was typically actuated by the pattern 101, 100, 110, 010, 011, 001, where 0 and 1 indicate “valve open” and “valve closed,” respectively. B) Pumping rate of a peristaltic micropump versus various driving frequencies. this
+  figure is reproduced from\citep{RN59}}
+  \label{fig:Ungar}
+\end{figure}
+
 Pumps that integrate pumping ‘on chip’ are key to minimising the dead volume within the device.
 Unger and co-workers\citep{RN59} were amongst the first to do this by using micro-fabricated PDMS valves
 using soft lithography. \fig{fig:Ungar} shows the devices, these work by having a fluid path that has various gas
 channels running perpendicular above. Then by simply applying air pressure, the gas channel expands cutting off
 the flow in the fluid path. When these are actuated in sequence it produces a net movement
 of fluid and flow rates of 2.5 nL/s were achieved.
-
-\begin{figure}
-  \begin{center}
-  \includegraphics[width=\textwidth,height=4cm,keepaspectratio]{UngarFig.png}
-  \end{center}
-  \caption{A) A 3D scale diagram of an elastomeric peristaltic pump. The channels are 100 μm wide and 10 μm high. Peristalsis was typically actuated by the pattern 101, 100, 110, 010, 011, 001, where 0 and 1 indicate “valve open” and “valve closed,” respectively. B) Pumping rate of a peristaltic micropump versus various driving frequencies. this
-  figure is reproduced from\citep{RN59}}
-  \label{fig:Ungar}
-\end{figure}
 
 Leslie et al\citep{RN100} had slightly different
 approach, they used PDMS but in direct contact with the fluid. In the ‘pump’ the PDMS forms

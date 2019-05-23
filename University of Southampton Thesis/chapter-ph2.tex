@@ -1,6 +1,6 @@
 % !TEX root = ./Thesis.tex
 
-\chapter{Parahydrogen induced polarisation}\label{Parahydrogen}
+\chapter{Parahydrogen induced polarisation} \label{Chapter:Parahydrogen}
 
  The majority of the work in this chapter appears in \citep{eills2019high}
 
@@ -329,20 +329,33 @@ where the $\hat{I}_{1x}\hat{I}_{2z}$ and $\hat{I}_{1z}\hat{I}_{2x}$ terms are ob
 
 \section{Introduction}
 
-\begin{figure*}[t]
+\begin{figure*}
+  \centering
+  \includegraphics[width=15cm]{mu1y11-ph2c-fi-190511-paa-reaction-scheme.pdf}
+  \caption{
+    Scheme of the reaction used in the PHIP@chip experiment. Hydrogen gas
+    \textbf{1}
+    enriched in parahydrogen reacts with propargyl acetate \textbf{2} in
+    the presence of the Rh catalyst \textbf{3} to form allyl acetate \textbf{4}.
+  }
+  \label{fig:reaction-scheme}
+\end{figure*}
+
+\begin{figure}
 	\centering
-	\includegraphics[width=0.75\textwidth]{mu1y11-ph2c-fi-190117-fig1}
-	\caption{Overview of the PHIP@chip experiment.
-		a: scheme of the hydrogenation reaction;
+	\includegraphics[width=7cm]{mu1y11-ph2c-fi-190117-fig1.png}
+	\caption{Overview of the PHIP@chip device.
+		% a: scheme of the hydrogenation reaction;
     %
+    a: outline drawing of the chip (dimensions in mm).
 		b: CAD rendering of the chip assembly with individual chip layers
 		separated, consisting of the PMMA chip, PDMS membrane, and two 3D
-		printed holders with threads for the gas and fluid connections;
-		The hydrogen gas
-		diffuses through the PDMS membrane into the flowing liquid;
-		c: Outline drawing of the chip (dimensions in mm).}
+		printed holders with threads for the gas and fluid connections.
+    The hydrogen gas
+		diffuses through the PDMS membrane into the flowing liquid.
+		}
 	\label{fig:phip@chip1}
-\end{figure*}
+\end{figure}
 
 High-resolution NMR
 spectroscopy is a superbly versatile method which provides detailed and
@@ -534,9 +547,10 @@ To generate parahydrogen gas at 50\% para enrichment, hydrogen gas
 containing an iron (III) oxide catalyst cooled to 77~K using liquid
 nitrogen.
 
-The solution before reaction was 20 mM propargyl acetate and 5 mM
+The solution before reaction contained 20 mM propargyl acetate \textbf{2}
+and 5 mM
 1,4-bis(diphenyl\-phosphino)\-butane(1,5-cyclo\-octadiene)\-rhodium
-tetra\-fluoro\-borate in methanol-d\textsubscript{4}. In an attempt to
+tetra\-fluoro\-borate \textbf{3} in methanol-d\textsubscript{4}. In an attempt to
 avoid possible spin relaxation or chemical side-reaction effects,
 dissolved oxygen from the atmosphere was removed by 5 minutes of
 vigorous helium bubbling.
@@ -557,7 +571,7 @@ Solution flow into the chip was controlled with a syringe pump (Cole-Parmer).
 
 \section{Results and Discussion}
 The hydrogenation reaction system employed in the present work is shown in
-\fig{fig:phip@chip1}a.
+\fig{fig:reaction-scheme}.
 Para\-hydrogen-en\-riched hydrogen gas $\mathbf{1}$ was
 allowed to react with propargyl acetate $\mathbf{2}$, in the presence of
 a rhodium catalyst $\mathbf{3}$. The substrate $\mathbf{2}$ was chosen in
@@ -630,56 +644,42 @@ was possible by bubble free transfer through a PDMS membrane in our devices.
   \label{fig:SetUp}
 \end{figure}
 
-\fig{fig:phip@chip1}b and c show the microfluidic device used for the
+\fig{fig:phip@chip1} shows the microfluidic device used for the
 present study. It consists of a chip made from PMMA, which houses a sample
-chamber of 2.5~$\mathrm{\mu l}$ volume that aligns with the transmission line
+chamber of 2.5~$\mathrm{\mu L}$ volume that aligns with the transmission line
 detector of a home-built NMR probe assembly, which was fitted inside of an
-11.7~T NMR magnet.  Fluid is flown through the chip by means of a syringe pump
+11.7~T NMR magnet.
+Fluid is flowed through the chip by means of a syringe pump
 installed outside of the magnet bore; connections are made through threaded
 ports in the two 3D-printed holders shown in \fig{fig:phip@chip1}b.
 Para-enriched H\textsubscript{2} gas at 5~bar above ambient pressure flows
 through a second
-channel in the chip (shown in red in \fig{fig:phip@chip1}b), which runs in
-the immediate vicinity of the liquid channel
-(a depiction of the set-up is given in \fig{fig:SetUp}).
+channel in the chip, which runs in
+the immediate vicinity of the liquid channel. A depiction of the set-up is given in \fig{fig:SetUp}.
 
-
-\begin{figure*}[t]
-	\centering
-	\includegraphics[width=\textwidth]{Fig2.pdf}
-	%
-	\caption{Proton NMR spectra obtained in continuous flow.
-	%
-	a: Buildup of the hyperpolarised signal after initiation of flow;
-	%
-	b: hyperpolarised NMR spectrum. Antiphase doublets from the two
-	hyperpolarised protons A and B are clearly visible at 5.2~ppm and
-	5.9~ppm, respectively.
-	%
-	c: control spectrum obtained with thermal H\textsubscript{2} gas.
-  %
-  Top right: traces b and c with the vertical axis expanded by a factor
-  of 10.
-	}
-	\label{fig:phip@chip2}
-\end{figure*}
 
 \begin{figure}
-  \begin{center}
-	\includegraphics[width=0.5\textwidth]{mu1y11-ph2c-fi-190117-h2fluxsim.pdf}
-  \end{center}
-	\caption{
-		Finite element simulation of hydrogen uptake. a: Diffusive hydrogen
-		flux in the PDMS membrane for different liquid flow rates;
-    %
-		b: final hydrogen concentration in flowing methanol as a function of
-		flow rate. Dashed line: simulation, open circles: NMR measurements.
+	\centering
+	\includegraphics[width=8cm]{mu1y11-ph2c-fi-100506-buildup-curve.pdf}
+	%
+	\caption{a: Single-scan proton NMR spectrum obtained with
+  parahydrogen at 5 bar using the PHIP@chip setup at a continuous
+  flow rate of 8~$\mu$L$\,\text{min}^{-1}$ (top trace with enlargement).
+  Antiphase doublets from the two
+	hyperpolarised protons $\mathrm{H}^a$  and $\mathrm{H}^{b}$ are
+  clearly visible at 5.2~ppm and 5.9~ppm, respectively. Without
+  parahydrogen, these signals are not observed (bottom trace).
+	%%
+	b: Buildup of the hyperpolarised signal ($\mathrm{H}^{a}$)
+  after initiation of flow.
+	%
 	}
-	\label{fig:h2fluxsim}
+	\label{fig:phip@chip2}
 \end{figure}
 
+
 The chip consists of three laser-cut layers of poly methylmethacrylate (PMMA)
-bonded together, as shown in \fig{fig:phip@chip1}b and c. Channels in the
+bonded together, as shown in \fig{fig:phip@chip1}b. Channels in the
 left part of the chip, where it is clamped between the holders, are cut through
 the top layer, while they are scored into the middle layer of the chip (and
 hence sealed from the outside) in the free part of the device.
@@ -691,40 +691,41 @@ The holders, made by 3D printing, keeps the membrane and the chip aligned,
 and maintains mechanical pressure to ensure sealing. Channels
 inside the holders guide the fluid and gas to and from
 the four access points at the top end
-of the chip, as shown in \fig{fig:phip@chip1}c.
+of the chip, as shown in \fig{fig:phip@chip1}b.
 The PDMS membrane acts both as a diffusion conduit for hydrogen gas
 and as a fluid seal.
 In a crucial difference to the otherwise similar geometry of the
 hydrogenation chip used by Bordonali et al\cite{Bordonali:2019jq},
 the gas and liquid channels are arranged side by side, and molecular
-hydrogen diffuses through the bulk of the PDMS membrane rather than through
-the thickness. By clamping the PDMS membrane onto the chip using the
-holders, this makes it possible to use large gas pressures (up to 5 bar in
+hydrogen diffuses through the bulk of the PDMS membrane rather than across the membrane. Clamping the PDMS membrane onto the chip using the
+holders, makes it possible to use large gas pressures (up to 5 bar in
 the present experiments). This would be difficult to achieve in the
 chip presented by Bordonali et al, which has the liquid and gas channels
 arranged on opposite sides of the membrane.
 
 \subsection{Signal Analysis}
 
-\fig{fig:phip@chip2} shows the results of a steady-state PHIP@chip experiment.
+\fig{fig:phip@chip2}a shows a single-scan proton NMR spectrum
+obtained from a steady-state PHIP@chip experiment (top trace), compared
+to the spectrum obtained without parahydrogen (bottom trace).
+The hyperpolarised spectrum is dominated by an antiphase doublet,
+centred at 5.17~ppm, and an antiphase multiplet at 5.92~ppm, corresponding to
+protons in the $\mathrm{H}^a$ and $\mathrm{H}^b$ positions of the
+hydrogenation product \textbf{4}.
 The PDMS membrane is equilibrated with para-enriched hydrogen gas, which is
 supplied from an aluminium storage tank at a regulated pressure of 5~bar. The
-gas flow rate is kept constant at 20~$\text{ml}\,\text{min}^{-1}$ by means of a
+gas flow rate is kept constant at 20~$\text{mL}\,\text{min}^{-1}$ by means of a
 mass flow controller placed after the chip. This ensures that the gas channel
 always contains fresh para-enriched hydrogen gas at the design pressure of
 5~bar. The fluid channel of the chip is pre-filled with a solution of 20~mM
-precursor $\mathbf{2}$ and 5~mM catalyst $\mathbf{3}$ in methanol-d$_4$. NMR
+precursor $\mathbf{2}$ and 5~mM catalyst $\mathbf{3}$ in methanol-$d_4$. NMR
 spectra are acquired every 30~s, using a $\pi/4$ excitation pulse.  The fluid
-channel is connected to a syringe pump situated outside the NMR magnet.  The
+channel is connected to a syringe pump situated outside the NMR magnet.
+The
 liquid flow is started by setting the target flow rate on the syringe pump to
-8~$\mathrm{\mu l\,\text{min}^{-1}}$ (marked by an arrow \fig{fig:phip@chip2}a).
-The NMR signal intensity begins to rise about 30~s later, and reaches saturation
-after about two minutes. The NMR spectra are dominated by an antiphase doublet,
-centred at 5.17~ppm, and an antiphase multiplet at 5.92~ppm, corresponding to
-protons in the A and B positions of the hydrogenation product
-(\fig{fig:phip@chip2}b).  Upon replacing the para-enriched hydrogen gas with
-normal hydrogen gas, these signals are no longer observed
-(\fig{fig:phip@chip2}c).
+8~$\mathrm{\mu L\,\text{min}^{-1}}$ (marked by an arrow \fig{fig:phip@chip2}b).
+The NMR signal intensity begins to rise about 30~s later, and reaches a steady
+state after about two minutes.
 
 Using normal hydrogen gas, a fully labelled spectrum of the reaction mixture
 was obtained using a lower flow rates whilst maintaining
@@ -745,6 +746,17 @@ is shown in \fig{fig:LabelledSpec}
 
 \subsection{Hydrogen Transport}
 
+\begin{figure}
+	\includegraphics[width=7cm]{mu1y11-ph2c-fi-190117-h2fluxsim.pdf}
+	\caption{
+		Finite element simulation of hydrogen uptake. a: Diffusive hydrogen
+		flux in the PDMS membrane for different liquid flow rates;
+    %
+		b: final hydrogen concentration in flowing methanol as a function of
+		flow rate. Solid line: simulation, open circles: NMR measurements.
+	}
+	\label{fig:h2fluxsim}
+\end{figure}
 
 The hydrogen transport through the membrane and its uptake into the flowing
 liquid was simulated using two coupled finite element models: a dilute species
@@ -777,6 +789,19 @@ throughout the chip is given in the supporting information.
 
 \subsection{Sensitivity and Limit of Detection}
 
+\begin{figure}
+	\centering
+	\includegraphics[width=7cm]{mu1y11-ph2c-190510-satrec-summary.pdf}
+	\caption{Saturation recovery results.
+  a: Signal buildup at constant
+	flow rate after saturation (solid dots: measured data points,
+  the dashed line is a guide to the eye);
+	b: Magnitude of the steady-state signal after full recovery (at least
+	100~s after saturation) as a function of flow rate. A clear maximum
+	at 8~$\mu\mathrm{L}\,\text{min}^{-1}$ is observed.}
+	\label{fig:satrec-summary}
+\end{figure}
+
 
 Clearly, the steady-state signals observed at constant flow rate are the result
 of a dynamic equilibrium between the rate of hydrogenation, the rate of
@@ -786,74 +811,11 @@ factors, the NMR signal was suppressed by saturating the spin populations
 with a train of 512 $\pi/2$ pulses separated by 100 $\mu$s delays.
 The signal intensity was then measured as a function of the delay between the
 end of the saturation train and the NMR excitation pulse.
-\fig{fig:phip@chip3}a shows an example of the data thus obtained at a
-flow rate $q=8\,\mathrm{\mu l\,\text{min}^{-1}}$.
+\fig{fig:satrec-summary}a shows an example of the data thus obtained at a
+flow rate $q=8\,\mathrm{\mu L\,\text{min}^{-1}}$ (results for
+other flow rates are given in the SI).
 The signal increases rapidly after saturation, reaching
 steady-state levels after about 10~s.
-
-The intensity of the steady-state NMR signal exhibits a clear maximum with flow
-rate (\fig{fig:phip@chip3}b), reflecting a balance between hydrogen uptake,
-reaction kinetics, and spin-lattice relaxation. The optimum, with the largest signal at
-saturation, is reached at a flow rate of 8~$\mu l\text{min}^{-1}$.
-The nature of the stationary state established in the system at each
-flow rate becomes clearer if the saturation recovery data is plotted in terms
-of the volume displaced during the saturation recovery time $q\tau$, rather
-than the recovery time itself, and normalised to the steady-state signal intensity
-at each flow rate, as shown in \fig{fig:displaced-volume}. At flow rates below
-the intensity maximum at $q<8\,\mathrm{\mu l\,\text{min}^{-1}}$ (solid
-circles in \fig{fig:displaced-volume}),
-the data points collapse onto a curve that shows an initial linear increase
-up to a displaced volume of about 1~$\mu$l, followed by rapid saturation to the
-steady-state value. This initial linear behaviour clearly indicates that the
-signal recovery in this regime is dominated by the convective fluid transport.
-This means that at these flow rates, a constant concentration of
-hyperpolarised material is established in the flowing liquid upstream of the
-sample chamber, and this is simply carried back into view of the NMR detector
-after the saturation pulses end. The maximum signal is reached after a volume
-of about 1.5~$\mu$l has been displaced. This is less than the capacity
-of the sample chamber, reflecting the uneven velocity distribution inside it.
-At flow rates above the optimum ($q\ge 8\,\mathrm{\mu l\,\text{min}^{-1}}$),
-a somewhat different behaviour is observed. The initial recovery rate is
-faster (\fig{fig:displaced-volume}, open circles), and appears to follow
-an exponential rather than linear shape. This suggests that at these flow
-rates, the stationary state is not yet established at the point where the
-liquid enters the sample chamber, and therefore, the observed recovery
-is dominated by the ongoing hydrogenation reaction.
-
-In order to dermine the sensitivity of detection of the hydrogenation product
-at the optimum flow rate, the experiment was repeated using normal hydrogen.
-In this case, the signal from  protons A and B  of the hydrogenation product
-are too weak to be observed above the noise in a single scan. \fig{fig:phip@chip3}d
-shows the averaged signal of 512 transients. Since the methyl group in the
-precursor and the hydrogenation product contribute to the same signal at 2.05~ppm ,
-this signal can be used as a calibration standard, with a concentration of 20~mM
-which is unaffected by the hydrogenation reaction. By comparing this integral to that
-of the signal from the A protons, the concentration of hydrogenated product can be
-quantified. At a flow rate of 8~$\mathrm{\mu l\,\text{min}^{-1}}$, an allyl acetate
-(product) concentration of $(0.29\pm 0.05)\,\mathrm{mM}$ was found, corresponding to a total
-of $(0.725\pm0.125)\,\text{nmol}$ in the $2.5\,\mathrm{\mu l}$ sample volume.
-
-\begin{figure}[]
-	\centering
-	\includegraphics[width=\columnwidth]{Fig3.pdf}
-	\caption{Saturation recovery results.
-	%
-	a: signal buildup at constant
-	flow rate after saturation;
-	%
-	b: magnitude of the steady-state signal after full recovery (at least
-	100~s after saturation) as a function of flow rate. A clear maximum
-	at 8~$\mu\mathrm{l}\,\text{min}^{-1}$ is observed.
-	%
-	c: single-scan steady-state spectrum obtained at the optimum flow rate
-	with para-enriched H\textsubscript{2}; d: spectrum obtained with hydrogen gas
-	in thermal equilibrium. 512 transients have been averaged. Signal enhancement by
-	PHIP was determined by comparing the integral of the positive lobe of signal A in
-	spectrum c to the
-	integral of the corresponding (purely absorptive) peak in spectrum d.
-	}
-	\label{fig:phip@chip3}
-\end{figure}
 
 \begin{figure}
   \begin{center}
@@ -870,9 +832,75 @@ of $(0.725\pm0.125)\,\text{nmol}$ in the $2.5\,\mathrm{\mu l}$ sample volume.
   \label{fig:displaced-volume}
 \end{figure}
 
+The intensity of the steady-state NMR signal exhibits a clear maximum with flow
+rate (\fig{fig:satrec-summary}b), reflecting a balance between hydrogen uptake,
+reaction kinetics, and spin-lattice relaxation. The optimum, with the largest signal at
+saturation, is reached at a flow rate of 8~$\mathrm{\mu L\,\text{min}^{-1}}$.
+The nature of the stationary state established in the system at each
+flow rate becomes clearer if the saturation recovery data is plotted in terms
+of the volume displaced during the saturation recovery time $q\tau$, rather
+than the recovery time itself, and normalised to the steady-state signal intensity
+at each flow rate, as shown in \fig{fig:displaced-volume}. At flow rates below
+the intensity maximum at $q<8\,\mathrm{\mu L\,\text{min}^{-1}}$ (solid
+circles),
+the data points collapse onto a curve that shows an initial linear increase
+up to a displaced volume of about 1~$\mu$L, followed by rapid saturation to the
+steady-state value. This behaviour clearly indicates that the
+signal recovery in this regime is dominated by the convective fluid transport.
+At these flow rates, a constant concentration of
+hyperpolarised material is established in the flowing liquid upstream of the
+sample chamber, and is simply carried back into view of the NMR detector
+after the saturation pulses end.
+The maximum signal is reached after a volume
+of about 1.5~$\mu$L has been displaced. This is less than the capacity
+of the sample chamber, reflecting the uneven velocity distribution inside it.
+At flow rates above the optimum ($q\ge 8\,\mathrm{\mu L\,\text{min}^{-1}}$),
+a somewhat different behaviour is observed. The initial recovery rate is
+faster (\fig{fig:displaced-volume}, open circles), and appears to follow
+an exponential rather than linear shape. This suggests that at these flow
+rates, the stationary state is not yet established at the point where the
+liquid enters the sample chamber, and therefore, the observed recovery
+is dominated by the ongoing hydrogenation reaction.
+
+\begin{figure}
+  \begin{center}
+    \includegraphics[width=6.0cm]{mu1y11-ph2c-fi-190510-pH2-vs-thermal512.pdf}
+  \end{center}
+  \caption{	a: Single-scan steady-state spectrum obtained at the optimum flow rate
+  	with para-enriched H\textsubscript{2}; b: spectrum obtained at the same flow
+    rate with hydrogen gas
+  	in thermal equilibrium. 512 transients have been averaged. Signal enhancement by
+  	PHIP was determined by comparing the integral of the positive lobe of
+    the $\mathrm{H}^a$ signal in spectrum a to the
+  	integral of the corresponding (purely absorptive) peak in spectrum b.}
+  \label{fig:pH2-vs-thermal512}
+\end{figure}
+
+In order to determine the sensitivity of detection of the hydrogenation product
+at the optimum flow rate, the experiment was repeated using normal hydrogen.
+In this case, the signal from  protons $\mathrm{H}^a$ and $\mathrm{H}^b$
+of the hydrogenation product \textbf{4}
+are too weak to be observed above the noise in a single scan.
+\fig{fig:pH2-vs-thermal512}
+compares the hyperpolarised signal (a) to the averaged signal of 512 transients
+obtained with hydrogen in thermal equilibrium (b).
+
+Since the methyl group in the
+precursor and the hydrogenation product contribute to the same signal at 2.05~ppm
+(signal labelled $\mathrm{H}^{e,j}$ in \fig{fig:phip@chip2}a),
+this signal can be used as a calibration standard, with a concentration of 20~mM
+which is unaffected by the hydrogenation reaction. By comparing this integral to that
+of the signal from the $\mathrm{H}^a$ protons, the concentration
+of hydrogenated product can be
+quantified. At a flow rate of 8~$\mathrm{\mu L\,\text{min}^{-1}}$, an allyl acetate
+(product) concentration of $(0.29\pm 0.05)\,\mathrm{mM}$ was found, corresponding to a total
+of $(0.725\pm0.125)\,\text{nmol}$ in the $2.5\,\mathrm{\mu L}$ sample volume.
+
+
+
 This quantity can be used to determine the limit of detection of the
 hyperpolarised product. The signal/noise ratio (SNR) in the spectrum shown in
-\fig{fig:phip@chip3}c is 400($\pm 10\%$), and the line width is $6\pm
+\fig{fig:pH2-vs-thermal512}a is 400($\pm 10\%$), and the line width is $6\pm
 0.5\,\text{Hz}$. The normalised limit of detection is given by \eqn{eqn:nLOD}\[
 \text{nLOD}_\omega = \frac{3 n}{\text{SNR}\,\sqrt{\Delta f}}, \] where $n$ is
 the amount of sample and $\Delta f$ is the signal bandwidth. In the present
@@ -880,37 +908,38 @@ case, one finds $\text{nLOD}_\omega = (2.2\pm
 0.4)\,\text{pmol}\,\sqrt{\text{s}}$. Limits of detection in this range have so
 far only been reported in very limited circumstances, including
 chemically-induced dynamic nuclear polarisation (CIDNP)
-\cite{mompean2018pushing}, or by making use of unconventional detection systems
-such as force-detected magnetic resonance or optical detection methods. Here, conventional inductive detection is used, and retains the full
-resolution and specificity that make proton NMR spectroscopy such a powerful
+\cite{mompean2018pushing}, or or by making use of unconventional low-field
+detection systems
+such as force-detected magnetic resonance or optical detection methods\cite{Rugar:1992dm,Rugar:2004bc,Mamin:2007ff,Poggio:2010jf,
+Maze:2008cs,Staudacher:2013kn,Rugar:2015by,McDermott:2002hp,
+Budker:2007hz,Xu:2006kg,Blanchard:2013gs}. In the
+present case, we are using conventional inductive detection, and retain the full
+resolution and specificity that make high-field
 analytical tool.
 
-\begin{figure*}[t]
+
+\begin{figure}
 	\centering
-	\includegraphics[width=0.92\textwidth]{Fig4.pdf}
+	\includegraphics[width=5cm]{mu1y11-ph2c-fi-190505-PH-TOCSY-combined.pdf}
 	\caption{
 		The continuous flow PHIP@chip approach allows acquisition of
-		two-dimensional spectra with very high sensitivity. Left pane:
-		experimental 2D NMR spectra of the hyperpolarised reaction mixture,
-		flowing at 8~$\mu\mathrm{l}\,\text{min}^{-1}$, along with simulations
-		(right). The diagonal in the TOCSY spectrum is marked by a dashed grey
+		two-dimensional spectra with very high sensitivity.
+    %
+    a: PH-TOCSY spectrum of the hyperpolarised reaction mixture,
+		flowing at 8~$\mu\mathrm{L}\,\text{min}^{-1}$.
+    %
+    b: Simulated PH-TOCSY spectrum. The diagonal in the spectrum is marked by a dashed grey
 		line. Only the protons originating from parahydrogen give signals on
 		the diagonal; the polarisation is transferred to the other locations by
-		the isotropic mixing sequence.  The $^1$H-$^{13}$C HMQC NMR spectrum
-		shows two separate multiplets, each correlating one of the two
-		hyperpolarised protons with the directly bonded $^{13}$C spin. The
-		\textsuperscript{13}C traces in the HMQC spectrum are shown in absolute
-		mode.
-		Right pane (top): Pulse sequences used to acqire TOCSY and HMQC
-		spectra.
-		Right pane (bottom):  1D $^1$H spectrum obtained in directly
-		after a single $\pi/4$ pulse (top) and after applying the
-		MLEV-17 isotropic mixing sequence (bottom). This demonstrates
-		that the hyperpolarisation can be spread throughout the $J$-coupling
-		network.
+		the isotropic mixing sequence. Both PH-TOCSY spectra are plotted in
+    magnitude mode (phase sensitive spectra are given in the SI).
+    %
+    c: $^1$H-$^{13}$C PH-HMQC spectrum
+		showing two separate multiplets, each correlating one of the two
+		hyperpolarised protons with the directly bonded $^{13}$C spin.
 }
-	\label{fig:phip@chip4}
-\end{figure*}
+	\label{fig:PH-TOCSY-HMQC}
+\end{figure}
 
 The mass limit of detection (LOD) for
 protons at a magnetic field of 14.1~T (corresponding to a proton Larmor frequency
@@ -937,8 +966,9 @@ case, the concentration limit of detection from \eqn{eqn:cLOD} is
 \text{cLOD}_\omega =
 \frac{\text{nLOD}_\omega}{V} = (0.88 ± 0.16)\mu\text{M}\sqrt{s}.
 \end{equation}
+
 From the ratio of the signal intensities in the thermal and hyperpolarised
-spectra shown in \fig{fig:phip@chip3}c and d, it is possible to estimate the
+spectra shown in \fig{fig:pH2-vs-thermal512}a and b, it is possible to estimate the
 $\mathrm{^1H}$ polarisation levels. In the thermal spectrum, the SNR is about
 5:1, whereas it is 400:1 in the hyperpolarised spectrum. The thermal spectrum is
 obtained from 512 transients, therefore the single transient thermal SNR would
@@ -953,9 +983,11 @@ given by
 \end{equation}
 where $x_p$ is the mole fraction of parahydrogen in the feed gas, $\gamma$ is
 the magnetogyric ratio, $B_0$ is the magnetic field, and $\hbar$ and $k_B$ are
-Planck's and Boltzmann's constants, respectively.  At a temperature of $T=298$K
+Planck's and Boltzmann's constants, respectively.
+The factor $\frac{1}{\sqrt{2}}$ reflects the use of a $\pi/4$ pulse for the
+hyperpolarised experiment. At a temperature of $T=298$~K
 and a magnetic field of $11.7$~T, and with $x_p=0.5$, this yields
-$\epsilon_{id}\approx 6100$, which is a factor of 3.5 larger than the
+$\epsilon_{id}\approx 5900$, which is a factor of 3.3 larger than the
 experimentally observed enhancement factor. We can therefore conclude that
 about 2/3 of the theoretically available spin order is lost to relaxation under
 the present experimental conditions.
@@ -970,20 +1002,29 @@ As a consequence, hyperpolarised multi-dimensional NMR spectra\cite{Mishkovsky:2
 either using automated reactors combined with NMR flow probes,\cite{Lloyd:2012cf,Eshuis:2015ce}
 or using ultrafast acquisition techniques\cite{Mishkovsky:2008cl,Giraudeau:2009fn,Kiryutin:2019hy}.
 
-The PHIP@chip setup allows straight-forward acquisition of 2D spectra, using
+The PHIP@chip setup allows straightforward acquisition of 2D spectra, using
 conventional $t_1$ incrementation.
-To demonstrate this, 2D TOCSY (Total Correlation
+To demonstrate this, we have taken 2D TOCSY (Total Correlation
 Spectroscopy) and HMQC (Heteronuclear Multiple Quantum Coherence) NMR spectra
-of the reaction mixture at a flow rate of 8~$\mu$l~min$^{-1}$ were collected. The
+of the reaction mixture at a flow rate of 8 $\mathrm{\mu L\,min^{-1}}$.
+The conventional
 pulse sequences were modified by replacing the initial \(\pi\)/2 pulse with a
-\(\pi/4\ \)pulse, and are referred to as ``PH-TOCSY'' (parahydrogen TOCSY) and
-``PH-HMQC'' (parahydrogen HMQC) in \fig{fig:phip@chip4}.  In the text they will
-henceforth simply be referred to as ``TOCSY'' and ``HMQC''.
+\(\pi/4\ \)pulse; we refer to these experiments as ``PH-TOCSY'' (parahydrogen TOCSY) and
+``PH-HMQC'' (parahydrogen HMQC).
 
-A TOCSY spectrum acquired in 20 min is shown in \fig{fig:phip@chip4}, alongside
-a simulated spectrum and the pulse sequence, which deviates from the standard
-TOCSY sequence only in the initial pulse. The acquisition parameters are given
-in \ref{pHMaterialandMethods}
+A PH-TOCSY spectrum acquired in 20 min is shown in \fig{fig:PH-TOCSY-HMQC}a.
+A \emph{thermal equilibrium} TOCSY spectrum of this compound would be
+expected to
+contain diagonal peaks connecting the identical nuclear spins in the two
+acquisition dimensions, and off-diagonal peaks connecting \emph{J}-coupled
+spins. In the PH-TOCSY experiment, the diagonal peaks only appear
+for the two parahydrogen proton signals, because they are the only spins
+significantly polarised in the indirect dimension. The other protons
+are only polarised during the isotropic spin-mixing step of the pulse sequence,
+and hence do not appear in the indirect dimension. These protons only produce
+off-diagonal peaks, connecting them to the parahydrogen pair.
+As shown in \fig{fig:PH-TOCSY-HMQC}b, the simulated spectrum
+closely corresponds to the experimentally observed one.
 
 We would expect a \emph{thermal equilibrium} TOSCY spectrum of this compound to
 contain diagonal peaks connecting the identical nuclear spins in the two
@@ -995,23 +1036,23 @@ are only polarised during the isotropic spin-mixing step of the pulse sequence,
 and hence don't appear in the direct dimension. These protons only produce
 off-diagonal peaks, connecting them to the parahydrogen pair.
 
-An HMQC spectrum acquired in 60 min is shown in \fig{fig:phip@chip4}, alongside
-a simulated spectrum and the pulse sequence, which deviates from the standard
-HMQC sequence only in the initial pulse. The acquisition parameters are given
-in \ref{pHMaterialandMethods}
-
-The HMQC spectrum shows two peaks, linking the parahydrogen protons to the
+A PH-HMQC spectrum acquired in 60 min is shown in \fig{fig:PH-TOCSY-HMQC}c.
+It contains two peaks, linking the parahydrogen protons to the
 \textsuperscript{13}C spins to which they have a direct
-\textsuperscript{1}\emph{J}\textsubscript{CH} coupling. This is supported by
-the simulated spectrum. An experiment of this kind, in which signals are
+\textsuperscript{1}\emph{J}\textsubscript{CH} coupling.
+An experiment of this kind, in which signals are
 detected at full natural abundance of the \textsuperscript{13}C spins (about
-1\%) in a 2.5~$\mu$l  detection volume, is only possible due to both the high
+1\%) in a 2.5~$\mu$L  detection volume, is only possible due to both the high
 polarisation levels and stability of the system.
 
-The results in \fig{fig:phip@chip4} show that the hyperpolarised spin order
+The results in \fig{fig:PH-TOCSY-HMQC} show that the hyperpolarised spin order
 can be spread to other
 protons in the molecule by the application of the isotropic mixing
-sequence MLEV-17 prior to 1D signal acquisition. This simple trick
+sequence MLEV-17
+ \cite{levittSupercyclesBroadbandHeteronuclear1982,baxMLEV17basedTwodimensionalHomonuclear1985}
+ prior to 1D signal acquisition.
+\cbend
+ This simple trick
 allows one to hyperpolarise any protons that are \emph{J}-coupled to the
 parahydrogen pair, which makes the technique more general.
 
@@ -1039,18 +1080,19 @@ only small quantities of hyperpolarised agents are needed.
 \section{Conclusions}
 
 The combination of a
-highly efficient transmission-line NMR micro detector with parahydrogen-induced
-hyperpolarisation leads to an unprecedented sensitivity in inductively detected
+highly efficient transmission-line NMR micro detector with para\-hyd\-ro\-gen-in\-duced
+hyper\-polarisation leads to an un\-precedented sensitivity in inductively detected
 NMR, with a mass limit of detection around 2.2~$\text{pmol}\,\sqrt{\mathrm{s}}$.
-This corresponds to a concentration sensitivity of less than 1~$\mu M\,\sqrt{\text{s}}$,
+This corresponds to a concentration sensitivity of less than 1~$\mu \mathrm{M}\,\sqrt{\text{s}}$,
 which, to our knowledge, has not previously been reached at the volume
-scale of 2.5~$\mu$l.
+scale of 2.5~$\mu$L.
 This opens the perspective to be able to study chemical processes involving
 low-abundance species in mass-limited samples. Obviously, such applications
 require preparation of a hyperpolarised reactant. As the foregoing study shows,
-the necessary chemistry can be integrated in a microfluidic system. It should be noted that the
-parahydrogen used here is enriched to 50\% (compared to 25\%
-at thermal equilibrium); the sensitivity
+the necessary chemistry can be integrated in a microfluidic system.
+It should be noted that
+parahydrogen enriched to 50\% (compared to 25\%
+at thermal equilibrium) has been used; the sensitivity
 could easily be boosted by a factor of three by using pure parahydrogen.
 Microfluidic systems hold great potential in combination
 with hyperpolarised NMR. All hyperpolarisation techniques require coordinated
@@ -1060,13 +1102,43 @@ this can be assisted considerably by integrating some of the necessary chemical
 steps on a microfluidic chip. Parahydrogen can be delivered to a reactive
 solution through a PDMS membrane at sufficient rate to achieve significant
 levels of hyperpolarisation; dissolution and transport of hydrogen in PDMS does
-not appear to lead to signficant ortho-para equilibration.
+not appear to lead to significant ortho-para equilibration.
 The highly stable continuous operation
 of the PHIP@chip system allows quantitative studies
 of the hydrogenation kinetics, and the relevant relaxation processes.
 This is demonstrated by the dependence of the steady-state signal intensity on
-flow rate (\fig{fig:phip@chip3}b, and the recovery of the
-hyperpolarised signal after saturation (\fig{fig:phip@chip3}a)).
+flow rate and the recovery of the
+hyperpolarised signal after saturation (\fig{fig:satrec-summary}).
+Detailed kinetic and transport models, taking into account
+the deprotection of the catalyst, hydrogen dissolution in the flowing
+liquid, the hydrogenation reaction, and spin-lattice relaxation,
+are currently being developed in our laboratory and will be reported
+on a separate occasion.
+
+The successful demonstration of PHIP on a chip opens important perspectives.
+Conditions can be optimised for continued production of hyperpolarised metabolites,
+which opens the possibility to conduct in-situ metabolic studies in microfluidic
+cultures of cells, tissues, and organisms.
+While the hyperpolarised compound used here, allyl acetate, is not
+a metabolite per se, the production of hyperpolarised metabolic species
+through PHIP has been demonstrated before \cite{cavallari201813,shchepin2014parahydrogen,reineri2015parahydrogen,Ripka:2018dc,Korchak:2018ga,hovener2018parahydrogen}.
+Some metabolites, such as fumarate, can be
+generated directly by hydrogenation
+of an unsaturated precursor \cite{Ripka:2018dc}. Aime et al. have proposed a more generally
+applicable method \cite{reineri2015parahydrogen}, which relies on the metabolite bound to an alkyne sidearm
+through an ester linkage. After hydrogenation, the polarisation is  transferred to a
+\textsuperscript{13}C nucleus in the metabolic moiety, and the sidearm is
+cleaved.  PHIP@chip opens the possiblity of implementing these additional
+production steps on the same chip. While previous demonstrations of sidearm hydrogenation have been carried
+out at low magnetic field, it may be possible to adapt recently developed
+efficient methods for heteronuclear polarisation transfer at
+high field\cite{eills2017singlet} to this purpose.
+In turn, this may enable integration
+of the hyperpolarised metabolite generation with an on-chip culture
+of cells or other biological systems.
+Thanks to its stability,
+the setup provides a convenient means to optimise pulse sequences
+and reaction conditions for producing hyperpolarised targets.
 
 The successful demonstration of PHIP on a chip opens important perspectives.
 Conditions can be optimised for continued production of hyperpolarised metabolites,
