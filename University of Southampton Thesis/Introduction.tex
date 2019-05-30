@@ -11,60 +11,61 @@ The first analytical miniaturised device fabricated on silicon was presented in 
 in seconds and included an injection valve and a 1.5 m long seperation column. A thermal conductivity detector
 was fabricated seperately, and clamped to the silicon wafer containing the column. This subsequently allowed for
 a reduction in size of nearly 3 orders of magnitude compared to the conventional lab equipment at the time,
-and is regarded\citep{reyes2002micro} as the first demonstration of the power of miniaturisation from which, the
+and is regarded \citep{reyes2002micro} as the first demonstration of the power of miniaturisation from which, the
 field of lab-on-a-chip and microfluidics would be born.
-From this, into the 1980s research related to miniaturisation focused on the fabrication of
-components, like micropumps\citep{van1988piezoelectric,van1989thermo}, and microvalves\citep{shoji1988prototype},
+Into the 1980s, research related to miniaturisation focused on the fabrication of
+components, like micropumps \citep{van1988piezoelectric,van1989thermo}, and microvalves \citep{shoji1988prototype},
 rather than silicon based analysers.
 
 In 1990, work describing a miniaturised liquid chromatograph on a silicon
-wafer was published\citep{manz1990design}. This work described a 5 x 5 mm chip containing a
+wafer was published \citep{manz1990design}. This work described a 5 x 5 mm chip containing a
 column and detector that was connected to an off-chip HPLC pump and valves to perform high pressure
 liquid chromatography. Concurrently, the concept of a 'miniaturised total analysis system' (µTAS) was introduced
-by Manz \textit{et al}\citep{manz1990miniaturized}, where the incorporation of sample pretreatment, separation,
+by Manz \textit{et al} \citep{manz1990miniaturized}, where the incorporation of sample pretreatment, separation,
 and detection onto a single device was proposed to enhance the analytical performance of the device rather
-than to arbitrarily reduce its size. However, it was also recognised that miniaturisation of the device
-presented the advantage of smaller consumption of materials, crucially, this miniaturisation would also
-enable integration of multiple separation techniques capable of monitoring many coponents in a single device.
+than to just simply reduce its size. However, it was also recognised that miniaturisation of the device
+presented the advantages of not only a smaller consumption of materials, but would also
+enable integration of multiple separation techniques capable of monitoring many components in a single device.
 
 Such a device was envisioned as capable of sample handling, analysis, detection, and incorporating control of
 mass transport and measurements. Conventional pumps at the time struggled with the high pressures needed for transport
 in small channels and early theoretical considerations showed that electroosmotic pumping was an attractive and
 feasible way to move aqueous liquid through a µTAS especially when separation was needed.
 
-Electroosmotic is defined as the motion of liquid induced by an applied potential, an electroosmotic pump
+Electroosmosis is defined as the motion of liquid induced by an applied potential. An electroosmotic pump
 has no moving parts and produces an even flow in the entire length of the channel, ideal for early applications
 of µTAS that imagined separating and analysing aqueous solutions. Early efforts were first put into optimising
 injection and separationg by switching voltages between the reservoirs containing reagent, carrier and
-waste\citep{manz1991integrated}.
+waste \citep{manz1991integrated}.
 
-Electrophoresis in a µTAS was reported in 1992 using silicon and glass\citep{harrison1992capillary}. This
+Electrophoresis in a µTAS was reported in 1992 using silicon and glass \citep{harrison1992capillary}. This
 demostrated success in using electroosmotic pumping for flow control in interconnected channels without the
 use of valves. The concept of integrating injection, separation, and detection was demostrated. As electrophoresis
-is most commonly used to separate biological samples (usually charged molecules in aqueous solution) it started to be
-coupled with laser induced fluorescence to detect amino acids separated on-chip\citep{seiler1993planar}. In
+is most commonly used to separate biological samples, usually charged molecules in aqueous solution, it started to be
+coupled with laser induced fluorescence to detect amino acids separated on-chip \citep{seiler1993planar}. In
 addition to separation of biological samples, applications of reactions concerning biomolecules and the
 handlng of cells started to emerge.
 
-Microfabricated devices found uses in DNA amplification by
-PCR\citep{woolley1996functional} and cellular metabolism\citep{bousse1994micromachined}.
-As analysis of biological samples in water continued to be persued, fabrication of the devices
+Microfabricated devices found uses in DNA amplification by polymerase chain reaction
+(PCR) \citep{woolley1996functional} and cellular metabolism \citep{bousse1994micromachined}.
+As analysis of biological samples in water became available, fabrication of the devices
 from glass and silicon became unecessary and inappropriate. Silicon was at the time expensive, but more
 importantly, opaque to visible and UV-light and so couldn't be used with conventional methods of optical
 detection frequently used in biology. The increasing complexity of the systems meant it became
-important for pumps and valves to be integrated into the device, these are more easily made from elastomers
+important for pumps and valves to be integrated into the device these are more easily made from elastomers
 than rigid materials. The trend towards studying mammalian cells lead to different requirements such as gas
 permeability which neither glass or silicon can provide. This required replacement of silicon and glass with
-polymers\citep{RN5}.
+polymers \citep{RN5}.
 
 Poly(dimethylsiloxane) (PDMS) was the polymer of choice, the properties of which differ greatly
-from silicon or glass\citep{ng2002components,whitesides2001flexible}. The switch to PDMS was made even
+from silicon or glass \citep{ng2002components,whitesides2001flexible}. The switch to PDMS was made even
 more attractive by the development of soft-lithography as a method for building prototype
-devices\citep{mcdonald2000fabrication} and the development of a method to fabricate pneumatically actuated valves
-pumps and mixers\citep{mcdonald2000fabrication}. Thse are only possible due to the elastomeric nature of PDMS
+devices \citep{mcdonald2000fabrication} and the development of a method to fabricate pneumatically actuated valves,
+pumps, and mixers \citep{mcdonald2000fabrication}. Thse are only possible due to the elastomeric nature of PDMS
 and would not be possible with a pure silicon or glass devices.
-These improved methods of fabrication lead to the developments of the components required for more sophisticated
-experiments in the form of valves\citep{weibel2005torque}, mixers\citep{gunther2005micromixing} and pumps\citep{laser2004review}.
+The improved methods of fabrication lead to the developments of the components required for more sophisticated
+experiments in the form of: valves that enabled immunoassays(\fig{fig:immunoassay})\citep{weibel2005torque}; an integrated
+microfluidic system for efficient mixing \citep{gunther2005micromixing}; and pumps\citep{laser2004review}.
 With these compnents, microfluidics was in a position to tackle more complex problems one example of the complexity is shown in \fig{fig:immunoassay}.
 
 
@@ -73,19 +74,18 @@ With these compnents, microfluidics was in a position to tackle more complex pro
   \includegraphics[width=\columnwidth,height=5cm,keepaspectratio]{Torque-immunoassay.jpg}
   \end{center}
   \caption{Coponents of a microfluidic device got increasingly complicated. This device from Ref.\citep{weibel2005torque} performs
-  immunoassays - widely used in medical and biological research. The screws circled are manually operated valves. Water with green dye
+  immunoassays - widely used in medical and biological research. The screws (dashed circles) are manually operated valves. Water with green dye
   shows the channels.}
   \label{fig:immunoassay}
 \end{figure}
 
 
 As these fabrication methods become more widely used the field of microfluidics moved, from
-adding components to its analytical
-arsenal, to starting to apply microfluidic systems to resolving problems.
-These systems then found applications in protein cyrstallisation\citep{hansen2002robust},
-separations coupled with mass spectroscopy\citep{ramsey1997generating}, single cell manipulation\citep{wheeler2003microfluidic},
-and synthesis of $^19$F-labelled organic compounds for use in PET
-scans\citep{lee2005multistep}.
+adding components to its analytical arsenal, to starting to find applications for devices.
+Microfluidic devices then found applications in protein cyrstallisation \citep{hansen2002robust},
+separations coupled with mass spectroscopy \citep{ramsey1997generating}, single cell manipulation \citep{wheeler2003microfluidic},
+and synthesis of $^{19}$F-labelled organic compounds for use in PET scans \citep{lee2005multistep}.
+
 A subsection of microfluidics began to emerge around this time too, as
 low reynolds numbers make multiphase flow manipulation
 relatively easy, the generation and manipulation of droplets\citep{thorsen2001dynamic, link2004geometrically, tan2004design} began to be explored.
@@ -106,85 +106,89 @@ produced in microfluidic devices is shown in \fig{fig:IntroDrops}.
 
 In parallel, another branch of microfluidics was being developed. Its goal was to
 culture cells in a repeatable way. In their normal environment, cells are subject to multiple
-cues that can vary greatly, including cytokines and secreted proteins from neighbouring cells, biochemical
+cues including cytokines and other signalling molecules from neighbouring cells, biochemical
 interactions with the extracellular matrix, mechanical stress and direct cell to cell contacts.
 Microfluidics was seen as an ideal method of providing cells with these cues in a controlled and reproducible fashion that couldn't be easily
-replecated with conventional cell culture. The idea at the time was that devices could combine
+replecated with conventional cell culture, by using microfludic devices one can combine
 cell culture with analytical techniques in order to probe the biochemical processes that
-govern all manner of cell behaviour.
+govern cell behaviour.
 
 \begin{figure}
   \begin{center}
   \includegraphics[width=\columnwidth,height=12cm,keepaspectratio]{Microfluidic-Cell-Culture.jpg}
   \end{center}
   \caption{A collection of microfluidic devices that enabled cell based assays from cell culture, to selection and treatment,
-  to analysis. \textbf{a}, Six biorexctors are operated in parallel in a single chip to monitor small numbers of cells\citep{balagadde2005long},
+  to analysis. \textbf{a}, Six biorexctors are operated in parallel in a single chip to monitor small numbers of cells \citep{balagadde2005long},
   \textbf{b}, Microfluidic cell-culture array with integrated concentration gradient generator (left). Image of concentration
-  gradient when blue and yellow dye is used (right)\citep{RN41}. \textbf{c} Two laminar streams exposing two sides of a single cell to different
-  conditions\citep{takayama2001laminar}.
-  \textbf{d}, Perfusion over a single trapped cell. The perfusion media can be switched in 100 ms\citep{wheeler2003microfluidic}. \textbf{e}, (left) Cell dielectrophoresis
-  trap. (right) Fluorescent image of trapped cell indicated by blue arrow\citep{Voldman:2002gf}. \textbf{f}, Fluorescent image of light path at the detection
-  zone in a micro flow cytometer\citep{wang2004measurements}. \textbf{g} Scanning electron micrograph of a mechanical lysis device with sharp knife-like protrusions\citep{di2003reagentless}.
-  \textbf{h}, Schematic of electrical lysis device with microelectrodes\citep{lee1999micro}. \textbf{i}, Isoelectric focusing of cell organelles\citep{lu2004microfabricated}.
-  \textbf{j}, Two-dimensional separation of four model proteins. Isoelectric focusing (top) followed by SDS gel electrophoresis\citep{li2004integration}.
-  \textbf{k}, Schematic of immunoassay using microbeads as a solid support\citep{sato2002microchip}. \textbf{l}, Schematic of a hollow cantilever-mased mass sensor
-  for analyte detection\citep{burg2003suspended}. Taken from Ref.\citep{el2006cells}}
+  gradient when blue and yellow dye is used (right) \citep{RN41}. \textbf{c} Two laminar streams exposing two sides of a single cell to different
+  conditions \citep{takayama2001laminar}.
+  \textbf{d}, Perfusion over a single trapped cell. The perfusion media can be switched in 100 ms \citep{wheeler2003microfluidic}. \textbf{e}, (left) Cell dielectrophoresis
+  trap. (right) Fluorescent image of trapped cell indicated by blue arrow \citep{Voldman:2002gf}. \textbf{f}, Fluorescent image of light path at the detection
+  zone in a micro flow cytometer \citep{wang2004measurements}. \textbf{g} Scanning electron micrograph of a mechanical lysis device with sharp knife-like protrusions \citep{di2003reagentless}.
+  \textbf{h}, Schematic of electrical lysis device with microelectrodes \citep{lee1999micro}. \textbf{i}, Isoelectric focusing of cell organelles \citep{lu2004microfabricated}.
+  \textbf{j}, Two-dimensional separation of four model proteins. Isoelectric focusing (top) followed by SDS gel electrophoresis \citep{li2004integration}.
+  \textbf{k}, Schematic of immunoassay using microbeads as a solid support \citep{sato2002microchip}. \textbf{l}, Schematic of a hollow cantilever-mased mass sensor
+  for analyte detection \citep{burg2003suspended}. Taken from Ref.\citep{el2006cells}}
   \label{fig:CellCulture}
 \end{figure}
 
 
 Microfluidic devices have been used enable cell-based assays from cell culture to biochemical analysis. In
 \fig{fig:CellCulture} images of different devices are shown that convey how complex the devices being
-produced were becoming, depite integration of functionalities proving difficult, these demonstrate the
+produced were becoming, despite integration of functionalities proving difficult, these demonstrate the
 power of miniaturisation and the ingenuity being developed in the field.
 Microfluidics can offer unique control over cell-cell and soluble cues typical of
 \textit{in vivo} cell environments by combining microfabrication of 3D extracellular matrix (ECM)
-structres and fluid networks that can deliver nutrients and oxygen.
+structres and fluid networks that can deliver nutrients and oxygen \citep{folch1999molding}.
 
 Throughout the 2000s, microfabrication, which combined micropatterning techniques such as
 photolithography, photoreactive chemistry, and soft lithography, made it possible to engineer the
-microenvironment of the cell on similar length scales\citep{folch2000microengineering}. This surface
-patterning of micrometre sized features, enabled control of cell-EDM interactions and was used
+microenvironment of the cell on similar length scales to the cell itself \citep{folch2000microengineering}. This surface
+patterning of micrometre sized features enabled control of cell-EDM interactions and was used
 to fabricate 3D scaffolds on which to grow cells that were made of biodegradable
-materials\citep{tsang2004three}.
+materials \citep{tsang2004three}.
 
-One of application was the 3D culture of liver cells. \textit{In vitro} culture
-of liver cells was of particular interest as many drugs failed clinical studies because they
+One area of application was the 3D culture of liver cells. \textit{In vitro} culture
+of liver cells is of particular interest as many drugs fail clinical studies because they
 either damaged the liver directly, or because the metabolites produced by the liver are toxic
-\citep{sivaraman2005microscale}. Efforts were then made to produce \textit{in vitro} culture
-systems that mimiced real liver conditions. In the liver, hepatocytes are found in a complex
+\citep{sivaraman2005microscale}. Efforts were made to produce \textit{in vitro} culture
+systems that mimic real liver conditions. In the liver, hepatocytes are found in a complex
 3D environment in which nutrients, soluble factors and oxygen are transported through blood
 capillaries and bile canaliculi. Using silicon as a substrate, Powers \textit{et al} fabricated
-3D liver reactors using array of 300 µm wide channels\citep{powers2002microfabricated}. In their
+3D liver reactors using array of 300 µm wide channels \citep{powers2002microfabricated}. In their
 device they perfused rat liver cells providing fluid shear stresses at physiological range. They found
 that the cells seeded into the channels rearranged extensively to form 'tissue like' structures and
 remained viable for up to 2 weeks.
 
 Later, Sivaraman \textit{et al} developed a different system to culture liver cells in a 3D scaffold,
-using a polycarbonate housing for a silicon device that contained a microfabricated wells in which the
-cells were seeded and perfused with media. In this work they also found that the cells in the 3D culture
+using a polycarbonate housing for a silicon device that contained microfabricated wells in which the
+cells were seeded and perfused with media. They also found that the cells in the 3D culture
 also had cell-cell contacts that resembled those found in tissues \textit{in
-vivo}\citep{sivaraman2005microscale}. It has been observed that co-culture of hepatocytes with other cell types, inculding liver epithelial cells and Kupffer cells, prolongs the survival of cultured hepatocytes and helps maintain liver-specific properties such as albumin secretion\citep{guguen1983maintenance}.
+vivo} \citep{sivaraman2005microscale}. It has been observed that co-culture of hepatocytes with other cell types,
+inculding liver epithelial cells and Kupffer cells, prolongs the survival of cultured hepatocytes and helps maintain
+liver-specific properties such as albumin secretion \citep{guguen1983maintenance}.
 
-As 3D cell culture became more and more popular, a new subgenre of microfluidics was formed, organ-on-a-chip. Early efforts had shown
-that microfabrication of adhesive substrates that provided well controlled environments for cell growth and epression of differentiated tissue-
-specific functions\citep{chen1997geometric,bhatia1999effect}. Advances in soft lithography-based microfluidic devices made it easier
+As 3D cell culture became more widely used, a new subgenre of microfluidics was formed, organ-on-a-chip. Early efforts had shown
+that microfabrication of adhesive substrates provided well-controlled environments for cell growth and epression of differentiated tissue-specific functions
+\citep{chen1997geometric,bhatia1999effect}. Advances in soft lithography-based microfluidic devices made it easier
 to develop the more complex 3D architecture of living tissues and organs. For example, a poly(dimethylsiloxane) (PDMS) device
-that contained structures that mimiced the structure of the endothelial-epithelial interface that forms the liver sinusoid\citep{nakao2011bile}.
+that contained structures that mimic the structure of the endothelial-epithelial interface that forms the liver sinusoid \citep{nakao2011bile}.
 
-Along with liver, kidney, lung, and body functions were replicated in microfluidic devices shown in \fig{fig:OrganChip}. Whilst the liver and kidney offered highly
+Along with liver function, kidney, lung, and body functions were replicated in microfluidic devices shown in \fig{fig:OrganChip}. Whilst the liver and kidney offer highly
 simplified microengineered models, within organs \textit{in vivo} nutrients, hormones, metabolites, cytokines and physical signals are usually transferred across interfaces
 between adjacent living cells and therefore require a much more complex microenvironment
 for true replication. Huh \textit{et al} created a model of the human alveolar-capillary interface formed in a flexible
-PDMS device containing a central channel and two hollow side chambers\citep{huh2010reconstituting}. A 10 µm thick PDMS membrane containing an
-ordered array of micropores (10 µm diameter) was stretched across the main channel see \fig{fig:OrganChip}. Human alveolar epithelial cells were then cultured on
+PDMS device containing a central channel and two hollow side chambers \citep{huh2010reconstituting}. A 10 µm thick PDMS membrane containing an
+ordered array of micropores (10 µm diameter) was stretched across the central channel, splitting it in two see \fig{fig:OrganChip}.
+Human alveolar epithelial cells were then cultured on
 one side of the membrane and exposed to air, while human lung capillary endothelial cells were cultured on the opposing side and exposed to flowing
 medium. When the holllow side chambers were exposed to vacuum, the cells were subjected to strain ranging from 5\%-15\% to match strain observed within
 whole lung \textit{in vivo}. In doing so, they found their 'lung on a chip' accentuated the inflammatory responses of the cells to silica
 nanoparticles. This mechanical strain also enhanced uptake of nanoparticles and stimulated the transport into the vascular channel and
 similar effects of physiological breathing were observed in whole mouse lung. These early organ on chip experiments paved the way for more complex
 'Body-on-a-chip' devices that contain multiple types of cultured cells connected by a network of
-microfluidic channels that permit recirculation and exchange of metabolites in a physiologically-relevant manner\citep{esch2011role}.
+microfluidic channels that permit recirculation and exchange of metabolites in a physiologically-relevant manner \citep{esch2011role} and
+has found applications in drug screening and disease modelling \citep{skardal2016organoid}.
 
 
 \begin{figure}
@@ -204,41 +208,121 @@ microfluidic channels that permit recirculation and exchange of metabolites in a
   \label{fig:OrganChip}
 \end{figure}
 
+As the complexity of cell culture within microfludic devices increased, so to, did the detection methods. Coupling
+a dector to an LOC is critical for any analytical purpose. A number of detector technologies were demonstrated in
+microfluidic devices including electrochemical\citep{wang2006electrochemical}, mechanical \citep{raiteri2001micromechanical},
+and optical methods \citep{kuswandi2007optical}. The small sample volumes typical to a microlfuidic experiment
+are an important challenge to overcome for any detector, ideally, a detector should be highly sensitive and scalable
+to smaller dimensions.
 
+The mechanism and features of the detection technologies summarised in \citep{pires2014recent} and
+reproduced in Table \ref{tab:detectors}.
+
+\newpage
+
+\begin{table}
+\begin{center}
+    \label{tab:detectors}
+    \begin{tabular}{|p{5cm}||p{5cm}||p{5cm}|}\hline\hline
+      Method & Mechanism & Features \\ \hline
+      Electrochemical & Measures changes in conductance, resistance and/or capacitance at the active surface of the elctrodes  &
+      (+) Real-time detection, (+) Low-cost microelectrode fabrication, (-) Control of ionic concentrations before detection, (-) Short sehelf life  \\ \hline
+      Mechanical & Detection is based on variations of the resonant frequency or surface stress of the mechanical sensor &
+      (+) Monolithic sensor integration, (+) Label free detection, (-) damping effects in liquid samples, (-) Detection takes time (~30 mins), (-) Complex fabrication  \\ \hline
+      Optical & Detects variations in light intensity, refractive index sensitivity, or interference pattern &
+      (+) Minimal sample preparation, (+) Real-time detection, (+) Ubiquitous in laboratories, (-) Conventional instrumentation is expensive, (-) Set-up complexity \\ \hline\hline
+    \end{tabular}
+\caption{Summary of electrochemical, mechanical and optimal deteciton technologies employed in microfluidics.}
+\end{center}
+\end{table}
+
+Electrochemical detection involves the interaction of chemical species with electrodes or probes. This interaction
+results in a variation of signal, such as potential or current, which enables analysis of target analytes. The
+electrochemical phenomenon deals with two major effects: (i) chemical reactions are promoted by passing an
+electrical current through the electrode system; or (ii) electrode responses are triggered due to specific chemical reactions. These
+effects are usually observed using an eletrolytic cell. Reactions of oxidation and reduction occurring at the surface of the electrodes
+are the basis for electron transfers between the electrolyte (sample) and the electrodes. In a typical
+electrolytic cell, the electrode system is formed by the working electrode where detection of a certain
+analyte is analyzed, and the reference electrode where a standard oxidation/reduction is conducted \citep{flanagan2005electrochemical}.
+Wongkaew \textit{et al} reported an electrochemical biosensor that employed microelectrode array. In
+the array, adjacent electrode fingers form micro-sized gaps which allow an increase of the diffusion flux
+of chemical species, thus leading to an enhanced collection efficiency and higher signal amplification.
+The microchannels of the device were made by hot embossing PMMA and the electrodes were made by e-beam
+and wet-etching processes. The detection of targets using this system took 250 seconds and reported
+limit of detection of 12.5 µM.
+
+Mechanical detection systems mainly used cantilever technology, which showed that it could be accurate
+when detecting biomolecules \citep{waggoner2007micro}. Cantilever-based devices generally operate in two
+different modes upon analyte binding: (i) static deflection, where binding on one side of a cantilever
+causes unbalanced surface stress resulting in a measurable deflection; (ii) dynamic, resonant mode, where
+binding on a cantilever causes variations of its mass and consequently shifts the resonant frequency.
+Mechanical-based detection may require no labelling of biomolecules. Labels often make the detection
+method more complicated, time-consuming and costly, and could interfere with the function of biomolecules
+under investigation. Anoter characteristic of cantilever technology is the potential to fabricate large
+arrays of sensors for multi-molecular sensing \citep{ferrari2005cancer}. Hou \textit{et al} \citep{hou2013aptamer} presented
+a device that contained a microfabricated canter lever array  for the  specific detection of
+oxytetracycline (OTC), a common broadband antibiotic used in animals that can accumulate in our food chain
+and cause side effects on humans. The device achieved this by functionalising the cantilvers with OTC
+specific DNA aptamers which bind to the OTC and icrease the load on the cantilevers and causes them
+to deflect and once calibrated can indicate the concentration of OTC in solution. The limit of detection
+in this case is 0.2 nM in 1000 seconds.
+
+Optical detection is preferred for robust, sensitive Lab on a chip devices it has been the most widely
+used technique for quantitative proteomic analysis \citep{rusling2010measurement} and infectious disease
+diagnostics \citep{foudeh2012microfluidic}, due, in part, to the ubiquity of the optical instrumentation
+required in biological laboratories meaning these devices can be used readily in most locations.
+Conventional optical detection methods, including absorbance \citep{wang2011integration},
+chemiluminescence \citep{wojciechowski2009organic}, fluorescence \citep{yildirim2012aptamer}, and surface
+plasmon resonance (SPR) \citep{foudeh2014sub}, have all been applied in microfluidic devices. Foudeh
+\textit{ et al} \citep{foudeh2014sub} developed an SPR microdevice for the detection of
+\textit{Legionella pneumophila} which is the pathogenic organism that causes Legionellosis, and
+is responsible for fatality rates over 10\% within hospital and indutrial outbreaks
+\citep{swanson2000legionella}. The device is ultra-sensitive to RNA of \textit{Legionella pneumophila}
+and has a limit of detection of 1 pM in less than 3 hours.
 
 Presently, Microfluidics is a large and diverse field, so much so that the areas that started out as sub-categories are now referred to as their
 own field of research, indeed, within the last three years the journal Lab on a Chip has published no less than 116 reviews focusing on a wide variety of applications
-that microfluidics now enjoys, from 3D printed fluidic networks\citep{kinstlinger20163d} to droplet microfluidics for synthetic biology\citep{gach2017droplet} and
-phase behaviour characterization for industrial CO$_2$, oil and gas\citep{bao2017microfluidic}. Form the early days of Manz \textit{et al} the field is
-now virtually unrecognisable and has shown recent results in the production of stem cells using messenger RNAs\citep{giulitti2019direct} and paper microfluidics for diagnosis of malraia in
-low resource community\citep{reboud2019based}.
+that microfluidics now enjoys such as: 3D printed fluidic networks\citep{kinstlinger20163d}; droplet microfluidics for synthetic biology\citep{gach2017droplet};
+phase behaviour characterization for industrial CO$_2$, oil and gas\citep{bao2017microfluidic}; the production of stem cells using messenger RNAs\citep{giulitti2019direct};
+and paper microfluidics for diagnosis of malraia in low resource community\citep{reboud2019based}.
 
 
 \subsection{Goal}
 
-Microfluidics is a broad term that covers a wide variety of research, it is classified by the analysis of
-small volumes of liquids usually nL to $\mu$l, in doing so it offers a numerous benefits. Microfluidics
-chiefly uses Lab-on-a-chip (LoC) devices, or the more archaic term micro total analysis system (µTAS), to
-perform experiments. An LoC is a device capable of scaling labratory functions down to a chip-format. The
-size of this device ranges from a few mm$^2$ to a few cm$^2$ and contain very small volumes of fluid
-typically nano to micro litres.
+Microfluidics is a broad term that covers a wide variety of research, it is characterised by
+the analysis of small volumes of liquids usually nL to $\mu$L, in doing so, it offers numerous benefits
+such as: a reduction in the materials used in experiemnts which leads to less cost and less waste; a high
+level of control over the microenvironment; and ease of parallelisation and automation.
+Microfluidics chiefly uses Lab-on-a-chip (LoC) devices, or micro total analysis
+systems (µTAS), to perform experiments. These devices, or systems, are intended for the of scaling down of
+labratory functions to a chip-format, the sizes of which range from a few mm$^2$ to a few cm$^2$.
 
-Currently, NMR spectroscopy is not widely utilised in microfluidic devices or experiments and could be
-used to provide extra information on the system can also be used in conjunction with existing methods of
-analysis in microfluidics such as mass spectrometry of fluorescence spectroscopy.
-As NMR leaves sample unpeturbed, this makes it an ideal candidate for \textit{in situ} monitoring of
+Currently, NMR spectroscopy is not widely utilised in microfluidic devices, or experiments, and could be
+used to provide extra information on the system. It can also be used in conjunction with existing methods
+of analysis in microfluidics such as fluorescence spectroscopy.
+As NMR leaves the sample unpeturbed, this makes it an ideal candidate for \textit{in situ} monitoring of
 living systems.
 
-The goal of the work presented here is to incorporate funcitonal microfluidic experiments with high
+The goal of the work presented here is to incorporate functional microfluidic experiments with high
 resolution NMR spectroscopy, in such a way that the validity of either section, microfluidic or magnetic
-resonance, remains intact. In this way, not ony could this enable NMR become a more widely used tool in the
-microfluidic toolbox it could also become a valuable addition to compliment existing tools. However,
-this combination is not without significant challenges. Firstly, a probe capable of $\mu$NMR must be
-designed, that fits with a removable chip for ease of parellelisation. This probe must be of comparable
-performance to existing probes, to maintain validity, and work with existing magnets and spectrometers.
-Secondly, the chip, and any functionality that it possesses, must fit into the bore of the magnet which is
-typically around 38 mm in diameter. Thirdly, materials used in construction of the chip must be non-
-magnetic and have matching susceptibilities. Some examples of current devices and their applications are shown in \fig{fig:DifferentChips}.
+resonance, remains intact. In this approach, microfluidic capability is preserved by utilising a design
+that, whilst constrained by size and shape, has freedom to house a wide variety of chip designs that enable
+a host of applications, a few of which are shown in \fig{fig:DifferentChips}. This means that functional
+microfluidics can be performed, and coupled, with high resolution NMR spectroscopy. In this way not only
+could NMR become a more widely used tool in the microfluidic toolbox, it would also make a valuable
+attachment to existing tools
+
+High resolution NMR spectroscopy itself requires an extremely homogenous magnetic field, this means that
+any device capable of combining microfluidics and NMR should seek to preserve the homogeneity. This combination, however, is not without significant challenges. Firstly, a probe capable of µNMR must
+be designed with comparable performance to existing probes, to maintain validity, and work with existing
+magnets and spectrometers. Secondly, the chip, and any functionality it possesses must fit in the bore of
+the magnet which is typically around 38 mm in diameter. This chip should also couple to the probe in a
+removable way to enable parallelisation of experiments, preserving one of the key attributes of microfluidics.
+Thirdly, the materials used in construction should be non-magnetic wherever possible and the use of magnetic
+parts should be kept to a minimum. When designing experiments, the magnetic susceptibilities of solutions and
+chip material should also be considered as these need to be as closely matched as possible in order to preserve
+spectral resolution (a solution for when this isn’t the case is discussed in chapter \ref{Chapter:Droplets}).
+
 
 \begin{figure}
   \begin{center}
@@ -251,7 +335,7 @@ magnetic and have matching susceptibilities. Some examples of current devices an
   \label{fig:DifferentChips}
 \end{figure}
 
-By combining these two fields, and harnassing the 'best of both worlds' approach
+By combining these two fields, and harnessing the 'best of both worlds' approach
 new insight and analysis is available. Having quantitative, system-level information in a
 a single or just a few scans could benefit a wide variety of experiments. Enabling microfluidic
 NMR also provides the oppurtunity to scan mass-limited samples such as those commonly found in
@@ -313,7 +397,7 @@ Boltzmann distribution:
 
 where $P_{\beta}/P_{\alpha}$ is the population ratio between the states, $k_B$ is Boltzmann constant, and $T$ is the temperature. The polarisation, $p$, of a system of
 spin-1/2 nuclei is
-\begin{equation}
+\begin{equation}\label{eqn:Polarisation}
   p = \frac{P_\alpha - P_\beta}{P_\alpha + P_\beta}
 \end{equation}
 
@@ -707,7 +791,7 @@ states by taking the tensor product of the basis states
   0\\
   0\\
   0
-\end{pmatrix} &
+\end{pmatrix} &\quad
 \ket{\alpha_{1}\beta_{2}} = \ket{\alpha_1} \otimes \ket{\beta_2} = \begin{pmatrix}
   0\\
   1\\
@@ -719,7 +803,7 @@ states by taking the tensor product of the basis states
   0\\
   1\\
   0
-\end{pmatrix} &
+\end{pmatrix} &\quad
 \ket{\beta_{1}\beta_{2}} = \ket{\beta_1} \otimes \ket{\beta_2} = \begin{pmatrix}
   0\\
   0\\
@@ -732,7 +816,7 @@ spin 1 is in the $\beta$ state and spin 2 is in the $\alpha$ state.
 
 \subsubsection{Operators}
 
-Operators act on states. To explain this, let's consider a generic operator $\hat{B}$ with eigenstates $\ket{\alpha}$ and $\ket{beta}$. When a state is acted upon by an operator it is denoted by:
+Operators act on states. To explain this, let's consider a generic operator $\hat{B}$ with eigenstates $\ket{\alpha}$ and $\ket{\beta}$. When a state is acted upon by an operator it is denoted by:
 \begin{equation}
   \hat{B}\ket{\alpha} = b\ket{\alpha}
 \end{equation}
@@ -851,7 +935,7 @@ We will now discuss how these are used in describing the spin dynamics of a spin
 
 \subsubsection{Density Operator}
 
-The density operator gives us information on the state of groups of spins in a spin system.
+The density operator is a description of an ensemble of spin sytems.
 
 Let's go back once again to a spin-1/2 particle in a magnetic field. Where $\ket{\psi}$ is some superposition state in the two level system such that:
 \begin{align}
@@ -867,21 +951,24 @@ Let's go back once again to a spin-1/2 particle in a magnetic field. Where $\ket
 The density operator has the form:
 \begin{equation}
   \hat\rho = \overline{\ket{\psi}\bra{\psi}} = \begin{pmatrix}
-    c_1c_1^* & c_1c_2^*\\
-    c_2c_1^* & c_2c_2^*
+    \overline{c_1c_1^*} & \overline{c_1c_2^*}\\
+    \overline{c_2c_1^*} & \overline{c_2c_2^*}
 \end{pmatrix}
 \end{equation}
+Where $\overline{\ket{\psi}\bra{\psi}}$ denotes the ensemble average.
 
 If the number of spins is increased, the denstiy operator's form does not change instead it provides
-an average fo the entire group of spin states. The population of a given state is given by the expectation value of the density operator as in \eqn{eqn:expectation}. If we would like to know
+an average for the entire ensemble of spin states. The population of a given state is given by the expectation
+value of the density operator as in \eqn{eqn:expectation}. If we would like to know
 the population of state $\ket{\alpha}$ we would perform the following:
+
 \begin{equation}
-  \langle\alpha\vert\hat\rho\vert\alpha\rangle = \langle\alpha\vert\psi\rangle \langle\alpha\vert\psi\rangle = c_1^*c_1
+  \langle\alpha\vert\hat\rho\vert\alpha\rangle = \overline{\langle\alpha\vert\psi\rangle} \overline{\langle\alpha\vert\psi\rangle} = \overline{c_1^*c_1}
 \end{equation}
 
 The diagonal elements of $\hat\rho$ are state populations or the probabilities of being in a certain state.
 
-The off-diagonal elements are coherences between states. These coherences are complex numbers and two coherences between the same pair of states are complex cojugates of each other. e.g.:
+The off-diagonal elements are coherences between states. These coherences represent superposition These coherences are complex numbers and two coherences between the same pair of states are complex cojugates of each other. e.g.:
 \begin{equation}
   \langle\alpha\vert\hat\rho\vert\beta\rangle = (\langle\beta\vert\hat\rho\vert\alpha\rangle)^* = c_1c_2^* = (c_1^*c_2)^*
 \end{equation}
@@ -943,8 +1030,6 @@ The Hamiltonian, the energy operator, describes how the system evolves in time a
 
 \subsubsection{The Hamiltonian}\label{Hamiltonian}
 
-As mentioned the Hamiltonian is the energy operator. It provides information on the enrgies of states in a system.
-
 If we let $\ket{\psi_1}$ and $\ket{\psi_2}$ be eigenstates of the Hamiltonian $\hat{H}$ then
 \begin{align}
   \hat{H}\ket{\psi_1} = E_1\ket{\psi_1}\\
@@ -982,7 +1067,7 @@ to give the relationship
 \begin{equation}
   \frac{\partial}{\partial{t}}\hat\rho = -i[\hat{H},\hat\rho]
 \end{equation}
-this is called the Louisville von Neumann equation.
+this is called the Liouville von Neumann equation.
 
 Returning to our spin-1/2 particle in a magnetic field. The Hamiltonian is initially
 proportional to the $z$ angular momentum operator
@@ -1007,10 +1092,10 @@ The density operator evolves under a Hamiltonian like so:
   \hat\rho(t) = \text{exp}\{-i\hat{H}t\}\hat\rho(0)\text{exp}\{+i\hat{H}t\}
 \end{equation}
 
-In \eqn{eqn:propagate}, we saw that the precession of a spin-1/2 particle in a magnetic field can be described using the rotation superoperator around the $z$-axis $\hat{\hat{R}}_z(\omega t)$. We know that for this system its analagous to $\hat{H} = \omega\hat{I}_4$.
+In \eqn{eqn:propagate}, we saw that the precession of a spin-1/2 particle in a magnetic field can be described using the rotation superoperator around the $z$-axis $\hat{\hat{R}}_z(\omega t)$. We know that for this system its analagous to $\hat{H} = \omega\hat{I}_z$.
 
-If the density operator commutes with the Hamiltonian there is no evolution of the system
-this can be seen more clearly using propagators with $\hat{H} = \omega\hat{I}_z$ and $\rho(0) = \hat{I}_z$
+If the density operator commutes with the Hamiltonian there is no evolution of the system.
+This can be seen more clearly using propagators with $\hat{H} = \omega\hat{I}_z$ and $\rho(0) = \hat{I}_z$
 \begin{equation}
   \rho(t) = \text{exp}\{-i\omega t\hat{\hat{I}}_z\}\hat{I}_z\text{exp}\{+i\omega t\hat{\hat{I}}_z\} = \hat{I}_z
 \end{equation}
@@ -1065,7 +1150,8 @@ limited.
 \begin{equation}\label{eqn:Webb}
   M_0 = \frac{\gamma~h}{4\pi}(I(I+1))(P_{\alpha}-P_{\beta}) = N\gamma^2\hbar^2I(I+1)\frac{B_0}{3k_BT}
 \end{equation}
-where $\gamma$ is the gyromagnetic ratio of the nucleus,$\hbar$ is Plankc's constant $h$/2\pi, $P_{\alpha}-P_{\beta}$ is the population difference between zeeman energy levels seen in \ref{Population}, $B_0$ is the magnetic field, $N$ is
+where $\gamma$ is the gyromagnetic ratio of the nucleus,$\hbar$ is Planck's constant $h$/2$\pi$, $P_{\alpha}-P_{\beta}$
+is the population difference between zeeman energy levels seen in \ref{Population}, $B_0$ is the magnetic field, $N$ is
 the number of spins per unit volume , $k_B$ is the Boltzmann constant and T is the absolute temperature. The magnetisation
 and therefore signal depends on the population difference which at room temperature is on the order of $10^{-25}$J
 which is much lower that the thermal energy of the system. From the equation, increasing $B_0$ would seem a
@@ -1081,15 +1167,16 @@ motion of ions in solution. The signal to noise ratio, SNR, is an important fact
 the signal will never be seen.
 
 The SNR was formulated by Abragam\citep{Abragam:1961vg} and the analysis extended by Hoult and
-Richards\citep{Hoult:1976dw} and is defined as the peak signal divided by the root mean square (rms) noise including the magnetisation from \eqn{eqn:Webb} we find\citep{vanBentum:2007fda}:
-\begin{equation}
-  \text{SNR} = \frac{k_0\frac{B_1}{i}V_s\omega_0\frac{1}{\sqrt{2}}M}{F\sqrt{4k_BTR_{\text{noise}}\Delta~f}}
+Richards\citep{Hoult:1976dw} and is defined as the peak signal divided by the root mean square (rms) noise. By including
+the magnetisation from \eqn{eqn:Webb} we find \citep{vanBentum:2007fda}:
+\begin{equation}\label{eqn:SNR}
+  \text{SNR} = \frac{k_0\frac{B_1}{i}V_s\omega_0\frac{1}{\sqrt{2}}M_0}{F\sqrt{4k_BTR_{\text{noise}}\Delta~f}}
 \end{equation}
 where $k_0$ is a contant that accounts for spatial inhomogeneities in the $B_1$ field, $V_s$ is the sample volume,
 $\omega_0$ is the larmour frequency, the factor $\frac{1}{\sqrt{2}}$ is introduced as the noise is rms noise. The
 factor $B_1/i$ the magnetic field from the coil per unit current is defined as the coil sensitivity. The denominator is
 the noise determined by the noise factor from the spectrometer ($F$) and the dissipative loses ($R_{\text{noise}}$) of
-the coil, circuit and sample for the spectral bandwidth $\Delta~f$. T is the absolute temperature and $k_b$ is the
+the coil, circuit and sample for the spectral bandwidth $\Delta~f$. $T$ is the absolute temperature and $k_b$ is the
 boltzmann constant.
 
 In the same paper, Hoult and Richards introduced the principle of reciprocity for calculating the
@@ -1132,14 +1219,14 @@ Resistance is:
 with l, the height of the copper cylinder, d the diameter and $\rho$ the resistivity.
 Optimum coil sensitivity is given by $d/l$ = $1$ in this case the signal to noise is:
 \begin{equation}
-  SNR = 0.9\times10^-16\frac{N_s}{d\sqrt{\delta~f}}
+  SNR = 0.9\times10^{-16}\frac{N_s}{d\sqrt{\Delta~f}}
 \end{equation}
 For a fixed number of spins the SNR scales with 1/d as predicted by \citep{Hoult:1976dw}
 
 \subsection{Limit of Detection}
 
-The signal to noise ratio can be found in the time or frequency domain. In the time domain the noise, $N$, is
-~$\sqrt{\Delta~f}$. Therefore the SNR in the time domain is not a good measure of sensitivity, it can be
+The signal to noise ratio can be found in the time or frequency domain. In the time domain the noise, $N$, is proportional to
+$\sqrt{\Delta~f}$. Therefore the SNR in the time domain is not a good measure of sensitivity, it can be
 artificially inflated by narrowing the bandwidth. Instead it is better to use \textit{limit of deteciton}, deined as
 the number of spins that have to resonate within a bandwidth of 1 Hz to give an SNR of 3. This gives
 the normalised limit of detection as\citep{Badilita:2011td}:
@@ -1155,11 +1242,11 @@ In the frequency domain, this becomes
 here, $\Delta~t$ is the effective acquisition time for a single scan given by the inverse of the
 line broadening applied in the processing of the spectrum.
 
-Practically, NMR relies on signal averaging see \ref{Signal Averaging} to enhance the spectra, this
+Practically, NMR relies on signal averaging (see \ref{Signal Averaging}) to enhance the spectra. This
 method requires waiting between scans for the spins to reach thermal equilibrium. In
-this case the a better measure of sensitivity can be applied by using total measurement time
+this case, a better measure of sensitivity can be applied by using total measurement time
 as $\Delta~t$. The drawback here, is that the limit of detection now depends on instrumentation
-and sample as $T_1$ relaxation dictates the experiment repitition rate.
+and sample as $T_1$ relaxation dictates the experiment repetition rate.
 
 \subsection{Concentration limit of detection}
 
@@ -1167,14 +1254,19 @@ Both types of LOD discussed so far are absolute measures. It is often of more
 interest to examine the \textit{concentration} limit of detection cLOD. This is given by
 dividing the LOD by the sample volume:
 \begin{equation}\label{eqn:cLOD}
-  \text{cLOD} = \frac{\text{nLOD}}{\alpha_fV_c}
+  \text{cLOD} = \frac{nLOD}{V_s} = \frac{\text{nLOD}}{\alpha_fV_c}
 \end{equation}
-Where $V_c$ is the volume of the coil and $\alpha_f$ is the filling factor defined in \eqn{eqn:FillingFactor}
+Where $V_c$ is the volume of the coil and $\alpha_f$ is the filling factor defined in \eqn{eqn:FillingFactor}.
 
-One of the major reasons for development of micro-NMR has been the scaling of SNR and thefore LOD
+\eqn{eqn:SNR} and \eqn{eqn:Webb} show that overall the SNR and
+magnetisation depend on number of spins and energy level population differences, therefore, best practice
+would be to wherever possible have higher $B_0$ to increase population differences and in the case of
+concentrated limited samples to have a larger volume, increasing the number of spins.
+One of the major reasons, however, for development of micro-NMR has been the scaling of SNR and thefore LOD
 with coil size. The trade off here is that as the coil size, and LOD, becomes lower and lower, the
 volume shrinks too which leads to losses in cLOD. Micro-NMR therefore, only makes sense for mass
 or volume limited samples.
+
 
 \subsection{Transmission line probe}
 
