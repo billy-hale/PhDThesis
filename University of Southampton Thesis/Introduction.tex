@@ -358,373 +358,134 @@ Nuclear magnetic resonance (NMR) theory can be described using two approaches:
 The theory described in this chapter is mainly from \citep{RN135,RN136} and is intended to provide sufficient background
 knowledge in order for the reader to understand later chapters.
 
-\subsection{Classical NMR}
-
-\subsubsection{Spin}
-
-Atoms, often modelled as a clump of neutrons and protons at
-the centre known as the nuceleus, surrounded by electrons, have a property reffered to as spin.
-
-In fact, nuclear spin is an intrinsic property of the nucleus and can take half or whole
-integer values, including $0$. In this thesis one spin- 1/2 nucleus, the proton ($\ce{^{1}H}$) will be discussed, with another spin-1/2 nucleus \ce{^{13}C} making
-sparse appearences. Just like in this thesis, $\ce{^{13}C}$ only has an $\approx{1}\%$
-abundance in nature with the other $\approx{99}\%$ $\ce{^{12}C}$ having a spin-$0$
-nucleus.
-
-All spin-1/2 nuclei possess a magnetic dipole moment and behave rather like small bar magnets in that, when placed in an external magnetic field they have a tendency to align
-with the field. In NMR this external field is called $B_0$, and is orientated along the
-$z$-axis.
-
-\subsubsection{Population}\label{Population}
-
-In a magnetic field, a spin-1/2 nucles has two energy levels with a separation that is proportional to the strength of the magentic field, a schematic is show in \fig{fig:EnergySplit}. We label these levels $\alpha$ and $\beta$.
-
-\begin{figure}
-  \begin{center}
-  \includegraphics[width=\textwidth,height=5cm,keepaspectratio]{EigenStateLevel.pdf}
-  \end{center}
-  \caption{Energy level and $\Delta~E$ of the two energy levels for a spin-1/2 nucleus}
-  \label{fig:EnergySplit}
-\end{figure}
-
-When measuring a group of spins, each spin can exist in either the $\alpha$ or $\beta$ state and overall
-the spins have a slight preference for the lower energy state, $\alpha$. This preference can be quantified
-by calculating the difference in populations ($P$) which at thermal equilibrium is governed by the
-Boltzmann distribution:
-\begin{equation}\label{eqn:Boltzmann}
-  \frac{P_{\beta}}{P_{\alpha}} = \text{exp}\{\frac{-\Delta{E}}{k_B T}\}
-\end{equation}
-
-where $P_{\beta}/P_{\alpha}$ is the population ratio between the states, $k_B$ is Boltzmann constant, and $T$ is the temperature. The polarisation, $p$, of a system of
-spin-1/2 nuclei is
-\begin{equation}\label{eqn:Polarisation}
-  p = \frac{P_\alpha - P_\beta}{P_\alpha + P_\beta}
-\end{equation}
-
-For a system in an NMR experiment which typically operates at 298$K$ and
-a field of 14.1 T the polarisation level is circa $10^{-5}$ meaning That the spins are aligned weakly in the same direction as the magnetic field. It is this small polarisation that gives rise to the NMR signal and why NMR is famed for sensitivity
-issues. One possible solution to this, hyperpolarisation, will be described in a later chapter.
-
-\subsubsection{Nuclear spin precession}
-
-When placed in a magnetic field, the nuclei will precess around the axis of the field at a rate known as the larmour frequency defined as:
-\begin{equation}\label{eqn:larmour}
-  \omega_j^0 = -\gamma_jB_0
-\end{equation}
-
-where $\gamma_j$ is the gyromagnetic ratio for a nucleus, $j$. The gyromagnetic ratio is
-typically $10$s of MHz T$^{-1}$ that give larmour frequencies in the $100$s of MHz in an NMR
-experiment.
-
-\subsubsection{Magnetisation as a vector}
-
-The net magnetic moment of a spin ensemble can be modelled by a 3D vector that can rotates in space. The essence of this is shown in \fig{fig:VectorFig}. Magnetisation is intially taken to be orientated along the $z$-axis, this is called longitudinal magnetisation. It is then rotated into the $xy$-plane which is called transverse
-magnetisation that then precesses about the $z$-axis.
-
-\begin{figure}
-  \begin{center}
-  \includegraphics[width=\textwidth]{VectorFig.pdf}
-  \end{center}
-  \caption{Magnetisation shown as a vector in red, at equilibrium, is orientated on the $z$-axis. A $pi$/2
-  pulse rotates the vector to the $xy$-plane where it begins to precess around the $z$-axis.}
-  \label{fig:VectorFig}
-\end{figure}
-
-How this vector changes in a magnetic field is described using the Bloch equations\citep{Bloch:1946hk}. These are a group of differential equations that
-describe how the magnetisation vector components evolve in time in the
-presence of orthogonal magnetic fields.
-\begin{align}\label{eqn:Bloch}
-  \frac{dM_x(t)}{dt}\quad=\quad\gamma(M_y(t)B_z(t)-M_z(t)B_y(t))\\
-  \frac{dM_y(t)}{dt}\quad=\quad\gamma(M_z(t)B_x(t)-M_x(t)B_z(t))\\
-  \frac{dM_x(t)}{dt}\quad=\quad\gamma(M_x(t)B_y(t)-M_y(t)B_x(t))
-\end{align}
-where $M_a$ is the magnetisation vector component along the $a$-axis, $B_a$ is the
-magnetic field along the $a$-axis, and $\gamma$ is the gyromagnetic ratio as described before.
-
-In the case of processing magnetisation around the $z$-axis, here denoted $B_0$, the
-Bloch equations can be written as
-\begin{align}
-  \frac{dM_x(t)}{dt}\quad=&\quad\gamma~B_0M_y(t)\\
-  \frac{dM_x(t)}{dt}\quad=&\quad-\gamma~B_0M_x(t)\\
-  \frac{dM_x(t)}{dt}\quad=&\quad0
-\end{align}
-these have the solutiion
-\begin{align}
-  \frac{dM_x(t)}{dt}\quad=&\quad\cos(\omega^0t)M_x(0) + \sin(\omega_0t)M_y(0)\\
-  \frac{dM_x(t)}{dt}\quad=&\quad\cos(\omega^0t)M_y(0) + \sin(\omega_0t)M_x(0)\\
-  \frac{dM_x(t)}{dt}\quad=&\quad0
-\end{align}
-where $\omega^0$ is the larmour frequency from \eqn{eqn:larmour}.
-
-\subsubsection{Pulses and rotating frame}
-
-\subparagraph{Rotating frame}
-
-The field, $B_0$, of a regular NMR experiment is many Tesla, giving precession
-frequencies of hundreds of megahertz. These frequencies correspond to radio frequencies in the electromagnetic spectrum. When considering these precessing spins
-it can be useful to change from a static frame to a rotating frame of reference.
-
-The general case is when the rotating frame is at frequency $\omega_{rot}$, in this
-frame, the larmour frequency will appear to be ($\omega - \omega_{\text{rot}})$. This is called the offset,$\Omega$ and is given by:
-\begin{equation}
-  \Omega = \omega -\omega_{\text{rot}}
-\end{equation}
-
-It follows from this, that if the apparent larmour frequency in the rotating frame is different from that in the static frame, it must also be the case that the apparent magnetic field in the rotating frame must be different from the applied
-field. We can use \eqn{eqn:larmour} to compute the apparent magnetic field, $B^{\text{red}}_0$:
-\begin{align}\label{eqn:redB}
-  \Omega =& -\gamma~B^{\text{red}}_0\\
-\text{hence}\quad~B^{\text{red}}_0 =& \frac{\Omega}{\gamma}
-\end{align}
-this apparent magnetic field in the rotating frame is called the reduced field, $B_{\text{red}}$.
-
-\begin{figure}
-  \begin{center}
-  \includegraphics[width=\textwidth, height=7cm, keepaspectratio]{B1Bred.pdf}
-  \end{center}
-  \caption{In the rotating frame the effective field, $B_{\text{eff}}$, is the vector sum of the reduced field,
-  $B_{\text{red}}$ and the $B_1$ field. $\theta$ is the tilt angle defined between $B_{\text{red}}$ and $B_{\text{eff}}$}
-  \label{fig:BMag}
-\end{figure}
-
-
-\subparagraph{Pulses}
-
-In NMR experiments, pulses are used to manipulate magnetisation in order to obtain a signal. A pulse can be
-thought of as a magnetic field oscillating at the frequency of the rotating frame
-applied in the $xy$-plane in order to induce procession of the magnetisation. This magnetic field is labelled $B_1$ and is much smaller in amplitude than $B_0$, the actual applied field.
-
-\begin{figure}
-  \begin{center}
-  \includegraphics[width=\textwidth]{SpinRelaxation.pdf}
-  \end{center}
-  \caption{A) A graphical representation used to describe a pulse sequence, the width and height of the block
-  refer to the power and duration of pulse respectively, the line represents the acquisition of signal. B)(1) The
-  magnetisation lies in equilibrium along the $z$-axis. (2)  The $\pi/2_y$ pulse rotates the magnetisation around the $y$-axis. (3) The magnetisation precesses in the $xy$-plane around the $z$-axis and returns to thermal equilibrium}
-  \label{fig:Pulse}
-\end{figure}
-
-In the static frame, the magnetisation is processing around $B_0$ at the larmour frequncy, so a relatively weak $B_1$ applied along the $y$-axis, for example, would do little to peturb it, given the effective magnetic field, $B^{\text{eff}}_0$, is calculated by:
-\begin{equation}
-  B^{\text{eff}}_0 = \sqrt{(B_1)^2+(B_0)^2}
-\end{equation}
-the much larger $B_0$ dominates here, however, if we apply the $B_1$ in the rotating
-frame this becomes
-\begin{equation}
-  B^{\text{eff}}_0 = \sqrt{(B_1)^2+(B^{\text{red}}_0)^2}
-\end{equation}
-and using \eqn{eqn:redB} as $\omega_{\text{rot}}\rightarrow\omega$, $\Omega\rightarrow0$ and $B^{red}_0\rightarrow0$ so by making the offset small, or zero, the effective field
-then lies close to the $xy$-plane and so the magnetisation will be rotated down
-from $z$ which is what we'd like to acheive for our experiments.
-
-The key, is that although $B_0$ is much larger than $B_1$, we can still affect magnetisation using $B_1$ by making it oscillate close to the larmour frequency
-this is the phenomena of resonance. The angle between $B^{\text{red}}_0$ and $B^{\text{eff}}$ is
-called the tilt angle, $\theta$. It can be seen from \fig{fig:BMag} that:
-\begin{equation}
-\sin(\theta) = \frac{B_1}{B_{\text{eff}}}\qquad\cos(\theta) = \frac{B^{red}_0}{B_{\text{eff}}}\qquad\tan(\theta) = \frac{B_1}{B^{\text{red}}_0}
-\end{equation}
-
-These radio frequency (rf) pulses are useful because they can be used to address spins at a specific larmour
-frequncy. By applying an rf pulse on resonance with $\ce{^1H}$ we can manipulate the magnetisation of the nuclei whislt not affecting other spins (e.g. $\ce{^13C}$) contained in the sample.
-
-\subsubsection{Fourier Transform NMR}
-
-In this section we will examine how we can produce an NMR spectrum from the magnetisation of a sample
-using the rf pulses we introduced.
-
-In NMR we use a pulse sequence to describe the intensity and duration of pulses used in an
-experiment, shown in \fig{fig:Pulse}. The rf pulse, $B_1$, is a $\pi/2$ pulse in the $y$-axis, followed by a signal
-acquisition. This pulse tips the magnetisation into the $xy$-plane, and if the pulse length is much less than the
-precession period (we will assume so), the spins begin to precess freely around the $z$-axis at the larmour
-frequency, $\omega_0$, until they return to the $z$-axis through a process described in \ref{Relaxation}.
-
-In a usual NMR experiment the signal is inductally detected. The oscillation of the spins in the sample induces
-a current in the pick-up coils around the sample, which is detected, amplified and transformed into a spectrum.
-The resulting free induction decay (FID) is typically an exponentionally decaying sinusoidal function. The signal
-produced from this can be written as:
-\begin{align}\label{eqn:signal}
-  S(t) =& \sum_l s_l(t) \\
-  s_l(t) =& a_l\text{exp}\{-(i\omega_l+\lambda_l)t\} = a_l(\cos(\omega_lt) + i\sin(\omega_0t))\text{exp}\{-\lambda_l~t\}
-\end{align}
-where $S(t)$ is the total signal from from the sample and $s_l$ are the individual spins. Each spin has an amplitude, $a_l$, and an associated decay constant, $\lambda_l$. The nature of which will be discussed in \ref{Relaxation} section. Exponential to trigometric function conversion
-is done according to Euler's formula: $\text{exp}\{ix\} = \cos(x) + i\sin(x)$.
-
-$S(t)$ is easy to evaluate and interpret if it originates from one spin or a group of spins precessing
-at precisely the same frequency, however, if there are more spins in the sample processing at different frequencies
-the FID becomes extremely hard to interpret on its own.
-
-We can clear this picture up however by employing a Fourier transform. This comverts the time-domain data
-into the frequncy-domain, such that the total signal in the frequency domain, $S(\omega)$ is the sum of all individual spin signals in the frequency, $S_l(\omega)$:
-\begin{equation}
-  S(\omega) = \sum_l S_l(\omega)
-\end{equation}
-This allows us to clearly see which resonances are possessed by our spins in the sample. To
-perform a Fourier transform we must do the following:
-\begin{equation}
-  S_l(\omega) = \int_{0}^{\infty}s_l(t)\text{exp}\{-i\omega t\}dt
-\end{equation}
-and using \eqn{eqn:signal} can be rewritten:
-\begin{equation}
-  S_l(\omega) = a_l\int_{0}^{\infty}\text{exp}\{(-i(\omega+\omega_l)+\lambda_l t\}dt
-\end{equation}
-sometimes written more concisely as:
-\begin{equation}
-  S(\omega) = \mathcal{F}\{S(t)\}(\omega)
-\end{equation}
-where $S(t)$ is the signal for the time domain (FID) and $S(\omega)$ is the signal in the frequency domain.
-
-The Fourier transform of our general case is:
-\begin{equation}
-  \mathcal{F}\{S(t)\}(\omega) = a_l\frac{1}{\lambda_l + i(\omega - \omega_l)}
-\end{equation}
-which is Lorentzian function centered at $\omega_l$ with peak width parameter $\lambda_l$.
-
-The NMR signal represented in the frequency domain is a spectrum. It is usually many peaks
-indicating different resonance frequencies of spins in the sample. In the next
-section we will discuss chemical shift and J-coupling. Two additional effects that when combined
-with larmour frequencies already discussed forms the NMR spectrum as we know it.
-
-\subsubsection{Chemical Shift and J-coupling}
-
-In a molecule, nuclei are surrounded by clouds of electrons which can shield, or de-sheild, it
-from the effects of the external field $B_0$.
-
-The chemical shielding factor, $sigma$, shifts the resonance frequency of the nuclear spin. We
-can now include it in \eqn{eqn:larmour}:
-\begin{equation}
-  \omega_j^0 = -\gamma_jB_0(1-\sigma)
-\end{equation}
-this chemical shielding is specific to each nucleus in the molecule. It is possible
-for two or more nuclei to share the same factor. We refer to these as being chemically equivalent.
-
-The shielding is often around $10^-6$ for $\ce{^1H}$. When plotting and examining spectra
-it is would not be useful to use absolute frequecies, as discussed they are regualarly in the hundreds of MHz,
-whereas the differences in peaks might only be kHz or less. To combat this we use a relative frequency scale
-called chemical shift, $\delta$, it is defined as:
-\begin{equation}
-  \delta = \frac{\omega_j-\omega^\text{ref}_j}{\omega^\text{ref}_j}
-\end{equation}
-where $\omega_j$ is the precession frequency of the nucleus of interest, and $\omega^\text{ref}_j$ is the precession
-frequency of a reference nuclei. $\delta$ is a dimentionless number, unaffected by magnetic field strength, it often
-small compared to the size of the field and is reported in parts per million (ppm).
-
-In addition to the external $B_0$ field, the nuclear spins are also affected by the magnetic fields generated
-by neighboring spins. These magnetic fields are mediated by the electrons in the chemical bonds. This is refered to as
-spin-spin couling or $J$-coupling and gives rise to peak splittings in spectra. These splittings, and therefore the values of $J$-couplings, range from a few Hz to a thousand Hz typically. It is an important factor and is icorperated
-in the quatum description on NMR in \ref{Hamiltonian}.
-
-Both of these, $\sigma$ and $J$-couplings, are tensors this means they depend on the orientation of the molecule
-and the spin with respect to the magetic field. In liquids, however, tumble rapidly compared to the timescale
-of an NMR experiment. This averages the interactions resulting in a scalar quantity for each.
-
-There are additional effects the nuclear spins experience, for example, dipole-dipole coupling which
-is a through space spin-spin coupling, and quadrapole coupling where there are spins with >1/2 values
-however, these are not relevant to this work.
-
-\subsubsection{Relaxation}\label{Relaxation}
-
-The last part needed to complete our classical understanding of NMR is relaxation. Relaxation is the process
-of the spin returning to the thermal equilibrum. The thermal equilibrium of spin-1/2 nuclei in a
-magnetic field is the bulk magnetisation vector pointing in the direction of the $B_0$ field.
-
-In this system there are two forms of relaxation, $T_1$ and $T_2$. $T_1$ is the longitudal relaxation time
-constant and $T_2$ is the transverse relaxation time constant the difference between them is shown in \fig{fig:t1t2}.
-$T_1$ is the rate constant that governs the return of magnetisation to the $z$-axis from the $xy$-plane. $T_2$ on
-the other hand is the time constant that governs the return of magnetisation to equilibrium in the $xy$-plane.
-It is more accurate to say that $T_1$ is the relaxation rate constant for populations, and $T_2$ is the relaxation
-rate constant coherences, in the density operator (discussed in \ref{Quantum}). But this is incompatible
-with the classical description of NMR.
-
-We can now complete the Bloch equations from \eqn{eqn:Bloch}:
-\begin{align}
-  \frac{dM_x(t)}{dt}\quad=&\quad\gamma(M_y(t)B_z(t)-M_z(t)B_y(t)) - \frac{M_x(t)}{T_2}\\
-  \frac{dM_y(t)}{dt}\quad=&\quad\gamma(M_z(t)B_x(t)-M_x(t)B_z(t)) - \frac{M_y(t)}{T_2}\\
-  \frac{dM_z(t)}{dt}\quad=&\quad\gamma(M_x(t)B_y(t)-M_y(t)B_x(t)) - \frac{M_z(t)-M_0}{T_1}
-\end{align}
-in order to derive $M_{xy}$ we assume the following:
-\begin{equation}
-  M_{xy} = M_x + iM_y\qquad\text{and} B_{xy} = B_x + iB_y
-\end{equation}
-After some algebra we obtain:
-\begin{align}
-  \frac{dM_x(t)}{dt}\quad=&\quad-i\gamma(M_{xy}(t)B_z(t)-M_z(t)B_{xy}(t)) - \frac{M_{xy}(t)}{T_2}\\
-  \frac{dM_y(t)}{dt}\quad=&\quad~i~\frac{\gamma}{2}(M_{xy}(t)\overline{B_{xy}}(t)-\overline{M_{xy}}(t)B_z(t)) - \frac{M_y(t)}{T_2}\\
-\end{align}
-where $\overline{M_{xy}} = M_x - iM_y\qquad\text{and} \overline{B_{xy}} = B_x - iB_y$
-solving these gives:
-\begin{align}
-  M_z(t) =& M_{z,\text{eq}} - (M_{z,\text{eq}}-M_z(0))\text{exp}\{\frac{-t}{T_1}\}\\
-  M_{xy}(t) =& M_{xy}(0)\text{exp}\{\frac{-t}{T_2}\}
-\end{align}
-
-\begin{figure}[h]
-  \center{\includegraphics[width=\textwidth]{T1T2.pdf}}
-  \caption{A) a magnetisation vector precesses in the $xy$-plane, eventually returning to equilibrium.
-  B) A plot of the magnetisation along $z$-axis (yellow) and the $x$-axis (blue) during the relaxation.}
-  \label{fig:t1t2}
-\end{figure}
-
-Relaxation occurs when the spins exchange energy with their surroundings. They do
-this when local magnetic fields, usually caused by the motion of surrounding molecules, oscillate
-near the larmour frequency of the relaxing spin. These oscillating fields can be thought of
-as local RF pulses we discussed earlier, the key difference is that they only affect a few spins
-and not the sample as a whole. Essentially relaxation is an energy exchange between the
-spins and the molecules surrounding them. This is the origin of the original name for longitudal
-relaxation - spin-lattice relaxation.
-
-\newpage
 
 \subsection{Quantum description of NMR}\label{Quantum}
 
 In this chapter, I will introduce the the quantum description of NMR. Including how
-we use operators and superoperators to understand how states change under different conditons and how the energies of the system can be extracted.
+we use operators to understand how states change under different conditons and how the energies of the system can be extracted.
 
-\subsubsection{Nuclear Spin}
+\subsubsection{Nuclear Spin}\label{Spin}
 
-Nuclear spin can be treated as a type of angular momentum. Spin angular momentum can be characterized by its total
-angular momentum, and the angular momentum with respect to a reference axis (usually z).  Denoted by $\hat{I}$
-it is comprised of a magnitude, $\lvert\hat{I}\rvert$, and a direction, $m_I$.
-The magnitude is given by
+Nuclei have an intrinsic property known as spin. This spin can be represented by operators
+along the three Cartesian axes $\hat{I}_x$, $\hat{I}_y$, and $\hat{I}_z$ where:
+\begin{align}
+  \hat{I}_x\quad=&\quad-i(y\frac{\partial}{\partial{z}}-z\frac{\partial}{\partial{y}})\\
+  \hat{I}_y\quad=&\quad-i(z\frac{\partial}{\partial{x}}-x\frac{\partial}{\partial{z}})\\
+  \hat{I}_z\quad=&\quad-i(x\frac{\partial}{\partial{y}}-y\frac{\partial}{\partial{x}})
+\end{align}
+
+The commutation relation between two operators is defined as:
 \begin{equation}
-  \lvert\hat{I}\rvert = \hbar\sqrt{I(I+1)}
+  [\hat{A},\hat{B}] = \hat{A}\hat{B} - \hat{B}\hat{A}
 \end{equation}
-where $\hbar$ is the reduced Planck constant and $I = 0,\frac{1}{2},1,\dots$. The projection of $\hat{I}$ in
-the $z$ direction, $\hat{I}_{z}$, is given by
-\begin{equation}
-  \hat{I}_{z} = m_I\hbar
-\end{equation}
-$m_{I}$ can take integer values from $-I$ to $+I$ shown in \fig{fig:Projection}
 
-For the commonly occuring case of a spin-1/2 nucleus, $I=1/2$ and $m_I = ±1/2$ and if we were to measure $\hat{I}_z$ we would get a value of  with an associated probability depending which state the system is in. Indicating the possible measurement outcomes for $\hat{I}_z$ are $±\frac{\hbar}{2}$.
+If $[\hat{A},\hat{B}] = 0$ the operators are said to commute. The physical implication
+of this is that the two observables can be measured at the same time. Measuring one
+does not affect the outcome of the other and vice versa.
+
+The spin operators $\hat{I}_x$, $\hat{I}_y$ and $\hat{I}_z$
+have cyclic commutation rules:
+\begin{align}\label{eqn:commutator}
+  [\hat{I}_x,\hat{I}_y] = i\hat{I}_z\\
+  [\hat{I}_y,\hat{I}_z] = i\hat{I}_x\\
+  [\hat{I}_x,\hat{I}_z] = i\hat{I}_y
+\end{align}
+
+This cyclic commutation means that the spin that nuclei posses can be treated as a
+type of angular momentum and in NMR, $\hat{I}_x$, $\hat{I}_y$ and $\hat{I}_z$ are
+referred to as the spin angular momentum operators.
+
+The total square angular momentum operator, $\hat{I}^2$ can be defined as:
+\begin{equation}
+  \hat{I}^2 = \hat{I}_x^2 + \hat{I}_y^2 + \hat{I}_z^2
+\end{equation}
+
+This commutes with the three spin angular momentum operators:
+\begin{align}\label{eqn:I2commute}
+  [\hat{I}^2,\hat{I}_x] = 0\\
+  [\hat{I}^2,\hat{I}_y] = 0\\
+  [\hat{I}^2,\hat{I}_z] = 0
+\end{align}
+
+Operators act on states. To explain this, consider a generic operator $\hat{B}$ with eigenstates $\ket{x}$ and $\ket{y}$. When a state is acted upon by an operator it is denoted by:
+\begin{equation}
+  \hat{B}\ket{x} = b\ket{x}
+\end{equation}
+
+the same state is returned, multiplied by some scalar $b$, that is an eigenvalue of $\ket{x}$
+in the operator basis B.
+
+Analagous to this, spin angular momentum operators have eienstates and eigenvalues. If the nuclear spin quantum number is $I$, then the operator $\hat{I}_z$ has $2I+1$
+eiegenstates, $m_I$. State are denoted $\ket{I,m_I}$\citep{dirac_1939} and the angular momentum operator acts according to the following:
+\begin{equation}
+  \hat{I}_z\ket{I,m_I} = m_I\hbar\ket{I,m_I}
+\end{equation}
+
+The total square angular momentum acts in the following way:
+\begin{equation}
+  \hat{I}^2\ket{I,m_I} = I(I+1)\hbar\ket{I,m_I}
+\end{equation}
+for a nuclear spin state, $I$ can take half-integer and integer values for zero i.e
+$I = 0,\frac{1}{2},1,\frac{3}{2}\dots$, $m_I$ takes one of the integer values from $-I
+\text{to} +I$.
+
+\subsubsection{Spin Systems}\label{SpinStates}
+
+The simplest case that can be considered in NMR is a system of isolated
+spin-1/2 nuclei.
+
+According to the quantum theory of angular momentum discussed in \ref{Spin}, a
+single spin-1/2, when placed in a magnetic field has two eigenstates of angular
+momentum along the $z$-axis, denoted by $\ket{\alpha}$ and $\ket{\beta}$ and defined
+as:
+\begin{align}
+  \ket{\frac{1}{2},+\frac{1}{2}} = \ket{\alpha}\\
+  \ket{\frac{1}{2},-\frac{1}{2}} = \ket{\beta}
+ \end{align}
+
+The states $\ket{\alpha}$ and $\ket{\beta}$ are called the \textit{Zeeman eigenstates}
+of a spin-1/2 and are acted on by $\hat{I}_z$ according to the following:
+\begin{align}\label{eqn:momentum}
+  \hat{I}_z\ket{\alpha} = +\frac{1}{2}\hbar\ket{\alpha}\\
+  \hat{I}_z\ket{\alpha} = -\frac{1}{2}\hbar\ket{\beta}
+\end{align}
+
+\eqn{eqn:momentum} shows that the eigenstate $\ket{\alpha}$ has an eigenvalue of
+$+\hbar/2$ and $\ket{beta}$ has an eigenvalue of $-\hbar/2$ these are said to
+be polarized along the $z$-axis. This polarisation is represented in
+\fig{fig:Projection} by the up and down arrows pointing along the positive
+or negative $z$-axis indicating the direction of well-defined spin angular momentum.
+These arrows should not be overinterpreted as for the same spin,
+the $x$ and $y$ companents are fundamentally unpredicatble
+since the states $\ket{\alpha}$ and $\ket{\beta}$ are not eigenstates of the operators
+$\hat{I}_x$ or $\hat{I}_y$. The arrow along the $z$-axis does not mean the
+$x$-axis angular momentum is zero. The $x$-axis angular momentum is \textit{undefined}
+as measurments give $±1/2$ with equal probability and this is very hard to represent
+in a diagram.
 
 \begin{figure}
   \begin{center}
   \includegraphics[width=\columnwidth,height=5cm,keepaspectratio]{StateProjection.pdf}
   \end{center}
-  \caption{The projection of two states in a spin 1/2 nucleus (red arrow) with the magnitudes indicated (black arrow)}
+  \caption{The projection of the two zeeman eigenstates in a spin 1/2 nucleus.}
   \label{fig:Projection}
 \end{figure}
 
-\subsubsection{Spin States}\label{SpinStates}
 
-If a spin-1/2 nucleus is placed in a magnetic field (taken to be oriented along $z$) it can be represented using two basis states.
-State one has $I = 1/2$, $m_I = 1/2$ and State two has $I = 1/2$, $m_I = -1/2$. We denote these as $\ket{I,m_I}$\citep{dirac_1939}, for simplicity we omit the $I$ and are left with
-$\ket{m_I}$. For the special case of a spin-1/2 the two states are known as zeeman states denoted by $\ket{\alpha}$ and $\ket{\beta}$. Where the $\ket{\alpha}$ state has angular momentum +1/2 and $\ket{\beta}$ has -1/2.
-
-The zeeman states take the following form:
+The zeeman eigenstates can be used to define the Zeeman basis. The two kets, $\ket{\alpha}$ and $\ket{\beta}$ can be represented by the column vectors:
 
 \begin{equation}
   \ket{\alpha} = \begin{pmatrix}
     1\\
     0
-\end{pmatrix}
+\end{pmatrix}\quad
  \ket{\beta} = \begin{pmatrix}
    0\\
    1
 \end{pmatrix}
 \end{equation}
 
-bras are also defined by taking the conjugate transpose of the ket, $\ket{\alpha}^{\dagger} =
+as well as kets, bras are also defined by taking the conjugate transpose of the ket, $\ket{\alpha}^{\dagger} =
 \bra{\alpha}$ such that
 \begin{equation}
   \bra{\alpha} = \begin{pmatrix}
@@ -744,21 +505,20 @@ as the linear combination of the basis states:
 \end{pmatrix}
 \end{equation}
 \begin{equation}
-  \bra{\psi} = c_1^*\bra{\alpha} + c_2^*\ket{\beta} = \begin{pmatrix}
+  \bra{\psi} = c_1^*\bra{\alpha} + c_2^*\bra{\beta} = \begin{pmatrix}
     c_1^* & c_2^*
 \end{pmatrix}
 \end{equation}
 
 These are normalised such that $c_1c_1^* + c_2c_2^* = 1$.
 
-To complete the picture the sates must me orthonormal. Orthonormality between states exists if
-if the inner product of the basis states $\ket{r_i} ~\text{and}~ \ket{r_j}$ satisifies the following conditions:
+To complete the picture, the states must be orthonormal. Orthonormality between states exists if the inner product of the basis states $\ket{r_i} ~\text{and}~ \ket{r_j}$ satisifies the following conditions:
 
 \begin{equation}
   \langle r_i\vert r_j\rangle = \delta_{ij}
 \end{equation}
 
-where the Kronecker delta is:
+where the Kronecker delta, $\delta_{ij}$ is:
 \begin{equation}
   \delta_{ij} = \begin{cases}
     0 & ~\text{if}~ i \ne j\\
@@ -814,24 +574,46 @@ states by taking the tensor product of the basis states
 The subscripts indicate which spin we are reffering to, e.g. $\ket{\beta_1\alpha_2}$ means that
 spin 1 is in the $\beta$ state and spin 2 is in the $\alpha$ state.
 
-\subsubsection{Operators}
+\subsubsection{Pauli matrices and more Operators}
 
-Operators act on states. To explain this, let's consider a generic operator $\hat{B}$ with eigenstates $\ket{\alpha}$ and $\ket{\beta}$. When a state is acted upon by an operator it is denoted by:
+In quantum mechanics each observation is associated with a particular operator. For
+example, the measurement of the spin angular momentum along the $z$-axis is associated with
+$\hat{I}_z$ and when applied to the $\ket{\alpha}$ gives the result seen in \eqn{eqn:momentum}. The
+probability of obtaining this result is 1 as $\ket{\alpha}$ is an eigenstate of $\hat{I}_z$. In
+all other cases the results follow statistical laws and the result of an individual experiment
+is unpredictable.
+
+In quantum mechanics there is a formula for the average result of very many observations, this is
+called the expectation value of a general operator, $\hat{A}$, when applied to a spin-1/2 system, $\ket{\psi}$
+is denoted:
 \begin{equation}
-  \hat{B}\ket{\alpha} = b\ket{\alpha}
+  \langle\hat{A}\rangle = \bra{\psi}\hat{A}\ket{\psi}
 \end{equation}
 
-the same state is returned, multiplied by some scalar $b$, that is an eigenvalue of $\ket{\alpha}$
-in the operator basis B.
+from the genral case listed in \eqn{eqn:zeeman} this becomes:
+\begin{align}\label{eqn:expectation}
+  \langle\hat{A}\rangle =& \bra{\psi}\hat{A}\ket{\psi}\\
+  =& \begin{pmatrix}
+    c_1^* & c_2^*
+\end{pmatrix}
+\begin{pmatrix}
+A_{11} & A_{12}\\
+A_{21} & A_{22}
+\end{pmatrix}
+\begin{pmatrix}
+  c_1\\
+  c_2
+\end{pmatrix}\\
+=& c_1c_1^*A_{11} + c_1c_2^*A_{12} + c_2c_1^*A_{21} + c_2c_2^*A_{22}
+\end{align}
 
-The expectation value of an operator can be found by:
-\begin{equation}\label{eqn:expectation}
-  \langle\hat{B}\rangle = \langle\alpha\vert\hat{B}\vert\alpha\rangle = b\langle\alpha\vert\alpha\rangle = b
-\end{equation}
+The end sum of all these products is the expectation value of a single spin 1/2 particle when
+acted upon by $\hat{Q}$. This quickly becomes cumbersome should there be more than one spin. An easier
+way to deal with expectation values is described in \ref{Density}
 
-this returns the eigenvalue.
-
-In NMR we use three operators to determine the projection of angular momentum along a specific axis, $\hat{I}_x$, $\hat{I}_y$, and $\hat{I}_z$. These are defined by the Pauli matrices multiplied by $\frac{\hbar}{2}$.
+In NMR we use three operators to determine the projection of angular momentum along a
+specific axis, $\hat{I}_x$, $\hat{I}_y$, and $\hat{I}_z$. These are defined by the
+Pauli matrices in the Zeeman basis multiplied by $\frac{\hbar}{2}$.
 
 \begin{equation}
   \hat{I}_x=\frac{\hbar}{2}\begin{pmatrix}
@@ -863,7 +645,7 @@ and see what happens if we were to project the $\ket{\alpha}$ state along the z-
   0
 \end{pmatrix} = \frac{\hbar}{2}\ket{\alpha}
 \end{equation}
-We find that $\frac{\hbar}{2}$ is the eigenvalue of $\ket{\alpha}$ for the operator $\hat{I}_z$. For ease of handling in the following examples we will take $\hbar$ = 1.
+We find that $\frac{\hbar}{2}$ is the eigenvalue of $\ket{\alpha}$ for the operator $\hat{I}_z$.
 
 We will now examine three more operators and explore how they act on states. They are the total square angular momentum, $\hat{I}^2$ and the two shift operators $\hat{I}^+$ and $\hat{I}^-$ defined as the following:
 
@@ -872,72 +654,100 @@ We will now examine three more operators and explore how they act on states. The
   \hat{I}^+ =& \hat{I}_x + i\hat{I}_y\\
   \hat{I}^- =& \hat{I}_x - i\hat{I}_y
 \end{align}
-They act on states according to:
+They act on general states according to:
 \begin{align}
-  \hat{I}^2\ket{I,m_I} =& I(I+1)\ket{I, m_I}\\
+  \hat{I}^2\ket{I,m_I} =& I(I+1)\hbar\ket{I, m_I}\\
   \hat{I}^+\ket{I,m_I} =& \sqrt{(I(I+1)-m_I(m_I+1))}\ket{I,m_{I+1}}\\
   \hat{I}^-\ket{I,m_I} =& \sqrt{(I(I+1)-m_I(m_I-1))}\ket{I,m_{I-1}}
 \end{align}
-Using a spin-1/2 particle in a magnetic field as an example we'll let these operators act on the $\ket{\alpha}$ state
+Using a spin-1/2 particle in a magnetic field as an example we'll let these operators act on the $\ket{\alpha}$ and $\ket{\beta}$ states
 \begin{align}
-  \hat{I}^2\ket{\alpha} =& \frac{3}{4}\ket{\alpha}\\
+  \hat{I}^2\ket{\alpha} =& \frac{3}{4}\hbar\ket{\alpha}\\
   \hat{I}^+\ket{\alpha} =& 0\\
   \hat{I}^-\ket{\alpha} =& \ket{\beta}\\
   \hat{I}^+\ket{\beta} =& \ket{\alpha}\\
   \hat{I}^-\ket{\beta} =& 0
 \end{align}
-As the '+' and '-' denote raising or lowering $m_I$ by 1
+As the '+' and '-' denote raising or lowering $m_I$ by 1.
 
+As shown in \eqn{eqn:commutator} the three angular momentum opperators cyclically
+commute. This means the \textit{sandwich formula} applies.
 
-We can see if two operators commute by using the commutator which is defined as:
+In general if $\hat{A}$, $\hat{B}$ and $\hat{C}$ cyclically commute then:
 \begin{equation}
-  [\hat{A},\hat{B}] = \hat{A}\hat{B} - \hat{B}\hat{A}
+  \text{exp}\{-i\theta\hat{A}\}\:\hat{B}\:\text{exp}\{+i\theta\hat{A}\} = \hat{B}\cos{\theta} + \hat{C}\sin{\theta}
 \end{equation}
 
-If $[\hat{A},\hat{B}] = 0$ the operators are said to commute. The $\hat{I}_z$, $\hat{I}_z$ and $\hat{I}_z$
-have cyclic commutation rules:
-\begin{align}\label{eqn:commutator}
-  [\hat{I}_x,\hat{I}_y] = i\hat{I}_z\\
-  [\hat{I}_y,\hat{I}_z] = i\hat{I}_x\\
-  [\hat{I}_x,\hat{I}_z] = i\hat{I}_y
+geometrically, this can be thought of as a rotation of $\hat{B}$ by $\hat{A}$ through
+an angle $\theta$.
+
+It is important to define a set of rotation operators as these are essential for the generation of signal in NMR. They are defined as the complex exponentials of the
+angular momentum operators seen in \ref{Spin}:
+\begin{align}\label{eqn:RotOp}
+  \hat{R}_x(\theta) = exp\{-i\theta\hat{I}_x\}\\
+  \hat{R}_y(\theta) = exp\{-i\theta\hat{I}_y\}\\
+  \hat{R}_z(\theta) = exp\{-i\theta\hat{I}_z\}
 \end{align}
+ and they too have matrix representations:
+ \begin{align}\label{eqn:RotMat}
+   \hat{R}_x(\theta)& = \begin{pmatrix}
+      \cos(\frac{1}{2}\theta) & -i\sin(\frac{1}{2}\theta)\\
+      -i\sin(\frac{1}{2}\theta) & \cos(\frac{1}{2}\theta)
+ \end{pmatrix}\\
+ \hat{R}_y(\theta)& = \begin{pmatrix}
+    \cos(\frac{1}{2}\theta) & \sin(\frac{1}{2}\theta)\\
+    \sin(\frac{1}{2}\theta) & \cos(\frac{1}{2}\theta)
+\end{pmatrix}\\
+\hat{R}_x(\theta)& = \begin{pmatrix}
+    \text{exp}\{-i\frac{1}{2}\theta\} & 0\\
+    0 & \text{exp}\{+i\frac{1}{2}\theta\}
+\end{pmatrix}
+ \end{align}
 
-These relationships are important in NMR as they help govern the rules for the rotations of spins.
 
-\subsubsection{Superoperators}
-
-Like states, that can be transformed by operators, we can define objects that act in a similar manner on operators. These objects are called superoperators.
-
-To start, let's take a simple commutation superoperator, $\hat{\hat{A}}$, defined as:
+The rotation operators are applied to to the angular momentum operators using the sandwich formula:
 \begin{equation}
-  \hat{\hat{A}}\hat{B} = [\hat{A},\hat{B}] = \hat{A}\hat{B} - \hat{B}\hat{A}
-\end{equation}
-Applying it to operator $\hat{B}$ results in the commutation of $\hat{A}$ and $\hat{B}$
-
-In NMR, three rotational superoperators can be defined using the commutation superoperators from \eqn{eqn:operators}:
-\begin{equation}
- \hat{\hat{R}}_x(\theta) = \text{exp}\{-i\hat{\hat{I}}_x\theta\}\quad\hat{\hat{R}}_y(\theta) = \text{exp}\{-i\hat{\hat{I}}_y\theta\}\quad\hat{\hat{R}}_z(\theta) = \text{exp}\{-i\hat{\hat{I}}_z\theta\}
-\end{equation}
-
-These are applied to to the angular momentum operators using the sandwich formula:
-\begin{equation}
-  \hat{\hat{R}}_x(\theta)\hat{I}_z = \text{exp}\{-i\hat{\hat{I}}_x\theta\}\hat{I}_z\text{exp}\{+i\hat{\hat{I}}_x\theta\}
+  \hat{R}_x(\theta)\hat{I}_z = \text{exp}\{-i\hat{I}_x\theta\}\hat{I}_z\text{exp}\{+i\hat{I}_x\theta\}
 \end{equation}
 
 The result of this is a rotation of $\hat{I}_z$ around the $x$-axis by an angle $\theta$:
 \begin{equation}
-  \hat{\hat{R}}_x(\theta)\hat{I}_z = \cos{\theta}\hat{I}_z - \sin{\theta}\hat{I}_y
+  \hat{R}_x(\theta)\hat{I}_z = \cos{\theta}\hat{I}_z - \sin{\theta}\hat{I}_y
 \end{equation}
 
 The rotational direction (sign of the $\sin{\theta}$ term) is determined by the right hand co-ordinate system defined in \eqn{eqn:commutator}.
 
-We will now discuss how these are used in describing the spin dynamics of a spin system.
+How each rotational operator transforms the spin angular momentum operators is shown
+below:
+\begin{equation}
+  \hat{R}_x(\theta) \begin{cases}
+    \hat{I}_x \rightarrow \hat{I}_x \\
+    \hat{I}_y \rightarrow \hat{I}_y\cos\theta + \hat{I}_z\sin\theta \\
+    \hat{I}_z \rightarrow \hat{I}_z\cos\theta - \hat{I}_y\sin\theta
+\end{cases}
+\end{equation}
+\begin{equation}
+  \hat{R}_y(\theta) \begin{cases}
+    \hat{I}_x \rightarrow \hat{I}_x\cos\theta - \hat{I}_z\sin\theta \\
+    \hat{I}_y \rightarrow \hat{I}_y \\
+    \hat{I}_z \rightarrow \hat{I}_z\cos\theta + \hat{I}_y\sin\theta
+\end{cases}
+\end{equation}
+\begin{equation}
+  \hat{R}_z(\theta) \begin{cases}
+    \hat{I}_x \rightarrow \hat{I}_x\cos\theta + \hat{I}_y\sin\theta \\
+    \hat{I}_y \rightarrow \hat{I}_y\cos\theta - \hat{I}_x\sin\theta \\
+    \hat{I}_z \rightarrow \hat{I}_z
+\end{cases}
+\end{equation}
 
-\subsubsection{Density Operator}
 
-The density operator is a description of an ensemble of spin sytems.
+\subsubsection{Density Operator}\label{Density}
 
-Let's go back once again to a spin-1/2 particle in a magnetic field. Where $\ket{\psi}$ is some superposition state in the two level system such that:
+In \eqn{eqn:expectation} we saw how the expectation value of an operator can be expressed as
+the product of the matrix represntations of the state and the operator. We can simplify this by
+constructing a matrix of the quadratic products of the superposition coeffecients. If in the
+general case
 \begin{align}
 \ket{\psi} =& \begin{pmatrix}
     c_1\\
@@ -948,110 +758,536 @@ Let's go back once again to a spin-1/2 particle in a magnetic field. Where $\ket
 \end{pmatrix} = c_1^*\bra{\alpha} + c_2^*\bra{\beta}
 \end{align}
 
-The density operator has the form:
+Then the matrix has the form:
 \begin{equation}
-  \hat\rho = \overline{\ket{\psi}\bra{\psi}} = \begin{pmatrix}
-    \overline{c_1c_1^*} & \overline{c_1c_2^*}\\
-    \overline{c_2c_1^*} & \overline{c_2c_2^*}
+\ket{\psi}\bra{\psi} = \begin{pmatrix}
+    {c_1c_1^*} & {c_1c_2^*}\\
+    {c_2c_1^*} & {c_2c_2^*}
 \end{pmatrix}
 \end{equation}
-Where $\overline{\ket{\psi}\bra{\psi}}$ denotes the ensemble average.
 
-If the number of spins is increased, the denstiy operator's form does not change instead it provides
-an average for the entire ensemble of spin states. The population of a given state is given by the expectation
-value of the density operator as in \eqn{eqn:expectation}. If we would like to know
-the population of state $\ket{\alpha}$ we would perform the following:
-
+The expectation value of the operator $\hat{A}$ can now be expressed as:
 \begin{equation}
-  \langle\alpha\vert\hat\rho\vert\alpha\rangle = \overline{\langle\alpha\vert\psi\rangle} \overline{\langle\alpha\vert\psi\rangle} = \overline{c_1^*c_1}
+  \langle\hat{A}\rangle = \text{Tr}\{\ket{\psi}\bra{\psi}\hat{A}\}
 \end{equation}
 
-The diagonal elements of $\hat\rho$ are state populations or the probabilities of being in a certain state.
+If there are now two spins we need to consider with states, $\ket{\psi_1}$ and $\ket{\psi_2}$ the
+result of measuring $A$ is still uncertain but we can now write an expression for the most likely outcome, $A_obs$
+using the sum of expectation values:
+\begin{equation}
+  A_{\text{obs}} = \bra{\psi_1}\hat{A}\ket{\psi_1} + bra{\psi_2}\hat{A}\ket{\psi_2}
+\end{equation}
+which can be rewritten using the simplification:
+\begin{equation}
+  A_{\text{obs}} = \text{Tr}\{(\ket{\psi_1}\bra{\psi_1}+\ket{\psi_2}\bra{\psi_2})\hat{A}\}
+\end{equation}
 
-The off-diagonal elements are coherences between states. These coherences represent superposition These coherences are complex numbers and two coherences between the same pair of states are complex cojugates of each other. e.g.:
+If there are a large number of spin, like in a usual NMR experiemnt we can simplify
+by defining an operator, $\hat{rho}$:
+\begin{equation}
+  \hat{\rho} = \mathbb{N}^{-1}(\ket{\psi_1}\bra{\psi_1}+\ket{\psi_2}\bra{\psi_2}+\dots)
+\end{equation}
+where $\mathbb{N}$ is the number of spins in the ensemble. For brevity
+this is written as:
+\begin{equation}
+  \hat{\rho} = \overline{\ket{\psi}\bra{\psi}}
+\end{equation}
+where the overbar indicates the average over all members of the ensemble.
+
+Now the expectation of $\hat{A}$ over all memebrs of some spin esemble can now be written as:
+\begin{equation}
+  \langle{A}\rangle = \text{Tr}\{\hat{\rho}\hat{A}\}
+\end{equation}
+
+the operator $\hat{\rho}$ is referred to as the density matrix.
+\begin{equation}\label{eqn:density}
+  \hat{\rho} = \begin{pmatrix}
+      \overline{c_1c_1^*} & \overline{c_1c_2^*}\\
+      \overline{c_2c_1^*} & \overline{c_2c_2^*}
+  \end{pmatrix} = \begin{pmatrix}
+      \rho_\alpha & \rho_+\\
+      \rho_- & \rho_\beta
+  \end{pmatrix}
+\end{equation}
+
+The diagonal elements of $\hat{\rho}$, $\rho_\alpha$ and $\rho_\beta$ are state populations or the probabilities of being in a certain state.
+
+The off-diagonal elements are coherences between states. These coherences represent superposition states in the ensemble
+the coherences are complex numbers and two coherences between the same pair of states are complex cojugates of each other. e.g.:
 \begin{equation}
   \langle\alpha\vert\hat\rho\vert\beta\rangle = (\langle\beta\vert\hat\rho\vert\alpha\rangle)^* = c_1c_2^* = (c_1^*c_2)^*
 \end{equation}
 The coherence order between two states in a magnetic field is defined as the difference in angular
-momentum projection along the $z$ axis. In our two spin this would be(with $\hbar = 1$):
+momentum projection along the $z$ axis. In our two spin system this would be:
 \begin{align}
-  \hat{I}_z\ket{\beta} = m_\alpha = +\frac{1}{2}\ket{\alpha}\\
-  \hat{I}_z\ket{\beta} = m_\beta = -\frac{1}{2}\ket{\beta}
+  \hat{I}_z\ket{\beta} = m_\alpha = +\frac{1}{2}\hbar\ket{\alpha}\\
+  \hat{I}_z\ket{\beta} = m_\beta = -\frac{1}{2}\hbar\ket{\beta}
 \end{align}
-We can use these results to calculate the coherence order of the coherence $\langle\alpha\vert\hat\rho\vert\beta\rangle$:
+We can use these results to calculate the coherence order of the coherence $\rho_+$:
 \begin{equation}
  m_\alpha - m_\beta = +1
 \end{equation}
-and conversely the coherence order of $\langle\beta\vert\hat\rho\vert\alpha\rangle$ is:
+and conversely the coherence order of $\rho_-$ is:
 \begin{equation}
   m_\beta - m_\alpha = -1
 \end{equation}
 
-Now let's look at how $\hat\rho$ relates to the angular momentum operators given in \eqn{eqn:operators}.
+The density operator can be written as:
+\begin{equation}
+  \hat{\rho} = \rho_\alpha\hat{I}^\alpha + rho_\beta\hat{I}^\beta + \rho_+\hat{I}^+ + \rho_-\hat{I}^-
+\end{equation}
+
+using the shift operators, $\hat{I}^+$ and $\hat{I}^-$, and the projection operators, $\hat{I}^\alpha$ and $\hat{I}^\beta$.
+
+The physical interpretations of the components of the density operator can help to understand the microscopic state
+of th individual spins. The sum of the populations, $\rho_\alpha$ and $\rho_\beta$, is always equal to one, only the differences between the states
+have any significance. The difference in population indicates the net longitudinal spin polarization. i.e. if the
+$\ket{\alpha}$ state population is larger than the $\ket{\beta}$ state then there is net polarization of the spins
+along the external field direction.
+
+The presence of the coherences $\rho_+$ and $\rho_-$ indicates transverse spin magnetisation i.e. net spin
+polarization \textit{perpendicular} to the external field. These coherences are complex numbers and as
+such have phase and amplitude. The phase of the coherences indicates the direction of the spin polarization
+in the $xy$-plane. The ($-1$)-quantum coherence is written as:
+\begin{equation}
+  \rho_-= |\rho_-|\text{exp}\{i\phi_-\}
+\end{equation}
+and the polarization  axis of the spins is:
+\begin{equation}
+  \mathbf{e}_x'\cos\phi_- + \mathbf{e}_y'\sin\phi_-
+\end{equation}
+
+These populations and coherences play a vital role in NMR and will be re-visted inlater sections.
+
+\subsection{The Hamiltonian}\label{Hamiltonian}
+
+The Hamiltonian plays an important part in quantum systems. When the Hamiltonian acts on an eigenstate
+the eigenvalue returned is the energy level of that state.
+
+\subsubsection{Spins in a magentic field}
+
+In NMR the energy of a nucleus in a magnetic field, $E$, is given by:
+\begin{equation}
+  E = -m_I\hbar\gamma\B_0
+\end{equation}
+
+For a spin-1/2 nuclei there are two states labelled as $\alpha$ and $\beta$
+and these have an energy difference depicted in \fig{fig:EnergySplit}
+
+\begin{figure}
+  \begin{center}
+  \includegraphics[width=\textwidth,height=5cm,keepaspectratio]{EigenStateLevel.pdf}
+  \end{center}
+  \caption{Energy level and $\Delta~E$ of the two energy levels for a spin-1/2 nucleus}
+  \label{fig:EnergySplit}
+\end{figure}
+
+This splitting of energy levels due to the presence of a mganetic field is referred to as Zeeman splitting.
+When examining a spin ensmeble at thermal equilibrium, overal there is a slight bias to the lower energy
+state $\alpha$. This preference can be quantified by calculating the ratio of the populations, $P$:
+\begin{equation}\label{eqn:Boltzmann}
+  \frac{P_{\beta}}{P_{\alpha}} = \text{exp}\{\frac{-\Delta{E}}{k_B T}\}
+\end{equation}
+where $P_{\beta}/P_{\alpha}$ is the population ratio between the states, $k_B$ is Boltzmann constant, and $T$ is the temperature. The polarisation, $p$, of a system of
+spin-1/2 nuclei is
+\begin{equation}\label{eqn:Polarisation}
+  p = \frac{P_\alpha - P_\beta}{P_\alpha + P_\beta}
+\end{equation}
+
+For an NMR experiment which typically operates at 298$K$ and
+a field of 14.1 T the polarisation level is circa $10^{-5}$ meaning that the spins are aligned weakly
+in the same direction as the magnetic field. It is this small polarisation that gives rise to the NMR
+signal and why NMR is famed for sensitivity issues. One possible solution to this, hyperpolarisation, will be described in a later chapter.
+
+When placed in a magnetic field, the nuclei will precess around the axis of the field at a rate known as the larmour frequency defined as:
+\begin{equation}\label{eqn:larmor}
+  \omega_j^0 = -\gamma_jB_0
+\end{equation}
+
+where $\gamma_j$ is the gyromagnetic ratio for a nucleus, $j$. The gyromagnetic ratio is
+typically $10$s of MHz T$^{-1}$ that give larmour frequencies in the $100$s of MHz in an NMR
+experiment.
+
+
+If we let $\ket{\psi_1}$ and $\ket{\psi_2}$ be eigenstates of the Hamiltonian $\hat{\mathcal{H}}$ then
+\begin{align}
+  \hat{\mathcal{H}}\ket{\psi_1} = E_1\ket{\psi_1}\\
+  \hat{\mathcal{H}}\ket{\psi_2} = E_2\ket{\psi_2}
+\end{align}
+
+The Hamiltonian can also be expressed in matrix form:
+\begin{equation}
+  \hat{\mathcal{H}} = \begin{pmatrix}
+    E_1 & 0\\
+    0 & E_2
+\end{pmatrix}
+\end{equation}
+If the Hamiltonian is written in the eigenbasis of the system its main diagonal corresponds to state energies and it has values of $0$ everywhere else.
+
+The evolution in time of a quantum system is described by the Schr\"odinger equation:
+\begin{equation}
+  \frac{d}{dt}\ket{\psi} = i\hbar^{-1}\hat{\mathcal{H}}\ket{\psi}
+\end{equation}
+the factor of $\hbar^{-1}$ here is cumbersome and can be removed by defining a Hamiltonian in natural units, $\hat{H}$
+such that:
+\begin{equation}
+  \hat{H} = \hbar^{-1}\hat{\mathcal{H}}
+\end{equation}
+both Hamiltonians share the same eigenfunctions
+\begin{equation}
+  \hat{H}\ket{\psi_1} = \omega_{\psi1}\ket{\psi}
+\end{equation}
+eigenvalues are denoted $\omega_{\psi}$ and are given by:
+\begin{equation}
+  \omega_{\psi1} = \hbar^{-1}E_1
+\end{equation}
+
+the eiegenvalue, $\omega_{\psi1}$, is the energy of the state $\ket{\psi}$ in \textit{units} of $\hbar$.
+
+Returning to the example of a spin-1/2 particle in a magnetic field. The Hamiltonian is initially
+proportional to the $z$ angular momentum operator
+\begin{equation}
+  \hat{H} = \omega^0\hat{I}_z
+\end{equation}
+
+where $\omega = -\gamma B_0$ and is the Larmor frequency from \eqn{eqn:larmor}. In matrix form, in the original zeeman basis, the Hamiltonian is:
+\begin{equation}
+  \hat{H} = \begin{pmatrix}
++\frac{\omega}{2} & 0\\
+0 & -\frac{\omega}{2}
+\end{pmatrix}
+\end{equation}
+where
+\begin{equation}
+  \hat{H}\ket{\alpha} = +\frac{\omega}{2}\ket{\alpha}
+\end{equation}
+
+\subsection{Spin precession}
+
+ As discussed when describing Larmor frequency when a spin-1/2 particle is placed in
+ a magnetic field it precesses at the Larmor frequency. In quantum mechanics this precession
+ means that the spin state $\ket{\psi}$ depends on time.
+
+ The law of motion for the spin is the time depenent Schr\"odinger equation:
+ \begin{equation}
+   \frac{d}{dt}\ket{\psi}(t) = -i\hat{H}\ket{\psi}(t)
+ \end{equation}
+
+  The spin Hamiltonian is:
+  \begin{equation}
+    \hat{H} = \omega^0\hta{I}_z
+  \end{equation}
+the equaiton of motion then becomes:
+\begin{equation}
+  \frac{d}{dt}\ket{\psi}(t) = -i\omega^0\hat{I}_z\ket{\psi}(t)
+\end{equation}
+this is a first order differential equation that has the solution:
+\begin{equation}
+  \ket{\psi}(t) = \text{exp}\{-i\omega^0\Delta{t}\hat{I}_z\}{\psi}(t_0)
+\end{equation}
+where $t_0$ is the initial time and $\Delta{t}$ is the difference in time
+between $t_0$ and $t$. As the $\omega^0\Delta{t}$ term is angular fequency multiplied by
+time this simply gives an angle. This shows that it is equal to a rotation about the $z$-axis:
+\begin{equation}
+  \hat{R}_z{\theta} = \text{exp}\{-i\theta\hat{I}_z\}
+\end{equation}
+
+The solutiuon therefore to the Schr\"odinger equation in the absence of rf fields is:
+\begin{equation}
+  \ket{\psi}(t) = \hat{R}_z(\omega^0\Delta{t})\ket{psi}(t_0)
+\end{equation}
+
+In the absence of r.f. fields the Schr\"odinger equation says that the spin rotates
+around the $z$-axis, through the angle $\omega_0\Delta{t}$
+
+\subsection{Rotating Frame}
+
+The field, $B_0$, of a regular NMR experiment is many Tesla, giving precession
+frequencies of hundreds of megahertz. These frequencies correspond to radio frequencies
+in the electromagnetic spectrum. When considering these precessing spins
+it can be useful to change from a static frame to a rotating frame of reference.
+
+the static frame of reference axes ($x$, $y$, and $z$) and the rotating frame axes ($x'$, $y'$, and $z'$) of reference are connected through
+a time dependent angle , $\Phi$(t) such that:
+\begin{align}
+  x' =& x\cos\Phi(t) + y\sin\Phi(t)\\
+  y' =& y\cos\Phi(t) - x\sin\Phi(t)\\
+  z' =& z
+\end{align}
+The frame rotates with a constant frequency $\omega_\text{ref}$ around the $z$-axis:
+\begin{equation}
+  \Phi(t) = \omega_\text{ref}t + \phi_\text{ref}
+\end{equation}
+for brevity $(t)$ is now dropped
+
+If a spin in state $\ket{\psi}$ has a larmor frequency equal to $\omega_\text{ref}$
+then the spin state in the rotating frame, $\ket{\tilde{\psi}}$ is:
+\begin{equation}
+  \ket{\tilde{\psi}} = \hat{R}_z(-\Phi)\ket{\psi}
+\end{equation}
+where the tilde denotes a state in the rotating frame.
+
+These of course have an equation of motion:
+\begin{equation}
+  \frac{d}{dt}\ket{\tilde{\psi}} = i\hbar^{-1}\hat{\tilde{H}}\ket{\tilde{\psi}}
+\end{equation}
+where:
+\begin{equation}\label{eqn:RotFrame}
+  \hat{\tilde{H}} = \hat{R}_z(-\Phi)\hat{H}\hat{R}_z(\Phi) - \omega_\text{ref}\hat{I}_z
+\end{equation}
+
+\subsubsection{Precession in the rotating frame}
+The spin Hamiltonian in a static field is:
+\begin{equation}
+  \hat{H}^0 = \omega^0\hat{I}_z
+\end{equation}
+
+The rotating fram Hamiltonian is:
+\begin{equation}
+  \hat{\tilde{H}} = \omega^0\hat{R}_z(-\Phi)\hat{I}_z\hat{R}_z(\Phi) - \omega_\text{ref}\hat{I}_z =
+  (\omega^0 - \omega_\text{ref})\hat{I}_z
+\end{equation}
+The frequency $\omega^0 - \omega_\text{ref}$ is the differenc bwtween the larmor frequency
+and that of the frame and is denoted, $\Omega^0$:
+\begin{equation}
+  \Omega^0 = \omega^0 - \omega_\text{ref}
+\end{equation}
+
+The rotating-frame spin Hamiltonian in the presence pf a static field, is therefore:
+\begin{equation}
+  \hat{\tilde{H}} = \Omega^0\hat{I}_z
+\end{equation}
+
+\subsection{Radio Frequency Pulses}
+
+In NMR 'pulses' are used to manipulate the spin states. These pulses take the form
+of an oscillating magnetic field applied at a frequency such that it is resonant with
+the precessing spin. The frequencies correspond to radio frequncies anf the pulses and
+fields are reffered to as r.f. pulses and r.f. fields.
+
+When an r.f. pulse is applied, the spin experiences two magnetic fields: a static field generated
+by the magnet; and an oscillating field from the excitation coil. The static field is much larger
+than the oscillating r.f. field.
+
+The weak r.f. field produces a large effect on the nuclear spin due to it being \textit{resonant}
+with the precession of that spin. This allows the effect of the weak r.f. field to accumulate
+as time goes on. If the pulse is applied for long enough, then the weak r.f. field can casue a
+large change in the spin state. In practice, this corresponds to applying several microseconds
+of an r.f. pulse which allows for several hundred Larmor precession cycles.
+
+For an r.f. pulse of of phase, $\phi_p$, applied along the $x$-axis, the r.f. field oscillates at the spectrometer resonance frequency,$\omega_{\text{ref}}$, and  the spin Hamiltonian
+during the r.f. pulse is given by:
+\begin{equation}
+  \hat{H} = \omega^0\hat{I}_z + \hat{H}_{\text{RF}}{t}
+\end{equation}
+where
+\begin{equation}
+  \hat{H}_{\text{RF}}(t) = -\frac{1}{2}\gamma{B_{\text{RF}}}\sin{\theta_{\text{RF}}}\hat{R}_z(\Phi_p)\hat{I}_x\hat{R}_z(-\Phi_p)
+\end{equation}
+and
+\begin{equation}
+  \Phi_p(t) = \omega_{\text{ref}}t + \phi_p
+\end{equation}
+
+The rotating frame Hamiltonian is:
+\begin{align}
+  \hat{\tilde{H}} =& -\frac{1}{2}\gamma{B_{\text{RF}}}\sin{\theta_{\text{RF}}}\hat{R}_z(-\Phi  +  \Phi_p)\hat{I}_x\hat{R}_z(\Phi-\Phi_p) + (\omega^0 - \omega_\text{ref})\hat{I}_z \\
+  =& -\frac{1}{2}\gamma{B_{\text{RF}}}\sin{\theta_{\text{RF}}}\hat{R}_z(-\phi_{\text{ref}}  +  \phi_p)\hat{I}_x\hat{R}_z(\phi_{\text{ref}}-\phi_p) + \Omega^0\hat{I}_z
+\end{align}
+an additional simplification is possible if we include the value of $\phi_{\text{ref}}$ which is
+$\pi$ for positive $\gamma$ spins and has the effect of changing the sign of the $\gamma{B_{\text{RF}}}$
+term:
+\begin{equation}
+  \hat{\tilde{H}} = \omega_{\text{nut}}\hat{R}_z(\phi_p)\hat{I}_x\hat{R}_z(-\phi_p) + \Omega^0\hat{I}_z
+\end{equation}
+where $\omega_{\text{nut}}$ is the nutation frequency:
+\begin{equation}
+  \omega_{\text{nut}} = |-\frac{1}{2}\gamma{B_{\text{RF}}}\sin{\theta_{\text{RF}}}|
+\end{equation}
+the nutation frequency is the measure of the r.f. field amplitude.
+
+Using the sandwhich property again the final form of the rotating-frame Hamiltonian during an r.f. pulse
+is:
+\begin{equation}
+  \hat{\tilde{H}} = \Omega^0\hat{I}_z + \omega_{\text{nut}}(\hat{I}_x\cos\phi_p + \hat{I}y\sin\phi_p)
+\end{equation}
+
+
+\subsubsection{$x$-pulse}
+
+To illustrate the effect an r.f. pulse has on a sample we consider a strong
+pulse with frequency $\omega_\text{ref}$, duration $\tau$, and phase $\phi_p = 0$ (an '$x$-pulse').
+The amplitude is given by $\omega_\text{ref}$. We assume this pulse to be applied
+directly on resonance such that $\Omega^0 = 0$.
+
+The rotating frame spin Hamiltonian is:
+\begin{equation}
+  \hat{\tilde{H}} = \omega_{\text{ref}}\hat{I}_x
+\end{equation}
+the motion of the spin states may be found using the rotating frame Schr\"odinger equation. If the
+spin state before the pulse is given by $\ket{\tilde{\psi}}_1$ and the spin state after the pulse
+is $\ket{\tilde{\psi}}_2$ then they are related by:
+\begin{equation}
+  \ket{\tilde{\psi}}_2 = \hat{R}_x(\theta)\ket{\tilde{\psi}}_1
+\end{equation}
+where the rotation operator is as defined in \eqn{eqn:RotOp} and the angle
+$\theta$ is given by
+\begin{equation}
+  \theta = \omega_\text{nut}\tau
+\end{equation}
+this angle is referred to as the \textit{flip angle} of the pulse.
+
+To calculate what effect the pulse has on spins in specific states we can use the matrix representation.
+A $(\pi/2)_x$ pulse, which means a flip angle of $\theta = \pi/2$ and a phase of $\phi_p = 0$, applied to spin in the state $\ket{\alpha}$ can be calculated using the matrix representation of $\hat{R}_x(\theta)$  as:
+\begin{align}
+  \hat{R}_x(\pi/2)\ket{\alpha} =& \frac{1}{\sqrt{2}}\begin{pmatrix}
+     \cos(\frac{1}{2}\pi/2) & -i\sin(\frac{1}{2}\pi/2)\\
+     -i\sin(\frac{1}{2}\pi/2) & \cos(\frac{1}{2}\pi/2)
+\end{pmatrix}\begin{pmatrix}
+  1\\
+  0
+\end{pmatrix}\\ =& \frac{1}{\sqrt{2}}\begin{pmatrix}
+  1 & -i\\
+  -i & 1
+\end{pmatrix}\begin{pmatrix}
+  1\\
+  0
+\end{pmatrix}\\ =& \frac{1}{\sqrt{2}}\begin{pmatrix}
+  1\\
+  -i
+\end{pmatrix} = e^{-i\pi/4}\frac{1}{2}\begin{pmatrix}
+  1+i\\
+  1-i
+\end{pmatrix} = e^{i\pi/4}\ket{-y}
+\end{align}
+The pulse transforms the state $\ket{\alpha}$ into the state $\ket{-y}$ in other words
+it has rotated the polarization by $\pi/2$ around the $x$-axis.
+
+
+\subsubsection{Pulse of general phase}
+
+To understand the significance of the phase of a pulse, consider a pulse exactly on resonance
+($\Omega^0 = 0$) with a genral phase $\phi_p$. The rotating fram spin Hamiltonian is:
+\begin{equation}
+  \hat{\tilde{H}} = \omega_{\text{nut}}(\hat{I}_x\cos\phi_p + \hat{I}_y\sin\phi_p)
+\end{equation}
+from this, one can see that the effect of the phase shift is to change the axis about
+which the spin polarizations rotate. The rotation axis is still in the $xy$-plane but forms
+an angle, $\phi_p$, with the $x$ axis. Therefore, a pulse with a phase of $\pi/2$ rotates the spin
+polarization around the $y$-axis and a phase of $\pi$ rotates the polarization around the $-x$-axis and
+so on.
+
+The propagator for an on resonance pulse with phase $\phi_p$ is given by:
+\begin{align}
+  \hat{R}_{\phi_p}(\theta) =& \text{exp}\{-i\omega_{\text{nut}}\tau(\hat{I}_x\cos\phi_p + \hat{I}_y\sin\phi_p)\}\\
+  =& \text{exp}\{-i\theta(\hat{I}_x\cos\phi_p + \hat{I}_y\sin\phi_p)\}
+\end{align}
+
+this can be rewritten using rotation operators:
+\begin{equation}
+  \hat{R}_{\phi_p}(\theta) = \hat{R}_z(\phi_p)\hat{R}_x(\theta)\hat{R}_z(-\phi_p)
+\end{equation}
+The matrix representation can be optained by multiplying togther the matrix
+representations of the rotation operators from \eqn{RotMat}:
+\begin{equation}
+  \hat{R}_{\phi_p}(\theta) = \begin{pmatrix}
+    \cos\frac{1}{2}\theta & -i\sin\frac{1}{2}(\theta)e^{-i\phi_p}\\
+    -i\sin\frac{1}{2}(\theta)e^{+i\phi_p} & \cos\frac{1}{2}\theta
+\end{pmatrix}
+\end{equation}
+
+\subsubsection{Off-resonance effects}
+
+In general, it is not always possible to ensure exact resonance for all spins at the same
+time, so the condition $\Omega^0 = 0$ cannot always be satisfied. We can consider the
+case when $\Omega^0 \neq 0$ by examining the spin Hamiltonian during a rectangular
+pulse where:
+\begin{equation}
+  \hat{\tilde{H}} = \Omega^0\hat{I}_z + \omega_{\text{nut}}(\hat{I}_x\cos\phi_p + \hat{I}_y\sin\phi_p)
+\end{equation}
+The rotation axis of the spin polarization now has a $z$-component aswell as an $x$- and $y$-component. The
+axis is therefore tilted out of the $xy$-plane.
+
+The rotating frame spin Hamiltonian for an off-resonance pulse may be written as:
+\begin{equation}
+  \hat{\tilde{H}} = \mathbf{\omega}_{\text{eff}}\cdot\hat{mathbf{I}}
+\end{equation}
+where $\mathbf{\omega}_{\text{eff}}$ is the effective rotation axis, given by:
+\begin{equation}
+  \mathbf{\omega}_{\text{eff}} = \omega_eff\{mathbf{e}_x'\sin\beta_p\cos\phi_p + mathbf{e}_y'\sin\beta_p\sin\phi_p + mathbf{e}_z'\cos\beta_p\}
+\end{equation}
+and $\{mathbf{e}_x',mathbf{e}_x',mathbf{e}_x'\}$ are the rotating reference frame axes. The vector operator
+$\hat{mathbf{I}}$ is defined as:
+\begin{equation}
+  \hat{mathbf{I}} = mathbf{e}_x'\hat{I}_x + mathbf{e}_y'\hat{I}_y + mathbf{e}_z'\hat{I}_z
+\end{equation}
+The tilt of the rotation axis away from the $z$-axis is:
+\begin{equation}
+  \beta_p = \arctan(\frac{\omega_{\text{nut}}}{\Omega^0})
+\end{equation}
+the magnitude of the rotation frequency around the tilted axis is given by:
+\begin{equation}
+  \omega_{\text{eff}} = \{(\omega_{\text{nut}})^2 + (\Omega^0)^2\}^{1/2}
+\end{equation}
+Using these parameters the rotating frame spin Hamiltonian may be written as:
+\begin{equation}
+  \hat{\tilde{H}} = \omega_{\text{eff}}\hat{R}_z(\phi_p)\hat{R}_y(\beta_p)\hat{I}_z\hat{R}_y(-\beta_p)\hat{R}_z(-\phi_p)
+\end{equation}
+
+The rotating-frame spin states before and after the pulse are related through:
+\begin{equation}
+  \ket{\tilde{\psi}}_2 = \hat{R}_{\text{off}}\ket{\tilde{\psi}}_1
+\end{equation}
+where $\hat{R}_{\text{off}}$ is:
+\begin{equation}
+  \hat{R}_{\text{off}} = \hat{R}_z(\phi_p)\hat{R}_y(\beta_p)\hat{R}_z(\omega_{\text{eff}}\tau)\hat{R}_y(-\beta_p)\hat{R}_z(-\phi_p)
+\end{equation}
+
+\subsection{The Density operator revisited}
 
 Usually in NMR there are $>10^{20}$ spins in the sample, the density operator becomes more advantageous here
-as mentioned it contains information about the entire spin ensemble. Normally, there is only a small population difference between $\alpha$ and $\beta$ (see \ref{Population}),
-but for this example let's imagine we have found a sufficiently strong enough field for a population difference of $0.1$. The density operator in this case would be:
+as mentioned it contains information about the entire spin ensemble. Normally, there is only a small population difference between $\alpha$ and $\beta$
+governed by the Boltzmann distribution,
+so for a general polarisation level, $p$, the density operator can be written as:
 \begin{equation}
   \hat\rho = \frac{1}{2}\begin{pmatrix}
-    1 + 0.1 & 0\\
-    0 & 1-0.1
+    1 + p & 0\\
+    0 & 1 - p
 \end{pmatrix}
 \end{equation}
 using the definition given in \eqn{eqn:operators} we can re-write this as
 \begin{equation}
-  \hat\rho = \frac{1}{2}\hat{\mathbb{1}} + 0.1\hat{I}_z
+  \hat\rho = \frac{1}{2}\hat{\mathbb{1}} + \frac{1}{2}p\hat{I}_z
 \end{equation}
 $\hat{\mathbb{1}}$ is identity matrix and corresponds to no population difference between $\ket{\alpha}$ and $\ket{\beta}$.
 
 $\hat{\mathbb{1}}$ is unaffected by rotations so can be ignored in the context of NMR
 and so we write
 \begin{equation}
-  \hat{\rho} = 0.1\hat{I}_z
+  \hat{\rho} = \frac{1}{2}p\hat{I}_z
 \end{equation}
-to describe the $z$ magnetisation of our sample.
-
-The density operator can also be used to to describe the evolution of a spin system under operations. If we applied a $90$ degree pulse along the $y$ axis, denoted using radians by $(\pi/2)_y$. That is the equivalent of propagating the initial density operator, $\rho_0$
-under the rotation superoperator $\hat{\hat{R}}_y(\pi/2)$:
+to describe the $z$ magnetisation of our sample. If the system is at thermal equilibrium
+then $p$ is equal to the Boltzmann factor defined as:
 \begin{equation}
-  \hat{\rho}_1 = \hat{\hat{R}}_y(\frac{\pi}{2})\hat\rho_0 = \text{exp}\{-i(\frac{\pi}{2})\hat{\hat{I}}_y\}\hat{I}_z\text{exp}\{+i(\frac{\pi}{2})\hat{\hat{I}}_y\} = \hat{I}_x
+  \mathbb{B} = \frac{\hbar\gamma\B_0}{k_bT}
+\end{equation}
+
+The density operator can also be used to to describe the evolution of a spin system under operations. If we applied a $\pi/2$ degree pulse along the $y$ axis, denoted by $(\pi/2)_y$. That is the equivalent of propagating the initial density operator, $\rho_0$
+under the rotation operator $\hat{R}_y(\pi/2)$ using the sandwich formula:
+\begin{equation}
+  \hat{\rho}_1 = \hat{R}}_y(\frac{\pi}{2})\hat\rho_0\hat{R}}_y(-\frac{\pi}{2}) = \text{exp}\{-i(\frac{\pi}{2})\hat{I}}_y\}\hat{I}_z\text{exp}\{+i(\frac{\pi}{2})\hat{I}}_y\} = \hat{I}_x
 \end{equation}
 Now the magnetisation is in the $x$-axis it will begin to precess about the $z$-axis which using our notation is the equivalent of of propagating $\hat{I}_x$ ($\hat{\rho}_1$)
-under $\hat{\hat{R}}_z(\omega t)$:
+under $\hat{R}}_z(\omega t)$:
 \begin{align}\label{eqn:propagate}
-  \hat{\rho}_2 = \hat{\hat{R}}_z(\omega t)\hat{\rho}_1 =& \text{exp}\{-i\omega t\hat{\hat{I}}_z\}\hat{I}_x\text(exp)\{+i\omega t\hat{\hat{I}}_z\}\\
+  \hat{\rho}_2 = \hat{R}}_z(\omega t)\hat{\rho}_1\hat{R}}_z(-\omega t) =& \text{exp}\{-i\omega t\hat{I}}_z\}\hat{I}_x\text(exp)\{+i\omega t\hat{I}}_z\}\\
    =& \cos(\omega t)\hat{I}_x + \sin(\omega t)\hat{I}_y
 \end{align}
 where $\omega$ is the larmour frequency, and $t$ is time.
 
 the $\text{exp}\{i\omega t\}$ is called a propagator, because it propagates the density operator in time.
 
-The Hamiltonian, the energy operator, describes how the system evolves in time and uses progators, rotational superoperators and the density operator in order to do so.
-
-\subsubsection{The Hamiltonian}\label{Hamiltonian}
-
-If we let $\ket{\psi_1}$ and $\ket{\psi_2}$ be eigenstates of the Hamiltonian $\hat{H}$ then
-\begin{align}
-  \hat{H}\ket{\psi_1} = E_1\ket{\psi_1}\\
-  \hat{H}\ket{\psi_2} = E_2\ket{\psi_2}
-\end{align}
-
-The Hamiltonian can also be expressed in matrix form:
-\begin{equation}
-  \hat{H} = \begin{pmatrix}
-    E_1 & 0\\
-    0 & E_2
-\end{pmatrix}
-\end{equation}
-If the Hamiltonian is written in the eigenbasis of the system its main diagonal correspond to state energies and it has values of $0$ everywhere else.
-
-The evolution in time of a quantum system is described by the Schr\"odinger equation:
-\begin{equation}
-  i\hbar\frac{\partial}{\partial{t}}\ket{\psi} = \hat{H}\ket{\psi}
-\end{equation}
-The $\hbar$ was included for completeness sake and will again be set to equal $1$.
-
-In NMR we describe the dynamics of a system using the density operator evolution rather than the evolution of the states using
+In NMR we can  describe the dynamics of a system using the density operator evolution rather than the evolution of the states using
 \begin{align}
   \frac{\partial}{\partial{t}}\ket{\psi} = -i\hat{H}\ket{\psi}\\
   \frac{\partial}{\partial{t}}\bra{\psi} = i\bra{\psi}\hat{H}
@@ -1069,61 +1305,54 @@ to give the relationship
 \end{equation}
 this is called the Liouville von Neumann equation.
 
-Returning to our spin-1/2 particle in a magnetic field. The Hamiltonian is initially
-proportional to the $z$ angular momentum operator
+The calculation of the response of the spin ensemble to r.f. pulses given the
+general rotating fram as before the rotating frame density operator is given by:
 \begin{equation}
-  \hat{H} = \omega\hat{I}_z
+  \hat{\tilde{\rho}} = \overbar{\ket{\tilde{\psi}}\bar{\tilde{\psi}}}
 \end{equation}
+The rotating frame and fixed frame populations and coherences are related by:
+\begin{align}
+  \tilde{\rho_\alpha} =& \rho_\alpha  \qquad \tilde{\rho_\beta} =& \rho_\beta\\
+  \tilde{\rho_-} =& \rho_-\text{exp}\{-i\Phi(t)\} \qquad \tilde{\rho_-} =& \rho_-\text{exp}\{+i\Phi(t)\}
+\end{align}
+the populations remain the same and the coherences are linked through a time dependant phase factor.
 
-where $\omega = -\gamma B_0$. In matrix form, in our original zeeman basis, the Hamiltonian is:
-\begin{equation}
-  \hat{H} = \begin{pmatrix}
-+\frac{\omega}{2} & 0\\
-0 & -\frac{\omega}{2}
-\end{pmatrix}
-\end{equation}
-where
-\begin{equation}
-  \hat{H}\ket{\alpha} = +\frac{\omega}{2}\ket{\alpha}
-\end{equation}
+\subsubsection{Magnetization vector}
 
-The density operator evolves under a Hamiltonian like so:
-\begin{equation}
-  \hat\rho(t) = \text{exp}\{-i\hat{H}t\}\hat\rho(0)\text{exp}\{+i\hat{H}t\}
-\end{equation}
+The state of a single spin-1/2 can be represented by an arrow indicating the direction of well-defined angular momentum and
+the response measured by rotating the arrow around the different axes in three dimensional space. Then similarly
+an ensemble of isolated spins-1/2 can be represented as a magnetization vector, $\mathbf{M}$, idicating the magnitude
+and direction of the net magnetisation. The dynamics of the ensemble corresponds to the motion of the magentization vector.
 
-In \eqn{eqn:propagate}, we saw that the precession of a spin-1/2 particle in a magnetic field can be described using the rotation superoperator around the $z$-axis $\hat{\hat{R}}_z(\omega t)$. We know that for this system its analagous to $\hat{H} = \omega\hat{I}_z$.
+The magnetization vector has three Cartesian components:
+\begin{equation}
+  \mathbf{M} = M_x\mathbf{e}_x + M_y\mathbf{e}_y + M_z\mathbf{e}_z
+\end{equation}
+ The longitudinal component is related to the population difference between states:
+ \begin{equation}
+   M_z = 2\mathbb{B}^{-1}(\rho_\alpha - \rho_\beta)
+ \end{equation}
+The transverse magnetization components $M_x$ and $M_y$ are related to the $(-1)$-quantum coherence between the states:
+\begin{align}
+  M_x =& 4\mathbb{B}^-1Re\{\rho_-\}\\
+  M_y =& 4\mathbb{B}^-1Im\{\rho_-\}
+\end{align}
+These are chosen so that thermal equilibrium magnetization is a unit vector
+aliong the $z$-axis:
+\begin{equation}
+  \mathbf{M}^{\text{eq}} = \mathbf{e}_z
+\end{equation}
+With these, the density operator may be written as:
+\begin{align}
+  \hat{\rho} =& \frac{1}{2}\mathbb{1} + \frac{1}{2}\mathbb{B}\mathbf{M}\cdot{I}\\
+  =& \frac{1}{2}\mathbb{1} + \frac{1}{2}\mathbb{B}(M_x\hat{I}_x + M_y\hat{I}_y + M_z\hat{I}_z)
+\end{align}
+The populations and coherences can be representend in terms of magnetization:
+\begin{align}
+  \rho_\alpha =& \frac{1}{2} + \frac{1}{4}\mathbb{B}M_z \qquad \rho_\beta =& \frac{1}{2} - \frac{1}{4}\mathbb{B}M_z\\
+  \rho_+ =&  \frac{1}{4}\mathbb{B}(M_x - iM_y) \qquad \rho_- = \frac{1}{4}\mathbb{B}(M_x + iM_y)
+\end{align}
 
-If the density operator commutes with the Hamiltonian there is no evolution of the system.
-This can be seen more clearly using propagators with $\hat{H} = \omega\hat{I}_z$ and $\rho(0) = \hat{I}_z$
-\begin{equation}
-  \rho(t) = \text{exp}\{-i\omega t\hat{\hat{I}}_z\}\hat{I}_z\text{exp}\{+i\omega t\hat{\hat{I}}_z\} = \hat{I}_z
-\end{equation}
-If the density operator does not commute with the Hamiltonian it will evolve. To demostrate this we use $\hat{H} = \omega\hat{I}_z$ as before  however this time $\hat\rho(0) = \hat{I}_x$
-\begin{equation}
-  \hat\rho(t) = \text{exp}\{-i\omega t\hat{\hat{I}}_z\}\hat{I}_x\text{exp}\{+i\omega t\hat{\hat{I}}_z\} = \cos(\omega t)\hat{I}_x + \sin(\omega t)\hat{I}_y
-\end{equation}
-The Hamiltonian for multi-spin system is slightly more complicated. Consider a two spin
-system $I_1$ and $I_2$ with $J$-coupling $J_{12}$ the Hamiltonian then becomes:
-\begin{equation}
-  \hat{H} = \omega_1\hat{I}_1 + \omega_2\hat{I}_2 + 2\pi J_{12}\hat{\mathbf{I}}_1\cdot\hat{\mathbf{I}}_2
-\end{equation}
-where $\hat{\mathbf{I}}_1\cdot\hat{\mathbf{I}}_2 = \hat{I}_{1x}\hat{I}_{2x} + \hat{I}_{1y}\hat{I}_{2y} + \hat{I}_{1z}\hat{I}_{2z}$.
-In matrix form in the zeeman basis this is:
-\begin{equation}
-  \hat{H} = \frac{1}{2}\begin{pmatrix}
-    +\omega_1 + \omega_2 + \pi J_{12} & 0 & 0 & 0\\
-    0 & +\omega_1 - \omega_2 - \pi J_{12} & 2\pi J_{12} & 0\\
-    0 & 2\pi J_{12} & -\omega_1 + \omega_2 - \pi J_{12} & 0\\
-    0 & 0 & 0 & -\omega_1 - \omega_2 - \pi J_{12}
-\end{pmatrix}
-\end{equation}
-
-The zeeman basis is no longer an eigenbasis of the Hamiltonian because the $J$-coupling
-introduces off-diagonal terms. In practice, when $|\omega_1-\omega_2| >> 2\pi J_{12}$
-these terms are ignored because the zeeman basis is approxiamely the eigen basis of the Hamiltonian. This is termed the secular approxiamation.
-
-However, when this is not the case, the Hamiltonian requires diagonalisation which is beyond the scope of this introduction.
 
 \newpage
 
