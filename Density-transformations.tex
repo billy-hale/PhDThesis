@@ -1,3 +1,11 @@
+The macroscopic observation of the nuclear magnetic dipole moment for the entire spin ensemble
+is given by:
+\begin{equation}
+  \langle\overbar{\boldsymbol{\mu}}\rangle = Tr\{\hat{\rho}\hat{\boldsymbol{\mu}}\}
+\end{equation}
+This is not strictly an expectation value but rather the average contribution from each
+ensemble member as denoted by the overbar. Denoted from now on by $\overbar{\boldsymbol{\mu}}$
+
 Now let's look at how $\hat\rho$ relates to the angular momentum operators given in \eqn{eqn:operators}.
 
 Usually in NMR there are $>10^{20}$ spins in the sample, the density operator becomes more advantageous here
@@ -298,7 +306,7 @@ acquisition. This pulse tips the magnetisation into the $xy$-plane, and if the p
 precession period (we will assume so), the spins begin to precess freely around the $z$-axis at the larmour
 frequency, $\omega_0$, until they return to the $z$-axis through a process described in \ref{Relaxation}.
 
-In a usual NMR experiment the signal is inductally detected. The oscillation of the spins in the sample induces
+In a usual NMR experiment the signal is inductively detected. The oscillation of the spins in the sample induces
 a current in the pick-up coils around the sample, which is detected, amplified and transformed into a spectrum.
 The resulting free induction decay (FID) is typically an exponentionally decaying sinusoidal function. The signal
 produced from this can be written as:
@@ -314,22 +322,22 @@ at precisely the same frequency, however, if there are more spins in the sample 
 the FID becomes extremely hard to interpret on its own.
 
 We can clear this picture up however by employing a Fourier transform. This comverts the time-domain data
-into the frequncy-domain, such that the total signal in the frequency domain, $S(\omega)$ is the sum of all individual spin signals in the frequency, $S_l(\omega)$:
+into the frequncy-domain, such that the total signal in the frequency domain, $S(\Omega)$ is the sum of all individual spin signals in the frequency, $S_l(\Omega)$:
 \begin{equation}
-  S(\omega) = \sum_l S_l(\omega)
+  S(\Omega) = \sum_l S_l(\Omega)
 \end{equation}
 This allows us to clearly see which resonances are possessed by our spins in the sample. To
 perform a Fourier transform we must do the following:
 \begin{equation}
-  S_l(\omega) = \int_{0}^{\infty}s_l(t)\text{exp}\{-i\omega t\}dt
+  S_l(\Omega) = \int_{0}^{\infty}s_l(t)\text{exp}\{-i\Omega t\}dt
 \end{equation}
 and using \eqn{eqn:signal} can be rewritten:
 \begin{equation}
-  S_l(\omega) = a_l\int_{0}^{\infty}\text{exp}\{(-i(\omega+\omega_l)+\lambda_l t\}dt
+  S_l(\Omega) = a_l\int_{0}^{\infty}\text{exp}\{(-i(\Omega+\Omega_l)+\lambda_l t\}dt
 \end{equation}
 sometimes written more concisely as:
 \begin{equation}
-  S(\omega) = \mathcal{F}\{S(t)\}(\omega)
+  S(\omega) = \mathcal{F}\{S(t)\}(\Omega)
 \end{equation}
 where $S(t)$ is the signal for the time domain (FID) and $S(\omega)$ is the signal in the frequency domain.
 
@@ -349,7 +357,7 @@ with larmour frequencies already discussed forms the NMR spectrum as we know it.
 In a molecule, nuclei are surrounded by clouds of electrons which can shield, or de-sheild, it
 from the effects of the external field $B_0$.
 
-The chemical shielding factor, $sigma$, shifts the resonance frequency of the nuclear spin. We
+The chemical shielding factor, $\sigma$, shifts the resonance frequency of the nuclear spin. We
 can now include it in \eqn{eqn:larmour}:
 \begin{equation}
   \omega_j^0 = -\gamma_jB_0(1-\sigma)
@@ -370,8 +378,7 @@ small compared to the size of the field and is reported in parts per million (pp
 
 In addition to the external $B_0$ field, the nuclear spins are also affected by the magnetic fields generated
 by neighboring spins. These magnetic fields are mediated by the electrons in the chemical bonds. This is refered to as
-spin-spin couling or $J$-coupling and gives rise to peak splittings in spectra. These splittings, and therefore the values of $J$-couplings, range from a few Hz to a thousand Hz typically. It is an important factor and is icorperated
-in the quatum description on NMR in \ref{Hamiltonian}.
+spin-spin couling or $J$-coupling and gives rise to peak splittings in spectra. These splittings, and therefore the values of $J$-couplings, range from a few Hz to a thousand Hz typically.
 
 Both of these, $\sigma$ and $J$-couplings, are tensors this means they depend on the orientation of the molecule
 and the spin with respect to the magetic field. In liquids, however, tumble rapidly compared to the timescale

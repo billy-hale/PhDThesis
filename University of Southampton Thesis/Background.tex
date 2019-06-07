@@ -1,6 +1,6 @@
 % !TEX root = ./Thesis.tex
 
-\chapter{Introduction}
+\chapter{Background}
 
 \section{Microfluidics}
 
@@ -102,8 +102,6 @@ produced in microfluidic devices is shown in \fig{fig:IntroDrops}.
   \label{fig:IntroDrops}
 \end{figure}
 
-
-
 In parallel, another branch of microfluidics was being developed. Its goal was to
 culture cells in a repeatable way. In their normal environment, cells are subject to multiple
 cues including cytokines and other signalling molecules from neighbouring cells, biochemical
@@ -132,7 +130,6 @@ govern cell behaviour.
   \label{fig:CellCulture}
 \end{figure}
 
-
 Microfluidic devices have been used enable cell-based assays from cell culture to biochemical analysis. In
 \fig{fig:CellCulture} images of different devices are shown that convey how complex the devices being
 produced were becoming, despite integration of functionalities proving difficult, these demonstrate the
@@ -154,7 +151,10 @@ either damaged the liver directly, or because the metabolites produced by the li
 \citep{sivaraman2005microscale}. Efforts were made to produce \textit{in vitro} culture
 systems that mimic real liver conditions. In the liver, hepatocytes are found in a complex
 3D environment in which nutrients, soluble factors and oxygen are transported through blood
-capillaries and bile canaliculi. Using silicon as a substrate, Powers \textit{et al} fabricated
+capillaries and bile canaliculi. This 3D environment often contains polar tissue structure
+where two sides of the cell are exposed to different media, for example, in the liver
+some hepatocytes are exposed to the bile on one side and blood on the other. This polar structure
+is hard to reproduce using 2D cell culture alone. Using silicon as a substrate, Powers \textit{et al} fabricated
 3D liver reactors using array of 300 µm wide channels \citep{powers2002microfabricated}. In their
 device they perfused rat liver cells providing fluid shear stresses at physiological range. They found
 that the cells seeded into the channels rearranged extensively to form 'tissue like' structures and
@@ -286,83 +286,9 @@ that microfluidics now enjoys such as: 3D printed fluidic networks\citep{kinstli
 phase behaviour characterization for industrial CO$_2$, oil and gas\citep{bao2017microfluidic}; the production of stem cells using messenger RNAs\citep{giulitti2019direct};
 and paper microfluidics for diagnosis of malraia in low resource community\citep{reboud2019based}.
 
-
-\subsection{Goal}
-
-Microfluidics is a broad term that covers a wide variety of research, it is characterised by
-the analysis of small volumes of liquids usually nL to $\mu$L, in doing so, it offers numerous benefits
-such as: a reduction in the materials used in experiemnts which leads to less cost and less waste; a high
-level of control over the microenvironment; and ease of parallelisation and automation.
-Microfluidics chiefly uses Lab-on-a-chip (LoC) devices, or micro total analysis
-systems (µTAS), to perform experiments. These devices, or systems, are intended for the of scaling down of
-labratory functions to a chip-format, the sizes of which range from a few mm$^2$ to a few cm$^2$.
-
-Currently, NMR spectroscopy is not widely utilised in microfluidic devices, or experiments, and could be
-used to provide extra information on the system. It can also be used in conjunction with existing methods
-of analysis in microfluidics such as fluorescence spectroscopy.
-As NMR leaves the sample unpeturbed, this makes it an ideal candidate for \textit{in situ} monitoring of
-living systems.
-
-The goal of the work presented here is to incorporate functional microfluidic experiments with high
-resolution NMR spectroscopy, in such a way that the validity of either section, microfluidic or magnetic
-resonance, remains intact. In this approach, microfluidic capability is preserved by utilising a design
-that, whilst constrained by size and shape, has freedom to house a wide variety of chip designs that enable
-a host of applications, a few of which are shown in \fig{fig:DifferentChips}. This means that functional
-microfluidics can be performed, and coupled, with high resolution NMR spectroscopy. In this way not only
-could NMR become a more widely used tool in the microfluidic toolbox, it would also make a valuable
-attachment to existing tools
-
-High resolution NMR spectroscopy itself requires an extremely homogenous magnetic field, this means that
-any device capable of combining microfluidics and NMR should seek to preserve the homogeneity. This combination, however, is not without significant challenges. Firstly, a probe capable of µNMR must
-be designed with comparable performance to existing probes, to maintain validity, and work with existing
-magnets and spectrometers. Secondly, the chip, and any functionality it possesses must fit in the bore of
-the magnet which is typically around 38 mm in diameter. This chip should also couple to the probe in a
-removable way to enable parallelisation of experiments, preserving one of the key attributes of microfluidics.
-Thirdly, the materials used in construction should be non-magnetic wherever possible and the use of magnetic
-parts should be kept to a minimum. When designing experiments, the magnetic susceptibilities of solutions and
-chip material should also be considered as these need to be as closely matched as possible in order to preserve
-spectral resolution (a solution for when this isn’t the case is discussed in chapter \ref{Chapter:Droplets}).
-
-
-\begin{figure}
-  \begin{center}
-  \includegraphics[width=\textwidth]{MVChips.jpg}
-  \end{center}
-  \caption{Microfluidic devices developed for this work, as well as for other applications in microfluidic
-  NMR. From the left: A device for perfusion culture of a tissue slice on chip; capable of peristaltic
-  pumping; hydrogenation on a chip; droplet generation; simple sample chamber filler; 2D/3D cell culture
-  device. Figure taken from \citep{RN164}}
-  \label{fig:DifferentChips}
-\end{figure}
-
-By combining these two fields, and harnessing the 'best of both worlds' approach
-new insight and analysis is available. Having quantitative, system-level information in a
-a single or just a few scans could benefit a wide variety of experiments. Enabling microfluidic
-NMR also provides the oppurtunity to scan mass-limited samples such as those commonly found in
-ligand binding reactions\citep{Finch:2016gv} or macrocyclic chemistry\citep{RN81}.
-
 \newpage
 
-\section{NMR theory}
-
-Nuclear magnetic resonance (NMR) theory can be described using two approaches:
-\begin{enumerate}
-  \item The classical approach, in which the the nuclei are thought of as small bar magnets which
-  rotate in 3D space. Experiments can be described be approxiamating the net magnetisation as a
-  vector in 3D space.
-  \item The quantum mechanical approach, in which each spin in the system is in a distinct quantised state.
-  Operators are used to describe the state of a system as a whole. Experiments are described by propagating
-  these operators.
-\end{enumerate}
-
-The theory described in this chapter is mainly from \citep{RN135,RN136} and is intended to provide sufficient background
-knowledge in order for the reader to understand later chapters.
-
-
-\subsection{Quantum description of NMR}\label{Quantum}
-
-In this chapter, I will introduce the the quantum description of NMR. Including how
-we use operators to understand how states change under different conditons and how the energies of the system can be extracted.
+\section{NMR theory}\label{Quantum}
 
 \subsubsection{Nuclear Spin}\label{Spin}
 
@@ -1809,9 +1735,9 @@ The SNR was formulated by Abragam\citep{Abragam:1961vg} and the analysis extende
 Richards\citep{Hoult:1976dw} and is defined as the peak signal divided by the root mean square (rms) noise. By including
 the amplitude from \eqn{eqn:Hale} and using the \textit{Rayleigh-Jeans approxiamation} for the noise we find:
 \begin{equation}\label{eqn:SNR}
-  \text{SNR} = \frac{\frac{1}{4}\frac{B_{1x}}{i_c}\gamma^3\hbar^2\B_0^2\frac{n_s}{k_bT_s}}{F\sqrt{4k_bT_cR_{\text{noise}}\Delta~f}}
+  \text{SNR} = \frac{k_0\frac{1}{4}\frac{B_{1x}}{i_c}\gamma^3\hbar^2\B_0^2\frac{n_s}{k_bT_s}}{F\sqrt{4k_bT_cR_{\text{noise}}\Delta~f}}
 \end{equation}
-where assuming spatial homogeniety in the $B_1$ field, $n_s$ is the number of spins in the sample,
+where k_0 is a factor that accounts for inhomogeniety in the $B_1$ field, $n_s$ is the number of spins in the sample,
 $\omega_0$ is the larmour frequency. The factor $B_1/i_c$ the magnetic field from the coil per unit current is defined
 as the coil sensitivity. The denominator is the noise determined by the noise factor from the spectrometer ($F$) and
 the dissipative loses ($R_{\text{noise}}$) of the coil, circuit and sample for the spectral bandwidth $\Delta~f$.
@@ -1946,5 +1872,5 @@ are unreachable with this probe at this time
 For this work, the goal is not only to combine NMR detection and microfluidics, clearly that has been done before. However,
 it is the combination of these two in a way that does not comprimise in either. That, in an NMR sense, means nLODs
 comparible to macroprobes as well as sub 0.01 ppm line widths for true spectral resoltuion. The main
-challenge, as in most NMR is decreasing the limits of detection. Efforts towards
+challenge, as in most NMR, is decreasing the limits of detection. Efforts towards
 lowering the nLOD and cLOD are described in \ref{Chapter:Parahydrogen}
