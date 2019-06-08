@@ -31,23 +31,23 @@
 \maketitle
 \begin{abstract}
   Microfluidics is a constantly growing field of research finding applications in a diverse range of subjects
-  such as materials science, chemistry and across the life sciences. This is due to many advantageous attributes
-  that microfluidics enjoys, namely small sample volumes which contribute to waste reduction and reduced cost of
+  such as materials science, chemistry and across the life sciences. This is due to many advantageous attributes:
+  small sample volumes which contribute to waste reduction and reduced cost of
   experimentation; highly controllable local environments that enable very precise investigation of changes in
   systems to stimuli; rapid prototyping techniques meaning make, test, tweak cycles can be run more than once
   in a typical day; ease of parallelisation makes gathering statistically significant data much easier without
   the need to repeat experiments for days at a time; and ease of automation increases precision and repeatability
 
-  Nuclear magnetic resonance (NMR) spectroscopy is widely applied technique in chemistry and the life sciences.
-  Its non-invasive and non-destructive nature makes it ideal to study living, or mass limited samples. However,
-  it is limited by having to have an extremely homogenous magnetic field as well as the low sensitivities possible in a
-  typical experiment.
+  Nuclear magnetic resonance (NMR) spectroscopy is a widely applied technique in chemistry and the life sciences.
+  Its non-invasive and non-destructive nature makes it ideal to study living, or mass limited samples. NMR, however,
+  requires an extremely homogenous magnetic field to enable molecular structure determination and can be limited
+  by the inherent low sensitivities possible in a typical experiment.
 
   This thesis describes methods for integrating these two fields. Some NMR experiments being ‘miniaturised’ to
   be performed ‘on-chip’ as well as microfluidic concepts that have been engineered to be compatible with NMR
   techniques. These techniques do not seek to replace established methods of microfluidic analysis such as mass
   spectrometry or fluorescence spectroscopy but could be used to compliment these techniques as an additional
-  method of extracting data from the system.
+  method of extracting data from a system.
 
 \end{abstract}
 \tableofcontents
@@ -55,48 +55,69 @@
 \listoftables
 \lstlistoflistings
 \listofsymbols{ll}{
-$k_B$ & The Boltzmann constant \\
-$\gamma_j$ & The gyromagnetic ratio for a nucleus, $j$ \\
-$\omega_j^0$ & The larmour frequency for a nucleus, $j$ \\
+$a$ & The signal amplitude \\
+$\mathbb{B}$ & The Boltzmann factor \\
 $B_0$ & The external magnetic field \\
-$M_a$ & The magnetisation vector component along the $a$-axis \\
-$\theta$ & The tilt angle of magentisation \\
 $B_1$ & The magnetic field produced by an NMR coil \\
-$\lambda_l$ & The decay constant of a spin $l$ \\
+$c_s$ & The concentration of spins in a sample \\
+$C$ & A constant in SNR \\
+$d$ & The coil diameter \\
+$F$ & The noise factor from the spectrometer \\
+$\mathbf{H}$ & The magnetic field \\
+$h$ & Planck's constant \\
+$\hbar$ & The reduced Planck constant \\
+$\hat{H}$ & The Hamiltonian operator in natural units \\
+$I$ & The spin quantum number \\
+$\hat{I}$ & The spin angular momentum operator \\
+$i_c$ & The current \\
+$J$ & The rotational quantum number \\
+$k_0$ & A constant that accounts for spatial inhomogeneities in the $B_1$ field \\
+$k_B$ & The Boltzmann constant \\
+$l$ & The length of a coil \\
+$M_0$ & The net magnetisation \\
+$M_a$ & The magnetisation vector component along the $a$-axis \\
+$\mathbf{M}$ & The magnetisation \\
+$n_s$ & The number of spins in a sample\\
+$\breve{\mathbf{n}}$ & The surface normal \\
+$p$ & The polarisation of a spin system \\
+$P_\alpha$ & The population of the $\alpha$ state \\
+$R_{\text{noise}}$ & The dissipative loses \\
+$\hat{R}$ & The rotation operator
 $S(t)$ & The signal in the time domain \\
-$S(\omega)$ & The signal in the frequency domain \\
-$\sigma$ & The chemical shielding factor \\
-$\delta$ & The chemical shift \\
+$S(\Omega)$ & The signal in the frequency domain \\
+$T$ & The absolute temperature \\
 $T_1$ & The longitudal relaxation time constant \\
 $T_2$ & The transverse relaxation time constant \\
-$h$ & Planck's constant \\
-$I$ & The spin quantum number \\
-$k_0$ & A constant that accounts for spatial inhomogeneities in the $B_1$ field \\
-$V'_s$ & The product of $k_0$ and $V_s$ that is the volume is within 10\% of maximum \\
-$C$ & A constant in SNR \\
-$\rho$ & The resistivity \\
-$\delta$ & The RF current penetration depth \\
-$d$ & The coil diameter \\
-$l$ & The length of a coil \\
-$i$ & The current \\
-$F$ & The noise factor from the spectrometer \\
-$R_{\text{noise}}$ & The dissipative loses \\
-$T$ & The absolute temperature \\
-$\hbar$ & The reduced Planck constant \\
-$M_0$ & The net magnetisation \\
-$V_s$ & The sample volume \\
-$\Delta~f$ & The spectral bandwidth \\
-$\alpha_F$ & The filling factor \\
-$\rho$ & The resistivity \\
-$\chi_V$ & The Magnetic susceptibility \\
-$\mathbf{M}$ & The magnetisation \\
-$\mathbf{H}$ & The magnetic field \\
 $U$ & The scalar magnetic potential \\
-$\mu_{0}$ & The vacuum permeability \\
-$\breve{\mathbf{n}}$ & The surface normal \\
-$J$ & The rotational quantum number \\
+$V_s$ & The sample volume \\
+$V'_s$ & The product of $k_0$ and $V_s$ that is the volume is within 10\% of maximum \\
+$\mathbb{1}$ & The identity matrix \\
+$\alpha_F$ & The filling factor \\
+$\beta_p$ & The tilt of the roatation axis from $z$ for an off-resonance pulse \\
+$\gamma_j$ & The gyromagnetic ratio for a nucleus, $j$ \\
+$\delta$ & The chemical shift \\
+$\delta_{\text{RF}}$ & The RF current penetration depth \\
+$\Delta~f$ & The spectral bandwidth \\
+$\epsilon$ & The enhancement factor \\
+$\theta$ & The tilt angle of magentisation \\
+$\theta_{\text{RF}}$ & The angle between the r.f. coil and $B_0$ \\
+$\lambda_l$ & The decay constant of a spin $l$ \\
 $\mu$ & The reduced mass \\
-$\epsilon$ & The enhancement factor}
+$\mu_{0}$ & The vacuum permeability \\
+$\hat{\mu}$ & magnetic dipole moment operator \\
+$\xi$ & The emf \\
+$\rho_r$ & The resistivity \\
+$\hat{\rho}$ & The density operator \\
+$\sigma$ & The chemical shielding factor \\
+$\phi_p$ & The phase of an r.f. pulse \\
+$\phi_{\text{ref}}$ & The phase shift in the rotating frame \\
+$\Phi$ & The angle that connects the static to rotating frame \\
+$\chi_V$ & The Magnetic susceptibility \\
+$\omega_j^0$ & The larmour frequency for a nucleus, $j$ \\
+$\omega_{\text{nut}}$ & The nutation frequency \\
+$\omega_\text{ref}$ & The rotating frame frequency \\
+$\Omega^0$ & The difference between the Larmor frequency and rotating frame frequency
+}
 \acknowledgements{I would like to express my deep gratitude to Professor Marcel Utz for his patient guidance and
 enthusiastic encouragement that he provided as well as engaging discussion concerning all matters of life and work.
 His depth of knowledge in all manner of subjects was a great help throughout my PhD and provided a seemingly endless
@@ -124,7 +145,7 @@ Finally, I’d like to thank my family for all their support over the years, thi
 %% ----------------------------------------------------------------
 \include{IntroductionNew}
 \include{Background}
-%\include{chapter-droplets}
+\include{chapter-droplets}
 %\include{chapter-ph2}
 %\include{chapter-peristaltics}
 %\include{Conclusions}

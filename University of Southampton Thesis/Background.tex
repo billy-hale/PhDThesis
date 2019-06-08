@@ -573,7 +573,7 @@ and see what happens if we were to project the $\ket{\alpha}$ state along the z-
 \end{equation}
 We find that $\frac{\hbar}{2}$ is the eigenvalue of $\ket{\alpha}$ for the operator $\hat{I}_z$.
 
-We will now examine three more operators and explore how they act on states. They are the total square angular momentum, $\hat{I}^2$ and the two shift operators $\hat{I}^+$ and $\hat{I}^-$ defined as the following:
+We will now examine three operators and explore how they act on states. They are the total square angular momentum, $\hat{I}^2$ and the two shift operators $\hat{I}^+$ and $\hat{I}^-$ defined as the following:
 
 \begin{align}
   \hat{I}^2 =& \hat{I}_x^2 + \hat{I}_y^2 + \hat{I}_z^2\\
@@ -624,7 +624,7 @@ angular momentum operators seen in \ref{Spin}:
     \cos(\frac{1}{2}\theta) & \sin(\frac{1}{2}\theta)\\
     \sin(\frac{1}{2}\theta) & \cos(\frac{1}{2}\theta)
 \end{pmatrix}\\
-\hat{R}_x(\theta)& = \begin{pmatrix}
+\hat{R}_z(\theta)& = \begin{pmatrix}
     \text{exp}\{-i\frac{1}{2}\theta\} & 0\\
     0 & \text{exp}\{+i\frac{1}{2}\theta\}
 \end{pmatrix}
@@ -763,7 +763,23 @@ The density operator can be written as:
   \hat{\rho} = \rho_\alpha\hat{I}^\alpha + \rho_\beta\hat{I}^\beta + \rho_+\hat{I}^+ + \rho_-\hat{I}^-
 \end{equation}
 
-using the shift operators, $\hat{I}^+$ and $\hat{I}^-$, and the projection operators, $\hat{I}^\alpha$ and $\hat{I}^\beta$.
+using the shift operators, $\hat{I}^+$ and $\hat{I}^-$, and the projection operators, $\hat{I}^\alpha$ and $\hat{I}^\beta$ these have the following matrix representations:
+\begin{align}
+  \hat{I}^+ = \begin{pmatrix}
+    0 & 1\\
+    0 & 0
+\end{pmatrix}\qquad\hat{I}^- = \begin{pmatrix}
+  0 & 0\\
+  1 & 0
+\end{pmatrix}\\
+\hat{I}^\alpha = \begin{pmatrix}
+  1 & 0\\
+  0 & 0
+\end{pmatrix}\qquad\hat{I}^\beta = \begin{pmatrix}
+  0 & 0\\
+  0 & 1
+\end{pmatrix}
+\end{align}
 
 The physical interpretations of the components of the density operator can help to understand the microscopic state
 of th individual spins. The sum of the populations, $\rho_\alpha$ and $\rho_\beta$, is always equal to one, only the differences between the states
@@ -794,7 +810,7 @@ the eigenvalue returned is the energy level of that state.
 
 In NMR the energy of a nucleus in a magnetic field, $E$, is given by:
 \begin{equation}
-  E = -m_I\hbar\gamma\B_0
+  E = -m_I\hbar\gamma~B_0
 \end{equation}
 
 For a spin-1/2 nuclei there are two states labelled as $\alpha$ and $\beta$
@@ -901,7 +917,7 @@ where
 
   The spin Hamiltonian is:
   \begin{equation}
-    \hat{H} = \omega^0\hta{I}_z
+    \hat{H} = \omega^0\hat{I}_z
   \end{equation}
 the equaiton of motion then becomes:
 \begin{equation}
@@ -942,7 +958,7 @@ a time dependent angle , $\Phi$(t) such that:
 \end{align}
 The frame rotates with a constant frequency $\omega_\text{ref}$ around the $z$-axis:
 \begin{equation}
-  \Phi(t) = \omega_\text{ref}t + \phi_\text{ref}
+  \Phi(t) = \omega_{\text{ref}}t + \phi_{\text{ref}}
 \end{equation}
 for brevity $(t)$ is now dropped
 
@@ -1114,7 +1130,7 @@ this can be rewritten using rotation operators:
   \hat{R}_{\phi_p}(\theta) = \hat{R}_z(\phi_p)\hat{R}_x(\theta)\hat{R}_z(-\phi_p)
 \end{equation}
 The matrix representation can be optained by multiplying togther the matrix
-representations of the rotation operators from \eqn{RotMat}:
+representations of the rotation operators from \eqn{eqn:RotMat}:
 \begin{equation}
   \hat{R}_{\phi_p}(\theta) = \begin{pmatrix}
     \cos\frac{1}{2}\theta & -i\sin\frac{1}{2}(\theta)e^{-i\phi_p}\\
@@ -1195,7 +1211,7 @@ and so we write
 to describe the $z$ magnetisation of our sample. If the system is at thermal equilibrium
 then $p$ is equal to the Boltzmann factor defined as:
 \begin{equation}
-  \mathbb{B} = \frac{\hbar\gamma\B_0}{k_bT}
+  \mathbb{B} = \frac{\hbar\gamma~B_0}{k_bT}
 \end{equation}
 
 
@@ -1282,7 +1298,7 @@ after the pulse the density operator is
   \hat{rho}_2 =& \hat{R}_x(\pi/2)\hat{\rho}_1\hat{R}_x(-\pi/2) = \frac{1}{2}\hat{R}_x(\pi/2)\mathbb{1}\hat{R}_x(-\pi/2) + \frac{1}{2}\mathbb{B}\hat{R}_x(\pi/2)\hat{I}_z\hat{R}_x(-\pi/2) \\
   =& \frac{1}{2}\mathbb{1} + \frac{1}{2}\mathbb{B}\hat{R}_x(\pi/2)\hat{I}_z\hat{R}_x(-\pi/2)
 \end{align}
-since the unity matrix, $\mathbb{1}$ is invariant under rotations. The last term
+since the identity matrix, $\mathbb{1}$ is invariant under rotations. The last term
 can be calculated using the sandwhich relationship:
 \begin{equation}
   \hat{R}_x(\pi/2)\hat{I}_z\hat{R}_x(-\pi/2) = -\hat{I}_y
@@ -1328,7 +1344,7 @@ the other hand is the time constant that governs the return of magnetisation to 
 When talking in terms of the density operator we say that $T_1$ is the relaxation rate constant for populations, and $T_2$ is the relaxation
 rate constant coherences. But this is incompatible with the classical description of NMR.
 
-The Bloch equations are used to describe how the megnetisation vectors change in time\ref{Bloch:1946hk}:
+The Bloch equations are used to describe how the megnetisation vectors change in time \citep{Bloch:1946hk}:
 \begin{align}
   \frac{dM_x(t)}{dt}\quad=&\quad\gamma(M_y(t)B_z(t)-M_z(t)B_y(t)) - \frac{M_x(t)}{T_2}\\
   \frac{dM_y(t)}{dt}\quad=&\quad\gamma(M_z(t)B_x(t)-M_x(t)B_z(t)) - \frac{M_y(t)}{T_2}\\
@@ -1397,7 +1413,7 @@ The equation of motion for the $z$-axis magnetisation vector is:
 Longitudinal relaxation involves an energy exchange between the spin system and the molecular
 surroundings and is why it is often referred to as spin-lattice relaxation.
 
-\Subsection{NMR signal and detection}
+\subsection{NMR signal and detection}
 
 In NMR the signal produced by the spins is inductively detected. The precessing transverse magnetization, created
 when an r.f. field is applied to the sample, induces a voltage, and therefore a current, in a coil that
@@ -1459,22 +1475,22 @@ $\langle{\hat{I}_x}\rangle = \text{Tr}\{\hat{\rho}\hat{I}_x\}$ so
 \end{align}
 all terms apart from the coherences are time independent so the emf can be simplified for now as
 \begin{equation}
-  \xi \~ \frac{\partial}{\partial{t}}\rho_-(t) + \frac{\partial}{\partial{t}}\rho_+(t)
+  \xi \sim \frac{\partial}{\partial{t}}\rho_-(t) + \frac{\partial}{\partial{t}}\rho_+(t)
 \end{equation}
 using \eqn{eqn:coherencetime}
 \begin{align}
-  \rho_-(t) =& \rho_-(0)\text{exp}\{(i\omega^0-\lamba)t\}\\
-  \rho_+(t) =& \rho_-(0)\text{exp}\{(-i\omega^0-\lamba)t\}
+  \rho_-(t) =& \rho_-(0)\text{exp}\{(i\omega^0-\lambda)t\}\\
+  \rho_+(t) =& \rho_+(0)\text{exp}\{(-i\omega^0-\lambda)t\}
 \end{align}
 the emf becomes
 \begin{equation}
-  \xi \~ (i\omega^0\rho_- - i\omega^0\rho_+)
+  \xi \sim (i\omega^0\rho_- - i\omega^0\rho_+)
 \end{equation}
 
 the signal that one obtains in an NMR experiment is proportional to the emf induced in the pick-up coil this
 is denoted $s_\text{FID}$ and is given by:
 \begin{equation}
-  s_\text{FID} ~ (i\omega^0\rho_- - i\omega^0\rho_+)\frac{1}{2}\frac{B_1}{i}\gamma\hbar~c_sV_s
+  s_\text{FID} \sim (i\omega^0\rho_- - i\omega^0\rho_+)\frac{1}{2}\frac{B_1}{i}\gamma\hbar~c_sV_s
 \end{equation}
 
 \subsubsection{Quadrature detection}
@@ -1502,27 +1518,27 @@ given an additional phase shift so:
 
 The signal after mixing with $A$ is:
 \begin{equation}
-  s_{\text{FID}}(t)s_{\text{rec}}^A(t) = (i\omega^0\rho_-(t) - i\omega^0\rho_+(t))\cos(\omega_{\text{ref}}t + \phi_{\text{rec}})
+  s_\text{FID}(t)s_\text{rec}^A(t) = (i\omega^0\rho_-(t) - i\omega^0\rho_+(t)\cos(\omega_\text{ref}t + \phi_\text{rec})
 \end{equation}
 which can be evaluated as
 \begin{align}
-  s_{\text{FID}}(t)s_{\text{rec}}^A(t) =& \frac{1}{2}i\rho_-(0)\text{exp}\{i[(\omega^0 + \omega_{\text{ref}})t + \phi_{\text{rec}}]\}e^{-\lamba)t}\\
-                                        &+\frac{1}{2}i\rho_-(0)\text{exp}\{i[(\omega^0 - \omega_{\text{ref}})t - \phi_{\text{rec}}]\}e^{-\lamba)t}\\
-                                        &-\frac{1}{2}i\rho_+(0)\text{exp}\{i[-(\omega^0 - \omega_{\text{ref}})t + \phi_{\text{rec}}]\}e^{-\lamba)t}\\
-                                        &+\frac{1}{2}i\rho_+(0)\text{exp}\{i[-(\omega^0 + \omega_{\text{ref}})t - \phi_{\text{rec}}]\}e^{-\lamba)t}
+  s_{\text{FID}}(t)s_{\text{rec}}^A(t) =& \frac{1}{2}i\rho_-(0)\text{exp}\{i[(\omega^0 + \omega_{\text{ref}})t + \phi_{\text{rec}}]\}e^{-\lambda~t}\\
+                                        &+\frac{1}{2}i\rho_-(0)\text{exp}\{i[(\omega^0 - \omega_{\text{ref}})t - \phi_{\text{rec}}]\}e^{-\lambda~t}\\
+                                        &-\frac{1}{2}i\rho_+(0)\text{exp}\{i[-(\omega^0 - \omega_{\text{ref}})t + \phi_{\text{rec}}]\}e^{-\lambda~t}\\
+                                        &+\frac{1}{2}i\rho_+(0)\text{exp}\{i[-(\omega^0 + \omega_{\text{ref}})t - \phi_{\text{rec}}]\}e^{-\lambda~t}
 \end{align}
 This rather complicated signal is now passed through a low pass r.f. filter which removes the high frequncy components this
 removes the components oscillating at $\omega^0 + \omega_{\text{ref}}$ and retains the low frequency components
 $\Omega^0 = \omega^0 - \omega_{\text{ref}}$ the signal $s_A(t)$ emerging from the filter is
 \begin{align}
-  s_A =& +\frac{1}{2}i\rho_-(0)\text{exp}\{i(\Omega^0t - \phi_{\text{rec}})\}e^{-\lamba)t}\\
-       & -\frac{1}{2}i\rho_+(0)\text{exp}\{i(-\Omega^0t+ \phi_{\text{rec}})\}e^{-\lamba)t}
+  s_A =& +\frac{1}{2}i\rho_-(0)\text{exp}\{i(\Omega^0t - \phi_{\text{rec}})\}e^{-\lambda~t}\\
+       & -\frac{1}{2}i\rho_+(0)\text{exp}\{i(-\Omega^0t+ \phi_{\text{rec}})\}e^{-\lambda~t}
 \end{align}
 due to the relationship between labratory and rotating-frame coherences from \eqn{eqn:DensityRotFrame}
 this can be written as
 \begin{align}
-  s_A =& +\frac{1}{2}i\tilde{\rho}_-(0)\text{exp}\{i(\Omega^0t - \phi_{\text{rec}} + \phi_{\text{ref}})\}e^{-\lamba)t}\\
-       & -\frac{1}{2}i\tilde{\rho}_+(0)\text{exp}\{i(-\Omega^0t+ \phi_{\text{rec}} - \phi_{\text{ref}})\}e^{-\lamba)t}
+  s_A =& +\frac{1}{2}i\tilde{\rho}_-(0)\text{exp}\{i(\Omega^0t - \phi_{\text{rec}} + \phi_{\text{ref}})\}e^{-\lambda~t}\\
+       & -\frac{1}{2}i\tilde{\rho}_+(0)\text{exp}\{i(-\Omega^0t+ \phi_{\text{rec}} - \phi_{\text{ref}})\}e^{-\lambda~t}
 \end{align}
 where $\phi_{\text{ref}}$ represents the angle of the rotating frame with respect to the labratory frame
 at time $t = 0$. The equations for the precession in the rotating from (\eqn{eqn:coherencetime})
@@ -1543,21 +1559,21 @@ These signals are treated as two components of one complex signal:
 \end{equation}
 which evaluates to
 \begin{equation}
-  s(t) \~ i\tilde{\rho}_-(t)\text{exp}\{-i(\phi_{\text{rec}} - \phi_{\text{ref}})\}
+  s(t) \sim i\tilde{\rho}_-(t)\text{exp}\{-i(\phi_{\text{rec}} - \phi_{\text{ref}})\}
 \end{equation}
 Which contains contributions from the rotating frame ($-1$)-quantum coherences. The ($+1$)-quantum coherences
 have disappeared however, the contribution is equal to the ($-1$)-quantum coherence so a factor two is included
 the frame phase shift as well as other sources of constant shifts from instrumentation are corrected in post-processing
 so the quadrature signal can be expressed as:
 \begin{equation}
-  s(t) \~ 2i\tilde{\rho}_-(t)\text{exp}\{-i\phi_{\text{rec}}\}
+  s(t) \sim 2i\tilde{\rho}_-(t)\text{exp}\{-i\phi_{\text{rec}}\}
 \end{equation}
 There are some time independant variables from the original expression of $s_{\text{FID}}$ which can now be included:
 \begin{align}
   s(t) =& 2i\omega^0\frac{1}{2}\frac{B_{1x}}{i_c}\gamma\hbar~c_sV_s\tilde{\rho}_-(t)\text{exp}\{-i\phi_{\text{rec}}\}\\
   s(t) =& i\omega^0\frac{B_{1x}}{i_c}\gamma\hbar~c_sV_s\tilde{\rho}_-(t)\text{exp}\{-i\phi_{\text{rec}}\}
 \end{align}
-where $\omega^0$ is the larmor frequency, $\frac{B_{1x}}{i_c}$ is the coil sensitivity, $\gamma$ is the gyromagnetic ratio,
+where $\omega^0$ is the larmor frequency, $B_{1x}/i_c$ is the coil sensitivity, $\gamma$ is the gyromagnetic ratio,
 $\hbar$ is the reduced Planck's constant, the term $c_sV_s$ is the number of spins in the sample. This signal is still
 strictly speaking a voltage that produces an osciallting current
 
@@ -1602,7 +1618,7 @@ and in the case of the $(\pi/2)_x$ pulse
 \end{equation}
 collecting like terms and expanding $\mathbb{B}$ gives
 \begin{equation}
-  a = \frac{1}{4}\frac{B_{1x}}{i_c}\gamma^3\hbar^2\B_0^2\frac{n_s}{k_bT}
+  a = \frac{1}{4}\frac{B_{1x}}{i_c}\gamma^3\hbar^2B_0^2\frac{n_s}{k_bT}
 \end{equation}
 where $n_s$ is the number of spins in the sample. This relationship makes sense intuitively
 as increasing the number of spins in your sample leads to an increase in single amplitude as does increasing the
@@ -1714,7 +1730,7 @@ a smaller portion of spins in the sample but this compromises sensitivity as the
  Sensitivity in NMR at thermal equilibrium is always in short supply. In an NMR experiment, the signal amplitude
  at thermal equilibrium $a$ can be expressed as:
 \begin{equation}\label{eqn:Hale}
- a = \frac{1}{4}\frac{B_{1x}}{i_c}\gamma^3\hbar^2\B_0^2\frac{n_s}{k_bT}
+ a = \frac{1}{4}\frac{B_{1x}}{i_c}\gamma^3\hbar^2B_0^2\frac{n_s}{k_bT}
 \end{equation}
 where $\gamma$ is the gyromagnetic ratio of the nucleus,$\hbar$ is Planck's constant $h/2\pi$, $B_0$ is the magnetic field, $n_s$ is
 the number of spins in the sample, $k_B$ is the Boltzmann constant and $T$ is the absolute temperature. The amplitude
@@ -1735,9 +1751,9 @@ The SNR was formulated by Abragam\citep{Abragam:1961vg} and the analysis extende
 Richards\citep{Hoult:1976dw} and is defined as the peak signal divided by the root mean square (rms) noise. By including
 the amplitude from \eqn{eqn:Hale} and using the \textit{Rayleigh-Jeans approxiamation} for the noise we find:
 \begin{equation}\label{eqn:SNR}
-  \text{SNR} = \frac{k_0\frac{1}{4}\frac{B_{1x}}{i_c}\gamma^3\hbar^2\B_0^2\frac{n_s}{k_bT_s}}{F\sqrt{4k_bT_cR_{\text{noise}}\Delta~f}}
+  \text{SNR} = \frac{k_0\frac{1}{4}\frac{B_{1x}}{i_c}\gamma^3\hbar^2B_0^2\frac{n_s}{k_bT_s}}{F\sqrt{4k_bT_cR_{\text{noise}}\Delta~f}}
 \end{equation}
-where k_0 is a factor that accounts for inhomogeniety in the $B_1$ field, $n_s$ is the number of spins in the sample,
+where $k_0$ is a factor that accounts for inhomogeniety in the $B_1$ field, $n_s$ is the number of spins in the sample,
 $\omega_0$ is the larmour frequency. The factor $B_1/i_c$ the magnetic field from the coil per unit current is defined
 as the coil sensitivity. The denominator is the noise determined by the noise factor from the spectrometer ($F$) and
 the dissipative loses ($R_{\text{noise}}$) of the coil, circuit and sample for the spectral bandwidth $\Delta~f$.
@@ -1771,7 +1787,7 @@ can be tackled by commercially available cryoprobes where the coil is cooled wit
 
 To see how size of coil affects SNR we take an RF helical coil. An idealised coil
 is a cylindrical shell with uniform current density. The RF current penetrates to a frequency
-specific depth $\delta$. For copper at 600 MHz and room temperature $\delta$ = 2.7 $\mu$m. The center
+specific depth $\delta_{\text{RF}}$. For copper at 600 MHz and room temperature $\delta_{\text{RF}}$ = 2.7 $\mu$m. The center
 field is given by:
 \begin{equation}
   \frac{B_1}{i_c} = \frac{\mu_0}{\sqrt{l^2+d^2}}
