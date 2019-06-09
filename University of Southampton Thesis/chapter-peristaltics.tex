@@ -6,17 +6,20 @@
 
 The flow and control of liquids in microfluidics is essential, with microfluidic pumping
 and mixing playing an integral role in many biological and chemical applications, such as
-DNA analysis\citep{RN74, RN75}, protein folding\citep{RN76}, enzyme asssays\citep{RN77, RN78}, chemical synthesis\citep{RN79,RN80}, and kinetic stduies\citep{RN81, RN82}. Many solutions exist for the pumping and mixing challenge on small scales.
-These include 3D printed valves\citep{RN83, RN84}, syringe pumps\citep{RN85,RN86,RN87}, pressure actuated valves\citep{RN88, RN89, RN90},
-electrowetting (sometime referred to as digital microfluidics\citep{RN91, RN92}, piezoelectric pumps\citep{RN93, RN94}, magnetic pumping\citep{RN95,RN96}, and centrifugal forces\citep{RN97, RN98, RN99}
+DNA analysis \citep{RN74, RN75}, protein folding \citep{RN76}, enzyme asssays \citep{RN77, RN78},
+chemical synthesis \citep{RN79,RN80}, and kinetic studies \citep{RN81, RN82}. Many solutions exist for
+the pumping and mixing challenge on small scales. These include 3D printed valves \citep{RN83, RN84},
+syringe pumps \citep{RN85,RN86,RN87}, pressure actuated valves \citep{RN88, RN89, RN90}, electrowetting
+(sometime referred to as digital microfluidics) \citep{RN91, RN92}, piezoelectric pumps \citep{RN93, RN94},
+magnetic pumping \citep{RN95,RN96}, and centrifugal forces \citep{RN97, RN98, RN99}
 
 In this chapter, the design and implementation of an NMR compatible, low dead volume
 microfluidic pump will be discussed. The aim of this is to be able to mix two fluids in a
 controlled manner inside an NMR magnet. It will involve having an on-chip reservoir that
 can be drawn from and mixed with whichever liquid that’s under investigation. These aims
 are important as the technology will be useful in chemistry applications such as a chemical
-reaction study, kinetics study, or hyperpolarisation on chip. The pump will be useful in
-biological studies too with protein binding studies already being shown to be possible\citep{RN26}
+reaction study, kinetics study, or hyperpolarization on chip. The pump will be useful in
+biological studies too with protein binding studies already being shown to be possible \citep{RN26}
 these pumps could be used to do the whole experiment on chip. Cell and living tissue
 culture could also benefit from perfusion provided by the pump supplying them with fresh O2
 and nutrients. Ultimately, the goal is to observe active changes on the chip, induced by
@@ -26,19 +29,21 @@ pumping, in real time, using NMR.
 \begin{center}
   \includegraphics[width=\textwidth,height=4cm,keepaspectratio]{UngarFig.png}
 \end{center}
-  \caption{A) A 3D scale diagram of an elastomeric peristaltic pump. The channels are 100 μm wide and 10 μm high. Peristalsis was typically actuated by the pattern 101, 100, 110, 010, 011, 001, where 0 and 1 indicate “valve open” and “valve closed,” respectively. B) Pumping rate of a peristaltic micropump versus various driving frequencies. this
+  \caption{A) A 3D scale diagram of an elastomeric peristaltic pump. The channels are 100 μm wide and 10 μm high.
+  Peristalsis was typically actuated by the pattern 101, 100, 110, 010, 011, 001, where 0 and 1 indicate “valve open”
+  and “valve closed,” respectively. B) Pumping rate of a peristaltic micropump versus various driving frequencies. this
   figure is reproduced from\citep{RN59}}
   \label{fig:Ungar}
 \end{figure}
 
 Pumps that integrate pumping ‘on chip’ are key to minimising the dead volume within the device.
-Unger and co-workers\citep{RN59} were amongst the first to do this by using micro-fabricated PDMS valves
+Unger and co-workers \citep{RN59} were amongst the first to do this by using micro-fabricated PDMS valves
 using soft lithography. \fig{fig:Ungar} shows the devices, these work by having a fluid path that has various gas
 channels running perpendicular above. Then by simply applying air pressure, the gas channel expands cutting off
 the flow in the fluid path. When these are actuated in sequence it produces a net movement
 of fluid and flow rates of 2.5 nL/s were achieved.
 
-Leslie et al\citep{RN100} had slightly different
+Leslie et al \citep{RN100} had slightly different
 approach, they used PDMS but in direct contact with the fluid. In the ‘pump’ the PDMS forms
 a dome above a circular structure in the fluid channel that is the depressed using air
 pressure. In order to control the flow they use so called fluidic diodes, these work
@@ -112,19 +117,19 @@ The solution employed here, shown in \fig{fig:3Ddevice}, involves a multilayered
 with two PDMS membranes sandwiched between two 3D printed holders held together with brass
 screws. The PMMA device houses the structures for the valves as well as the fluid circuits
 including an NMR sensitive sample chamber and on-chip reservoir. The PDMS layers have two
-seperate functions, the top membrane forms the valves with the PMMA structures whilst the
+separate functions, the top membrane forms the valves with the PMMA structures whilst the
 bottom membrane acts as an o-ring to seal against liquid leaks. The 3D printed holders
 are also multi purpose. The top holder forms the last part of the valves by sealing the
 PDMS-PMMA valve and allowing the delivery of pneumatic pressure through the bore of the
 magnet to the device. The bottom 3D printed holder allows the device to be filled and
-supplys external ports for fluid short circuiting. Togther, they help seal the device
+supplies external ports for fluid short circuiting. Together, they help seal the device
 against gas and liquid leaks. This device coupled with a bespoke, homebuilt probe enables
 pumping and observation by NMR in a microfluidic device.
 
 
 \subsection{Materials and Methods}
 
-The devices were composed of three layers of cell cast Polymethyl methacrylate (PMMA,
+The devices were composed of three layers of cell cast poly(methyl methacrylate) (PMMA,
 Weatherall Equipment). The sheet thickness was 200 \mu m for the top and bottom layers, and 500 \mu m for
 the middle layer. The channels and sample chambers were designed in
 AutoCAD and cut using a CO2 laser (HPC Laser ltd.) to an approximate width and depth
@@ -165,7 +170,7 @@ all valves open indefinitely.
 The hardware for controlling pumping comprised of a solenoid valve system with 8
 individual valves (Festo, RS). These were connected to 3mm plastic tubes (Festo, RS)
 and all supplied from an in-lab air pressure source. This valve system was connected,
-via a solderless breadoard, to an arduino (Mega 2560, RS) controller allowing for
+via a solderless breadboard, to an arduino (Mega 2560, RS) controller allowing for
 individual control of each of the valves. The Solenoid valve system was powered using
 a 24V supply.
 
@@ -210,7 +215,7 @@ air pressure from above one seals the valve by covering the hole in the middle l
 \begin{figure}
   \begin{center}
   \includegraphics[width=\columnwidth]{Peristaltic-Chip-Render-01.pdf}
-  \caption{A 3D representation of the device with seperate layers of chips and PDMS
+  \caption{A 3D representation of the device with separate layers of chips and PDMS
   layers shown.}
   \label{fig:3Ddevice}
   \end{center}
@@ -234,7 +239,7 @@ In \fig{fig:Micrographs}, micrographs of the chip outside the holders are shown 
 
 In my design, there are 6 such valves all individually addressable with air pressure that, when
 coupled with home-written Arduino firmware, can be actuated in sequence in order to move
-fluid in a given direction. The block diagram of the arduino set-up ios show in
+fluid in a given direction. The block diagram of the arduino set-up is shown in
 \fig{fig:ValveSetup}. By varying the frequency and lambda parameters, listed in the
 firmware, one can control the liquid pumped in a given time.
 
@@ -249,20 +254,20 @@ firmware, one can control the liquid pumped in a given time.
   \label{fig:ValveSetup}
 \end{figure}
 
-As well as 6 valves the chips also have two seperate liquid
+As well as 6 valves the chips also have two separate liquid
 circuits that can be connected externally by connecting tubes to the top of the 3D
 holders as shown in FIG. The inner circuit on
 the diagram comprises the pumping network which can be
-modfified to pump around the internal circuit or the complete network; and an NMR
-sensitive sample chamber wherre measurements are performed. The external corcuit,
-contains an indentical sample chamber that helps to keep the relative
+modified to pump around the internal circuit or the complete network; and an NMR
+sensitive sample chamber where measurements are performed. The external circuit,
+contains an identical sample chamber that helps to keep the relative
 volumes of the two circuits similar. The chip is filled from the
 ‘bottom’ using the 4 small access holes at the top of the chip.
 This then allows the valve network and pressurised air to be
 on the top side of the chip. The challenge in the chip was to fit
 all the liquid paths and valve network around the 4 large screw
-holes in the top of the design which accomodate the screws
-neccesary to hold the device together and seal against leaks of
+holes in the top of the design which accommodate the screws
+necessary to hold the device together and seal against leaks of
 both liquid and gas.
 
 
@@ -284,14 +289,14 @@ minute for 10 minutes. The was repeated 3 times for frequencies from 0.25-1 keep
 lambda constant at 3, which had shown through trial and error to be the optimum number.
 
 The graph shown in \fig{fig:Graph} is the result of plotting the cumulative volume pumped
-vs. time. All 4 frequencies show very little deviation from linearity (quantify) in the
+vs. time. All 4 frequencies show very little deviation from linearity in the
 long term and also show very small error bars (plotted as ±2\sigma).
 
 \begin{figure}
   \begin{center}
   \includegraphics[width=\columnwidth]{ALLPlots.pdf}
   \caption{Plot of the total volume pumped vs time for a chip in the open
-  configuration}
+  configuration.}
   \label{fig:Graph}
   \end{center}
 \end{figure}
@@ -299,7 +304,7 @@ long term and also show very small error bars (plotted as ±2\sigma).
 \begin{figure}
   \begin{center}
   \includegraphics[width=\columnwidth]{Flowratevsfreq.pdf}
-  \caption{Flow rates produced by the pump at different frequecies.}
+  \caption{Flow rates produced by the pump at different frequencies.}
   \label{fig:FRvFGraph}
   \end{center}
 \end{figure}
@@ -308,7 +313,7 @@ In \fig{fig:FRvFGraph}, the flow rate of the pump at varying frequencies is plot
 shows that the rate doesn't linearly depend on frequency and seems to level off at higher
 frequencies. When initially observing the slope of the lines in \fig{fig:Graph} the non-
 linearity was attributed to inconsistencies in the tightening of the screws in the device.
-However, the small error bars associated with the flow rates across three seperate
+However, the small error bars associated with the flow rates across three separate
 experiments each with at least one disassembly it is know thought that the limit of the
 pump rate is related to the elasticity of the membrane and how fast it's able to 'snap
 back' and re prime itself to pump in each valve.
@@ -325,10 +330,10 @@ back' and re prime itself to pump in each valve.
 \end{figure}
 
 In order to validate the pumps compatibility with NMR, the device was placed into a home
-built transmission line probe inside a 500 MHz magnet. The arduino controller and soplenoid valve
+built transmission line probe inside a 500 MHz magnet. The arduino controller and solenoid valve
 bank where secured outside the magnet and the 6 pressurised air lines fed in to the top of
 the magnet. The device was then filled with 100mM sodium acetate in DI water (Sigma Aldrich) in
-the inner circuit by attaching a syring to inlet \textbf{B} in \fig{fig:Chip}. 100mM DSS in DI
+the inner circuit by attaching a syringe to inlet \textbf{B} in \fig{fig:Chip}. 100mM DSS in DI
 water (Sigma Aldrich) was added to the outer circuit by syringing into inlet \textbf{A}. Such
 that all the initial signal should come from the sodium acetate solution. The two fluid networks
 were then connected using two short lengths of 1/16" outer diameter PTFE tubing by joining
@@ -336,27 +341,27 @@ were then connected using two short lengths of 1/16" outer diameter PTFE tubing 
 
 First a spectra was collected of the chip after filling, A in \fig{fig:spectra}, using 16
 transients and shows mainly the acetate signal at 1.9 ppm. The pump was then put into
-the 'advance' state for 120 seconds which mean the valves are actuated inorder to pump
+the 'advance' state for 120 seconds which mean the valves are actuated in order to pump
 liquid around both circuits. The pump then mixed in the inner circuit for 120 seconds
-and a second spectra was recorded, B. This shows the 4 signals typical opf DSS at 2.91
+and a second spectra was recorded, B. This shows the 4 signals typical of DSS at 2.91
 ppm, 1.75 ppm, 0.63 ppm and 0 ppm and very little acetate signal. Indicating that the
-volume inside the NMR sensitive area has been almost entireley exchanged. Lastly the
+volume inside the NMR sensitive area has been almost entirely exchanged. Lastly the
 pump again advanced and mixed for the same time as before producing the spectra shown
 in C. Again, this spectrum is different. It shows all signals expected in abundance.
-This points to mixing of the two substances facilated by the peristaltic pump and serves
-as proof, at least in priciple, that an NMR compatible microfluidic peristaltic pump
+This points to mixing of the two substances facilitated by the peristaltic pump and serves
+as proof, at least in principle, that an NMR compatible microfluidic peristaltic pump
 capable of mixing liquids in a controllable manor has been presented here.
 
 \section{Conclusions}
 
 In conclusion, an NMR compatible; low dead volume microfluidic pump has been designed and
 manufactured that works inside the bore of a high field magnet. The pump has shown
-excellent linearity (quantify?) and stabilty in the long term as well as performing exchange and
-mixing of two substances within the device inside a high field magnet. The present limitations
-are that precise volume control has not yet been acheived. This is, however, thought to be linked
+excellent linearity and stability in the long term as well as performing exchange, and
+mixing, of two substances within the device inside a high field magnet. The present limitations
+are that precise volume control has not yet been achieved. This is, however, thought to be linked
 with the varied tightening of the screws of the 3D holder as well as the presence of bubbles
 within the device. another element that requires further probing is the non-linear dependence of
-flow rate on frequency. My intuition is that this depneds on the thickness of the PDMS layer used
+flow rate on frequency. My intuition is that this depends on the thickness of the PDMS layer used
 however further experimentation with varying thicknesses is needed. Potential future applications
 of this pump include microfluidic protein binding experiments; \textit{in situ} liver slice
-culture and metabolomics; and hyperpolarisation experiments.
+culture and metabolomics; and hyperpolarization experiments.
