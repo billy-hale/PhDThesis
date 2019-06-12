@@ -1,3 +1,47 @@
+\subsection{Signal Averaging}\label{Signal Averaging}
+
+In NMR, the total signal that emerges from the probe contains signal from the sample
+under observation as well as uncontrolled random signals called noise. In NMR spectroscopy, the most dominant source of noise comes
+from the thermal motions of the electrons
+in the receiver coil. In order for the signal that originated from the sample to rise above the noise,
+signal averaging must be employed. This works as the sum of two identical experiments is twice the signal
+of the original individual experiment:
+\begin{equation}
+  s_\text{NMR}(1+2) = s_\text{NMR}(1) + s_\text{NMR}(2) = 2s_\text{NMR}(1)
+\end{equation}
+The key is that this relationship doesn't apply equally to the noise, as it is random. A suitable
+definition of the noise amplitude in a single experiment is given by the root mean square (RMS) noise defined
+as:
+\begin{equation}
+  \sigma_\text{noise} = \langle~s_{\text{noise}}(1)^2\rangle^{1/2}
+\end{equation}
+where the angle bracket indicates an average over all sampling points. The RMS noise is the same for two
+experiments assuming the noise is stationary i.e. the noise doesn't change from one experiment to the next.
+However this does not imply that the noise from two experiments has twice the value. Summed over the two experiments
+the RMS noise takes the value:
+\begin{equation}
+  \sigma_\text{noise}(1+2) \cong \sqrt{2} \sigma_{\text{noise}}(1)
+\end{equation}
+Since the noise over two experiments increases by $\sqrt{2}$ but the signal doubles. Therefore the signal to noise
+ratio over two experiments can be written as:
+\begin{equation}
+  \text{SNR}(1+2) = \sqrt{2}\frac{s_{\text{NMR}}(1)}{\sigma_{\text{noise}}(1)}
+\end{equation}
+This can be extended to show the signal-to-noise over $N$ transients is a factor $\sqrt{N}$ larger than the
+signal for a single transient. So by signal averaging over many scans the SNR can be increased.
+
+In principle, this allows NMR signals that have a SNR less than one to be 'pulled out' of the noise. In reality, this is
+time consuming as in order to repeat an experiment precisely it is essential to allow the spin system to
+reach thermal equilibrium again. The different NMR experiments must therefore be separated by an interval
+many times longer than $T_1$, which in some case can be several seconds. For example, if the SNR of the first
+experiment is 0.1 clearly the signal will be buried in the noise. The SNR may be changed to 10:1 by signal averaging
+over 10,000 scans. If each scan takes 1 second this amounts to 3 hours of instrument time which is long but
+acceptable. However, if the SNR is 0.01 then it follows that 300 hours would now be needed which is not feasible.
+
+In order for smaller signals to be detected, the amount of signal i.e. the amount of polarization in the sample,
+needs to be increased this can be done by preparing the sample in a specific way and is referred to as
+'hyperpolarization'.
+
 \renewcommand\listoffigures{
 \btypeout{List of Figures}
 \begin{spacing}{1}{

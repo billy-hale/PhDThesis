@@ -4,7 +4,7 @@
 %% Thesis.tex
 %% ----------------------------------------------------------------
 \documentclass{ecsthesis}      % Use the Thesis Style
-\usepackage[square,numbers]{natbib}  % Use Natbib style for the refs.
+\usepackage[square,numbers,sort&compress]{natbib}  % Use Natbib style for the refs.
 \usepackage{graphicx}
 \usepackage[version=4]{mhchem}
 \usepackage{amsmath}
@@ -30,16 +30,16 @@
 \keywords   {}
 \maketitle
 \begin{abstract}
-  Microfluidics is a constantly growing field of research finding applications in a diverse range of subjects
-  such as materials science, chemistry and across the life sciences. This is due to many advantageous attributes:
+  Microfluidics is a constantly growing field of research, finding applications in a diverse range of subjects
+  such as materials science, chemistry and across the life sciences. This expansion is due to many advantageous attributes:
   small sample volumes which contribute to waste reduction and reduced cost of
   experimentation; highly controllable local environments that enable very precise investigation of changes in
-  systems to stimuli; rapid prototyping techniques meaning make, test, tweak cycles can be run more than once
+  systems to stimuli; rapid prototyping techniques that mean make, test, tweak cycles can be run more than once
   in a typical day; ease of parallelisation makes gathering statistically significant data much easier without
-  the need to repeat experiments for days at a time; and ease of automation increases precision and repeatability
+  the need to repeat experiments for days at a time; and ease of automation increases precision and repeatability.
 
   Nuclear magnetic resonance (NMR) spectroscopy is a widely applied technique in chemistry and the life sciences.
-  Its non-invasive and non-destructive nature makes it ideal to study living, or mass limited samples. NMR, however,
+  Its non-invasive and non-destructive nature makes NMR ideal to study living, or mass limited samples. NMR, however,
   requires an extremely homogenous magnetic field to enable molecular structure determination and can be limited
   by the inherent low sensitivities possible in a typical experiment.
 
@@ -51,9 +51,9 @@
 
 \end{abstract}
 \tableofcontents
-\listoffigures
-\listoftables
-\lstlistoflistings
+%\listoffigures
+%\listoftables
+%\lstlistoflistings
 \listofsymbols{ll}{
 $a$ & The signal amplitude \\
 $\mathbb{B}$ & The Boltzmann factor \\
@@ -82,7 +82,7 @@ $\breve{\mathbf{n}}$ & The surface normal \\
 $p$ & The polarisation of a spin system \\
 $P_\alpha$ & The population of the $\alpha$ state \\
 $R_{\text{noise}}$ & The dissipative loses \\
-$\hat{R}$ & The rotation operator
+$\hat{R}$ & The rotation operator \\
 $S(t)$ & The signal in the time domain \\
 $S(\Omega)$ & The signal in the frequency domain \\
 $T$ & The absolute temperature \\
@@ -116,10 +116,10 @@ $\chi_V$ & The Magnetic susceptibility \\
 $\omega_j^0$ & The larmour frequency for a nucleus, $j$ \\
 $\omega_{\text{nut}}$ & The nutation frequency \\
 $\omega_\text{ref}$ & The rotating frame frequency \\
-$\Omega^0$ & The difference between the Larmor frequency and rotating frame frequency
+$\Omega^0$ & The  and rotating frame frequency offset
 }
-\acknowledgements{I would like to express my deep gratitude to Professor Marcel Utz for his patient guidance and
-enthusiastic encouragement that he provided as well as engaging discussion concerning all matters of life and work.
+\acknowledgements{I would like to express my deep gratitude to Professor Marcel Utz for providing patient guidance and
+enthusiastic encouragement, as well as engaging discussion concerning all matters of life and work.
 His depth of knowledge in all manner of subjects was a great help throughout my PhD and provided a seemingly endless
 source of ideas and problem solving. The principles of scientific investigation I have learnt from him will stay with
 me throughout my career.
@@ -136,17 +136,17 @@ To the people that provided support and encouragement throughout my work and hel
 Leeming, Thomas Kear, Laura Jowett, James Eills, Stuart Elliot, Christian Bengs, Aliki Moysiadi, Nic Charles, Judy Fox, Josie
 Charles, Gemma Charles and Eddie Robinson you all helped immensely.
 
-In particular I’d like to thank Alyssa Charles for her unwavering support, encouragement and belief in me, as well as proof
+In particular I’d like to thank Alyssa Charles for her unwavering support, encouragement, and belief in me, as well as proof
 reading and correcting my grammar errors.
 
-Finally, I’d like to thank my family for all their support over the years, this is all possible because of them.}
+Finally, I’d like to thank my family for all their support over the years, this is only possible because of them.}
 \dedicatory{To my friends and family}
 \mainmatter
 %% ----------------------------------------------------------------
-\include{IntroductionNew}
-\include{Background}
-\include{chapter-droplets}
-%\include{chapter-ph2}
+%\include{IntroductionNew}
+%\include{Background}
+%\include{chapter-droplets}
+\include{chapter-ph2}
 %\include{chapter-peristaltics}
 %\include{Conclusions}
 %\appendix

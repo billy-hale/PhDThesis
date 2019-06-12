@@ -306,7 +306,7 @@ The commutation relation between two operators is defined as:
 \end{equation}
 
 If $[\hat{A},\hat{B}] = 0$ the operators are said to commute. The physical implication
-of this is that the two observables can be measured at the same time. Measuring one
+of this is that the two observables can be measured at the same time, measuring one
 does not affect the outcome of the other and vice versa.
 
 The spin operators $\hat{I}_x$, $\hat{I}_y$ and $\hat{I}_z$
@@ -318,7 +318,7 @@ have cyclic commutation rules:
 \end{align}
 
 This cyclic commutation means that the spin that nuclei posses can be treated as a
-type of angular momentum and in NMR, $\hat{I}_x$, $\hat{I}_y$ and $\hat{I}_z$ are
+type of angular momentum and in NMR, $\hat{I}_x$, $\hat{I}_y$, and $\hat{I}_z$ are
 referred to as the spin angular momentum operators.
 
 The total square angular momentum operator, $\hat{I}^2$ can be defined as:
@@ -333,27 +333,26 @@ This commutes with the three spin angular momentum operators:
   [\hat{I}^2,\hat{I}_z] = 0
 \end{align}
 
-Operators act on states. To explain this, consider a generic operator $\hat{B}$ with eigenstates $\ket{x}$ and $\ket{y}$. When a state is acted upon by an operator it is denoted by:
+Operators act on states. To explain this, consider a generic operator $\hat{B}$ with eigenstates $\ket{x}$ and $\ket{y}$. When an operator acts on an eigenstate it is denoted by:
 \begin{equation}
   \hat{B}\ket{x} = b\ket{x}
 \end{equation}
-
-the same state is returned, multiplied by some scalar $b$, that is an eigenvalue of $\ket{x}$
+this returns the eigenstate multiplied by some scalar $b$, which is an eigenvalue of $\ket{x}$
 in the operator basis B.
 
 Analagous to this, spin angular momentum operators have eigenstates and eigenvalues. If the nuclear spin quantum number is $I$, then the operator $\hat{I}_z$ has $2I+1$
-eigenstates, $m_I$. State are denoted $\ket{I,m_I}$\citep{dirac_1939} and the angular momentum operator acts according to the following:
+eigenstates, $m_I$. States are denoted $\ket{I,m_I}$\citep{dirac_1939} and the angular momentum operator acts according to the following:
 \begin{equation}
   \hat{I}_z\ket{I,m_I} = m_I\hbar\ket{I,m_I}
 \end{equation}
 
-The total square angular momentum acts in the following way:
+The total square angular momentum operator acts in the following way:
 \begin{equation}
   \hat{I}^2\ket{I,m_I} = I(I+1)\hbar\ket{I,m_I}
 \end{equation}
-for a nuclear spin state, $I$ can take half-integer and integer values for zero i.e
-$I = 0,\frac{1}{2},1,\frac{3}{2}\dots$, $m_I$ takes one of the integer values from $-I
-\text{to} +I$.
+where $I$ can take half-integer and integer values from zero, i.e
+$I = 0,\frac{1}{2},1,\frac{3}{2}\dots$, and $m_I$ takes one of the integer values from
+$-I \text{to} +I$.
 
 \subsubsection{Spin Systems}\label{SpinStates}
 
@@ -361,8 +360,8 @@ The simplest case that can be considered in NMR is a system of isolated
 spin-1/2 nuclei.
 
 According to the quantum theory of angular momentum discussed in \ref{Spin}, a
-single spin-1/2, when placed in a magnetic field has two eigenstates of angular
-momentum along the $z$-axis, denoted by $\ket{\alpha}$ and $\ket{\beta}$ and defined
+single spin-1/2, when placed in a magnetic field, has two eigenstates of angular
+momentum along the $z$-axis, denoted by $\ket{\alpha}$ and $\ket{\beta}$, and defined
 as:
 \begin{align}
   \ket{\frac{1}{2},+\frac{1}{2}} = \ket{\alpha}\\
@@ -377,11 +376,11 @@ of a spin-1/2 and are acted on by $\hat{I}_z$ according to the following:
 \end{align}
 
 \eqn{eqn:momentum} shows that the eigenstate $\ket{\alpha}$ has an eigenvalue of
-$+\hbar/2$ and $\ket{beta}$ has an eigenvalue of $-\hbar/2$ these are said to
+$+\hbar/2$ and $\ket{beta}$ has an eigenvalue of $-\hbar/2$, these are said to
 be polarised along the $z$-axis. This polarization is represented in
 \fig{fig:Projection} by the up and down arrows pointing along the positive
-or negative $z$-axis indicating the direction of well-defined spin angular momentum.
-These arrows should not be over-interpreted as for the same spin,
+or negative $z$-axis, indicating the direction of well-defined spin angular momentum.
+These arrows should not be over-interpreted, as for the same spin,
 the $x$ and $y$ components are fundamentally unpredictable
 since the states $\ket{\alpha}$ and $\ket{\beta}$ are not eigenstates of the operators
 $\hat{I}_x$ or $\hat{I}_y$. The arrow along the $z$-axis does not mean the
@@ -418,7 +417,7 @@ as well as kets, bras are also defined by taking the conjugate transpose of the 
     1 & 0
 \end{pmatrix}
   \bra{\beta} = \begin{pmatrix}
-  1 & 0
+  0 & 1
 \end{pmatrix}
 \end{equation}
 
@@ -452,10 +451,10 @@ where the Kronecker delta, $\delta_{ij}$ is:
                 \end{cases}
 \end{equation}
 
-where $\langle r_i\vert r_j\rangle = \delta_{ij}$ denotes taking the dot product between the two
+and where $\langle r_i\vert r_j\rangle = \delta_{ij}$ denotes taking the dot product between the two
 vectors $\ket{r_i}$ and $\ket{r_j}$.
 
-The basis states help to quantify the component of a state vector along that state. Take our example from \eqn{eqn:zeeman}, we can construct inner products of the overall state, $\ket{\psi}$ with $\ket{\alpha}$ and $\ket{\beta}$ to determine component of the basis states.
+The basis states help to quantify the component of a state vector along that state. Take our example from \eqn{eqn:zeeman}, we can construct inner products of the overall state, $\ket{\psi}$ with $\ket{\alpha}$ and $\ket{\beta}$, to determine component of the basis states.
 \begin{equation}
   \langle\alpha\vert\psi\rangle = c_1 \quad \langle\beta\vert\psi\rangle = c_2
 \end{equation}
@@ -468,8 +467,7 @@ The outer product of the basis state, $\ket{r_n}$, for an N-spin system must sat
 where $\mathbb{1}$ is an N by N identity matrix.
 
 When a second spin is introduced, the Hilbert space is extended to accommodate additional spin
-states by taking the tensor product of the basis states
-
+states by taking the tensor product of the basis states:
 
 \begin{align}\label{eqn:2spinstates}
 \ket{\alpha_{1}\alpha_{2}} = \ket{\alpha_1} \otimes \ket{\alpha_2} = \begin{pmatrix}
@@ -497,10 +495,10 @@ states by taking the tensor product of the basis states
   1
 \end{pmatrix}
 \end{align}
-The subscripts indicate which spin we are referring to, e.g. $\ket{\beta_1\alpha_2}$ means that
+The subscripts indicate which spin we are referring to, i.e. $\ket{\beta_1\alpha_2}$ means that
 spin 1 is in the $\beta$ state and spin 2 is in the $\alpha$ state.
 
-\subsubsection{Pauli matrices and more Operators}
+\subsubsection{Pauli matrices and more operators}
 
 In quantum mechanics each observation is associated with a particular operator. For
 example, the measurement of the spin angular momentum along the $z$-axis is associated with
@@ -516,7 +514,7 @@ is denoted:
   \langle\hat{A}\rangle = \bra{\psi}\hat{A}\ket{\psi}
 \end{equation}
 
-from the genral case listed in \eqn{eqn:zeeman} this becomes:
+from the general case listed in \eqn{eqn:zeeman} this becomes:
 \begin{align}\label{eqn:expectation}
   \langle\hat{A}\rangle =& \bra{\psi}\hat{A}\ket{\psi}\\
   =& \begin{pmatrix}
@@ -534,12 +532,12 @@ A_{21} & A_{22}
 \end{align}
 
 The end sum of all these products is the expectation value of a single spin 1/2 particle when
-acted upon by $\hat{Q}$. This quickly becomes cumbersome should there be more than one spin. An easier
-way to deal with expectation values is described in \ref{Density}
+acted upon by $\hat{A}$, this quickly becomes cumbersome should there be more than one spin. An easier
+way to deal with expectation values is described in \ref{Density}.
 
-In NMR we use three operators to determine the projection of angular momentum along a
+In NMR we use three operators to determine the projection of spin angular momentum along a
 specific axis, $\hat{I}_x$, $\hat{I}_y$, and $\hat{I}_z$. These are defined by the
-Pauli matrices in the Zeeman basis multiplied by $\frac{\hbar}{2}$.
+Pauli matrices in the Zeeman basis multiplied by $\hbar/2$.
 
 \begin{equation}
   \hat{I}_x=\frac{\hbar}{2}\begin{pmatrix}
@@ -556,12 +554,12 @@ Pauli matrices in the Zeeman basis multiplied by $\frac{\hbar}{2}$.
 \end{pmatrix}
 \end{equation}
 
-as an example, let's take the example from before of a spin-1/2 particle in a magnetic field
+As an example, let's take a spin-1/2 particle in a magnetic field
 and see what happens if we were to project the $\ket{\alpha}$ state along the z-axis.
 \begin{equation}\label{eqn:operators}
   \hat{I}_z\ket{\alpha} = \frac{\hbar}{2}\begin{pmatrix}
-    0 & 1\\
-    1 & 0
+    1 & 0\\
+    0 & 1
 \end{pmatrix}
 \begin{pmatrix}
   1\\
@@ -571,9 +569,9 @@ and see what happens if we were to project the $\ket{\alpha}$ state along the z-
   0
 \end{pmatrix} = \frac{\hbar}{2}\ket{\alpha}
 \end{equation}
-We find that $\frac{\hbar}{2}$ is the eigenvalue of $\ket{\alpha}$ for the operator $\hat{I}_z$.
+We find that $\hbar/2$ is the eigenvalue of $\ket{\alpha}$ for the operator $\hat{I}_z$.
 
-We will now examine three operators and explore how they act on states. They are the total square angular momentum, $\hat{I}^2$ and the two shift operators $\hat{I}^+$ and $\hat{I}^-$ defined as the following:
+We will now examine three operators and explore how they act on states. They are the total square angular momentum, $\hat{I}^2$, and the two shift operators, $\hat{I}^+$ and $\hat{I}^-$, which are defined as the following:
 
 \begin{align}
   \hat{I}^2 =& \hat{I}_x^2 + \hat{I}_y^2 + \hat{I}_z^2\\
@@ -586,7 +584,7 @@ They act on general states according to:
   \hat{I}^+\ket{I,m_I} =& \sqrt{(I(I+1)-m_I(m_I+1))}\ket{I,m_{I+1}}\\
   \hat{I}^-\ket{I,m_I} =& \sqrt{(I(I+1)-m_I(m_I-1))}\ket{I,m_{I-1}}
 \end{align}
-Using a spin-1/2 particle in a magnetic field as an example we'll let these operators act on the $\ket{\alpha}$ and $\ket{\beta}$ states
+Using a spin-1/2 particle in a magnetic field as an example we'll let these operators act on the $\ket{\alpha}$ and $\ket{\beta}$ states:
 \begin{align}
   \hat{I}^2\ket{\alpha} =& \frac{3}{4}\hbar\ket{\alpha}\\
   \hat{I}^+\ket{\alpha} =& 0\\
@@ -594,17 +592,16 @@ Using a spin-1/2 particle in a magnetic field as an example we'll let these oper
   \hat{I}^+\ket{\beta} =& \ket{\alpha}\\
   \hat{I}^-\ket{\beta} =& 0
 \end{align}
-As the '+' and '-' denote raising or lowering $m_I$ by 1.
+the '+' and '-' denote raising or lowering $m_I$ by 1.
 
-As shown in \eqn{eqn:commutator} the three angular momentum operators cyclically
+As shown in \eqn{eqn:commutator}, the three angular momentum operators cyclically
 commute. This means the \textit{sandwich formula} applies.
 
-In general if $\hat{A}$, $\hat{B}$ and $\hat{C}$ cyclically commute then:
+In general, if $\hat{A}$, $\hat{B}$, and $\hat{C}$ cyclically commute, then:
 \begin{equation}
   \text{exp}\{-i\theta\hat{A}\}\:\hat{B}\:\text{exp}\{+i\theta\hat{A}\} = \hat{B}\cos{\theta} + \hat{C}\sin{\theta}
 \end{equation}
-
-geometrically, this can be thought of as a rotation of $\hat{B}$ by $\hat{A}$ through
+Geometrically this can be thought of as a rotation of $\hat{B}$ by $\hat{A}$ through
 an angle $\theta$.
 
 It is important to define a set of rotation operators as these are essential for the generation of signal in NMR. They are defined as the complex exponentials of the
@@ -673,7 +670,7 @@ below:
 In \eqn{eqn:expectation} we saw how the expectation value of an operator can be expressed as
 the product of the matrix representations of the state and the operator. We can simplify this by
 constructing a matrix of the quadratic products of the superposition coefficients. If in the
-general case
+general case:
 \begin{align}
 \ket{\psi} =& \begin{pmatrix}
     c_1\\
@@ -683,8 +680,7 @@ general case
   c_1^* & c_2^*
 \end{pmatrix} = c_1^*\bra{\alpha} + c_2^*\bra{\beta}
 \end{align}
-
-Then the matrix has the form:
+then the matrix has the form:
 \begin{equation}
 \ket{\psi}\bra{\psi} = \begin{pmatrix}
     {c_1c_1^*} & {c_1c_2^*}\\
@@ -697,9 +693,9 @@ The expectation value of the operator $\hat{A}$ can now be expressed as:
   \langle\hat{A}\rangle = \text{Tr}\{\ket{\psi}\bra{\psi}\hat{A}\}
 \end{equation}
 
-If there are now two spins we need to consider with states, $\ket{\psi_1}$ and $\ket{\psi_2}$ the
-result of measuring $A$ is still uncertain but we can now write an expression for the most likely outcome, $A_obs$
-using the sum of expectation values:
+If there are now two spins we need to consider, with states $\ket{\psi_1}$ and $\ket{\psi_2}$, the
+result of measuring $A$ is still uncertain. However we can now write an expression for the most likely outcome,
+$A_{\text{obs}}$, using the sum of expectation values:
 \begin{equation}
   A_{\text{obs}} = \bra{\psi_1}\hat{A}\ket{\psi_1} + bra{\psi_2}\hat{A}\ket{\psi_2}
 \end{equation}
@@ -708,19 +704,19 @@ which can be rewritten using the simplification:
   A_{\text{obs}} = \text{Tr}\{(\ket{\psi_1}\bra{\psi_1}+\ket{\psi_2}\bra{\psi_2})\hat{A}\}
 \end{equation}
 
-If there are a large number of spin, like in a usual NMR experiment we can simplify
-by defining an operator, $\hat{rho}$:
+If there are a large number of spins, like in a usual NMR experiment, we can simplify
+by defining an operator, $\hat{\rho}$:
 \begin{equation}
   \hat{\rho} = \mathbb{N}^{-1}(\ket{\psi_1}\bra{\psi_1}+\ket{\psi_2}\bra{\psi_2}+\dots)
 \end{equation}
-where $\mathbb{N}$ is the number of spins in the ensemble. For brevity
+where $\mathbb{N}$ is the number of spins in the ensemble. For brevity,
 this is written as:
 \begin{equation}
   \hat{\rho} = \overline{\ket{\psi}\bra{\psi}}
 \end{equation}
 where the overbar indicates the average over all members of the ensemble.
 
-Now the expectation of $\hat{A}$ over all members of some spin ensemble can now be written as:
+Now the expectation of $\hat{A}$ over all members of some spin ensemble can be written as:
 \begin{equation}
   \langle{A}\rangle = \text{Tr}\{\hat{\rho}\hat{A}\}
 \end{equation}
@@ -736,14 +732,14 @@ the operator $\hat{\rho}$ is referred to as the density matrix.
   \end{pmatrix}
 \end{equation}
 
-The diagonal elements of $\hat{\rho}$, $\rho_\alpha$ and $\rho_\beta$ are state populations or the probabilities of being in a certain state.
+The diagonal elements of $\hat{\rho}$, $\rho_\alpha$ and $\rho_\beta$, are state populations or the probabilities of being in a certain state.
 
-The off-diagonal elements are coherences between states. These coherences represent superposition states in the ensemble
-the coherences are complex numbers and two coherences between the same pair of states are complex conjugates of each other. e.g.:
+The off-diagonal elements are coherences between states. These coherences represent superposition states in the ensemble,
+the coherences are complex numbers and two coherences between the same pair of states are complex conjugates of each other i.e.:
 \begin{equation}
   \langle\alpha\vert\hat\rho\vert\beta\rangle = (\langle\beta\vert\hat\rho\vert\alpha\rangle)^* = c_1c_2^* = (c_1^*c_2)^*
 \end{equation}
-The coherence order between two states in a magnetic field is defined as the difference in angular
+The coherence order between two states in a magnetic field is defined as the difference in spin angular
 momentum projection along the $z$ axis. In our two spin system this would be:
 \begin{align}
   \hat{I}_z\ket{\beta} = m_\alpha = +\frac{1}{2}\hbar\ket{\alpha}\\
@@ -763,7 +759,7 @@ The density operator can be written as:
   \hat{\rho} = \rho_\alpha\hat{I}^\alpha + \rho_\beta\hat{I}^\beta + \rho_+\hat{I}^+ + \rho_-\hat{I}^-
 \end{equation}
 
-using the shift operators, $\hat{I}^+$ and $\hat{I}^-$, and the projection operators, $\hat{I}^\alpha$ and $\hat{I}^\beta$ these have the following matrix representations:
+using the shift operators, $\hat{I}^+$ and $\hat{I}^-$, and the projection operators, $\hat{I}^\alpha$ and $\hat{I}^\beta$, these have the following matrix representations:
 \begin{align}
   \hat{I}^+ = \begin{pmatrix}
     0 & 1\\
@@ -783,11 +779,11 @@ using the shift operators, $\hat{I}^+$ and $\hat{I}^-$, and the projection opera
 
 The physical interpretations of the components of the density operator can help to understand the microscopic state
 of the individual spins. The sum of the populations, $\rho_\alpha$ and $\rho_\beta$, is always equal to one, only the differences between the states
-have any significance. The difference in population indicates the net longitudinal spin polarization. i.e. if the
-$\ket{\alpha}$ state population is larger than the $\ket{\beta}$ state then there is net polarization of the spins
+have any significance. The difference in population indicates the net longitudinal spin polarization, i.e. if the
+$\ket{\alpha}$ state population is larger than the $\ket{\beta}$ state, then there is net polarization of the spins
 along the external field direction.
 
-The presence of the coherences $\rho_+$ and $\rho_-$ indicates transverse spin magnetization i.e. net spin
+The presence of the coherences, $\rho_+$ and $\rho_-$, indicates transverse spin magnetization i.e. net spin
 polarization \textit{perpendicular} to the external field. These coherences are complex numbers and as
 such have phase and amplitude. The phase of the coherences indicates the direction of the spin polarization
 in the $xy$-plane. The ($-1$)-quantum coherence is written as:
@@ -803,55 +799,55 @@ These populations and coherences play a vital role in NMR and will be re-visted 
 
 \subsection{The Hamiltonian}\label{Hamiltonian}
 
-The Hamiltonian plays an important part in quantum systems. When the Hamiltonian acts on an eigenstate
+The Hamiltonian plays an important part in quantum systems. When the Hamiltonian acts on an eigenstate,
 the eigenvalue returned is the energy level of that state.
 
-\subsubsection{Spins in a magentic field}
+\subsubsection{Spins in a magentic field}\label{EnergyLevels}
 
-In NMR the energy of a nucleus in a magnetic field, $E$, is given by:
+In NMR, the energy of a nucleus in a magnetic field, $E$, is given by:
 \begin{equation}
   E = -m_I\hbar\gamma~B_0
 \end{equation}
 
 For a spin-1/2 nuclei there are two states labelled as $\alpha$ and $\beta$
-and these have an energy difference depicted in \fig{fig:EnergySplit}
+and these have an energy difference depicted in \fig{fig:EnergySplit}.
 
-\begin{figure}
+\begin{figure}[h]
   \begin{center}
   \includegraphics[width=\textwidth,height=5cm,keepaspectratio]{EigenStateLevel.pdf}
   \end{center}
-  \caption{Energy level and $\Delta~E$ of the two energy levels for a spin-1/2 nucleus}
+  \caption{Energy level and $\Delta~E$ of the two energy levels for a spin-1/2 nucleus.}
   \label{fig:EnergySplit}
 \end{figure}
 
 This splitting of energy levels due to the presence of a magnetic field is referred to as Zeeman splitting.
-When examining a spin ensemble at thermal equilibrium, overall there is a slight bias to the lower energy
+When examining a spin ensemble at thermal equilibrium, overall, there is a slight bias to the lower energy
 state $\alpha$. This preference can be quantified by calculating the ratio of the populations, $P$:
 \begin{equation}\label{eqn:Boltzmann}
   \frac{P_{\beta}}{P_{\alpha}} = \text{exp}\{\frac{-\Delta{E}}{k_B T}\}
 \end{equation}
-where $P_{\beta}/P_{\alpha}$ is the population ratio between the states, $k_B$ is Boltzmann constant, and $T$ is the temperature. The polarization, $p$, of a system of
+where $P_{\beta}/P_{\alpha}$ is the population ratio between the states, $k_B$ is the Boltzmann constant, and $T$ is the temperature. The polarization, $p$, of a system of
 spin-1/2 nuclei is
-\begin{equation}\label{eqn:Polarisation}
-  p = \frac{P_\alpha - P_\beta}{P_\alpha + P_\beta}
+\begin{equation}\label{eqn:Polarization}
+  p = \frac{P_\alpha - P_\beta}{P_\alpha + P_\beta} = \tanh(\frac{\gamma\hbar~B_0}{2k_bT})
 \end{equation}
 
-For an NMR experiment which typically operates at 298$K$ and
-a field of 14.1 T the polarization level is circa $10^{-5}$ meaning that the spins are aligned weakly
+For a typical NMR experiment, which operates at 298$K$ and
+a field of 14.1 T, the polarization level is circa $10^{-5}$ which means that the spins are aligned weakly
 in the same direction as the magnetic field. It is this small polarization that gives rise to the NMR
-signal and why NMR is famed for sensitivity issues. One possible solution to this, hyperpolarization, will be described in a later chapter.
+signal and why NMR is famed for sensitivity issues. One possible solution to these issues, hyperpolarization, will be described in a later chapter.
 
-When placed in a magnetic field, the nuclei will precess around the axis of the field at a rate known as the Larmor frequency defined as:
+When placed in a magnetic field, the nuclei will precess around the axis of the field at a rate known as the Larmor frequency, this is defined as:
 \begin{equation}\label{eqn:Larmor}
   \omega_j^0 = -\gamma_jB_0
 \end{equation}
 
 where $\gamma_j$ is the gyromagnetic ratio for a nucleus, $j$. The gyromagnetic ratio is
-typically $10$s of MHz T$^{-1}$ that give Larmor frequencies in the $100$s of MHz in an NMR
+typically $10$s of MHz T$^{-1}$ which give Larmor frequencies in the $100$s of MHz in an NMR
 experiment.
 
 
-If we let $\ket{\psi_1}$ and $\ket{\psi_2}$ be eigenstates of the Hamiltonian $\hat{\mathcal{H}}$ then
+If we let $\ket{\psi_1}$ and $\ket{\psi_2}$ be eigenstates of the Hamiltonian $\hat{\mathcal{H}}$, then
 \begin{align}
   \hat{\mathcal{H}}\ket{\psi_1} = E_1\ket{\psi_1}\\
   \hat{\mathcal{H}}\ket{\psi_2} = E_2\ket{\psi_2}
@@ -864,34 +860,33 @@ The Hamiltonian can also be expressed in matrix form:
     0 & E_2
 \end{pmatrix}
 \end{equation}
-If the Hamiltonian is written in the eigenbasis of the system its main diagonal corresponds to state energies and it has values of $0$ everywhere else.
+If the Hamiltonian is written in the eigenbasis of the system, its main diagonal corresponds to state energies and it has values of $0$ everywhere else.
 
 The evolution in time of a quantum system is described by the Schr\"odinger equation:
 \begin{equation}
   \frac{d}{dt}\ket{\psi} = i\hbar^{-1}\hat{\mathcal{H}}\ket{\psi}
 \end{equation}
-the factor of $\hbar^{-1}$ here is cumbersome and can be removed by defining a Hamiltonian in natural units, $\hat{H}$
+The factor of $\hbar^{-1}$ here is cumbersome and can be removed by defining a Hamiltonian in natural units, $\hat{H}$,
 such that:
 \begin{equation}
   \hat{H} = \hbar^{-1}\hat{\mathcal{H}}
 \end{equation}
-both Hamiltonians share the same eigenfunctions
+Both of these Hamiltonians share the same eigenfunctions:
 \begin{equation}
   \hat{H}\ket{\psi_1} = \omega_{\psi1}\ket{\psi}
 \end{equation}
-eigenvalues are denoted $\omega_{\psi}$ and are given by:
+the eigenvalues are denoted $\omega_{\psi}$ and are given by:
 \begin{equation}
-  \omega_{\psi1} = \hbar^{-1}E_1
+  \omega_{\psi_1} = \hbar^{-1}E_1
 \end{equation}
 
-the eigenvalue, $\omega_{\psi1}$, is the energy of the state $\ket{\psi}$ in \textit{units} of $\hbar$.
+and the eigenvalue, $\omega_{\psi_1}$, is the energy of the state $\ket{\psi}$ in \textit{units} of $\hbar$.
 
-Returning to the example of a spin-1/2 particle in a magnetic field. The Hamiltonian is initially
-proportional to the $z$ angular momentum operator
+Returning to the example of a spin-1/2 particle in a magnetic field, the Hamiltonian is initially
+proportional to the $z$ angular momentum operator:
 \begin{equation}
   \hat{H} = \omega^0\hat{I}_z
 \end{equation}
-
 where $\omega^0 = -\gamma B_0$ and is the Larmor frequency from \eqn{eqn:Larmor}. In matrix form, in the original Zeeman basis, the Hamiltonian is:
 \begin{equation}
   \hat{H} = \begin{pmatrix}
@@ -1295,7 +1290,7 @@ Before the pulse, the spin density operator is
 \end{equation}
 after the pulse the density operator is
 \begin{align}
-  \hat{rho}_2 =& \hat{R}_x(\pi/2)\hat{\rho}_1\hat{R}_x(-\pi/2) = \frac{1}{2}\hat{R}_x(\pi/2)\mathbb{1}\hat{R}_x(-\pi/2) + \frac{1}{2}\mathbb{B}\hat{R}_x(\pi/2)\hat{I}_z\hat{R}_x(-\pi/2) \\
+  \hat{\rho}_2 =& \hat{R}_x(\pi/2)\hat{\rho}_1\hat{R}_x(-\pi/2) = \frac{1}{2}\hat{R}_x(\pi/2)\mathbb{1}\hat{R}_x(-\pi/2) + \frac{1}{2}\mathbb{B}\hat{R}_x(\pi/2)\hat{I}_z\hat{R}_x(-\pi/2) \\
   =& \frac{1}{2}\mathbb{1} + \frac{1}{2}\mathbb{B}\hat{R}_x(\pi/2)\hat{I}_z\hat{R}_x(-\pi/2)
 \end{align}
 since the identity matrix, $\mathbb{1}$ is invariant under rotations. The last term
@@ -1311,7 +1306,7 @@ therefore
 In terms of the magnetization vector, this is equivalent to rotating
 the magnetization from the $z$-axis to the $-y$-axis.
 \begin{equation}
-  \mathbf{M}_1 = \mathbf{e}_z \xrightarrow{(\pi/2)_x} mathbf{M}_2 = -\mathbf{e}_y
+  \mathbf{M}_1 = \mathbf{e}_z \xrightarrow{(\pi/2)_x} \mathbf{M}_2 = -\mathbf{e}_y
 \end{equation}
 
 To determine what happens to the populations and coherences we can look at the
@@ -1413,7 +1408,7 @@ The equation of motion for the $z$-axis magnetization vector is:
 Longitudinal relaxation involves an energy exchange between the spin system and the molecular
 surroundings and is why it is often referred to as spin-lattice relaxation.
 
-\subsection{NMR signal and detection}
+\subsection{NMR signal and detection}\label{Signal}
 
 In NMR the signal produced by the spins is inductively detected. The precessing transverse magnetization, created
 when an r.f. field is applied to the sample, induces a voltage, and therefore a current, in a coil that
@@ -1740,7 +1735,7 @@ however even at 23.5T there is only a factor of ~$6\times10^{-6}$ in population 
 very small value that is responsible for the low sensitivity of NMR compared to other techniques.
 
 As mentioned, detection in NMR is typically done through the induction of a voltage in a coil that's close
-to the precessing nuclear spins this is usually referred to as the sample coil. Unfortunately,
+to the precessing nuclear spins, this is usually referred to as the sample coil. Unfortunately,
 this coil also brings with it a type of interference, noise, analogous to the 'hiss' in the background
 of radio it is produced mainly from thermal motion of electrons in the sample coil with some contribution from thermal
 motion of ions in solution. The signal to noise ratio, SNR, is an important factor in NMR experiments if its too low
@@ -1761,7 +1756,7 @@ $T_c$ is the absolute temperature of the coil, and $k_b$ is the Boltzmann consta
 In the same paper, Hoult and Richards introduced the principle of reciprocity for calculating the
 sensitivity of the RF coil, This states that the signal received from a sample by a coil is proportional to the magnetic
 field which would have been created in the sample if unit current were passed through the coil. Therefore the SNR is
-directly proportional to the sensitivity of the coil, $B_1/i$. This can be seen if we define an
+directly proportional to the sensitivity of the coil, $B_1/i_c$. This can be seen if we define an
 effective sample volume that is the volume in which $B_1$ is within 10\% of the maximum
 value at the center of the coil. The SNR is given by a more simple expression\citep{vanBentum:2007fda}:
 \begin{equation}
@@ -1780,7 +1775,7 @@ where the function $\rho$ is unity in the sample area, and zero elsewhere. For a
 interior space filled with sample, $\alpha_F = 1/2$.
 
 Increasing the filling factor and maximising maximise coil sensitivity, can be solved by decreasing the size of
-the detector. The third, minimising resistance in the coil
+the detector. The third, minimising resistance in the coil,
 can be tackled by commercially available cryoprobes where the coil is cooled with a stream of He gas to
 ~20K this reduces the thermal noise from the source and can increase SNR by a factor of four.
 
@@ -1798,9 +1793,75 @@ Resistance is:
 with $l$, the height of the copper cylinder, $d$ the diameter and $\rho_r$ the resistivity.
 Optimum coil sensitivity is given by $d/l$ = $1$ in this case the signal to noise is:
 \begin{equation}
-  SNR = 0.9\times10^{-16}\frac{N_s}{d\sqrt{\Delta~f}}
+  SNR = 0.9\times10^{-16}\frac{n_s}{d\sqrt{\Delta~f}}
 \end{equation}
 For a fixed number of spins the SNR scales with 1/d as predicted by \citep{Hoult:1976dw}
+
+\subsection{Signal Averaging}\label{Signal Averaging}
+
+In NMR, the total signal that emerges from the probe contains signal from the sample
+under observation as well as uncontrolled random signals called noise. In NMR spectroscopy, the most dominant source of noise comes
+from the thermal motions of the electrons
+in the receiver coil, called thermal noise. In order for the signal that originated from the sample to rise above the noise,
+signal averaging must be employed. This works as the sum of two identical experiments is twice the signal
+of the original individual experiment:
+\begin{equation}
+  s_\text{NMR}(1+2) = s_\text{NMR}(1) + s_\text{NMR}(2) = 2s_\text{NMR}(1)
+\end{equation}
+The key is that this relationship does not apply equally to the noise, as it is random. A suitable
+definition of the noise amplitude in a single experiment is given by the root mean square (RMS) noise defined
+as:
+\begin{equation}
+  \sigma_\text{noise} = \langle~s_{\text{noise}}(1)^2\rangle^{1/2}
+\end{equation}
+where the angle bracket indicates an average over all sampling points.
+
+As in \ref{Signal}, the signal generated by the noise is proportional to the noise
+voltage in the coil such that:
+\begin{equation}
+  \langle~s_{\text{noise}}(1)^2\rangle \sim (\langle~\xi_n^2\rangle)^2,
+\end{equation}
+where $\langle~\xi_n^2\rangle$ is the mean square emf produced in the coil by thermal noise, and $F$ is the noise
+factor from the spectrometer.
+
+This mean square emf is derived from statistical mechanics and can be expressed as \citep{nyquist1928thermal, johnson1928thermal}:
+\begin{equation}
+  \langle~\xi_n^2\rangle = 4k_bT_CR_{\text{noise}}\Delta~f.
+\end{equation}
+
+Including a factor for the noise from the spectrometer, $F$, $\sigma_\text{noise}$ can be expressed
+quantitatively as:
+\begin{equation}
+  \sigma_\text{noise} = F\sqrt{4k_bT_CR_{\text{noise}}\Delta~f},
+\end{equation}
+which is equal to the denominator for the SNR from \eqn{eqn:SNR}.
+
+The RMS noise is the same for two experiments assuming the noise is stationary i.e. the noise does not change from one experiment to the next.
+However, this does not imply that the noise from two experiments has twice the value. Summed over the two experiments
+the RMS noise takes the value:
+\begin{equation}
+  \sigma_\text{noise}(1+2) \cong \sqrt{2} \sigma_{\text{noise}}(1)
+\end{equation}
+Since the noise over two experiments increases by $\sqrt{2}$ but the signal doubles. Therefore the signal to noise
+ratio over two experiments can be written as:
+\begin{equation}
+  \text{SNR}(1+2) = \sqrt{2}\frac{s_{\text{NMR}}(1)}{\sigma_{\text{noise}}(1)}
+\end{equation}
+This can be extended to show the signal-to-noise over $N$ transients is a factor $\sqrt{N}$ larger than the
+signal for a single transient. So by signal averaging over many scans the SNR can be increased.
+
+In principle, this allows NMR signals that have a SNR less than one to be 'pulled out' of the noise. In reality, this is
+time consuming as in order to repeat an experiment precisely it is essential to allow the spin system to
+reach thermal equilibrium again. The different NMR experiments must therefore be separated by an interval
+many times longer than $T_1$, which in some case can be several seconds. For example, if the SNR of the first
+experiment is 0.1 clearly the signal will be buried in the noise. The SNR may be changed to 10:1 by signal averaging
+over 10,000 scans. If each scan takes 1 second this amounts to 3 hours of instrument time which is long but
+acceptable. However, if the SNR is 0.01 then it follows that 300 hours would now be needed which is not feasible.
+
+In order for smaller signals to be detected, the amount of signal i.e. the amount of polarization in the sample,
+needs to be increased this can be done by preparing the sample in a specific way and is referred to as
+'hyperpolarization'.
+
 
 \subsection{Limit of Detection}
 
@@ -1878,7 +1939,7 @@ ensuring species present at 0.1 mM can be detected within less than 20 mins to a
 ~ 1 mM $\sqrt{\text{s}}$ and can detect species at 0.02 mM in that time frame. Whilst this is suitable for some metabolomic information to be
 gained, however, the subtle changes in molecules present at less than 0.02 mM are of interest but
 are unreachable with this probe at this time
-\begin{figure}
+\begin{figure}[h]
   \includegraphics[width=\columnwidth]{sensitivity-ov.pdf}
   \caption{Plot comparing the limits of detection of previously design micro-NMR detectors. Letters
   a-t correspond to different authors as cited by Badilita \textit{et al.}\citep{Badilita:2011td} Letters u\citep{Meier:2014ds}
