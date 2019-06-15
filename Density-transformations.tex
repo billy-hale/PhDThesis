@@ -1,3 +1,49 @@
+subsubsection{Fourier Transform}
+
+After applying an r.f. pulse, the resulting free induction decay (FID) measured is typically an exponentially decaying sinusoidal function.
+The signal produced from this can be written generally as:
+\begin{align}\label{eqn:signal}
+  S(t) =& \sum_l s_l(t) \\
+  s_l(t) =& a_l\text{exp}\{-(i\omega_l+\lambda_l)t\},
+\end{align}
+where $S(t)$ is the total signal from from the sample and $s_l$ are the signals from the individual spins. Each spin has an
+amplitude, $a_l$, and an associated decay constant, $\lambda_l = T_2^{-1}$.
+
+$S(t)$ is easy to evaluate and interpret if it originates from one spin or a group of spins precessing
+at precisely the same frequency, however, if there are more spins in the sample processing at different frequencies
+the FID becomes extremely hard to interpret on its own.
+
+We can clear this picture up however by employing a Fourier transform. This converts the time-domain data
+into the frequency-domain, such that the total signal in the frequency domain, $S(\Omega)$ is the sum of all individual spin signals resonating at the frequency, $S_l(\Omega)$:
+\begin{equation}
+  S(\Omega) = \sum_l S_l(\Omega).
+\end{equation}
+This allows us to clearly see which resonances are possessed by our spins in the sample. To
+perform a Fourier transform we must do the following:
+\begin{equation}
+  S_l(\Omega) = \int_{0}^{\infty}s_l(t)\text{exp}\{-i\Omega t\}dt,
+\end{equation}
+and using \eqn{eqn:signal} can be rewritten:
+\begin{equation}
+  S_l(\Omega) = a_l\int_{0}^{\infty}\text{exp}\{(-i(\Omega+\Omega_l)+\lambda_l t\}dt,
+\end{equation}
+sometimes written more concisely as:
+\begin{equation}
+  S(\omega) = \mathcal{F}\{S(t)\}(\Omega),
+\end{equation}
+where $S(t)$ is the signal for the time domain (FID) and $S(\omega)$ is the signal in the frequency domain.
+
+The Fourier transform of our general case is:
+\begin{equation}
+  \mathcal{F}\{S(t)\}(\omega) = a_l\frac{1}{\lambda_l + i(\omega - \omega_l)},
+\end{equation}
+which is Lorentzian function centered at $\omega_l$ with peak width parameter $\lambda_l$.
+
+The NMR signal represented in the frequency domain is a spectrum. It is usually consists of many peaks
+indicating different resonance frequencies of spins in the sample. In the next
+section we will discuss chemical shift and J-coupling. Two additional effects that when combined
+with Larmor frequencies already discussed form the NMR spectrum as we know it.
+
 \subsection{Signal Averaging}\label{Signal Averaging}
 
 In NMR, the total signal that emerges from the probe contains signal from the sample

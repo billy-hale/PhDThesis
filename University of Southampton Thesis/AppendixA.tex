@@ -16,6 +16,8 @@ The pulse sequences used for the PH-TOCSY and the PH-HMQC spectra are shown belo
 
 Below the firmware for the operation of the peristaltic pump is given.
 
+\begin{lstlisting}
+
 pump_driver_0.0.1
 
 #define VALVE_A 3
@@ -188,3 +190,4 @@ void stopPump(int *valves, int npins)
   for(int k=0;k<npins;k++)
     digitalWrite(valves[k],LOW);
 }
+\end{lstlisting}

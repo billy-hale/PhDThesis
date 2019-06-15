@@ -1,12 +1,13 @@
-% !TEX root = ./Thesis.tex
+% !TEX root = ./Thesis - combined.tex
 
 \chapter{Parahydrogen induced polarization on a chip} \label{Chapter:Parahydrogen}
 
- This chapter is an extended version of J Eills$^*$, W Hale$^*$, M Sharma,
+ This chapter is an extended version of J Eills\footnotemark, W Hale\footnotemark[\value{footnote}], M Sharma,
  M Rossetto, M H Levitt and M Utz, High-Resolution Nuclear Magnetic Resonance
  Spectroscopy With Picomole Sensitivity by Hyperpolarisation On A Chip,
- \textit{Journal of the American Chemical Society}, 2019, XXXX, XXX, XXX-XXX \citep{Hale2019PHIP}
-
+ \textit{Journal of the American Chemical Society}, 2019 \citep{Hale2019PHIP}
+\footnotetext{These authors contributed equally
+to the work.}
 \section{Synopsis}
 In this chapter a device that combines high-resolution NMR and parahydrogen induced hyperpolarization (PHIP)
 with a high-sensitivity transmission line micro-detector is discussed.
@@ -35,15 +36,15 @@ their interplay with nuclear relaxation. It is further exemplified by homo-
  \section{Introduction}
 
  High-resolution NMR
- spectroscopy is a superbly versatile method which provides detailed and
- quantitative information on chemical composition and structure. It is widely
+ spectroscopy is a superbly versatile method which provides detailed, and
+ quantitative, information on chemical composition and structure. It is widely
  used to follow the progress of chemical reactions
  \cite{Foley-quantitative:2004bk,Foley:2014kpa},
  as well as
  metabolic processes in living systems
  \cite{Wishart:2008ga,Gottschalk:2008ixa,CuperlovicCulf:2010vc,Shintu:2012bl}.
- However, NMR suffers from inherently low sensitivity,
- which is due in part to the very weak polarization of nuclear spins along the magnetic
+ However, NMR suffers from inherently low sensitivity
+ which is due, in part, to the very weak polarization of nuclear spins along the magnetic
  field for samples in thermal equilibrium at ambient conditions.
  Conventional high-resolution NMR therefore requires nanomole quantities of
  sample. Many important problems require detection of analytes at low
@@ -51,7 +52,7 @@ their interplay with nuclear relaxation. It is further exemplified by homo-
  metabolic species. Despite the
  comparatively higher mass sensitivity of NMR for small sample volumes
  \cite{Olson:1995vu,Bart:2009kc}, conventional micro-NMR systems  around
- 1~$\mu$L achieve mass limits of detection of no better than\cite{Finch:2016gv}
+ 1~$\mu$L achieve mass limits of detection of no better than \cite{Finch:2016gv}
  1~nmol$\sqrt{\mathrm{s}}$,  corresponding to a concentration
  limit of detection of 1~$\mathrm{m M \, \sqrt{s}}$. An increase of several
  orders of magnitude in sensitivity is therefore required to enable NMR
@@ -68,7 +69,7 @@ their interplay with nuclear relaxation. It is further exemplified by homo-
  In the life sciences, microfluidic devices are increasingly used as
  sophisticated culture platforms for cells,
  cell assemblies, tissues, and small organisms
- \cite{Manz:1990vc,Whitesides:2006vi,
+ \cite{Whitesides:2006vi,
  ElAli:2006ci,West:2008jd,Neuzil:2012gc,Gracz:2015co}.
  The integration of NMR with microfluidics
  \cite{Ryan:2012ke,Badilita:2011td,Spengler:2014ir,Finch:2016gv} is promising, as
@@ -91,7 +92,7 @@ their interplay with nuclear relaxation. It is further exemplified by homo-
  Budker:2007hz,Xu:2006kg,Blanchard:2013gs}, they lack spectral resolution.
  While a recent study
  has demonstrated resolution of $J$ couplings using a nitrogen-vacancy
- (NV) centre magnetometer. \cite{Glenn:2018ct}, none of these
+ (NV) centre magnetometer \cite{Glenn:2018ct}. None of these
  alternative detection schemes are compatible with high (several Tesla)
  magnetic fields, which are essential to produce spectral dispersion
  by chemical shifts.
@@ -103,8 +104,9 @@ their interplay with nuclear relaxation. It is further exemplified by homo-
 
  Hyperpolarization methods generate substances which exhibit a transiently high
  level of nuclear spin polarization, with an increase in the NMR signal strength
- of more than 4 orders of magnitude \cite{munnemann2011nuclear}, can be combined
- with micro-NMR detectors and microfluidic systems \cite{McDonnell:2005dn,Desvaux:2009bq,Telkki:2010vg,Paciok:2011ek,JimenezMartinez:2014et,Causier:2015fg,eills-hale2018EuromarPHIP,Bordonali:2019jqa}.
+ of more than 4 orders of magnitude \cite{munnemann2011nuclear}, and can be combined
+ with micro-NMR detectors and microfluidic systems \cite{McDonnell:2005dn,Desvaux:2009bq,Telkki:2010vg,Paciok:2011e,
+ JimenezMartinez:2014et,Causier:2015fg,eills-hale2018EuromarPHIP,Bordonali:2019jqa}.
  One such method
  involves the chemical reaction of the singlet spin isomer of molecular
  hydrogen, and is called parahydrogen-induced hyperpolarization (PHIP)
@@ -123,7 +125,7 @@ their interplay with nuclear relaxation. It is further exemplified by homo-
  conventional size scales \cite{Roth:2010hk,Lehmkuhl:2018cd}.
  It has been shown that silicone elastomer membranes can be used
  to deliver parahydrogen directly to a flowing liquid in a microfluidic
- device \cite{eills-hale2018EuromarPHIP}. Bordonali et al\cite{Bordonali:2019jqa} have
+ device \cite{eills-hale2018EuromarPHIP}. Bordonali et al \cite{Bordonali:2019jqa} have
  recently combined a microfluidic NMR probe system with a gas exchange
  chip based on a silicone elastomer membrane to implement the SABRE (signal
  enhancement by reversible exchange) variant of parahydrogen-induced polarization,
@@ -148,8 +150,8 @@ their interplay with nuclear relaxation. It is further exemplified by homo-
  contains a precursor, which is hydrogenated through a homogeneous
  catalyst also present in the solution. Two hydrogenitive PHIP experiments are performed in
  this way. In the ALTADENA experiment, the solution is hydrogenated 'on-chip' at low magnetic field
- and transferred to a high field magnet for detection. ALTADENA was used as a proof of principle that the device
- was capable of hydrogenation 'on-chip'. In the second experiment, PASADENA,
+ and transferred to a high field magnet for detection. ALTADENA is used as a proof of principle that the device
+ is capable of hydrogenation 'on-chip'. In the PASADENA reactions,
  the microfluidic device is held in the bore of a conventional
  NMR magnet using a purpose-built transmission line NMR probe.
  This yields a continuous on-chip stream of hyperpolarized material. As shown
@@ -169,11 +171,12 @@ their interplay with nuclear relaxation. It is further exemplified by homo-
 
  \subsection{Sensitivity}\label{Sensitivity}
 
-As described in \ref{Population}, NMR has low polarization levels that are governed by the Boltzmann
-distribution given in \eqn{eqn:Boltzmann}. For example, for a spin-1/2 particle in a static field of 14.1 Tesla
+As described in \ref{EnergyLevels}, NMR has low polarization levels that are governed by the Boltzmann
+distribution given in \eqn{eqn:Polarization}. For example, for a spin-1/2 particle in a static field of 14.1 Tesla
 there is only a factor of $~6\times10^{-6}$ difference in the populations of the $\ket{\alpha}$ and $\ket{\beta}$ state.
-Compared to other detection techniques, NMR suffers from poor limits of detection (LODs). Raman Spectroscopy, has
-LODs of $10^{-12}$ - $10^{-15}$ M, Laser induced fluorescence (LIF) has detected concentrations at $10^{-13}$ M and
+Compared to other detection techniques, NMR suffers from poor limits of detection (LODs)
+in comparison to other detection methods. Raman Spectroscopy, has
+LODs of $10^{-12} - 10^{-15}$ M, Laser induced fluorescence (LIF) has detected concentrations at $10^{-13}$ M and
 mass spectrometry has achieved $10^{-19}$ M. These alternative techniques are several orders of magnitude higher than that of NMR.
 While sensitivity is not a strong point, NMR is quantitative, non-invasive, and non-destructive making it an ideal
 tool for mass limited and, in particular, living samples.
@@ -181,7 +184,7 @@ tool for mass limited and, in particular, living samples.
 \subsection{Hyperpolarization}
 
  From \eqn{eqn:Polarization} in \ref{EnergyLevels}, we find that, the polarization level of nuclear spins at room temperature is low. In fact,
- for protons, it is only $3\times10{^-6}$ per Tesla \citep{RN138}. The signal derived from an NMR experiment
+ for protons, it is only $3\times10^{-6}$ per Tesla \citep{RN138}. The signal derived from an NMR experiment
  is proportional to this polarization and means that the sensitivity and LOD is limited. The highest
  field available commercially is ~28 Tesla which corresponds to polarization levels in protons of ~$10^{-4}$ and
  whilst there are clear advantages to working in higher fields the size and more importantly - cost, make them
@@ -209,7 +212,7 @@ tool for mass limited and, in particular, living samples.
  is first cooled to \~2.3 K, after which, there is a waiting period to allow for the build up of polarization
  of the $^1$H nuclei. This period is required due to long $T_1$ times at cryogenic temperatures and
  can be up to 70 hours \citep{RN155}. After the polarization build up, the solid sample is passed
- through a low field to facilitate thermal mixing and polarizaiton of $^13$C nuclei. Finally,
+ through a low field to facilitate thermal mixing and polarizaiton of $^{13}$C nuclei. Finally,
  the solid sample is rapidly dissolved in warm solvent and detected.
 
  There are drawbacks however, firstly, the long $T_1$ times at cryogenic temperatures mean long
@@ -339,10 +342,10 @@ Using \eqn{eqn:partition}, the percentage of parahydrogen in an equlibrium mixtu
   \label{fig:ParaTemp}
 \end{figure}
 
- By cooling alone, the ratio would remain unchanged. Conversion
+ By cooling alone, the ratio would remain unchanged, conversion
  from ortho to para spin states without the aid of a catalyst (typically charcoal or iron (III) oxide) is not possible.
- The catalyst temporarily breaks the symmetry of the \ce{H_2} molecule which allows spin-spin transitions and means
- a much larger fraction of the \textit{para} form of hydrogen is produced. Crucially, when warmed up to
+ The catalyst temporarily breaks the symmetry of the \ce{H_2} molecule which allows spin-spin transitions and leads to
+ a much larger fraction of the \textit{para} form of hydrogen. Crucially, when warmed up to
  room temperature in the absence of a symmetry breaking catalyst, no conversion from the singlet state $\ket{S^0}$ back to
  the triplet states $\ket{T^+}$, $\ket{T^0}$, $\ket{T^-}$ occurs. This is because transitions between singlet and triplet states
  are forbidden through quantum mechanical selection rules. It is therefore possible to store pure parahydrogen
@@ -409,7 +412,7 @@ Using \eqn{eqn:partition}, the percentage of parahydrogen in an equlibrium mixtu
 
 This density operator may also be expressed as a linear combination of operators:
 \begin{equation}
-  \rho_{\text{ini}} = \frac{1}{4}\mathbb{1} - \frac{1}{2}(2\hat{I}_{1x}\hat{I}_{2x} + \hat{I}_{1y}\hat{I}_{2y} + \hat{I}_{1z}\hat{I}_{2z})
+  \rho_{\text{ini}} = \frac{1}{4}\mathbb{1} - (\hat{I}_{1x}\hat{I}_{2x} + \hat{I}_{1y}\hat{I}_{2y} + \hat{I}_{1z}\hat{I}_{2z}).
 \end{equation}
 
  These diagonal elements (populations) do not evolve as these components commute with the Hamiltonian. The off-diagonal
@@ -417,7 +420,7 @@ This density operator may also be expressed as a linear combination of operators
 
 The Hamiltonian of the product molecule is given by:
 \begin{equation}
-  \hat{H}_{\text{pas}} = 2\pi(\omega_1\hat{I}_{1z}) + \omega_2\hat{I}_{2z} + 2\pi~J_{12}(\hat{I}_{1x}\hat{I}_{2x} + \hat{I}_{1y}\hat{I}_{2y} + \hat{I}_{1z}\hat{I}_{2z}),
+  \hat{H}_{\text{pas}} = 2\pi(\omega_1\hat{I}_{1z}) + 2\pi(\omega_2\hat{I}_{2z}) + 2\pi~J_{12}(\hat{I}_{1x}\hat{I}_{2x} + \hat{I}_{1y}\hat{I}_{2y} + \hat{I}_{1z}\hat{I}_{2z}),
 \end{equation}
  as the reaction continues, an ensemble of molecules are hydrogenated at different time points, this gives
  a new density operator, $\hat{\rho}_{pas}(t)$, expressed as:
@@ -442,25 +445,25 @@ these coherences average to zero over the reaction time period and so the
  \end{equation}
 and can also be written as:
 \begin{equation}
-   \hat{\rho}_{\text{pas}}(t_r) = \frac{1}{4}\mathbb{1} - \hat{I}_{1z}\hat{I}_{2z}
+   \hat{\rho}_{\text{pas}}(t_r) = \frac{1}{4}\mathbb{1} - \hat{I}_{1z}\hat{I}_{2z},
 \end{equation}
  \fig{fig:PASADENA} shows the eigenstate populations and general simulated spectra of a thermal equilibrium experiment and
  a PASADENA experiment.
 
- In a usual NMR spectrum a $\pi/2$ pulse is used to excite observable single quantum coherences. For a PASADENA signal to
+ In a usual NMR spectrum, a $\pi/2$ pulse is used to excite observable single quantum coherences. For a PASADENA signal to
  be observed, a $\frac{\pi}{4}$ pulse must be used. The reason becomes clear when examining the effect on $\hat{\rho}_{\text{pas}}(t_r)$ of a pulse with general
  tilt angle, $\theta$, along the $y$-axis:
 \begin{equation}
-  \hat{R}(\theta)_y\hat{\rho}_{\text{pas}}(t_r) = \hat{\rho}_\theta_p = \cos^2(\theta)\hat{I}_{1z}\hat{I}_{2z} +
+  \hat{R}(\theta)_y\hat{\rho}_{\text{pas}}(t_r) = \hat{\rho}_\theta~p = \cos^2(\theta)\hat{I}_{1z}\hat{I}_{2z} +
   \cos(\theta)\sin{\theta}(\hat{I}_{1z}\hat{I}_{2x} + \hat{I}_{1x}\hat{I}_{2z}) + \sin^2(\theta)\hat{I}_{1x}\hat{I}_{2x},
 \end{equation}
 using a tilt angle of $\theta = \pi/2$ would give:
 \begin{equation}
-  \hat{\rho}_{\pi/2}_p  = \hat{I}_{1x}\hat{I}_{2x},
+  \hat{\rho}_{\pi/2p}  = \hat{I}_{1x}\hat{I}_{2x},
 \end{equation}
 which is unobservable double quantum coherence. However, a pulse with $\theta = \pi/4$ gives:
 \begin{equation}
-  \hat{\rho}_{\pi/4}_p = \frac{1}{2}(\hat{I}_{1z}\hat{I}_{2z} + \hat{I}_{1z}\hat{I}_{2x} + \hat{I}_{1x}\hat{I}_{2z} + \hat{I}_{1x}\hat{I}_{2x}),
+  \hat{\rho}_{\pi/4p} = \frac{1}{2}(\hat{I}_{1z}\hat{I}_{2z} + \hat{I}_{1z}\hat{I}_{2x} + \hat{I}_{1x}\hat{I}_{2z} + \hat{I}_{1x}\hat{I}_{2x}),
 \end{equation}
 where the $\hat{I}_{1x}\hat{I}_{2z}$ and $\hat{I}_{1z}\hat{I}_{2x}$ terms are observable.
 
@@ -474,7 +477,7 @@ where the $\hat{I}_{1x}\hat{I}_{2z}$ and $\hat{I}_{1z}\hat{I}_{2x}$ terms are ob
  \end{figure*}
 
  In an ALTADENA experiment, the hydrogenation is performed at low field. In this case, when a molecule of hydrogen
- is added to a substrate the denstiy operator - $\hat{\rho}_\text{ini}$, is projected onto the new eigenbasis which
+ is added to a substrate the density operator, $\hat{\rho}_\text{ini}$, is projected onto the new eigenbasis which
  at low field (where $\frac{\delta{\omega}}{J}<<1$) is the singlet-triplet basis. To a good approximation the only term
  is the $\ket{S_0}$ and there is no evolution of the system.
 
@@ -483,7 +486,7 @@ where the $\hat{I}_{1x}\hat{I}_{2z}$ and $\hat{I}_{1z}\hat{I}_{2x}$ terms are ob
  the field increases, the eigenbasis changes from singlet-triplet to the Zeeman basis. The adiabatic change carries the population of the
  $\ket{S_0}$ state to the $\ket{\alpha\beta}$ or $\ket{\beta\alpha}$ state, depending on which is more energetically more favourable.
  This change is depicted graphically in \fig{fig:SingletTriplet} where $\ket{\beta\alpha}$ has been arbitrarily chosen as the lower energy state.
- In the case showm, only one of the four energy levels, namely $\ket{\beta\alpha}$ is now populated, therefore the density operator, $\hat{\rho}_{alta}$ is given by:
+ In the case shown, only one of the four energy levels, namely $\ket{\beta\alpha}$ is now populated, therefore the density operator, $\hat{\rho}_{alta}$ is given by:
  \begin{equation}
    \hat{\rho}_{\text{alta}} = \ket{\beta\alpha}\bra{\beta\alpha}.
  \end{equation}
@@ -505,12 +508,12 @@ where the $\hat{I}_{1x}\hat{I}_{2z}$ and $\hat{I}_{1z}\hat{I}_{2x}$ terms are ob
 
  An r.f. pulse with general angle, $\theta$, orientated along the $y$-axis gives:
  \begin{equation}
-   \hat{R}(\theta)_y\hat{\rho}_{\text{alta}} = \hat{\rho}_\theta_a = \cos(\theta)\sin{\theta}(\hat{I}_{1z}\hat{I}_{2x} + \hat{I}_{1x}\hat{I}_{2z})
+   \hat{R}(\theta)_y\hat{\rho}_{\text{alta}} = \hat{\rho}_\theta = \cos(\theta)\sin{\theta}(\hat{I}_{1z}\hat{I}_{2x} + \hat{I}_{1x}\hat{I}_{2z})
    ± \frac{1}{2}\sin\theta(\hat{I}_{1x} - \hat{I}_{2x}).
  \end{equation}
  A pulse with $\theta = \pi/4$ here yields:
  \begin{equation}
-   \hat{\rho}_{\pi/4}_a = \frac{1}{2}(\hat{I}_{1z}\hat{I}_{2x} + \hat{I}_{1x}\hat{I}_{2z}) ± \frac{1}{2\sqrt{2}}(\hat{I}_{1x} - \hat{I}_{2x}),
+   \hat{\rho}_{\pi/4a} = \frac{1}{2}(\hat{I}_{1z}\hat{I}_{2x} + \hat{I}_{1x}\hat{I}_{2z}) ± \frac{1}{2\sqrt{2}}(\hat{I}_{1x} - \hat{I}_{2x}),
  \end{equation}
  that gives rise to two out of phase doublets shown in \fig{fig:ALTADENA}. However, unlike PASADENA, ALTADENA does not require
  a $\pi/4$ pulse so $\pi/2$ pulses are more common.
@@ -553,7 +556,7 @@ screw-tightened 3D printed (Accura Xtreme, Proto Labs) holders, with
 fluid and gas in/out ports (to fit Kinesis UK NanoPorts).
 
 For PASASDENA experiments, the assembled microfluidic device was put in a transmission line based
-home-built probe \cite{RN164}. The
+home-built probe \cite{sharma2019modular}. The
 device sits between the two stripline planes on a sample holder having
 sample chamber of the device coinciding with the constriction on
 stripline planes. PASADENA and 2D NMR experiments were performed at a field strength
@@ -619,7 +622,7 @@ the NMR tube. The tube was then exposed to vacuum for varying amounts of
 time, in order to study the conversion effect of the residual oxygen the
 results of which are shown in \fig{fig:ph2conv}.
 
-\begin{figure}
+\begin{figure}[h]
   \includegraphics[width=\columnwidth]{PDMS-Ts.png}
   \caption{Ortho-para conversion of hydrogen in PDMS after various times
   under vacuum.}
@@ -636,7 +639,7 @@ $f = 0.25$ gives a signal of 1, and pure parahydrogen gas gives no
 signal. Hence, our signal starting at 50\% enrichment should vary from
 2/3 to 1.
 The data was fit to a function of the form
-$(A - B\ e^{- \frac{t}{T_{s}}}\), with A, B and T_{s}$ as
+$(A - B\ e^{- \frac{t}{T_{s}}})$, with $A$, $B$ and $T_{s}$ as
 variables.
 The $T_s$ under no vacuum of \~10 min lead to the assumption that no significant
 relaxation would occur during the transport of H$_2$ through the PDMS membrane.
@@ -661,7 +664,7 @@ Para\-hydrogen-en\-riched hydrogen gas $\mathbf{1}$ was
 allowed to react with propargyl acetate $\mathbf{2}$, in the presence of
 a rhodium catalyst $\mathbf{3}$. The substrate $\mathbf{2}$ was chosen in
 view of future studies based on side-arm hydrogenation (SAH)
-\cite{Reineri:2015he,cavallari201813,cavallari2015effects}. In SAH the
+\cite{Reineri:2015he,cavallari201813,cavallari2015effects}. In SAH, the
 polarisation of the $^1$H nucleus is transferred to a neighbouring $^13$C
 and the moiety that has been hydrogenated is removed. SAH techniques can
 help to bring generality to the PHIP technique as they eliminate the need for
@@ -682,7 +685,7 @@ $\mu$m thick layer of PMMA with serpentine paths for liquid and gas flow. B in t
 \fig{fig:AltadenaChip} shows the path structure in the chip as well as the hydrogen and fluid paths
 respectively.
 
-\begin{figure}
+\begin{figure}[h]
   \begin{center}
   \includegraphics[width=\columnwidth]{ALTADENA-FIG.pdf}
   \end{center}
@@ -698,10 +701,17 @@ was pressurised with 5 bar of 50\% enriched parahydrogen and allowed to equilibr
 for some time. Then, 100 $\mu$l was flown through the device at a flow rate of 1000
 $\mu$l min$^{-1}$ this was done to ensure the sample from the experiment would reside
 completely in the sensitive area. For the ALTADENA, 350 $\mu$l was flown through
-the device and collected in the magnet. A $\pi$/4 pulse was applied and the spectra
+the device and collected in the magnet. A $\pi$/2 pulse was applied and the spectra
 recorded the result of the experiment is shown in \fig{fig:AltadenaResults}.
 
-\begin{figure}
+A comparison is shown between scans taken of the same experiment, in \fig{fig:AltadenaResults} i) spectra
+from an experiment with thermal hydrogen and ii) one with parahydrogen. The parahydrogen
+ALTADENA signal (ii) exhibits the characteristic inverted peaks and a much higher signal
+to noise ratio (SNR) and gives enhancement by comparison of the SNR of around 200.
+This result provided a proof of principle that parahydrogenation induced polarization (PHIP) on a chip
+was possible by bubble free transfer through a PDMS membrane in our devices.
+
+\begin{figure}[h]
   \begin{center}
   \includegraphics[width=7cm,keepaspectratio]{Altadena-Signal-comp.png}
   \end{center}
@@ -711,18 +721,13 @@ recorded the result of the experiment is shown in \fig{fig:AltadenaResults}.
   \label{fig:AltadenaResults}
 \end{figure}
 
-A comparison is shown between scans taken of the same experiment, in \fig{fig:AltadenaResults} i) spectra
-from an experiment with thermal hydrogen and ii) one with parahydrogen. The parahydrogen
-ALTADENA signal (ii) exhibits the characteristic inverted peaks and a much higher signal
-to noise ratio (SNR) and gives enhancement by comparison of the SNR of around 200.
-This result provided a proof of principle that parahydrogenation induced polarization (PHIP) on a chip
-was possible by bubble free transfer through a PDMS membrane in our devices.
+\newpage
 
 \subsection{PASADENA}
 
-\begin{figure}
+\begin{figure}[h!]
 	\centering
-	\includegraphics[width=7cm]{mu1y11-ph2c-fi-190117-fig1.png}
+	\includegraphics[width=10cm]{mu1y11-ph2c-fi-190117-fig1.png}
 	\caption{Overview of the PHIP@chip device.
 		% a: scheme of the hydrogenation reaction;
     %
@@ -809,6 +814,8 @@ the present experiments). This would be difficult to achieve in the
 chip presented by Bordonali et al, which has the liquid and gas channels
 arranged on opposite sides of the membrane.
 
+\newpage
+
 \subsection{Signal Analysis}
 
 \fig{fig:phip@chip2}a shows a single-scan proton NMR spectrum
@@ -837,18 +844,20 @@ Using normal hydrogen gas, a fully labelled spectrum of the reaction mixture
 was obtained using a lower flow rates whilst maintaining
 the 5 bar of hydrogen pressure. This allowed the solution to saturate with
 methanol and facilitated the quantification of the product and dissolved hydrogen.
-A fully labelled spectrum obtained using a flow rate of 2$\mu~l \text{min}^{-1}$
+A fully labelled spectrum obtained using a flow rate of 2$\mu$L$\text{min}^{-1}$
 is shown in \fig{fig:LabelledSpec}
 
 \begin{figure}
   \begin{center}
-  \includegraphics[width=\columnwidth]{Labelled-1H-spectrum.png}
+  \includegraphics[width=\columnwidth]{Labelled-spectrum.pdf}
   \end{center}
   \caption{Labelled $^1$H spectrum acquired using a flow rate of 2$\mu~l \text{min}^{-1}$
   and a normal hydrogen pressure of 5 bar. The spectrum was collected using 64 transients
   with a delay of 5 seconds.}
   \label{fig:LabelledSpec}
 \end{figure}
+
+\newpage
 
 \subsection{Hydrogen Transport}
 
@@ -1079,9 +1088,9 @@ A great advantage of the continuously operating microfluidic PHIP system is the
 ability to acquire many transients in succession under virtually unchanged
 conditions.
 This is difficult to achieve with bubbling hydrogen through a solution.
-As a consequence, hyperpolarized multi-dimensional NMR spectra\cite{Mishkovsky:2008cl,Giraudeau:2009fn,Roth:2010hk,Lloyd:2012cf,Eshuis:2015ce,Kiryutin:2019hy}. have been recorded
-either using automated reactors combined with NMR flow probes,\cite{Lloyd:2012cf,Eshuis:2015ce}
-or using ultrafast acquisition techniques\cite{Mishkovsky:2008cl,Giraudeau:2009fn,Kiryutin:2019hy}.
+As a consequence, hyperpolarized multi-dimensional NMR spectra \cite{Mishkovsky:2008cl,Giraudeau:2009fn,Roth:2010hk,Lloyd:2012cf,Eshuis:2015ce,Kiryutin:2019hy}. have been recorded
+either using automated reactors combined with NMR flow probes, \cite{Lloyd:2012cf,Eshuis:2015ce}
+or using ultrafast acquisition techniques \cite{Mishkovsky:2008cl,Giraudeau:2009fn,Kiryutin:2019hy}.
 
 The PHIP@chip setup allows straightforward acquisition of 2D spectra, using
 conventional $t_1$ incrementation.
@@ -1155,9 +1164,8 @@ protons in the molecule by the application of the isotropic mixing
 sequence MLEV-17
  \cite{levittSupercyclesBroadbandHeteronuclear1982,baxMLEV17basedTwodimensionalHomonuclear1985}
  prior to 1D signal acquisition.
-\cbend
  This simple trick
-allows one to hyperpolarise any protons that are \emph{J}-coupled to the
+allows one to hyperpolarize any protons that are \emph{J}-coupled to the
 parahydrogen pair, which makes the technique more general.
 
 Much ongoing research in the field of hyperpolarization is
@@ -1174,7 +1182,7 @@ transfer. This has the advantage that near magnetic equivalence between the two
 added protons is maintained through the reaction, leading to longer lifetimes
 \cite{bhattacharya2007towards,chekmenev2008pasadena,
 chekmenev2009hyperpolarized,shchepin2014parahydrogen,
-Reineri:2015he,cavallari201813,ripka2018hyperpolarized,roy2018sabre}.
+Reineri:2015he,cavallari201813,Ripka:2018dc,roy2018sabre}.
 The present work opens a complementary strategy, in that the hydrogenation
 is done at high field. Deleterious effects of relaxation are minimised by
 the proximity of the site of hydrogenation to the point of use. Arguably,
@@ -1184,7 +1192,7 @@ only small quantities of hyperpolarized agents are needed.
 \section{Conclusions}
 
 The combination of a highly efficient transmission-line NMR micro detector with
-parahydrogen-induced hyper\-polarization leads to an un\-precedented sensitivity
+parahydrogen induced hyperpolarization leads to an unprecedented sensitivity
 in inductively detected NMR, with a mass limit of detection around
 2.2~$\text{pmol}\,\sqrt{\mathrm{s}}$. This corresponds to a concentration
 sensitivity of less than 1~$\mu \mathrm{M}\,\sqrt{\text{s}}$,

@@ -141,29 +141,21 @@
 \examiner    {}
 \degree      {}
 \authors     {}
-\university  {\texorpdfstring{\href{http://www.soton.ac.uk}
+\university  {
                 {University of Southampton}}
-                {University of Southampton}}
-\UNIVERSITY  {\texorpdfstring{\href{http://www.soton.ac.uk}
+\UNIVERSITY  {
                 {UNIVERSITY OF SOUTHAMPTON}}
-                {UNIVERSITY OF SOUTHAMPTON}}
-\department  {\texorpdfstring{\href{https://www.southampton.ac.uk/chemistry/}
+\department  {
                 {School of Chemistry}}
-                {School of Chemistry}}
-\DEPARTMENT  {\texorpdfstring{\href{https://www.southampton.ac.uk/chemistry/}
+\DEPARTMENT  {
                 {SCHOOL OF CHEMISTRY}}
-                {SCHOOL OF CHEMISTRY}}
-\group       {\texorpdfstring{\href{https://www.southampton.ac.uk/magres/index.page?}
+\group       {
                 {Magnetic Resonance}}
-                {Magnetic Resonance}}
-\GROUP       {\texorpdfstring{\href{https://www.southampton.ac.uk/magres/index.page?}
+\GROUP       {
                 {MAGNETIC RESONANCE}}
-                {MAGNETIC RESONANCE}}
-\faculty     {\texorpdfstring{\href{http://www.engineering.soton.ac.uk}
+\faculty     {
                 {Faculty of Engineering and Physical Sciences}}
-                {Faculty of Engineering and Physical Sciences}}
-\FACULTY     {\texorpdfstring{\href{http://www.engineering.soton.ac.uk}
-                {FACULTY OF ENGINEERING AND PHYSICAL SCIENCES}}
+\FACULTY     {
                 {FACULTY OF ENGINEERING AND PHYSICAL SCIENCES}}
 \addresses   {}
 \subject     {}
