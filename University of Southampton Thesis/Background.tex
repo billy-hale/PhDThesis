@@ -87,11 +87,14 @@ and synthesis of $^{19}$F-labelled organic compounds for use in PET scans \citep
 
 A subsection of microfluidics began to emerge around this time too, as
 low Reynolds numbers make multiphase flow manipulation
-relatively easy, the generation and manipulation of droplets \citep{thorsen2001dynamic, link2004geometrically, tan2004design} then began to be explored.
+relatively easy, the generation and manipulation of droplets \citep{thorsen2001dynamic,
+link2004geometrically, tan2004design} then began to be explored.
 These experiments involved dispersing a liquid phase in a continuous
-liquid stream to form a monodisperse emulsion of (often) aqueous droplets in oil. These droplets
-were used to produce polymer particles \citep{nie2005polymer}, in making irregular particles \citep{nisisako2007formation},
-hollow microcapsules\citep{utada2005monodisperse}, and protein detection in cells \citep{huebner2007quantitative}. An example of one of the ways droplets were first
+liquid stream to form a monodisperse emulsion of (often) aqueous droplets in oil.
+These droplets were used to produce polymer particles \citep{nie2005polymer},
+in making irregular particles \citep{nisisako2007formation}, hollow microcapsules
+\citep{utada2005monodisperse}, and protein detection in cells
+\citep{huebner2007quantitative}. An example of one of the ways droplets were first
 produced in microfluidic devices is shown in \fig{fig:IntroDrops}.
 
 \begin{figure}
@@ -442,8 +445,8 @@ and where $\langle r_i\vert r_j\rangle = \delta_{ij}$ denotes taking the dot pro
 vectors $\ket{r_i}$ and $\ket{r_j}$.
 
 The basis states help to quantify the component of a state vector along that state. Take our example
-from \eqn{eqn:zeeman}, we can construct inner products of the overall state, $\ket{\psi}$ with $\ket{\alpha}$
-and $\ket{\beta}$, to determine component of the basis states.
+from \eqn{eqn:zeeman}, inner products of the overall state, $\ket{\psi}$ with $\ket{\alpha}$
+and $\ket{\beta}$, can be constructed to determine component of the basis states.
 \begin{equation}
   \langle\alpha\vert\psi\rangle = c_1 \quad \langle\beta\vert\psi\rangle = c_2.
 \end{equation}
@@ -484,10 +487,10 @@ states by taking the tensor product of the basis states:
   1
 \end{pmatrix}.
 \end{align}
-The subscripts indicate which spin we are referring to, i.e. $\ket{\beta_1\alpha_2}$ means that
+The subscripts indicate which spin is being referred to, i.e. $\ket{\beta_1\alpha_2}$ means that
 spin 1 is in the $\beta$ state and spin 2 is in the $\alpha$ state.
 
-\subsubsection{Pauli matrices and more operators}
+\subsection{Pauli matrices and more operators}
 
 In quantum mechanics each observation is associated with a particular operator. For
 example, the measurement of the spin angular momentum along the $z$-axis is associated with
@@ -524,7 +527,7 @@ The end sum of all these products is the expectation value of a single spin 1/2 
 acted upon by $\hat{A}$, this quickly becomes cumbersome should there be more than one spin. An easier
 way to deal with expectation values is described in \ref{Density}.
 
-In NMR we use three operators to determine the projection of spin angular momentum along a
+In NMR three operators are used to determine the projection of spin angular momentum along a
 specific axis, $\hat{I}_x$, $\hat{I}_y$, and $\hat{I}_z$. These are defined by the
 Pauli matrices in the Zeeman basis multiplied by $\hbar/2$.
 
@@ -544,7 +547,7 @@ Pauli matrices in the Zeeman basis multiplied by $\hbar/2$.
 \end{equation}
 
 As an example, let's take a spin-1/2 particle in a magnetic field
-and see what happens if we were to project the $\ket{\alpha}$ state along the z-axis.
+and project the $\ket{\alpha}$ state along the z-axis.
 \begin{equation}\label{eqn:operators}
   \hat{I}_z\ket{\alpha} = \frac{\hbar}{2}\begin{pmatrix}
     1 & 0\\
@@ -558,9 +561,9 @@ and see what happens if we were to project the $\ket{\alpha}$ state along the z-
   0
 \end{pmatrix} = \frac{\hbar}{2}\ket{\alpha},
 \end{equation}
-we find that $\hbar/2$ is the eigenvalue of $\ket{\alpha}$ for the operator $\hat{I}_z$.
+$\hbar/2$ is found to be the eigenvalue of $\ket{\alpha}$ for the operator $\hat{I}_z$.
 
-We will now examine three operators and explore how they act on states. They are the total square angular momentum, $\hat{I}^2$,
+Three operators are now examined, and how they act on states is explored. They are the total square angular momentum, $\hat{I}^2$,
 and the two shift operators, $\hat{I}^+$ and $\hat{I}^-$, which are defined as the following:
 
 \begin{align}
@@ -574,7 +577,7 @@ They act on general states according to:
   \hat{I}^+\ket{I,m_I} =& \sqrt{(I(I+1)-m_I(m_I+1))}\hbar\ket{I,m_{I+1}}\\
   \hat{I}^-\ket{I,m_I} =& \sqrt{(I(I+1)-m_I(m_I-1))}\hbar\ket{I,m_{I-1}}.
 \end{align}
-Using a spin-1/2 particle in a magnetic field as an example we'll let these operators act on the $\ket{\alpha}$ and $\ket{\beta}$ states:
+Using a spin-1/2 particle in a magnetic field as an example, let these operators act on the $\ket{\alpha}$ and $\ket{\beta}$ states:
 \begin{align}
   \hat{I}^2\ket{\alpha} =& \frac{3}{4}\hbar^2\ket{\alpha}\\
   \hat{I}^+\ket{\alpha} =&\quad0\\
@@ -654,11 +657,11 @@ below:
 \end{equation}
 
 
-\subsubsection{Density Operator}\label{Density}
+\subsection{Density Operator}\label{Density}
 
-In \eqn{eqn:expectation} we saw how the expectation value of an operator can be expressed as
-the product of the matrix representations of the state and the operator. We can simplify this by
-constructing a matrix of the quadratic products of the superposition coefficients. If in the
+In \eqn{eqn:expectation}, the expectation value of an operator was expressed as
+the product of the matrix representations of the state and the operator. Simplification of this
+is possible by constructing a matrix of the quadratic products of the superposition coefficients. If in the
 general case:
 \begin{align}
 \ket{\psi} =& \begin{pmatrix}
@@ -682,9 +685,9 @@ The expectation value of the operator $\hat{A}$ can now be expressed as:
   \langle\hat{A}\rangle = \text{Tr}\{\ket{\psi}\bra{\psi}\hat{A}\}.
 \end{equation}
 
-If there are now $\mathbb{N}$ spins we need to consider, the
-result of measuring $A$ is still uncertain. However we can now write an expression for the most likely outcome,
-$A_{\text{obs}}$, using the sum of expectation values:
+If there are now $\mathbb{N}$ spins considered, the
+result of measuring $A$ is still uncertain. However, an expression for the most likely outcome,
+$A_{\text{obs}}$, can be written by using the sum of expectation values:
 \begin{equation}
   A_{\text{obs}} = \text{Tr}\{\mathbb{N}^{-1}\ket{\psi_1}\bra{\psi_1}+\ket{\psi_2}\bra{\psi_2}+\dots)\hat{A}\}.
 \end{equation}
@@ -728,7 +731,7 @@ momentum projection along the $z$ axis. In our two spin system this would be:
   \hat{I}_z\ket{\beta} =& m_\alpha = +\frac{1}{2}\hbar\ket{\alpha}\\
   \hat{I}_z\ket{\beta} =& m_\beta = -\frac{1}{2}\hbar\ket{\beta}.
 \end{align}
-We can use these results to calculate the coherence order of the coherence $\rho_+$:
+These results can be used to calculate the coherence order of the coherence $\rho_+$:
 \begin{equation}
  m_\alpha - m_\beta = +1,
 \end{equation}
@@ -778,7 +781,7 @@ and the polarization  axis of the spins is:
   \mathbf{e}_x'\cos\phi_- + \mathbf{e}_y'\sin\phi_-.
 \end{equation}
 
-These populations and coherences play a vital role in NMR and will be re-visted in a later section.
+These populations and coherences play a vital role in NMR and will be re-visited in a later section.
 
 \subsection{The Hamiltonian}\label{Hamiltonian}
 
@@ -792,12 +795,12 @@ In NMR the energy of a nucleus in a magnetic field, $E$, is given by:
   E = -m_I\hbar\gamma~B_0,
 \end{equation}
 where $m_I$ is the azimuthal quantum number, $\hbar$ is the reduced Planck constant, $\gamma$
-is the gyromagnetic ratio, and $B_0$ is the external field taken to be orientatd along the $z$-axis.
+is the gyromagnetic ratio, and $B_0$ is the external field taken to be orientated along the $z$-axis.
 
 For a spin-1/2 nuclei there are two states labelled as $\alpha$ and $\beta$
 and these have an energy difference depicted in \fig{fig:EnergySplit}.
 
-\begin{figure}[h]
+\begin{figure}[ht]
   \begin{center}
   \includegraphics[width=\textwidth,height=5cm,keepaspectratio]{EigenStateLevel.pdf}
   \end{center}
@@ -833,7 +836,7 @@ typically $10$s of MHz T$^{-1}$ which give Larmor frequencies in the $100$s of M
 experiment.
 
 
-If we let $\ket{\psi_1}$ and $\ket{\psi_2}$ be eigenstates of the Hamiltonian $\hat{\mathcal{H}}$, then
+If $\ket{\psi_1}$ and $\ket{\psi_2}$ are eigenstates of the Hamiltonian $\hat{\mathcal{H}}$, then
 \begin{align}
   \hat{\mathcal{H}}\ket{\psi_1} =& E_1\ket{\psi_1}\\
   \hat{\mathcal{H}}\ket{\psi_2} =& E_2\ket{\psi_2}.
@@ -941,7 +944,7 @@ The frame rotates with a constant frequency $\omega_\text{ref}$ around the $z$-a
 \begin{equation}
   \Phi(t) = \omega_{\text{ref}}t + \phi_{\text{ref}},
 \end{equation}
-for brevity $(t)$ is now dropped
+for brevity $(t)$ is now dropped.
 
 If a spin in state $\ket{\psi}$ has a Larmor frequency equal to $\omega_\text{ref}$
 then the spin state in the rotating frame, $\ket{\tilde{\psi}}$ is:
@@ -1017,9 +1020,9 @@ The rotating frame Hamiltonian is:
   \hat{\tilde{H}} =& -\frac{1}{2}\gamma{B_{\text{RF}}}\sin{\theta_{\text{RF}}}\hat{R}_z(-\Phi  +  \Phi_p)\hat{I}_x\hat{R}_z(\Phi-\Phi_p) + (\omega^0 - \omega_\text{ref})\hat{I}_z \\
   =& -\frac{1}{2}\gamma{B_{\text{RF}}}\sin{\theta_{\text{RF}}}\hat{R}_z(-\phi_{\text{ref}}  +  \phi_p)\hat{I}_x\hat{R}_z(\phi_{\text{ref}}-\phi_p) + \Omega^0\hat{I}_z,
 \end{align}
-an additional simplification is possible if we include the value of $\phi_{\text{ref}}$ which is
-$\pi$ for positive $\gamma$ spins and has the effect of changing the sign of the $\gamma{B_{\text{RF}}}$
-term:
+an additional simplification is possible if the value of $\phi_{\text{ref}}$, which is
+$\pi$ for positive $\gamma$ spins, and has the effect of changing the sign of the $\gamma{B_{\text{RF}}}$
+term is included:
 \begin{equation}
   \hat{\tilde{H}} = \omega_{\text{nut}}\hat{R}_z(\phi_p)\hat{I}_x\hat{R}_z(-\phi_p) + \Omega^0\hat{I}_z,
 \end{equation}
@@ -1038,11 +1041,10 @@ is:
 
 \subsubsection{$x$-pulse}
 
-To illustrate the effect an r.f. pulse has on a sample we consider a strong
+To illustrate the effect an r.f. pulse has on a sample, consider a strong
 pulse with frequency $\omega_\text{ref}$, duration $\tau$, and phase $\phi_p = 0$ (an '$x$-pulse').
-The amplitude is given by $\omega_\text{ref}$. We assume this pulse to be applied
+The amplitude is given by $\omega_\text{ref}$. Assuming this pulse to be applied
 directly on resonance such that $\Omega^0 = 0$.
-
 The rotating frame spin Hamiltonian is:
 \begin{equation}
   \hat{\tilde{H}} = \omega_{\text{ref}}\hat{I}_x,
@@ -1060,7 +1062,7 @@ $\theta$ is given by
 \end{equation}
 this angle is referred to as the \textit{flip angle} of the pulse.
 
-To calculate what effect the pulse has on spins in specific states we can use the matrix representation.
+To calculate what effect the pulse has on spins in specific states the matrix representation can be used.
 A $(\pi/2)_x$ pulse, which means a flip angle of $\theta = \pi/2$ and a phase of $\phi_p = 0$, applied to spin in the state $\ket{\alpha}$ can be calculated using the matrix representation of $\hat{R}_x(\theta)$  as:
 \begin{align}
   \hat{R}_x(\pi/2)\ket{\alpha} =& \frac{1}{\sqrt{2}}\begin{pmatrix}
@@ -1122,8 +1124,8 @@ representations of the rotation operators from \eqn{eqn:RotMat}:
 \subsubsection{Off-resonance effects}
 
 In general, it is not always possible to ensure exact resonance for all spins at the same
-time, so the condition $\Omega^0 = 0$ cannot always be satisfied. We can consider the
-case when $\Omega^0 \neq 0$ by examining the spin Hamiltonian during a rectangular
+time, so the condition $\Omega^0 = 0$ cannot always be satisfied. Consider the
+case when $\Omega^0 \neq 0$, by examining the spin Hamiltonian during a rectangular
 pulse where:
 \begin{equation}
   \hat{\tilde{H}} = \Omega^0\hat{I}_z + \omega_{\text{nut}}(\hat{I}_x\cos\phi_p + \hat{I}_y\sin\phi_p).
@@ -1178,14 +1180,14 @@ so for a general polarization level, $p$, the density operator can be written as
     0 & 1 - p
 \end{pmatrix},
 \end{equation}
-using the definition given in \eqn{eqn:operators} we can re-write this as
+using the definition given in \eqn{eqn:operators} the density operator can be re-written as
 \begin{equation}
   \hat\rho = \frac{1}{2}\hat{\mathbb{1}} + \frac{1}{2}p\hat{I}_z,
 \end{equation}
 $\hat{\mathbb{1}}$ is identity matrix and corresponds to no population difference between $\ket{\alpha}$ and $\ket{\beta}$.
 
 $\hat{\mathbb{1}}$ is unaffected by rotations so can be ignored in the context of NMR
-and so we write
+and it becomes
 \begin{equation}
   \hat{\rho} = \frac{1}{2}p\hat{I}_z,
 \end{equation}
@@ -1196,13 +1198,13 @@ then $p$ is equal to the Boltzmann factor defined as:
 \end{equation}
 
 
-In NMR we can  describe the dynamics of a system using the density operator evolution rather than the evolution of the states using
+In NMR the dynamics of a system can be described using the density operator evolution, rather than the evolution of the states using
 \begin{align}
   \frac{\partial}{\partial{t}}\ket{\psi} = -i\hat{H}\ket{\psi}\\
   \frac{\partial}{\partial{t}}\bra{\psi} = i\bra{\psi}\hat{H},
 \end{align}
 
-we can derive\citep{Neumann2018}:
+Using this, the following derivation can be made \citep{Neumann2018}:
 \begin{align}
   \frac{\partial}{\partial{t}}\hat\rho\quad=&\quad \frac{\partial}{\partial{t}}[\ket{\psi}\bra{\psi}]\\
   =&\quad[\frac{\partial}{\partial{t}}\ket{\psi}]\bra{\psi} + \ket{\psi}[\frac{\partial}{\partial{t}}\bra{\psi}]\\
@@ -1269,7 +1271,7 @@ The populations and coherences can be represented in terms of magnetization:
 
 \subsubsection{Density operator under pulses}
 
-We can use the sandwich equation to calculate the effect of a strong $(\pi/2)_x$ pulse
+The sandwich equation can be used to calculate the effect of a strong $(\pi/2)_x$ pulse
 on an ensemble of spins-1/2 at thermal equilibrium.
 Before the pulse, the spin density operator is
 \begin{equation}
@@ -1296,7 +1298,7 @@ the magnetization from the $z$-axis to the $-y$-axis.
   \mathbf{M}_1 = \mathbf{e}_z \xrightarrow{(\pi/2)_x} \mathbf{M}_2 = -\mathbf{e}_y.
 \end{equation}
 
-To determine what happens to the populations and coherences we can look at the
+To determine what happens to the populations and coherences, consider the
 pulse effects in terms of the matrix representation:
 \begin{equation}
   \hat{\rho}_1 = \begin{pmatrix}
@@ -1312,10 +1314,10 @@ two states and secondly, converts the population difference into coherences.
 
 \subsection{Free evolution with relaxation}\label{Relaxation}
 
-So far, we have only discussed the Hamiltonian and density operator before, during and
+So far, the Hamiltonian and density operator have only been discussed before, during, and
 immediately after an r.f. pulse. This picture is insufficient to describe what one observes
-experimentally. In terms of populations and coherences, experimentally we find that
-the populations are not time independent but gradually drift towards their thermal
+experimentally. In terms of populations and coherences, experimentally it is found that
+the populations are not time independent, but gradually drift towards their thermal
 equilibrium values and that the coherences do not last forever but gradually decay
 to zero.
 
@@ -1323,7 +1325,7 @@ For populations and coherences there are two forms of relaxation, $T_1$ and $T_2
 constant and $T_2$ is the transverse relaxation time constant. The difference between them is demonstrated in \fig{fig:t1t2}. Classically
 $T_1$ is the rate constant that governs the return of magnetization to the $z$-axis from the $xy$-plane. $T_2$ on
 the other hand is the time constant that governs the return of magnetization to equilibrium in the $xy$-plane.
-When talking in terms of the density operator we say that $T_1$ is the relaxation rate constant for populations, and $T_2$ is the relaxation
+When talking in terms of the density operator it is said that ''$T_1$' is the relaxation rate constant for populations, and '$T_2$' is the relaxation
 rate constant coherences. But this is incompatible with the classical description of NMR.
 
 The Bloch equations are used to describe how the magnetization vectors change in time \citep{Bloch:1946hk}:
@@ -1333,7 +1335,7 @@ The Bloch equations are used to describe how the magnetization vectors change in
   \frac{dM_z(t)}{dt}\quad=&\quad\gamma(M_x(t)B_y(t)-M_y(t)B_x(t)) - \frac{M_z(t)-M_0}{T_1}.
 \end{align}
 
-\begin{figure}[h]
+\begin{figure}[ht]
   \center{\includegraphics[width=\textwidth]{T1T2.pdf}}
   \caption{A) a magnetization vector precesses in the $xy$-plane, eventually returning to equilibrium.
   B) A plot of the magnetization along $z$-axis (yellow) and the $x$-axis (blue) during the relaxation.}
@@ -1418,8 +1420,8 @@ The total nuclear magnetization of the sample is given by:
 \end{equation}
 where $\langle\overbar{\hat{\pmb{\mu}}}\rangle$ is the ensemble average of the expectation value magnetic dipole moment.
 
-This magnetization leads to the signal obtained in NMR, to find the relationship we can
-invoke the principle of reciprocity \citep{Hoult:1976dw}. Consider the induction
+This magnetization leads to the signal obtained in NMR, to find the relationship the principle of reciprocity
+is invoked \citep{Hoult:1976dw}. Consider the induction
 field, $\mathbf{B}_1$, produced by a coil carrying unit current. For a magnetic dipole, $\mathbf{m}$,
 the induced emf is given by:
 \begin{equation}
@@ -1436,20 +1438,20 @@ if $\mathbf{B}_1$ is assumed to be homogeneous over the sample volume this gives
 \begin{equation}
   \xi = \frac{\partial}{\partial{t}}\{\mathbf{B}_1\cdot\mathbf{M}\}V_s,
 \end{equation}
-we can sub in the result from \eqn{eqn:magnetization} to give
+Substitution of the result from \eqn{eqn:magnetization} gives
 \begin{equation}
   \xi = \frac{\partial}{\partial{t}}\{\mathbf{B}_1\cdot\langle\overbar{\hat{\pmb{\mu}}}\rangle\}V_sc_s,
 \end{equation}
-if we take the $B_1$ coil to be aligned along the $x$-axis, the $x$-axis components contribute to the emf
+if the $B_1$ coil is aligned along the $x$-axis, only the $x$-axis components contribute to the emf
 \begin{equation}
   \xi = \frac{\partial}{\partial{t}}\{B_{1x}\langle\overbar{\hat{\mu}}_x\rangle~c_s\}V_s,
 \end{equation}
-using \eqn{eqn:MagneticMoment} we get that $\langle\hat{\mu}_x\rangle = \hbar\gamma\langle{\hat{I}_x}\rangle$
+using \eqn{eqn:MagneticMoment}, $\langle\hat{\mu}_x\rangle = \hbar\gamma\langle{\hat{I}_x}\rangle$
 the emf becomes
 \begin{equation}
   \xi = \frac{\partial}{\partial{t}}\{B_{1x}\langle\overbar{\hat{I}_x}\rangle~c_s\}V_s\hbar\gamma,
 \end{equation}
-form \ref{Density} we find that the ensemble average can be found using the density operator
+form \ref{Density}, the ensemble average can be found using the density operator
 $\langle{\hat{I}_x}\rangle = \text{Tr}\{\hat{\rho}\hat{I}_x\}$ so
 \begin{equation}
   \xi = \frac{\partial}{\partial{t}}\{B_{1x}[\text{Tr}\{\hat{\rho}\hat{I}_x\}]~c_s\}V_s\hbar\gamma.
@@ -1566,8 +1568,8 @@ $\hbar$ is the reduced Planck's constant, the term $c_sV_s$ is the number of spi
 
 The signal dependence can be seen more clearly if one gets more quantitative, to do this,
 consider a $(\pi/2)_x$ pulse with receiver phase, $\phi_{\text{rec}} = 0$, for brevity the
-tilde will be dropped as only the rotating frame will be considered. In order to calculate the $(-1)$-quantum coherence we must
-first calculate the density operator. The rotating frame density operator at equilibrium is
+tilde will be dropped as only the rotating frame will be considered. In order to calculate the $(-1)$-quantum coherence,
+the density operator must be calculated first. The rotating frame density operator at equilibrium is
 \begin{equation}
   \hat{\rho}^{eq} = \frac{1}{2}\mathbb{1} + \frac{1}{2}\mathbb{B}\hat{I}_z,
 \end{equation}
@@ -1613,17 +1615,17 @@ coil sensitivity.
 In a molecule, nuclei are surrounded by clouds of electrons which can shield, or de-sheild, it
 from the effects of the external field $B_0$.
 
-The chemical shielding factor, $\sigma$, shifts the resonance frequency of the nuclear spin. We
+The chemical shielding factor, $\sigma$, shifts the resonance frequency of the nuclear spin. It
 can now include it in \eqn{eqn:Larmor}:
 \begin{equation}
   \omega_j^0 = -\gamma_jB_0(1-\sigma),
 \end{equation}
 this chemical shielding is specific to each nuclei position in the molecule. It is possible
-for two or more nuclei to share the same factor. We refer to these as being chemically equivalent.
+for two or more nuclei to share the same factor. These are referred to as being 'chemically equivalent'.
 
 The shielding is often around $10^{-6}$ for $\ce{^1H}$, when plotting and examining spectra
 it would not be useful to use absolute frequencies, as discussed they are regularly in the hundreds of MHz,
-whereas the differences in peaks might only be kHz or less. To combat this we use a relative frequency scale
+whereas the differences in peaks might only be kHz or less. To combat this a relative frequency scale is used
 called chemical shift, $\delta$, defined as:
 \begin{equation}
   \delta = \frac{\omega_j-\omega^\text{ref}_j}{\omega^\text{ref}_j},
@@ -1688,7 +1690,7 @@ the signal will never be seen.
 
 The SNR was formulated by Abragam\citep{Abragam:1961vg} and the analysis extended by Hoult and
 Richards\citep{Hoult:1976dw} and is defined as the peak signal divided by the root mean square (rms) noise. By including
-the amplitude from \eqn{eqn:Hale} and using the \textit{Rayleigh-Jeans approxiamation} for the noise we find:
+the amplitude from \eqn{eqn:Hale} and using the \textit{Rayleigh-Jeans approxiamation} for the noise the SNR is:
 \begin{equation}\label{eqn:SNR}
   \text{SNR} = \frac{k_0\frac{1}{4}\frac{B_{1x}}{i_c}\gamma^3\hbar^2B_0^2\frac{n_s}{k_bT_s}}{F\sqrt{4k_bT_cR_{\text{noise}}\Delta~f}},
 \end{equation}
@@ -1701,8 +1703,8 @@ $T_c$ is the absolute temperature of the coil, and $k_b$ is the Boltzmann consta
 In the same paper, Hoult and Richards introduced the principle of reciprocity for calculating the
 sensitivity of the RF coil, This states that the signal received from a sample by a coil is proportional to the magnetic
 field which would have been created in the sample if unit current were passed through the coil. Therefore the SNR is
-directly proportional to the sensitivity of the coil, $B_1/i_c$. This can be seen if we define an
-effective sample volume that is the volume in which $B_1$ is within 10\% of the maximum
+directly proportional to the sensitivity of the coil, $B_1/i_c$. This can be seen if an
+effective sample volume is defined, that is the volume in which $B_1$ is within 10\% of the maximum
 value at the centre of the coil. The SNR is given by a more simple expression\citep{vanBentum:2007fda}:
 \begin{equation}
   SNR = C\frac{B_1n_s}{i_c\sqrt{R\Delta~f}},
@@ -1724,7 +1726,7 @@ the detector. The third, minimising resistance in the coil,
 can be tackled by commercially available cryo-probes where the coil is cooled with a stream of He gas to
 ~20K this reduces the thermal noise from the source and can increase SNR by a factor of four.
 
-To see how size of coil affects SNR we take an RF helical coil. An idealised coil
+To see how size of coil affects SNR, consider an RF helical coil. An idealised coil
 is a cylindrical shell with uniform current density. The RF current penetrates to a frequency
 specific depth $\delta_{\text{RF}}$. For copper at 600 MHz and room temperature $\delta_{\text{RF}}$ = 2.7 $\mu$m. The centre
 field is given by:
@@ -1862,7 +1864,7 @@ to an electromagnetic eigenmode with a strong anti-node of the magnetic field be
 at the constriction. This concentrates the r.f. field and the detection sensitivity onto the sample area.
 The probe is compatible with a generic microfluidic device that has well defined outer geometry, and a fixed sample
 chamber position.
-\begin{figure}[h]
+\begin{figure}
   \begin{center}
   \includegraphics[width=\columnwidth]{Manvendra-Probe.jpg}
   \end{center}
@@ -1888,7 +1890,7 @@ ensuring species present at 0.1 mM can be detected within less than 20 mins. The
 species at 0.02 mM in that time frame. Whilst this is suitable for some metabolomic information to be
 gained, however, the subtle changes in molecules present at less than 0.02 mM are of interest but
 are unreachable with this probe using thermal polarisation at this time.
-\begin{figure}[h]
+\begin{figure}
   \includegraphics[width=\columnwidth]{sensitivity-ov.pdf}
   \caption{Plot comparing the limits of detection of previously design micro-NMR detectors. Letters
   a-t correspond to different authors as cited by Badilita \textit{et al.} \citep{Badilita:2011td} Letters u \citep{Meier:2014ds}
@@ -1898,4 +1900,4 @@ are unreachable with this probe using thermal polarisation at this time.
 
 For this work, the goal is not only to combine NMR detection and microfluidics, clearly that has been done before. However,
 it is the combination of these two in a way that does not minimise compromises on either side: free fluidic design and complexity
-on the one hand, and the full resolution and sensitivity of conventional liquid state NMR spectroscopy on the other. 
+on the one hand, and the full resolution and sensitivity of conventional liquid state NMR spectroscopy on the other.

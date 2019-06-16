@@ -4,26 +4,55 @@
 
 \section{Introduction}
 
-The flow and control of liquids in microfluidics is essential, with microfluidic pumping
-and mixing playing an integral role in many biological and chemical applications, such as
-DNA analysis \citep{RN74, RN75}, protein folding \citep{RN76}, enzyme asssays \citep{RN77, RN78},
-chemical synthesis \citep{RN79,RN80}, and kinetic studies \citep{RN81, RN82}. Many solutions to
-the challenge of pumping and mixing at small scales exist, these include 3D printed valves \citep{RN83, RN84},
+In this chapter, the design and implementation of an NMR compatible, low dead volume,
+microfluidic pump will be discussed. The goal is the development of a device that is
+capable of exchanging and mixing two fluids in a controlled manner, and acquiring high
+resolution NMR spectroscopy. Microfluidic pumping  and mixing plays an integral role in
+many biological and chemical applications, such as DNA analysis \citep{RN74, RN75}, protein
+folding \citep{RN76}, enzyme asssays \citep{RN77, RN78},chemical synthesis \citep{RN79,RN80},
+and kinetic studies \citep{RN81, RN82}. These applications use a wide variety of techniques to
+detect and characterise samples, including fluorescence spectroscopy \citep{RN75}, mass spectrometry
+\citep{RN79}, and UV-vis spectroscopy \citep{RN82}. In comparison to these techniques, NMR typically has
+a higher limit of detection, however, NMR can provide quantitative, system level information in a few scans
+and due to its non-invasive, non-destructive nature can give insight into living
+systems \textit{in situ} and allows for longitudinal studies of them. However, in order to
+keep these systems alive, and truly replicate \textit{in vivo} conditions, they need fresh supplies
+of oxygen and nutrients. One way of achieving this is by perfusion of
+liquid that has been exposed to fresh supplies of oxygen. Perfusion can be accomplished by
+pumping liquid through the microfluidic device and then out to a reservoir that is in
+contact with a supply of oxygen. This method would, however, dilute any metabolites
+given off by the living system that is under investigation within the device, and
+since the biggest limitation of NMR is sensitivity, it is pertinent to avoid this.
+
+Many solutions to the challenge of pumping and mixing at small scales exist, these include 3D printed valves
+\citep{RN83, RN84},
 syringe pumps \citep{RN85,RN86,RN87}, pressure actuated valves \citep{RN88, RN89, RN90}, electrowetting
 (sometime referred to as digital microfluidics) \citep{RN91, RN92}, piezoelectric pumps \citep{RN93, RN94},
-magnetic pumping \citep{RN95,RN96}, and centrifugal forces \citep{RN97, RN98, RN99}.
+magnetic pumping \citep{RN95,RN96}, and centrifugal forces \citep{RN97, RN98, RN99}. However,
+in order to enable microfluidic pumping and mixing at high magnetic fields, and high-resolution NMR, a
+number of challenges must be overcome. Firstly, the dead volume of the device should be kept to a minimum,
+as any unnecessary dilution will affect the ability to collect NMR spectra. Secondly, the materials used should be
+compatible with a high magnetic field, clearly ruling out ferrous metals, this also rules out materials that
+have a significantly different magnetic susceptibility to that of the chosen fluid (in this
+case water). As described in chapter \ref{Chapter:Droplets}, susceptibility mismatches need to be carefully
+managed, or they will interfere with the homogeneity of the magnetic field which
+essential for production high resolution spectra. Thirdly, the construction materials selected must be
+conducive to rapid prototyping, and as such, must be cheap and readily available, as well as
+be easily cut by a laser cutter and bonded using a simple method. Fourthly, when fully assembled the device must
+fit inside the bore of an NMR magnet, typically 38mm in diameter. The NMR sensitive area, should not be more
+that 1 mm in thickness, due to limitations imposed by the strip-line probe geometry \citep{sharma2019modular}.
+Lastly, the device should be able to seal against gas and liquid pressures whilst in operation
+inside the magnet.
 
-In this chapter, the design and implementation of an NMR compatible, low dead volume,
-microfluidic pump will be discussed. The aim of device is to be able to mix two fluids in a
-controlled manner inside an NMR magnet. It will involve having an on-chip reservoir that
-can be drawn from and mixed with whichever liquid that is under investigation. These aims
-are important as the technology could be useful in chemistry applications such as a chemical
-reaction study, kinetics study, or hyperpolarization on chip. The pump could be used in
-biological studies too, with protein binding studies already being shown to be possible \citep{RN26},
-these pumps could enable whole experiment to be performed on chip. Cell and living tissue
-culture could also benefit from perfusion provided by the pump, supplying them with fresh O$_2$
-and nutrients. Ultimately, the goal is to observe active changes on the chip, induced by
-pumping, in real time, using NMR.
+In summary, the device must meet the following criteria:
+\begin{itemize}
+  \item Non-magnetic parts where possible, susceptibility matched.
+  \item Easily fabricated using rapid prototyping.
+  \item Low dead volume pump.
+  \item Biocompatible materials.
+  \item Geometry compatible with transmission line probe.
+  \item Easily assembled and operated \textit{in situ}.
+\end{itemize}
 
 \begin{figure}
 \begin{center}
@@ -56,7 +85,7 @@ predictable which allowed control of flow in the chip at large.
 
 \begin{figure}
 \begin{center}
-  \includegraphics[height=12cm,keepaspectratio]{Leslie-Valves.jpg}
+  \includegraphics[height=10cm,keepaspectratio]{Leslie-Valves.jpg}
 \end{center}
   \caption{\textbf{a}, Discrete fluidic capacitors are created by bonding deformable films (in
    this case, PDMS) over reservoirs placed in the network between fluidic channels (resistors)
@@ -69,67 +98,10 @@ predictable which allowed control of flow in the chip at large.
     (volumetric flow rate, qD) dictated by solid–fluid coupling. When the internal pressure is
     less than the external pressure, the diode pulls shut and prevents flow. Figure taken from
     \citep{RN100}.}
-  \label{fig:Ungar}
+  \label{fig:Leslie-valves}
 \end{figure}
 
-There are specific challenges related to enabling on-chip pumping in a high magnetic field to perform high
-resolution NMR spectroscopy. Firstly, the materials used should be compatible with a high
-magnetic field clearly ruling out ferrous metals, this also rules out materials that
-have a significantly different magnetic susceptibility to that of the chosen fluid (in this
-case water). As described in chapter \ref{Chapter:Droplets}, susceptibility mismatches need to be carefully
-managed, or they will interfere with the homogeneity of the magnetic field which
-essential for production high resolution spectra. Secondly, materials chosen must also be
-conducive to rapid prototyping, and as such must be cheap and readily available as well as
-be easily cut by a laser cutter and bonded using a simple method. These reasons rule out
-glass, a common microfluidic material, which is not easily cut using a standard
-laser cutter. Thirdly the chip, when fully assembled, should not be more
-that 1 mm in thickness, due to limitations imposed by the strip-line probe geometry \citep{sharma2019modular}. This
-limitation  means that more brittle materials, such as glass, would be too fragile for
-continuous insertion into the probe and magnet. Lastly,
-the device should be able to seal against gas and liquid pressures whilst in operation
-inside the magnet.
-
-With all these limitations, poly(dimethylsiloxane) (PDMS) would seem an ideal candidate. It is: cheap and
-readily available; easy to cut and bond; and can but made into 1 mm layers to fit the
-transmission line probe. However, due to its amorphous structure the $^1$H background
-signal is large and broad across the range of ppm that the signals that we are interested in
-appear. This broad background signal makes it impractical to suppress and any suppression would also suppress the
-signals that we are interested in, and could lead to difficulties in quantification of
-substances present in the sample under investigation.
-
-In the design shown, a PDMS layer is still used. However, it is removed from the
-sensitive area around the sample chamber so that it does not interfere with the signal
-collected from the device. The 3D printed parts role here is three-fold, firstly, it acts
-as a conduit for delivering liquids and transporting them around the device. Secondly, it
-allows for the pressurised air to be delivered which drives the pneumatic valves and
-enables pumping. Lastly, when screwed together, the 3D printed parts form a seal against
-liquid and gas leaks.
-
-Nuclear magnetic resonance (NMR) is an ideal tool with which to study live systems,
-which owing to its non invasive non destructive nature, can give insight into living
-systems \textit{in situ} and allows for longitudinal studies of them. However, in order to
-keep these systems alive, and truly replicate \textit{in vivo} conditions, they need fresh supplies of oxygen and nutrients. One way of achieving this is by perfusion of
-liquid that has been exposed to fresh supplies of oxygen. Perfusion can be accomplished by
-pumping liquid through the microfluidic device and then out to a reservoir that is in
-contact with a supply of oxygen. This method would, however, dilute any metabolites
-given off by the living system that is under investigation within the device, and
-since the biggest limitation of NMR is sensitivity, it is pertinent to avoid this. This
-means that the pump would ideally be integral to the device itself. This could reduce the
-overall volume of the system to tens of microlitres which is much better than the tens of
-millilitres that come from having an external pumping network. This means that the pump
-would ideally be integral to the device itself.
-
-In summary, the device must meet the following criteria:
-\begin{itemize}
-  \item Non-magnetic parts where possible, susceptibility matched.
-  \item Easily fabricated using rapid prototyping.
-  \item Low dead volume.
-  \item Biocompatible.
-  \item Geometry compatible with transmission line probe.
-  \item Easily assembled and operated \textit{in situ}.
-\end{itemize}
-
-The solution employed here involves a multilayered PMMA device,
+The solution employed here involves a multilayered poly(methylmethacrylate) PMMA device,
 with two PDMS membranes, sandwiched between two 3D printed holders held together with brass
 screws. The PMMA device houses the structures for the valves, as well as the fluid circuits,
 including an NMR sensitive sample chamber and on-chip reservoir. The PDMS layers have two
@@ -142,6 +114,117 @@ supplies external ports for fluid short circuiting. Together, they help seal the
 against gas and liquid leaks. This device coupled with a bespoke, homebuilt probe enables
 pumping and observation by NMR in a microfluidic device.
 
+For this work, the valves that are used for pumping are integrated
+in to the fluid path on the device itself. These valves are then actuated in sequence to produce a net flow
+of liquid around the device. Shown below in \fig{fig:PP-device} is the
+basic principle behind the design.
+
+\begin{figure}[ht]
+  \begin{center}
+  \includegraphics[width=\columnwidth]{Peristaltic-principle.pdf}
+  \caption{A cut-through view of the valves in the device showing how when air pressure is
+  appplied the PDMS membrane is pushed down and seals the small hole cut in the middle layer.}
+  \label{fig:PP-device}
+  \end{center}
+\end{figure}
+
+\begin{figure}[ht]
+  \begin{center}
+  \includegraphics[width=\columnwidth]{3DRenderOfValve-02.png}
+  \caption{3D render of a single valve with 3D printed layer shown too}
+  \label{fig:ValveRend}
+  \end{center}
+\end{figure}
+
+In the device, there are valves cut into the layers of PMMA. These are formed by a hole
+in the top, and middle layer. The hole in top layer has a radius of $500 \mu m$ whilst the
+hole in the middle layer has a radius of $100 \mu m$. The top layer has a channel (approx.
+$150\mu m$ in width and depth) scored into it to deliver fluid to the top chamber whilst
+the middle layer has a similar channel scored on the under-side to carry fluid away. When covering the hard
+PMMA structure with the more compliant PDMS membrane of $250 \mu m$ thickness, applying
+air pressure from above seals the valve by covering the hole in the middle layer. A 3D rendering of a single
+valve is shown in \fig{fig:ValveRend} and shows the ratio of pump holder opening, top hole; and middle hole
+respectively. The key to these valves is that the scored channels are on opposing sides of the valve. In \fig{fig:Micrographs},
+micrographs of the chip outside the holders are shown, with the valves
+where one can see the fluid channels on opposing side of their respective layers. Also given,
+is side by side comparison of the same valve (valve 2 in \fig{fig:Chip}) open (2) and closed
+(3) one can see the 'ring' formed by the PDMS as it seals against the middle layer.
+
+\begin{figure}[ht]
+  \begin{center}
+  \includegraphics[width=\columnwidth]{Valve-Micrographs.png}
+  \caption{Micrographs of A: free chip showing two valves B: An assembled device with an
+  open valve C: An assembled device with a closed valve, the arrows indicate the area where the PDMS is
+  in contact with the PMMA and is sealing the hole.}
+  \label{fig:Micrographs}
+  \end{center}
+\end{figure}
+
+PMMA was chosen for the main construction material as it is amenable to rapid prototyping, and can be
+reliably bonded using established methods \citep{RN2}. The susceptibility of PMMA is similar to water, so
+high resolution spectroscopy is possible. It is biocompatible and optically transparent, which allows
+for future biological experiments that may also require fluorescent analysis. Poly(dimethylsiloxane) (PDMS)
+is used as the membrane in the valves due to its wide availability and bio-compatibility. However, when
+considering PDMS devices in NMR it is important to place it away from any NMR sensitive areas. Due to its amorphous structure,
+the $^1$H background signal from PDMS is large and broad across the range of ppm that the signals that are of interest
+appear. This broad background signal, makes it impractical to suppress and any suppression would also suppress the
+signals of interest, and could lead to difficulties in quantification of
+substances present in the sample under investigation.
+
+In the design shown in \fig{fig:3Ddevice}, a PDMS layer is still used. However, it is removed from the
+sensitive area around the sample chamber so that it does not interfere with the signal
+collected from the device. The 3D printed part's role here is three-fold, firstly, it acts
+as a conduit for delivering liquids and transporting them around the device. Secondly, it
+allows for the pressurised air to be delivered which drives the pneumatic valves and
+enables pumping. Lastly, when screwed together, the 3D printed parts form a seal against
+liquid and gas leaks.
+
+\begin{figure}[ht]
+  \begin{center}
+  \includegraphics[width=\columnwidth]{Peristaltic-Chip-Render-01.pdf}
+  \caption{A 3D representation of the device with separate layers of chips and PDMS
+  layers shown.}
+  \label{fig:3Ddevice}
+  \end{center}
+\end{figure}
+
+The fluidic path design is shown in \fig{fig:Chip}. There are six valves that make up the pumping network,
+these are labelled \textbf{1}-\textbf{6}. Using the valves, it is possible to selectively pump around the inner circuit,
+shown in red, or the entire circuit formed of the blue and red liquid paths. To pump around the inner circuit, valves \textbf{3}
+amd \textbf{5} are closed, and valves \textbf{2}, \textbf{4}, and \textbf{6} are actuated in sequence. To pump around the full
+circuit the ports (\textbf{A}-\textbf{D}) need to be linked by external tubing, the easiest way to do this is to join \textbf{A} to
+\textbf{B} and \textbf{C} to \textbf{D}. Valve \textbf{4} is closed, and valves \textbf{1}, \textbf{2}, and \textbf{3} actuated in sequence.
+The outer circuit also features an on-chip reservoir that is of the same size and shape of the sample chamber, this reservoir is used to
+balance the volumes of the two circuits, and provides a source of whichever reactant or chemical is to be introduced to
+the sample chamber.
+
+\begin{figure}[ht]
+  \begin{center}
+  \includegraphics[width=\columnwidth]{Experimental-chip.pdf}
+  \caption{A CAD drawing of the chip designed for pumping and mixing. Inner (red) and outer (blue) liquid circuits; liquid ports (\textbf{A}-\textbf{D}) and valve positions (1-6) shown.}
+  \label{fig:Chip}
+  \end{center}
+\end{figure}
+
+The 6 valves are all individually addressable with air pressure which, when
+coupled with home-written Arduino firmware, can be actuated in sequence in order to move
+fluid in a given direction. The block diagram of the arduino set-up is shown in
+\fig{fig:ValveSetup}. By varying the frequency and lambda parameters, listed in the
+firmware, one can control the liquid pumped in a given time.
+
+\begin{figure}[ht]
+  \begin{center}
+  \includegraphics[width=\columnwidth]{Arduino-Valve.pdf}
+  \end{center}
+  \caption{An arduino controller is connected to, and powered by, a laptop via USB. The controller is connected
+  to a darlington array via six 5V logic connections (shown in red) when addressed, these allow the corresponding pin
+  opposite to draw power from the +24V connected from an outside source. The blue lines indicate the the wires
+  carrying 24V to the solenoid bank which are pneumatically connected to the valves in the chip as labelled. }
+  \label{fig:ValveSetup}
+\end{figure}
+
+\newpage
+
 \subsection{Materials and Methods}
 
 The devices are composed of three layers of cell cast poly(methyl methacrylate) (PMMA,
@@ -150,7 +233,7 @@ the middle layer. The channels and sample chambers were designed in
 AutoCAD and cut using a CO$_2$ laser (HPC Laser ltd.) to an approximate width and depth
 of 150 $\mu$m. These layers were bonded together using plasticiser (2.5\% v/v dibutyl
 phthalate in isopropyl alcohol) and subjected to heat and pressure (358 K, 18.6 MPa).
-To seal the devices, two polydimethyl siloxane (PDMS, Shielding Solutions) were
+To seal the devices, two poly(dimethylsiloxane) (PDMS, Shielding Solutions) were
 designed in AutoCAD and cut using the same laser as the PMMA layers.
 
 The PMMA and PDMS were screwed together and held in place using 3D printed devices
@@ -159,9 +242,9 @@ device whilst enabling the filling of the device as well as delivering the press
 air for the peristaltic pumping.
 
 The hardware for controlling pumping comprised of a solenoid valve system with 8
-individual valves (Festo, RS). These were connected to 3mm plastic tubes (Festo, RS)
-and all supplied from an in-lab air pressure source. This valve system was connected,
-via a solderless breadboard, to an arduino (Mega 2560, RS) controller allowing for
+individual valves (Festo, RS Components Ltd). These were connected to 3mm plastic tubes
+(Festo, RS Components Ltd) and all supplied from an in-lab air pressure source. This valve system was connected,
+via a solderless breadboard, to an arduino (Mega 2560, RS Components Ltd) controller allowing for
 individual control of each of the valves. The Solenoid valve system was powered using
 a 24V supply.
 
@@ -185,109 +268,8 @@ the device to the inside loop for a desired number of seconds; “mix” pumps a
 inner loop for a desired number of seconds; and “quiet” stops all pumping and leaves
 all valves open indefinitely.
 
-\begin{figure}[h]
-  \begin{center}
-  \includegraphics[width=\columnwidth]{Peristaltic-principle.pdf}
-  \caption{A cut-through view of the valves in the device showing how when air pressure is
-  appplied the PDMS membrane is pushed down and seals the small hole cut in the middle layer.}
-  \label{fig:PP-device}
-  \end{center}
-\end{figure}
-
-\begin{figure}[h]
-  \begin{center}
-  \includegraphics[width=\columnwidth]{3DRenderOfValve-01.png}
-  \caption{3D render of a single valve with 3D printed layer shown too}
-  \label{fig:ValveRend}
-  \end{center}
-\end{figure}
 
 \section{Results and Discussion}
-
-\subsection{Peristaltics}
-
-In order for the dead volume in the device to be kept at a minimum, the valves are implemented
-in the fluid path on the device itself. Shown below in \fig{fig:PP-device} is the
-basic principle behind the design.
-
-\begin{figure}[h]
-  \begin{center}
-  \includegraphics[width=\columnwidth]{Experimental-chip.pdf}
-  \caption{A CAD drawing of the chip designed for pumping and mixing. Inner (red) and outer (blue) liquid circuits; liquid ports (\textbf{A}-\textbf{D}) and valve positions (1-6) shown.}
-  \label{fig:Chip}
-  \end{center}
-\end{figure}
-
-In the device, there are valves cut into the layers of PMMA. These are formed by two holes
-in the top and middle layer. The hole in top layer has a radius of $500 \mu m$ whilst the
-hole in the middle layer has a radius of $100 \mu m$. The top layer has a channel (approx.
-$150\mu m$ in width and depth) scored into it to deliver fluid to the top chamber whilst
-the middle layer
-has a similar channel scored on the under-side to carry fluid away. When covering the hard
-PMMA structure with the more compliant PDMS membrane of $250 \mu m$ thickness, applying
-air pressure from above seals the valve by covering the hole in the middle layer.
-
-\begin{figure}[h]
-  \begin{center}
-  \includegraphics[width=\columnwidth]{Peristaltic-Chip-Render-01.pdf}
-  \caption{A 3D representation of the device with separate layers of chips and PDMS
-  layers shown.}
-  \label{fig:3Ddevice}
-  \end{center}
-\end{figure}
-
-A 3D rendering of a single valve is shown in \fig{fig:ValveRend} and shows the ratio of pump holder opening, top hole; and middle hole respecively. The key to these valves
-is that the scored channels are on opposing sides of the valve.
-
-\begin{figure}[h]
-  \begin{center}
-  \includegraphics[width=\columnwidth]{Micrographs-02.png}
-  \caption{Micrographs of A: free chip showing two valves B: An assembled device with an
-  open valve C: An assembled device with a closed valve, the arrows indicate the area where the PDMS is
-  in contact with the PMMA and is sealing the hole.}
-  \label{fig:Micrographs}
-  \end{center}
-\end{figure}
-
-
-In \fig{fig:Micrographs}, micrographs of the chip outside the holders are shown with the valves
-where one can see the fluid channels on opposing side of their respective layers. Also given,
-is side by side comparison of the same valve (valve 2 in \fig{fig:Chip}) open (2) and closed
-(3) one can see the 'ring' formed by the PDMS as it seals against the middle layer.
-
-In my design, there are 6 such valves all individually addressable with air pressure, which when
-coupled with home-written Arduino firmware, can be actuated in sequence in order to move
-fluid in a given direction. The block diagram of the arduino set-up is shown in
-\fig{fig:ValveSetup}. By varying the frequency and lambda parameters, listed in the
-firmware, one can control the liquid pumped in a given time.
-
-\begin{figure}[h]
-  \begin{center}
-  \includegraphics[width=\columnwidth]{Arduino-Valve.pdf}
-  \end{center}
-  \caption{An arduino controller is connected to, and powered by, a laptop via USB. The controller is connected
-  to a darlington array via six 5V logic connections (shown in red) when addressed, these allow the corresponding pin
-  opposite to draw power from the +24V connected from an outside source. The blue lines indicate the the wires
-  carrying 24V to the solenoid bank which are pneumatically connected to the valves in the chip as labelled. }
-  \label{fig:ValveSetup}
-\end{figure}
-
-As well as 6 valves, the chips also have two separate liquid
-circuits that can be connected externally by attaching tubes to the top of the 3D
-holders as shown in \fig{fig:Chip}. The inner circuit on
-the diagram contains the pumping network which can be
-modified to pump around the internal circuit or the complete network, and an NMR
-sensitive sample chamber where measurements are performed. The external circuit,
-contains an identical sample chamber that helps to keep the relative
-volumes of the two circuits similar. The chip is filled from the
-‘bottom’ using the 4 small access holes at the top of the chip (\textbf{A}-\textbf{D}).
-This then allows the valve network and pressurised air to be
-on the top side of the chip. The challenge in the chip was to fit
-all the liquid paths and valve network around the 4 large
-holes in the top of the design which accommodate the screws
-necessary to hold the device together, and seal against leaks of
-both liquid and gas.
-
 
 \subsection{Characterisation of flow}
 
@@ -310,7 +292,7 @@ The graph shown in \fig{fig:Graph} is the result of plotting the cumulative volu
 vs. time. All 4 frequencies show very little deviation from linearity in the
 long term and also show very small error bars (plotted as ±2$\sigma$).
 
-\begin{figure}[h]
+\begin{figure}[ht]
   \begin{center}
   \includegraphics[width=\columnwidth]{ALLPlots.pdf}
   \caption{Plot of the total volume pumped vs time for a chip in the open
@@ -319,7 +301,7 @@ long term and also show very small error bars (plotted as ±2$\sigma$).
   \end{center}
 \end{figure}
 
-\begin{figure}[h]
+\begin{figure}[ht]
   \begin{center}
   \includegraphics[height=8cm,keepaspectratio]{Flowratevsfreq.pdf}
   \caption{Flow rates produced by the pump at different frequencies.}
@@ -336,9 +318,12 @@ experiments, each with at least one disassembly and reassembly of the device, it
 pump rate is related to the elasticity of the membrane, and how fast it's able to 'snap
 back' and re prime itself to pump in each valve.
 
+\newpage
+\newpage
+
 \subsection{\textit{In situ} operation of the device}
 
-\begin{figure}[h]
+\begin{figure}[ht]
   \begin{center}
   \includegraphics[height=12cm,keepaspectratio]{Acetate-DSS-stackplot-edit.pdf}
   \caption{NMR spectra recorded with 16 transients on a device containing 100mM Sodium
@@ -352,7 +337,8 @@ built transmission line probe inside a 500 MHz magnet. The arduino controller an
 bank where secured outside the magnet and the 6 pressurised air lines fed in through the top of
 the magnet. The device was then filled with 100mM sodium acetate in DI water (Sigma Aldrich) in
 the inner circuit by attaching a syringe to inlet \textbf{B} in \fig{fig:Chip}. 100mM DSS in DI
-water (Sigma Aldrich) was added to the outer circuit by syringing into inlet \textbf{A}. The sample chamber then contained only sodium acetate and all the initial signal should arise from this. The two fluid networks
+water (Sigma Aldrich) was added to the outer circuit by syringing into inlet \textbf{A}. The sample
+chamber then contained only sodium acetate and all the initial signal should arise from this. The two fluid networks
 were then connected using two short lengths of 1/16" outer diameter PTFE tubing by joining
 \textbf{A} to \textbf{B} and \textbf{C} to \textbf{D}.
 

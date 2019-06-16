@@ -56,6 +56,52 @@
 \tableofcontents
 %\listoffigures
 %\listoftables
+\newpage
+\begin{center}
+\section*{Abbreviations}
+\end{center}
+\begin{table}[ht]
+%\renewcommand\tabcolsep{8pt}
+%\renewcommand\arraystretch{1.34}
+\begin{tabular}{lcccl}
+\textbf{Acronym} & & & & \textbf{Definition}\\
+cLOD & & & & Concentration Limit of Detection\\
+dDNP & & & & dissolution Dynamic Nuclear Polarization\\
+DNP & & & & Dynamic Nuclear Polarization\\
+DTPA & & & & Diethylenetriaminepentaacetic Acid\\
+EMF & & & & Electromotive Force\\
+FCC & & & & Face-Centred Cubic\\
+FID & & & & Free Induction Decay\\
+HMQC & & & & Heteronuclear Multiple Quantum Coherence\\
+LIF & & & & Laser Induced Fluorescence\\
+LoC & & & & Lab-on-a-chip\\
+MAS & & & & Magic Angle Spinning\\
+MR & & & & Magnetic Resonance\\
+MRI & & & & Magnetic Resonance Imaging\\
+nLOD & & & & Mass Limit of Detection\\
+NMR & & & & Nuclear Magnetic Resonance\\
+OTC & & & & Oxytetracycline\\
+PDMS & & & & Poly(dimethylsiloxane)\\
+PHIP & & & & Parahydrogen Induced Polarization\\
+PMMA & & & & Poly(methylmethacrylate)\\
+ppm & & & & Parts Per Million\\
+PTFE & & & & PolyTetraFluoroEthylene\\
+r.f. & & & & Radio Frequency\\
+RF & & & & Radio Fredquency\\
+RMS & & & & Root Mean Square\\
+SABRE & & & & Signal Enhancement By Reversible Exchange\\
+SNR & & & & Signal to Noise Ratio\\
+SPR & & & & Surface Plasmon Resonance\\
+TLP & & & & Transmission Line Probe\\
+TOCSY & & & & Total Correlation Spectroscopy\\
+UV-light & & & & Ultraviolet-light\\
+2D & & & & Two Dimensional\\
+3D & & & & Three Dimensional\\
+µTAS & & & & Micro Total Analysis System
+\end{tabular}
+\label{Abbreviations}
+\end{table}
+\newpage
 \listofsymbols{ll}{
 $a$ & The signal amplitude \\
 $\mathbb{B}$ & The Boltzmann factor \\
@@ -88,6 +134,7 @@ $\hat{R}$ & The rotation operator \\
 $S(t)$ & The signal in the time domain \\
 $S(\Omega)$ & The signal in the frequency domain \\
 $T$ & The absolute temperature \\
+$T_s$ & the singlet relaxation time constant \\
 $T_1$ & The longitudal relaxation time constant \\
 $T_2$ & The transverse relaxation time constant \\
 $U$ & The scalar magnetic potential \\
@@ -125,11 +172,12 @@ $\Omega^0$ & The  and rotating frame frequency offset
 \section*{Declaration of Authorship}
 \end{center}
 
-This thesis is the result of work done wholly while I was in registered candidature
-for a Ph.D. degree at the University of Southampton. The material presented here is
-based on work mostly done by myself. Where the work was carried out jointly with others,
-a substantial part is my own original work and co-workers and their roles have been clearly
-indicated. The material contained herein has not been submitted by the author for a degree
+This thesis is the result of work done wholly while I was in registered
+candidature for a Ph.D. degree at the University of Southampton. The material
+presented here is based on work mostly done by myself. Where the work was
+carried out jointly with others, a substantial part is my own original work
+and co-workers and their roles have been clearly indicated. The material
+contained herein has not been submitted by the author for a degree
 at any other institution.
 \newline
 \newline
@@ -163,12 +211,12 @@ Finally, I’d like to thank my family for all their support over the years, thi
 \cleardoublepage
 \mainmatter
 %% ----------------------------------------------------------------
-%\include{IntroductionNew}
-%\include{Background}
-%\include{chapter-droplets}
-%\include{chapter-ph2}
+\include{IntroductionNew}
+\include{Background}
+\include{chapter-droplets}
+\include{chapter-ph2}
 \include{chapter-peristaltics}
-%\include{Conclusions}
+\include{Conclusions}
 \appendix
 \include{AppendixA}
 \bibliographystyle{rsc}
