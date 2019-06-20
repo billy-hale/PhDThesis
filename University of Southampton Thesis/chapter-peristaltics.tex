@@ -85,7 +85,7 @@ predictable which allowed control of flow in the chip at large.
 
 \begin{figure}
 \begin{center}
-  \includegraphics[height=10cm,keepaspectratio]{Leslie-Valves.jpg}
+  \includegraphics[height=10cm,keepaspectratio]{capacitor-diode-v1.pdf}
 \end{center}
   \caption{\textbf{a}, Discrete fluidic capacitors are created by bonding deformable films (in
    this case, PDMS) over reservoirs placed in the network between fluidic channels (resistors)
@@ -115,8 +115,13 @@ against gas and liquid leaks. This device coupled with a bespoke, homebuilt prob
 pumping and observation by NMR in a microfluidic device.
 
 For this work, the valves that are used for pumping are integrated
-in to the fluid path on the device itself. These valves are then actuated in sequence to produce a net flow
-of liquid around the device. Shown below in \fig{fig:PP-device} is the
+in to the fluid path on the device itself. This integration is essential, as the
+device is required to work \textit{in situ} inside a full size NMR magnet. In order
+to feed the device with liquid from outside the magnet, even with small internal diameter
+tubes, would mean many millilitres of dead volume. The integration
+of the valves means that the dead volume can be kept to a few nL. These valves are
+then actuated in sequence to produce a net flow of liquid around the device.
+Shown below in \fig{fig:PP-device} is the
 basic principle behind the design.
 
 \begin{figure}[ht]
@@ -188,29 +193,39 @@ liquid and gas leaks.
   \end{center}
 \end{figure}
 
+In \fig{fig:OperationSchematic}, a simple depiction of the operation of the device is given. The
+device has two states, 'advance' and 'mix', labelled as A and B respectively. During the 'advance'
+state, valve \textbf{4} is closed, and valves \textbf{1}, \textbf{2}, and \textbf{3} are actuated in sequence to move liquid from
+the reservoir to the sample chamber and vice versa. During the 'mix' state, valves \textbf{3}
+amd \textbf{5} are closed, and valves \textbf{2}, \textbf{4}, and \textbf{6} are actuated in sequence
+to mix the contents of the sample chamber.
+
+\begin{figure}[ht]
+  \begin{center}
+  \includegraphics[width=\columnwidth]{Pump-Schematic.pdf}
+  \caption{A schematic drawing of the 'advance' (A) and 'mix' state (B) of the on chip pump. In the 'advance'
+  state the valves move liquid around the outer circuit, from the reservoir to the sample chamber, and vice versa.
+  In the 'mix' state, the valves move the contents of the sample chamber around the inner circuit and mixes them.}
+  \label{fig:OperationSchematic}
+  \end{center}
+\end{figure}
+
+
 The fluidic path design is shown in \fig{fig:Chip}. There are six valves that make up the pumping network,
-these are labelled \textbf{1}-\textbf{6}. Using the valves, it is possible to selectively pump around the inner circuit,
-shown in red, or the entire circuit formed of the blue and red liquid paths. To pump around the inner circuit, valves \textbf{3}
-amd \textbf{5} are closed, and valves \textbf{2}, \textbf{4}, and \textbf{6} are actuated in sequence. To pump around the full
-circuit the ports (\textbf{A}-\textbf{D}) need to be linked by external tubing, the easiest way to do this is to join \textbf{A} to
-\textbf{B} and \textbf{C} to \textbf{D}. Valve \textbf{4} is closed, and valves \textbf{1}, \textbf{2}, and \textbf{3} actuated in sequence.
-The outer circuit also features an on-chip reservoir that is of the same size and shape of the sample chamber, this reservoir is used to
-balance the volumes of the two circuits, and provides a source of whichever reactant or chemical is to be introduced to
-the sample chamber.
+these are labelled \textbf{1}-\textbf{6}. There are four liquid ports (\textbf{A}-\textbf{D}), that allow the
+flow from the inner circuit (red) to the outer circuit (blue). When in the 'advance' state, the ports are
+are connected \textbf{A}-\textbf{B} and \textbf{C} to \textbf{D} using small amounts of tubing outside the device. When,
+in the mix state the liquid ports are cut off by closing valves \textbf{3} and \textbf{5}, and the liquid is mixed in the
+inner circuit.
 
 \begin{figure}[ht]
   \begin{center}
   \includegraphics[width=\columnwidth]{Experimental-chip.pdf}
-  \caption{A CAD drawing of the chip designed for pumping and mixing. Inner (red) and outer (blue) liquid circuits; liquid ports (\textbf{A}-\textbf{D}) and valve positions (1-6) shown.}
+  \caption{A CAD drawing of the chip designed for pumping and mixing. Inner (red) and outer (blue) liquid circuits; liquid ports
+  (\textbf{A}-\textbf{D}) and valve positions (\textbf{1}-\textbf{6}) shown.}
   \label{fig:Chip}
   \end{center}
 \end{figure}
-
-The 6 valves are all individually addressable with air pressure which, when
-coupled with home-written Arduino firmware, can be actuated in sequence in order to move
-fluid in a given direction. The block diagram of the arduino set-up is shown in
-\fig{fig:ValveSetup}. By varying the frequency and lambda parameters, listed in the
-firmware, one can control the liquid pumped in a given time.
 
 \begin{figure}[ht]
   \begin{center}
@@ -222,6 +237,14 @@ firmware, one can control the liquid pumped in a given time.
   carrying 24V to the solenoid bank which are pneumatically connected to the valves in the chip as labelled. }
   \label{fig:ValveSetup}
 \end{figure}
+
+The 6 valves are all individually addressable with air pressure which, when
+coupled with home-written Arduino firmware, can be actuated in sequence in order to move
+fluid in a given direction. The block diagram of the arduino set-up is shown in
+\fig{fig:ValveSetup}. By varying the frequency and lambda parameters, listed in the
+firmware, one can control the liquid pumped in a given time.
+
+
 
 \newpage
 

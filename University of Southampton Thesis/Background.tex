@@ -296,26 +296,15 @@ and paper microfluidics for diagnosis of malaria in low resource communitiess \c
 
 Nuclei have an intrinsic property known as spin. This spin can be represented by operators
 along the three Cartesian axes $\hat{I}_x$, $\hat{I}_y$, and $\hat{I}_z$.
-The commutation relation between two operators is defined as:
-\begin{equation}
-  [\hat{A},\hat{B}] = \hat{A}\hat{B} - \hat{B}\hat{A}.
-\end{equation}
 
-If $[\hat{A},\hat{B}] = 0$ the operators are said to commute. The physical implication
-of this is that the two observables can be measured at the same time, measuring one
-does not affect the outcome of the other and vice versa.
-
-The spin operators $\hat{I}_x$, $\hat{I}_y$ satisfy $\hat{I}_z$
-have cyclic commutation rules:
+The spin angular momentum operators $\hat{I}_x$, $\hat{I}_y$ and $\hat{I}_z$
+satisfy cyclic commutation rules:
 \begin{align}\label{eqn:commutator}
-  [\hat{I}_x,\hat{I}_y] =& i\hat{I}_z\\
-  [\hat{I}_y,\hat{I}_z] =& i\hat{I}_x\\
-  [\hat{I}_x,\hat{I}_z] =& i\hat{I}_y.
+  [\hat{I}_x,\hat{I}_y] =& i\hbar\hat{I}_z\\
+  [\hat{I}_y,\hat{I}_z] =& i\hbar\hat{I}_x\\
+  [\hat{I}_x,\hat{I}_z] =& i\hbar\hat{I}_y.
 \end{align}
 
-This cyclic commutation means that the spin that nuclei posses can be treated as a
-type of angular momentum and in NMR, $\hat{I}_x$, $\hat{I}_y$, and $\hat{I}_z$ are
-referred to as the spin angular momentum operators.
 
 The total square angular momentum operator, $\hat{I}^2$ can be defined as:
 \begin{equation}
@@ -573,16 +562,16 @@ and the two shift operators, $\hat{I}^+$ and $\hat{I}^-$, which are defined as t
 \end{align}
 They act on general states according to:
 \begin{align}
-  \hat{I}^2\ket{I,m_I} =& I(I+1)\hbar\ket{I, m_I}\\
-  \hat{I}^+\ket{I,m_I} =& \sqrt{(I(I+1)-m_I(m_I+1))}\hbar\ket{I,m_{I+1}}\\
-  \hat{I}^-\ket{I,m_I} =& \sqrt{(I(I+1)-m_I(m_I-1))}\hbar\ket{I,m_{I-1}}.
+  \hat{I}^2\ket{I,m_I} =& \hbar^2I(I+1)\ket{I, m_I}\\
+  \hat{I}^+\ket{I,m_I} =& \hbar\sqrt{(I(I+1)-m_I(m_I+1))}\ket{I,m_{I+1}}\\
+  \hat{I}^-\ket{I,m_I} =& \hbar\sqrt{(I(I+1)-m_I(m_I-1))}\ket{I,m_{I-1}}.
 \end{align}
 Using a spin-1/2 particle in a magnetic field as an example, let these operators act on the $\ket{\alpha}$ and $\ket{\beta}$ states:
 \begin{align}
   \hat{I}^2\ket{\alpha} =& \frac{3}{4}\hbar^2\ket{\alpha}\\
   \hat{I}^+\ket{\alpha} =&\quad0\\
-  \hat{I}^-\ket{\alpha} =& \ket{\beta}\\
-  \hat{I}^+\ket{\beta} =& \ket{\alpha}\\
+  \hat{I}^-\ket{\alpha} =& \hbar\ket{\beta}\\
+  \hat{I}^+\ket{\beta} =& \hbar\ket{\alpha}\\
   \hat{I}^-\ket{\beta} =&\quad0,
 \end{align}
 the '+' and '-' denote raising or lowering $m_I$ by 1.
@@ -687,9 +676,9 @@ The expectation value of the operator $\hat{A}$ can now be expressed as:
 
 If there are now $\mathbb{N}$ spins considered, the
 result of measuring $A$ is still uncertain. However, an expression for the most likely outcome,
-$A_{\text{obs}}$, can be written by using the sum of expectation values:
+$A_{\text{obs}}$, can be written by using the average of expectation values:
 \begin{equation}
-  A_{\text{obs}} = \text{Tr}\{\mathbb{N}^{-1}\ket{\psi_1}\bra{\psi_1}+\ket{\psi_2}\bra{\psi_2}+\dots)\hat{A}\}.
+  A_{\text{obs}} = \text{Tr}\{\mathbb{N}^{-1}(\ket{\psi_1}\bra{\psi_1}+\ket{\psi_2}\bra{\psi_2}+\dots)\hat{A}\}.
 \end{equation}
 this can be simplified by defining an operator, $\hat{\rho}$:
 \begin{equation}
@@ -728,7 +717,7 @@ the coherences are complex numbers and two coherences between the same pair of s
 The coherence order between two states in a magnetic field is defined as the difference in spin angular
 momentum projection along the $z$ axis. In our two spin system this would be:
 \begin{align}
-  \hat{I}_z\ket{\beta} =& m_\alpha = +\frac{1}{2}\hbar\ket{\alpha}\\
+  \hat{I}_z\ket{\alpha} =& m_\alpha = +\frac{1}{2}\hbar\ket{\alpha}\\
   \hat{I}_z\ket{\beta} =& m_\beta = -\frac{1}{2}\hbar\ket{\beta}.
 \end{align}
 These results can be used to calculate the coherence order of the coherence $\rho_+$:
@@ -747,17 +736,17 @@ The density operator can be written as:
 
 using the shift operators, $\hat{I}^+$ and $\hat{I}^-$, and the projection operators, $\hat{I}^\alpha$ and $\hat{I}^\beta$, these have the following matrix representations:
 \begin{align*}
-  \hat{I}^+ = \begin{pmatrix}
+  \hat{I}^+ = \hbar\begin{pmatrix}
     0 & 1\\
     0 & 0
-\end{pmatrix}\quad\hat{I}^- &= \begin{pmatrix}
+\end{pmatrix}\quad\hat{I}^- &= \hbar\begin{pmatrix}
   0 & 0\\
   1 & 0
 \end{pmatrix}\\
-\hat{I}^\alpha = \begin{pmatrix}
+\hat{I}^\alpha = \frac{\hbar}{2}\begin{pmatrix}
   1 & 0\\
   0 & 0
-\end{pmatrix}\quad\hat{I}^\beta &= \begin{pmatrix}
+\end{pmatrix}\quad\hat{I}^\beta &= \frac{\hbar}{2}\begin{pmatrix}
   0 & 0\\
   0 & 1
 \end{pmatrix}.
@@ -782,6 +771,8 @@ and the polarization  axis of the spins is:
 \end{equation}
 
 These populations and coherences play a vital role in NMR and will be re-visited in a later section.
+
+\newpage
 
 \subsection{The Hamiltonian}\label{Hamiltonian}
 
@@ -817,7 +808,7 @@ state $\alpha$. This preference can be quantified by calculating the ratio of th
 where $\rho_{\beta}/\rho_{\alpha}$ is the population ratio between the states, $k_B$ is the Boltzmann constant, and $T$ is the temperature. The polarization, $p$, of a system of
 spin-1/2 nuclei is
 \begin{equation}\label{eqn:Polarization}
-  p = \frac{P_\alpha - P_\beta}{P_\alpha + P_\beta} = \tanh(\frac{\gamma\hbar~B_0}{2k_bT}).
+  p = \frac{\rho_\alpha - \rho_\beta}{\rho_\alpha + \rho_\beta} = \tanh(\frac{\gamma\hbar~B_0}{2k_bT}).
 \end{equation}
 
 For a typical NMR experiment, which operates at 298$K$ and
@@ -1184,7 +1175,14 @@ using the definition given in \eqn{eqn:operators} the density operator can be re
 \begin{equation}
   \hat\rho = \frac{1}{2}\hat{\mathbb{1}} + \frac{1}{2}p\hat{I}_z,
 \end{equation}
-$\hat{\mathbb{1}}$ is identity matrix and corresponds to no population difference between $\ket{\alpha}$ and $\ket{\beta}$.
+$\hat{\mathbb{1}}$ is identity matrix defined as:
+\begin{equation}\label{eqn:1Def}
+  \hat{\mathbb{1}} = \begin{pmatrix}
+    1 & 0 \\
+    0 & 1\\
+\end{pmatrix},
+\end{equation}
+ and corresponds to no population difference between $\ket{\alpha}$ and $\ket{\beta}$.
 
 $\hat{\mathbb{1}}$ is unaffected by rotations so can be ignored in the context of NMR
 and it becomes
@@ -1193,7 +1191,7 @@ and it becomes
 \end{equation}
 to describe the $z$ magnetization of our sample. If the system is at thermal equilibrium,
 then $p$ is equal to the Boltzmann factor defined as:
-\begin{equation}
+\begin{equation}\label{eqn:BDef}
   \mathbb{B} = \frac{\hbar\gamma~B_0}{k_bT}.
 \end{equation}
 
@@ -1224,8 +1222,8 @@ general rotating frame as before, the rotating frame density operator is given b
 \end{equation}
 The rotating frame and fixed frame populations and coherences are related by:
 \begin{align}\label{eqn:DensityRotFrame}
-  \tilde{\rho_\alpha} &= \rho_\alpha & \tilde{\rho_\beta} &= \rho_\beta\\
-  \tilde{\rho_-} &= \rho_-\text{exp}\{-i\Phi(t)\} & \tilde{\rho_-} &= \rho_-\text{exp}\{+i\Phi(t)\},
+  \tilde{\rho}_\alpha &= \rho_\alpha & \tilde{\rho}_\beta &= \rho_\beta\\
+  \tilde{\rho}_- &= \rho_-\text{exp}\{-i\Phi(t)\} & \tilde{\rho}_- &= \rho_-\text{exp}\{+i\Phi(t)\},
 \end{align}
 where
 \begin{equation}
@@ -1265,7 +1263,7 @@ With these, the density operator may be written as:
 \end{align}
 The populations and coherences can be represented in terms of magnetization:
 \begin{align}
-  \rho_\alpha &= \frac{1}{2} + \frac{1}{4}\mathbb{B}M_z & \rho_\beta &= \frac{1}{2} - \frac{1}{4}\mathbb{B}M_z\\
+  \rho_\alpha =& \frac{1}{2} + \frac{1}{4}\mathbb{B}M_z & \rho_\beta &= \frac{1}{2} - \frac{1}{4}\mathbb{B}M_z\\
   \rho_+ =&  \frac{1}{4}\mathbb{B}(M_x - iM_y) & \rho_- &= \frac{1}{4}\mathbb{B}(M_x + iM_y).
 \end{align}
 
@@ -1418,7 +1416,7 @@ The total nuclear magnetization of the sample is given by:
 \begin{equation}\label{eqn:magnetization}
   \mathbf{M} = \frac{\sum_{k=1}^n\hat{\pmb{\mu}}}{V_s} = \frac{c_sV_s\langle\overbar{\hat{\pmb{\mu}}}\rangle}{V_s} = c_s\langle\overbar{\hat{\pmb{\mu}}}\rangle,
 \end{equation}
-where $\langle\overbar{\hat{\pmb{\mu}}}\rangle$ is the ensemble average of the expectation value magnetic dipole moment.
+where $\langle\overbar{\hat{\pmb{\mu}}}\rangle$ is the ensemble average of the expectation value of the magnetic dipole moment.
 
 This magnetization leads to the signal obtained in NMR, to find the relationship the principle of reciprocity
 is invoked \citep{Hoult:1976dw}. Consider the induction
@@ -1440,7 +1438,7 @@ if $\mathbf{B}_1$ is assumed to be homogeneous over the sample volume this gives
 \end{equation}
 Substitution of the result from \eqn{eqn:magnetization} gives
 \begin{equation}
-  \xi = \frac{\partial}{\partial{t}}\{\mathbf{B}_1\cdot\langle\overbar{\hat{\pmb{\mu}}}\rangle\}V_sc_s,
+  \xi = \frac{\partial}{\partial{t}}\{\mathbf{B}_1\cdot\langle\overbar{\hat{\pmb{\mu}}}\rangle~c_s\}V_s,
 \end{equation}
 if the $B_1$ coil is aligned along the $x$-axis, only the $x$-axis components contribute to the emf
 \begin{equation}
@@ -1458,7 +1456,7 @@ $\langle{\hat{I}_x}\rangle = \text{Tr}\{\hat{\rho}\hat{I}_x\}$ so
 \end{equation}
 For a spin-1/2 nucleus this equation becomes:
 \begin{align}
-  \xi = \frac{\partial}{\partial{t}}\{B_{1x}[\rho_- + \rho_+]\}V_sc_s\hbar\gamma\frac{1}{2},
+  \xi = \frac{\partial}{\partial{t}}\{B_{1x}[\rho_- + \rho_+]c_s\}V_s\hbar\gamma\frac{1}{2},
 \end{align}
 if all terms apart from the coherences are considered time independent, the emf can be simplified for now as
 \begin{equation}
@@ -1569,7 +1567,8 @@ $\hbar$ is the reduced Planck's constant, the term $c_sV_s$ is the number of spi
 The signal dependence can be seen more clearly if one gets more quantitative, to do this,
 consider a $(\pi/2)_x$ pulse with receiver phase, $\phi_{\text{rec}} = 0$, for brevity the
 tilde will be dropped as only the rotating frame will be considered. In order to calculate the $(-1)$-quantum coherence,
-the density operator must be calculated first. The rotating frame density operator at equilibrium is
+the density operator must be calculated first. Using definitions from \eqn{eqn:1Def}
+and \eqn{eqn:BDef}, the rotating frame density operator at equilibrium is
 \begin{equation}
   \hat{\rho}^{eq} = \frac{1}{2}\mathbb{1} + \frac{1}{2}\mathbb{B}\hat{I}_z,
 \end{equation}
@@ -1603,7 +1602,7 @@ and in the case of the $(\pi/2)_x$ pulse
   a = i\omega^0\frac{B_{1x}}{i_c}\gamma\hbar~c_sV_s\frac{1}{4i}\mathbb{B},
 \end{equation}
 collecting like terms and expanding $\mathbb{B}$ gives
-\begin{equation}
+\begin{equation}\label{eqn:SignalAmplitude}
   a = \frac{1}{4}\frac{B_{1x}}{i_c}\gamma^3\hbar^2B_0^2\frac{n_s}{k_bT},
 \end{equation}
 where $n_s$ is the number of spins in the sample. This relationship makes sense intuitively
@@ -1669,8 +1668,8 @@ a smaller portion of spins in the sample but this compromises sensitivity as the
 
 
  Sensitivity in NMR at thermal equilibrium is always in short supply. In an NMR experiment, the signal amplitude after a $\pi/2$ pulse
- at thermal equilibrium, $a$, can be expressed as:
-\begin{equation}\label{eqn:Hale}
+ at thermal equilibrium, $a$, can be expressed as \eqn{eqn:SignalAmplitude}:
+\begin{equation}
  a = \frac{1}{4}\frac{B_{1x}}{i_c}\gamma^3\hbar^2B_0^2\frac{n_s}{k_bT},
 \end{equation}
 where, $B_{1x}/i_c$ is the coil sensitivity, $\gamma$ is the gyromagnetic ratio of the nucleus,$\hbar = h/2\pi$, $B_0$ is the magnetic field, $n_s$ is
@@ -1690,7 +1689,7 @@ the signal will never be seen.
 
 The SNR was formulated by Abragam\citep{Abragam:1961vg} and the analysis extended by Hoult and
 Richards\citep{Hoult:1976dw} and is defined as the peak signal divided by the root mean square (rms) noise. By including
-the amplitude from \eqn{eqn:Hale} and using the \textit{Rayleigh-Jeans approxiamation} for the noise the SNR is:
+the amplitude from \eqn{eqn:SignalAmplitude} and using the \textit{Rayleigh-Jeans approxiamation} for the noise the SNR is:
 \begin{equation}\label{eqn:SNR}
   \text{SNR} = \frac{k_0\frac{1}{4}\frac{B_{1x}}{i_c}\gamma^3\hbar^2B_0^2\frac{n_s}{k_bT_s}}{F\sqrt{4k_bT_cR_{\text{noise}}\Delta~f}},
 \end{equation}
@@ -1864,9 +1863,9 @@ to an electromagnetic eigenmode with a strong anti-node of the magnetic field be
 at the constriction. This concentrates the r.f. field and the detection sensitivity onto the sample area.
 The probe is compatible with a generic microfluidic device that has well defined outer geometry, and a fixed sample
 chamber position.
-\begin{figure}
+\begin{figure}[ht]
   \begin{center}
-  \includegraphics[width=\columnwidth]{Manvendra-Probe.jpg}
+  \includegraphics[height=11cm,keepaspectratio]{Manvendra-Probe.jpg}
   \end{center}
   \caption{Drawings of the detector assembly and the microfluidic device (1). A: front view (dimensions in mm); B:
   exploded view. Spacer (4) ensures the alignment of the sample chamber with the constrictions on the PCB planes. In A,
